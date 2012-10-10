@@ -1,0 +1,116 @@
+body, html {
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+    font-size:12px;
+    line-height:16px;
+    background: transparent url('../images/background.gif') 0 0;
+}
+
+
+#carcas {
+    background: transparent url('../images/background-grad-top.png') repeat-x 0 0;
+    padding-top:20px;
+}
+
+div.wrapper {
+    width:835px;
+    margin:0 auto;
+}
+
+div.header {
+    margin-bottom:35px;
+}
+
+/*search block*/
+div.search {
+    float:right;
+    padding-left:8px;
+    background: transparent url('../images/search-background-left.png') no-repeat 0 0;
+    margin-top:32px;
+}
+
+div.search div {
+    float:none;
+    padding:0 7px 0 0;
+    background: transparent url('../images/search-background-right.png') no-repeat right 0;
+}
+
+div.search div div {
+    background: transparent url('../images/search-background-center.png') repeat-x 0 0;
+    padding:0;
+    position:relative;
+}
+
+div.search div div input {
+    width:100px;
+    border:0 solid #fff;
+    padding:1px 0 1px 19px;
+    height: 22px;
+    color:#fff;
+    background: transparent;
+}
+
+div.search i.search-loupe {
+    position:absolute;
+    width:17px;
+    height:13px;
+    background: transparent url('../images/loupe.gif') no-repeat 0 center;
+    left:0;
+    top:6px;
+}
+
+
+/*lenta carousel*/
+div.lenta {
+    font-size:0;
+}
+
+div.lenta-carousel {
+    background: transparent url('../images/lenta-background-center.gif') repeat-x 0 0;
+}
+
+#lenta-left,
+#lenta-right,
+div.lenta-carousel {
+    display: -moz-inline-stack;
+    display:inline-block;
+    zoom: 1;
+    *display: inline;
+    vertical-align:top;
+    height:46px;
+    width:775px;
+    position:relative;
+    cursor:pointer;
+}
+
+#lenta-left {
+    background:transparent url('../images/lenta-background-left.png') no-repeat 0 0;
+    height:46px;
+    width:30px;
+}
+
+#lenta-left div,
+#lenta-right div {
+    position:absolute;
+    width:11px;
+    height:17px;
+    top:14px;
+}
+
+#lenta-left div {
+    background: transparent url('../images/lenta-navigation-left.gif') no-repeat 0 0;
+    left:9px;
+}
+
+#lenta-right div {
+    background: transparent url('../images/lenta-navigation-right.gif') no-repeat 0 0;
+    right:9px;
+}
+
+#lenta-right {
+    background:transparent url('../images/lenta-background-right.png') no-repeat 0 0;
+    height:46px;
+    width:30px;
+}
