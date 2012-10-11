@@ -10,13 +10,15 @@
             $(function() {
                 $('#lenta-list').carouFredSel({
                     auto: true,
-                    prev: '#prev2',
-                    next: '#next2',
-                    pagination: "#pager2",
+                    prev: '#lenta-left',
+                    next: '#lenta-right',
                     mousewheel: true,
                     swipe: {
                         onMouse: true,
                         onTouch: true
+                    },
+                    scroll: {
+                        items: 1
                     }
                 });
             });
@@ -38,25 +40,44 @@
                     </div>
                     <div class="logo"><a href="/"><img src="/images/logo.png" alt="betlog.net"></a></div>
                 </div>
+                <div class="lenta-categories">
+                    <ul>
+                        <li class="active">
+                            <div><div><div><a href="javascript://">Football</a></div></div></div>
+                        </li>
+                        <li>
+                            <div><div><div><a href="javascript://">Football</a></div></div></div>
+                        </li>
+                        <li>
+                            <div><div><div><a href="javascript://">Football</a></div></div></div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
                 <div class="lenta">
                     <div id="lenta-left"><div></div></div>
                     <div class="lenta-carousel">
                         <ul id="lenta-list">
+                            <li>
+                                <p class="lenta-item-date">15:00</p>
+                                <p>spartak</p>
+                                <p>dinamo</p>
+                            </li>
                             <li></li>
-                            <li>a</li>
-                            <li>r</li>
-                            <li>o</li>
-                            <li>u</li>
-                            <li>F</li>
-                            <li>r</li>
-                            <li>e</li>
-                            <li>d</li>
-                            <li>S</li>
-                            <li>e</li>
-                            <li>l</li>
-                            <li> </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
-                        <div class="clearfix"></div>
+                        <div class="clear"></div>
                     </div>
                     <div id="lenta-right"><div></div></div>
                 </div>

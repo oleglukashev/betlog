@@ -12,5 +12,9 @@
         $(this).animate({
             width:'-=100'
         }, 'fast').attr('placeholder', 'Search...');
-    })
+    });
+
+    $('#lenta-left div,#lenta-right div').mousedown(function() {
+        $(this).addClass('active');
+    });
  })();

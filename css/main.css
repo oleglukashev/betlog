@@ -6,8 +6,19 @@ body, html {
     font-size:12px;
     line-height:16px;
     background: transparent url('../images/background.gif') 0 0;
+    font-family: arial,tahoma,verdana,sans-serif;
 }
 
+a {
+    color:#555;
+}
+
+div.clear {
+    line-height:0;
+    height:0;
+    font-size:0;
+    clear:both;
+}
 
 #carcas {
     background: transparent url('../images/background-grad-top.png') repeat-x 0 0;
@@ -15,7 +26,7 @@ body, html {
 }
 
 div.wrapper {
-    width:835px;
+    width:836px;
     margin:0 auto;
 }
 
@@ -68,6 +79,8 @@ div.lenta {
 }
 
 div.lenta-carousel {
+    padding:5px 0 5px 2px;
+    height:36px;
     background: transparent url('../images/lenta-background-center.gif') repeat-x 0 0;
 }
 
@@ -79,8 +92,7 @@ div.lenta-carousel {
     zoom: 1;
     *display: inline;
     vertical-align:top;
-    height:46px;
-    width:775px;
+    width:776px;
     position:relative;
     cursor:pointer;
 }
@@ -88,7 +100,7 @@ div.lenta-carousel {
 #lenta-left {
     background:transparent url('../images/lenta-background-left.png') no-repeat 0 0;
     height:46px;
-    width:30px;
+    width:29px;
 }
 
 #lenta-left div,
@@ -112,5 +124,71 @@ div.lenta-carousel {
 #lenta-right {
     background:transparent url('../images/lenta-background-right.png') no-repeat 0 0;
     height:46px;
-    width:30px;
+    width:29px;
+}
+
+#lenta-list li {
+    float:left;
+    width:89px;
+    height:36px;
+    margin-right:2px;
+    padding:0 3px;
+    background-color:#fff;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    font-size:9px;
+    line-height:12px;
+    color:#555;
+}
+
+#lenta-list li p {
+    padding:0 2px;
+    font-weight:bold;
+    line-height:11px;
+}
+
+#lenta-list li p.lenta-item-date {
+    border-bottom:1px solid #e1e1e1;
+    font-weight:normal;
+    line-height:12px;
+}
+
+div.lenta-categories {
+    position:relative;
+    top:2px;
+    z-index:1;
+    margin-left:30px;
+}
+
+div.lenta-categories ul li {
+    float:left;
+    margin-right:20px;
+    padding-top:2px;
+}
+
+div.lenta-categories ul li.active {
+    padding-top:0;
+}
+
+div.lenta-categories ul li.active div {
+    padding-left:5px;
+    background:transparent url('../images/lenta-categories-left.gif') no-repeat 0 0;
+}
+
+div.lenta-categories ul li.active div div {
+    padding:0 5px 0 0;
+    background:transparent url('../images/lenta-categories-right.gif') no-repeat right 0;
+}
+
+div.lenta-categories ul li.active div div div {
+    padding:2px 3px;
+    background:transparent url('../images/lenta-categories-center.gif') repeat-x 0 0;
+    height:17px;
+}
+
+div.lenta-categories a {
+    text-decoration:none;
+    font-size:12px;
+    text-shadow: 0px 1px 1px #fff;
 }
