@@ -31,7 +31,7 @@ div.wrapper {
 }
 
 div.header {
-    margin-bottom:35px;
+    margin-bottom:20px;
 }
 
 /*search block*/
@@ -76,6 +76,7 @@ div.search i.search-loupe {
 /*lenta carousel*/
 div.lenta {
     font-size:0;
+    margin-bottom:20px;
 }
 
 div.lenta-carousel {
@@ -191,4 +192,58 @@ div.lenta-categories a {
     text-decoration:none;
     font-size:12px;
     text-shadow: 0px 1px 1px #fff;
+}
+
+
+/*content block*/
+div.content {
+    margin-left:-4px;
+    width:844px;
+}
+
+div.content-top {
+    padding-left:15px;
+    background:url('../images/content-left-top.png') no-repeat 0 0;
+}
+
+div.content-top div {
+    padding:0 15px 0 0;
+    background:url('../images/content-right-top.png') no-repeat right 0;
+}
+
+div.content-top div div {
+    padding:0;
+    background:url('../images/content-center-top.png') repeat-x 0 0;
+    height:14px;
+}
+
+div.content-bottom {
+    padding-left:15px;
+    background:url('../images/content-left-bottom.png') no-repeat 0 0;
+}
+
+div.content-bottom div {
+    padding:0 15px 0 0;
+    background:url('../images/content-right-bottom.png') no-repeat right 0;
+}
+
+div.content-bottom div div {
+    padding:0;
+    background:url('../images/content-center-bottom.png') repeat-x 0 0;
+    height:19px;
+}
+
+div.content-middle {
+    padding-left:15px;
+    background:url('../images/content-left-middle.png') repeat-y 0 0;
+}
+
+div.content-middle div {
+    padding:0 15px 0 0;
+    background:url('../images/content-right-middle.png') repeat-y right 0;
+}
+
+div.content-middle div div {
+    padding:0;
+    background:#ebebeb;
 }

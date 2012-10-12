@@ -81,6 +81,15 @@
                     </div>
                     <div id="lenta-right"><div></div></div>
                 </div>
+                <div class="content">
+                    <div class="content-top"><div><div></div></div></div>
+                    <div class="content-middle"><div><div>
+                        <div class="content-wrapper">
+    asdfasdfasdf
+                        </div>
+                    </div></div></div>
+                    <div class="content-bottom"><div><div></div></div></div>
+                </div>
             </div>
         </div>
         <script type="text/javascript" src="../js/main.js"></script>
