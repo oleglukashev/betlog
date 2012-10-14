@@ -83,9 +83,42 @@
                 </div>
                 <div class="content">
                     <div class="content-top"><div><div></div></div></div>
-                    <div class="content-middle"><div><div>
+                    <div class="content-middle"><div class="content-middle-right"><div class="content-middle-center">
                         <div class="content-wrapper">
-    asdfasdfasdf
+                            <div class="col1">
+                                <h1>Events</h1>
+                                <div class="bets-list-wrapper">
+                                    <div class="bets-list-top"><div><div></div></div></div>
+                                    <div class="bets-list-middle">
+                                        <div class="date">30<p>sep.</p></div>
+                                        <div class="bet-item">
+                                            <div class="bet-item-top"><div><div></div></div></div>
+                                            <div class="bet-item-middle">
+                                            <br /><br />
+                                            </div>
+                                            <div class="bet-item-bottom"><div><div></div></div></div>
+                                        </div>
+                                        <div class="bet-item">
+                                            <div class="bet-item-top"><div><div></div></div></div>
+                                            <div class="bet-item-middle">
+                                            <br /><br />
+                                            </div>
+                                            <div class="bet-item-bottom"><div><div></div></div></div>
+                                        </div>
+                                        <div class="bet-item">
+                                            <div class="bet-item-top"><div><div></div></div></div>
+                                            <div class="bet-item-middle">
+                                            <br /><br />
+                                            </div>
+                                            <div class="bet-item-bottom"><div><div></div></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="bets-list-bottom"><div><div></div></div></div>
+                                </div>
+                            </div>
+                            <div class="col2">
+                                2
+                            </div>
                         </div>
                     </div></div></div>
                     <div class="content-bottom"><div><div></div></div></div>
