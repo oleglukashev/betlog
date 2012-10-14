@@ -17,4 +17,10 @@
     $('#lenta-left div,#lenta-right div').mousedown(function() {
         $(this).addClass('active');
     });
+
+    $('div.bet-item').toggle(function() {
+        $(this).find('div.bet-content').slideDown('fast');
+    }, function() {
+        $(this).find('div.bet-content').slideUp('fast');
+    });
  })();

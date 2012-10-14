@@ -332,6 +332,8 @@ div.bets-list-middle {
 /*bet-item*/
 div.bet-item {
     margin-bottom:2px;
+    font-size:15px;
+    cursor:pointer;
 }
 
 div.bet-item-top {
@@ -368,12 +370,49 @@ div.bet-item-bottom div div {
 }
 
 div.bet-item-middle {
-    padding:0;
+    padding:6px 20px 6px 20px;
     border-left:1px solid #efefef;
     border-right:1px solid #efefef;
     background-color:#fff;
 }
 
+div.bet-vs {
+    width:20px;
+    margin:0 auto;
+    text-align:center;
+}
+div.bet-item-time {
+    width:50px;
+    float:left;
+    margin-left:5px;
+}
+
+div.bet-item-title {
+    width:400px;
+    margin:0 auto;
+}
+
+div.bet-item-more {
+    width:17px;
+    height:11px;
+    margin-top:3px;
+    background:url(../images/bet-more.gif) no-repeat 0 0;
+    float:right;
+}
+
+div.bet-left-team {
+    width:180px;
+    float:left;
+    text-align:right;
+}
+div.bet-right-team {
+    float:right;
+    width:180px;
+}
+
+dib.bet-content {
+    display:none;
+}
 /*date*/
 div.date {
     float:left;
@@ -393,3 +432,4 @@ div.date p {
     font-weight:normal;
     line-height:20px;
 }
+

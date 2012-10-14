@@ -94,21 +94,15 @@
                                         <div class="bet-item">
                                             <div class="bet-item-top"><div><div></div></div></div>
                                             <div class="bet-item-middle">
-                                            <br /><br />
-                                            </div>
-                                            <div class="bet-item-bottom"><div><div></div></div></div>
-                                        </div>
-                                        <div class="bet-item">
-                                            <div class="bet-item-top"><div><div></div></div></div>
-                                            <div class="bet-item-middle">
-                                            <br /><br />
-                                            </div>
-                                            <div class="bet-item-bottom"><div><div></div></div></div>
-                                        </div>
-                                        <div class="bet-item">
-                                            <div class="bet-item-top"><div><div></div></div></div>
-                                            <div class="bet-item-middle">
-                                            <br /><br />
+                                                <div class="bet-item-time">22:00</div>
+                                                <div class="bet-item-more"></div>
+                                                <div class="bet-item-title">
+                                                    <div class="bet-left-team">Spartak M.</div>
+                                                    <div class="bet-right-team">Lokomotov M.</div>
+                                                    <div class="bet-vs">&mdash;</div>
+                                                </div>
+                                                <div class="bet-content">
+                                                </div>
                                             </div>
                                             <div class="bet-item-bottom"><div><div></div></div></div>
                                         </div>
