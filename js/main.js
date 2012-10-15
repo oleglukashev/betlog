@@ -20,6 +20,10 @@
             $(this).next().show();
     });
 
+    $('div.search-value').click(function() {
+        $(this).prev().focus();
+    });
+
     $('div.search input').keydown(function() {
         $(this).next().hide();
     });

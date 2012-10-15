@@ -31,7 +31,7 @@
                     <div class="search">
                         <div>
                             <div>
-                                <form action="" method="GET">
+                                <form action="" method="GET" autocomplete="off">
                                     <i class="search-loupe"></i>
                                     <input type="text" value="" />
                                     <div class="search-value">Search...</div>
