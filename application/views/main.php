@@ -33,7 +33,8 @@
                             <div>
                                 <form action="" method="GET">
                                     <i class="search-loupe"></i>
-                                    <input type="text" placeholder="Search..."/>
+                                    <input type="text" value="" />
+                                    <div class="search-value">Search...</div>
                                 </form>
                             </div>
                         </div>
@@ -165,6 +166,8 @@
                         </div>
                     </div></div></div>
                     <div class="content-bottom"><div><div></div></div></div>
+                </div>
+                <div class="footer">
                 </div>
             </div>
         </div>

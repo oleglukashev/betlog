@@ -91,6 +91,13 @@ div.search i.search-loupe {
     top:6px;
 }
 
+div.search div div div.search-value {
+    position:absolute;
+    left:20px;
+    top:4px;
+    background:transparent;
+    color:#fff;
+}
 
 /*lenta carousel*/
 div.lenta {
@@ -405,6 +412,14 @@ div.bet-item-more {
     height:11px;
     margin-top:3px;
     background:url(../images/bet-more.gif) no-repeat 0 0;
+    float:right;
+}
+
+div.bet-item-less {
+    width:17px;
+    height:11px;
+    margin-top:3px;
+    background:url(../images/bet-less.gif) no-repeat 0 0;
     float:right;
 }
 
