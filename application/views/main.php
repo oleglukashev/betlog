@@ -90,28 +90,77 @@
                                 <div class="bets-list-wrapper">
                                     <div class="bets-list-top"><div><div></div></div></div>
                                     <div class="bets-list-middle">
-                                        <div class="date">30<p>sep.</p></div>
-                                        <div class="bet-item">
-                                            <div class="bet-item-top"><div><div></div></div></div>
-                                            <div class="bet-item-middle">
-                                                <div class="bet-item-time">22:00</div>
-                                                <div class="bet-item-more"></div>
-                                                <div class="bet-item-title">
-                                                    <div class="bet-left-team">Spartak M.</div>
-                                                    <div class="bet-right-team">Lokomotov M.</div>
-                                                    <div class="bet-vs">&mdash;</div>
+                                        <div class="bet-items-wrap">
+                                            <div class="date">30<p>sep.</p></div>
+                                            <div class="bet-item">
+                                                <div class="bet-item-top"><div><div></div></div></div>
+                                                <div class="bet-item-middle">
+                                                    <div class="bet-item-time">22:00</div>
+                                                    <div class="bet-item-more"></div>
+                                                    <div class="bet-item-title">
+                                                        <div class="bet-left-team">Spartak M.</div>
+                                                        <div class="bet-right-team">Lokomotov M.</div>
+                                                        <div class="bet-vs">&mdash;</div>
+                                                    </div>
+                                                    <div class="bet-content">
+                                                    </div>
                                                 </div>
-                                                <div class="bet-content">
-                                                </div>
+                                                <div class="bet-item-bottom"><div><div></div></div></div>
                                             </div>
-                                            <div class="bet-item-bottom"><div><div></div></div></div>
+                                        </div>
+                                        <div class="bet-items-wrap last">
+                                            <div class="date">30<p>sep.</p></div>
+                                            <div class="bet-item">
+                                                <div class="bet-item-top"><div><div></div></div></div>
+                                                <div class="bet-item-middle">
+                                                    <div class="bet-item-time">22:00</div>
+                                                    <div class="bet-item-more"></div>
+                                                    <div class="bet-item-title">
+                                                        <div class="bet-left-team">Spartak M.</div>
+                                                        <div class="bet-right-team">Lokomotov M.</div>
+                                                        <div class="bet-vs">&mdash;</div>
+                                                    </div>
+                                                    <div class="bet-content">
+                                                    </div>
+                                                </div>
+                                                <div class="bet-item-bottom"><div><div></div></div></div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="bets-list-bottom"><div><div></div></div></div>
                                 </div>
                             </div>
                             <div class="col2">
-                                2
+                                <h1>Categories</h1>
+                                <div id="menu-categories">
+                                    <div class="menu-item active">
+                                        <div class="menu-item-top"><div></div></div>
+                                        <div class="menu-item-middle">Football</div>
+                                        <div class="menu-item-bottom"><div></div></div>
+                                        <div class="menu-subitem">
+                                            <div class="menu-subitem-middle">
+                                                <div class="active">UEFA</div>
+                                                <div class="last">Russian liga</div>
+                                            </div>
+                                            <div class="menu-subitem-bottom"><div><div></div></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-top"><div></div></div>
+                                        <div class="menu-item-middle">Football</div>
+                                        <div class="menu-item-bottom"><div></div></div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-top"><div></div></div>
+                                        <div class="menu-item-middle">Football</div>
+                                        <div class="menu-item-bottom"><div></div></div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-top"><div></div></div>
+                                        <div class="menu-item-middle"><a href="/">Football</a></div>
+                                        <div class="menu-item-bottom"><div></div></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div></div></div>

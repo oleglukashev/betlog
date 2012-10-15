@@ -23,4 +23,11 @@
     }, function() {
         $(this).find('div.bet-content').slideUp('fast');
     });
+
+    $('#menu-categories > div').click(function() {
+        $('#menu-categories div').removeClass('active').find('div.menu-subitem').hide();
+
+        $(this).addClass('active').find('div.menu-subitem').slideDown('fast');
+
+    });
  })();

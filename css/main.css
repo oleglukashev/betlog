@@ -330,6 +330,14 @@ div.bets-list-middle {
 
 
 /*bet-item*/
+div.bet-items-wrap {
+    margin-bottom:35px;
+}
+
+div.bet-items-wrap.last {
+    margin:0;
+}
+
 div.bet-item {
     margin-bottom:2px;
     font-size:15px;
@@ -410,9 +418,11 @@ div.bet-right-team {
     width:180px;
 }
 
-dib.bet-content {
+div.bet-content {
     display:none;
 }
+
+div
 /*date*/
 div.date {
     float:left;
@@ -431,5 +441,102 @@ div.date p {
     font-size:12px;
     font-weight:normal;
     line-height:20px;
+}
+
+
+
+/*menu categories*/
+#menu-categories {
+    margin:30px 0 0 -1px;
+}
+
+div.menu-item {
+    padding:12px 20px;
+}
+
+div.menu-item a {
+    text-decoration:none;
+}
+
+div.active.menu-item {
+    padding:0;
+}
+
+div.active div.menu-item-top {
+    padding:0 6px 0 0;
+    background:url('../images/whitebox-right-top.gif') no-repeat right 0;
+}
+
+div.active div.menu-item-top div {
+    padding:0;
+    height:6px;
+    background:url('../images/whitebox-center-top.gif') repeat-x 0 0;
+}
+
+div.active div.menu-item-bottom {
+    padding:0 7px 0 0;
+    background:url('../images/whitebox-right-bottom.gif') no-repeat right 0;
+}
+
+div.active div.menu-item-bottom div {
+    padding:0;
+    height:7px;
+    background:url('../images/whitebox-center-bottom.gif') repeat-x 0 0;
+}
+
+div.menu-item-middle {
+    cursor:pointer;
+}
+
+div.active div.menu-item-middle {
+    background-color:#f9f9f9;
+    border-right:1px solid #d7d7d7;
+    font-size:16px;
+    padding:10px 0 10px 20px;
+}
+
+div.menu-subitem {
+    display:none;
+}
+
+div.active div.menu-subitem {
+    padding-right:5px;
+}
+
+div.active div.menu-subitem-bottom {
+    padding:0 7px 0 0;
+    background:url('../images/submenu-right-bottom.gif') no-repeat right 0;
+}
+
+div.active div.menu-subitem-bottom div {
+    padding:0;
+    height:7px;
+    background:url('../images/submenu-center-bottom.gif') repeat-x 0 0;
+}
+
+div.menu-subitem-middle {
+    cursor:pointer;
+}
+
+div.active div.menu-subitem-middle {
+    background-color:#e1e1e1;
+    border-right:1px solid #d7d7d7;
+    padding:10px 0 5px 20px;
+}
+
+div.active div.menu-subitem-middle div {
+    margin-bottom:12px;
+}
+
+div.active div.menu-subitem-middle div.last {
+    margin:0;
+}
+
+div.active div.menu-subitem-middle div a {
+    text-shadow:0 1px 1px #fff;
+}
+
+div.active div.menu-subitem-middle div.active a {
+    color:#000;
 }
 
