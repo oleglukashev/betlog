@@ -158,7 +158,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-item-top"><div></div></div>
-                                        <div class="menu-item-middle"><a href="/">Football</a></div>
+                                        <div class="menu-item-middle">Football</div>
                                         <div class="menu-item-bottom"><div></div></div>
                                     </div>
                                 </div>

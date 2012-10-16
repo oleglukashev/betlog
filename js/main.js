@@ -47,9 +47,15 @@
     });
 
     $('#menu-categories > div').click(function() {
-        $('#menu-categories div').removeClass('active').find('div.menu-subitem').hide();
+        $('#menu-categories > div').removeClass('active').find('div.menu-subitem').hide();
 
         $(this).addClass('active').find('div.menu-subitem').slideDown('fast');
 
+    });
+    $('div.menu-subitem-middle div').click(function(event) {
+        event.stopPropagation();
+        $('div.menu-subitem-middle div').removeClass('active');
+
+        $(this).addClass('active');
     });
  })();

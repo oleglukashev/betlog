@@ -501,6 +501,7 @@ div.active div.menu-item-bottom div {
 
 div.menu-item-middle {
     cursor:pointer;
+    text-shadow:0 1px 1px #fff;
 }
 
 div.active div.menu-item-middle {
@@ -547,11 +548,11 @@ div.active div.menu-subitem-middle div.last {
     margin:0;
 }
 
-div.active div.menu-subitem-middle div a {
+div.active div.menu-subitem-middle div {
     text-shadow:0 1px 1px #fff;
 }
 
-div.active div.menu-subitem-middle div.active a {
+div.active div.menu-subitem-middle div.active {
     color:#000;
 }
 
