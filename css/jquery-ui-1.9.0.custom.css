@@ -1,0 +1,27 @@
+ul.ui-tabs-nav li {
+    float:left;
+    width:49px;
+    padding-right:10px;
+    height:23px;
+    background:url('../images/tab-background.png') no-repeat 0 0;
+    margin-left:-8px;
+    position:relative;
+    text-align:center;
+}
+
+ul.ui-tabs-nav li a {
+    font-size:12px;
+    text-decoration:none;
+    font-weight:bold;
+    text-shadow:0 1px 1px #fff;
+    line-height:23px;
+}
+
+ul.ui-tabs-nav li:first-child {
+    margin:0;
+}
+
+ul.ui-tabs-nav li.ui-state-active {
+    background:url('../images/active-tab-background.png') no-repeat 0 0;
+    z-index:10!important;
+}

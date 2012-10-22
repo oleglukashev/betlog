@@ -385,7 +385,7 @@ div.bet-item-bottom div div {
 }
 
 div.bet-item-middle {
-    padding:6px 20px 6px 20px;
+    padding:8px 0;
     border-left:1px solid #efefef;
     border-right:1px solid #efefef;
     background-color:#fff;
@@ -399,7 +399,7 @@ div.bet-vs {
 div.bet-item-time {
     width:50px;
     float:left;
-    margin-left:5px;
+    margin-left:25px;
 }
 
 div.bet-item-title {
@@ -410,7 +410,7 @@ div.bet-item-title {
 div.bet-item-more {
     width:17px;
     height:11px;
-    margin-top:3px;
+    margin:3px 20px 0 0;
     background:url(../images/bet-more.gif) no-repeat 0 0;
     float:right;
 }
@@ -418,7 +418,7 @@ div.bet-item-more {
 div.bet-item-less {
     width:17px;
     height:11px;
-    margin-top:3px;
+    margin:3px 20px 0 0;
     background:url(../images/bet-less.gif) no-repeat 0 0;
     float:right;
 }
@@ -435,6 +435,8 @@ div.bet-right-team {
 
 div.bet-content {
     display:none;
+    padding-top:8px;
+    cursor:default;
 }
 
 div
@@ -556,3 +558,63 @@ div.active div.menu-subitem-middle div.active {
     color:#000;
 }
 
+
+/*coef list*/
+ul.ui-tabs-nav li {
+    float:left;
+    width:49px;
+    padding-right:10px;
+    height:23px;
+    background:url('../images/tab-background.png') no-repeat 0 0;
+    margin-left:-8px;
+    position:relative;
+    text-align:center;
+}
+
+ul.ui-tabs-nav li a {
+    font-size:12px;
+    text-decoration:none;
+    font-weight:bold;
+    text-shadow:0 1px 1px #fff;
+    line-height:23px;
+}
+
+ul.ui-tabs-nav li:first-child {
+    margin:0;
+}
+
+ul.ui-tabs-nav li.ui-state-active {
+    background:url('../images/active-tab-background.png') no-repeat 0 0;
+    z-index:10!important;
+}
+
+table.coef-table tr th {
+    background:#ffda3f url('../images/coef-title-background.gif') repeat-x 0 0;
+    font-weight:normal;
+    font-size:12px;
+    text-shadow:0 1px 1px #fff;
+    padding:5px 10px;
+}
+
+table.coef-table tr.coef-title-even td {
+    background-color:#cdecf1;
+}
+
+table.coef-table tr th:first-child {
+    text-align:left;
+}
+
+table.coef-table tr td {
+    padding:1px 10px;
+    font-size:12px;
+    text-align:center;
+    border-left:1px solid #d7d7d7;
+    border-bottom:1px solid #d7d7d7;
+    font-weight:bold;
+}
+
+table.coef-table tr td:first-child {
+    text-align:left;
+    border-top:1px solid #d7d7d7;
+    border-left:0px solid #d7d7d7;
+}

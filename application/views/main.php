@@ -4,7 +4,9 @@
         <title>Betlog.net | sport bets</title>
         <link href="/css/reset.css" type="text/css" rel="stylesheet" />
         <link href="/css/main.css" type="text/css" rel="stylesheet" />
+        <link href="/css/jquery-ui-1.9.0.custom.css" type="text/css" rel="stylesheet" />
         <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+        <script type="text/javascript" src="../js/jquery-ui-1.9.0.custom.min.js"></script>
         <script type="text/javascript" src="../js/jquery.carouFredSel-6.0.6-packed.js"></script>
         <script type="text/javascript">
             $(function() {
@@ -104,6 +106,111 @@
                                                         <div class="bet-vs">&mdash;</div>
                                                     </div>
                                                     <div class="bet-content">
+                                                        <div class="coef-list">
+                                                            <div class="coef-tabs">
+                                                                <ul>
+                                                                    <li style="z-index:2"><a href="#tabs-1">1x2</a></li>
+                                                                    <li style="z-index:1;"><a href="#tabs-2">1/2</a></li>
+                                                                </ul>
+                                                                <div class="clear"></div>
+                                                                <!--<div class="coef-title">
+                                                                    <p class="coef-title-1">Name</p>
+                                                                    <p class="coef-title-2">1</p>
+                                                                    <p class="coef-title-3">1x2</p>
+                                                                    <p class="coef-title-4">2</p>
+                                                                    <p class="coef-title-5">Payout</p>
+                                                                    <div class="clear"></div>
+                                                                </div>-->
+                                                                <div id="tabs-1">
+                                                                    <table class="coef-table" cellpadding="0" cellspacing="0">
+                                                                        <col width="299" />
+                                                                        <col width="62" />
+                                                                        <col width="62" />
+                                                                        <col width="62" />
+                                                                        <col width="62" />
+                                                                        <tr>
+                                                                            <th>Name</th>
+                                                                            <th>1</th>
+                                                                            <th>1x2</th>
+                                                                            <th>2</th>
+                                                                            <th>Payout</th>
+                                                                        </tr>
+                                                                        <tr class="coef-title-even">
+                                                                            <td>10bet</td>
+                                                                            <td>4.68</td>
+                                                                            <td>1.32</td>
+                                                                            <td>2.45</td>
+                                                                            <td>2.45</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>10bet</td>
+                                                                            <td>4.68</td>
+                                                                            <td>1.32</td>
+                                                                            <td>2.45</td>
+                                                                            <td>2.45</td>
+                                                                        </tr>
+                                                                        <tr class="coef-title-even">
+                                                                            <td>10bet</td>
+                                                                            <td>4.68</td>
+                                                                            <td>1.32</td>
+                                                                            <td>2.45</td>
+                                                                            <td>2.45</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>10bet</td>
+                                                                            <td>4.68</td>
+                                                                            <td>1.32</td>
+                                                                            <td>2.45</td>
+                                                                            <td>2.45</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <div id="tabs-2">
+                                                                    <table class="coef-table" cellpadding="0" cellspacing="0">
+                                                                        <col width="299" />
+                                                                        <col width="62" />
+                                                                        <col width="62" />
+                                                                        <col width="62" />
+                                                                        <col width="62" />
+                                                                        <tr>
+                                                                            <th>Name</th>
+                                                                            <th>1</th>
+                                                                            <th>1x2</th>
+                                                                            <th>2</th>
+                                                                            <th>Payout</th>
+                                                                        </tr>
+                                                                        <tr class="coef-title-even">
+                                                                            <td>10bet</td>
+                                                                            <td>4.68</td>
+                                                                            <td>1.32</td>
+                                                                            <td>2.45</td>
+                                                                            <td>2.45</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>10bet</td>
+                                                                            <td>4.68</td>
+                                                                            <td>1.32</td>
+                                                                            <td>2.45</td>
+                                                                            <td>2.45</td>
+                                                                        </tr>
+                                                                        <tr class="coef-title-even">
+                                                                            <td>10bet</td>
+                                                                            <td>4.68</td>
+                                                                            <td>1.32</td>
+                                                                            <td>2.45</td>
+                                                                            <td>2.45</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>10bet</td>
+                                                                            <td>4.68</td>
+                                                                            <td>1.32</td>
+                                                                            <td>2.45</td>
+                                                                            <td>2.45</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="bet-item-bottom"><div><div></div></div></div>
