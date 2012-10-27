@@ -241,33 +241,24 @@
                             <div class="col2">
                                 <h1>Categories</h1>
                                 <div id="menu-categories">
-                                    <div class="menu-item active">
-                                        <div class="menu-item-top"><div></div></div>
-                                        <div class="menu-item-middle">Football</div>
-                                        <div class="menu-item-bottom"><div></div></div>
-                                        <div class="menu-subitem">
-                                            <div class="menu-subitem-middle">
-                                                <div class="active">UEFA</div>
-                                                <div class="last">Russian liga</div>
-                                            </div>
-                                            <div class="menu-subitem-bottom"><div><div></div></div></div>
+                                    <?php foreach( $sports_list as $item ) : ?>
+                                        <div class="menu-item">
+                                            <div class="menu-item-top"><div></div></div>
+                                            <div class="menu-item-middle"><?php echo html::chars($item->name);?></div>
+                                            <div class="menu-item-bottom"><div></div></div>
+                                            <?php if ($item->getCountChildrens()) : ?>
+                                                <div class="menu-subitem">
+                                                    <div class="menu-subitem-middle">
+                                                        <?php $i = 0;foreach($item->getChampionshipList() as $sub_item) : ?>
+                                                            <?php $i++;?>
+                                                            <div class="<?php if ($i == $item->getCountChildrens()) : ?>last<?php endif ; ?>"><?php echo html::chars($sub_item->name) ; ?></div>
+                                                        <?php endforeach ; ?>
+                                                    </div>
+                                                    <div class="menu-subitem-bottom"><div><div></div></div></div>
+                                                </div>
+                                            <?php endif ; ?>
                                         </div>
-                                    </div>
-                                    <div class="menu-item">
-                                        <div class="menu-item-top"><div></div></div>
-                                        <div class="menu-item-middle">Football</div>
-                                        <div class="menu-item-bottom"><div></div></div>
-                                    </div>
-                                    <div class="menu-item">
-                                        <div class="menu-item-top"><div></div></div>
-                                        <div class="menu-item-middle">Football</div>
-                                        <div class="menu-item-bottom"><div></div></div>
-                                    </div>
-                                    <div class="menu-item">
-                                        <div class="menu-item-top"><div></div></div>
-                                        <div class="menu-item-middle">Football</div>
-                                        <div class="menu-item-bottom"><div></div></div>
-                                    </div>
+                                    <?endforeach ; ?>
                                 </div>
                             </div>
                         </div>
