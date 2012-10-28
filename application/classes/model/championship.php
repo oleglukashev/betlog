@@ -13,7 +13,7 @@ class Model_Championship extends ORM
     );
 
     protected $_belongs_to = array(
-        'sports' => array('model' => 'sports', 'foreign_key' => 'sport_id')
+        'sport' => array('model' => 'sport', 'foreign_key' => 'sport_id')
     );
 
     protected $_has_many = array(

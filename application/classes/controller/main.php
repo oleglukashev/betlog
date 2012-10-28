@@ -6,7 +6,7 @@ class Controller_Main extends Controller_Template {
 
 	public function action_index()
 	{
-		$this->template->sports_list = ORM::factory('sports')->find_all();
+		$this->template->sport_list = ORM::factory('sport')->find_all();
 	}
 
 } // End Welcome

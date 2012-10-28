@@ -1,8 +1,8 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
 
-class Model_Sports extends ORM
+class Model_Sport extends ORM
 {
-    protected $_table_name = 'sports';
+    protected $_table_name = 'sport';
 
     protected $_primary_val  = 'name';
 

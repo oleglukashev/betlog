@@ -113,14 +113,6 @@
                                                                     <li style="z-index:1;"><a href="#tabs-2">1/2</a></li>
                                                                 </ul>
                                                                 <div class="clear"></div>
-                                                                <!--<div class="coef-title">
-                                                                    <p class="coef-title-1">Name</p>
-                                                                    <p class="coef-title-2">1</p>
-                                                                    <p class="coef-title-3">1x2</p>
-                                                                    <p class="coef-title-4">2</p>
-                                                                    <p class="coef-title-5">Payout</p>
-                                                                    <div class="clear"></div>
-                                                                </div>-->
                                                                 <div id="tabs-1">
                                                                     <table class="coef-table" cellpadding="0" cellspacing="0">
                                                                         <col width="299" />
@@ -241,7 +233,7 @@
                             <div class="col2">
                                 <h1>Categories</h1>
                                 <div id="menu-categories">
-                                    <?php foreach( $sports_list as $item ) : ?>
+                                    <?php foreach( $sport_list as $item ) : ?>
                                         <div class="menu-item">
                                             <div class="menu-item-top"><div></div></div>
                                             <div class="menu-item-middle"><?php echo html::chars($item->name);?></div>
