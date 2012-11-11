@@ -5,7 +5,7 @@ namespace :resque do
   task :setup
 
   desc "Start a Resque worker"
-  task :work => [:pidfile, :setup] do
+  task :work => :setup do
     require 'resque'
 
     queues = (ENV['QUEUES'] || ENV['QUEUE']).to_s.split(',')
@@ -26,7 +26,7 @@ namespace :resque do
       Process.daemon(true)
     end
 
-    worker.log "Starting worker #{worker}"
+    Resque.logger.info "Starting worker #{worker}"
 
     worker.work(ENV['INTERVAL'] || 5) # interval, will block
   end

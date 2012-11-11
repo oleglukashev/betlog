@@ -384,7 +384,7 @@ describe "Resque::Worker" do
       assert_equal nil, found
     end
   end
-
+  
   it "cleans up dead worker info on start (crash recovery)" do
     # first we fake out two dead workers
     workerA = Resque::Worker.new(:jobs)
@@ -447,29 +447,24 @@ describe "Resque::Worker" do
     assert !$BEFORE_FORK_CALLED
     Resque::Job.create(:jobs, SomeJob, 20, '/tmp')
     workerA.work(0)
-    assert $BEFORE_FORK_CALLED
+    assert $BEFORE_FORK_CALLED == workerA.will_fork?
   end
+  
+  it "Will not call a before_fork hook when the worker can't fork" do
+    Resque.redis.flushall
+    $BEFORE_FORK_CALLED = false
+    Resque.before_fork = Proc.new { $BEFORE_FORK_CALLED = true }
+    workerA = Resque::Worker.new(:jobs)
+    workerA.cant_fork = true
 
-  it "very verbose works in the afternoon" do
-    begin
-      require 'time'
-      last_puts = ""
-      Time.fake_time = Time.parse("15:44:33 2011-03-02")
-
-      @worker.extend(Module.new {
-        define_method(:puts) { |thing| last_puts = thing }
-      })
-
-      @worker.very_verbose = true
-      @worker.log("some log text")
-
-      assert_match /\[15:44:33 2011-03-02\] \d+: some log text/, last_puts
-    ensure
-      Time.fake_time = nil
-    end
+    assert !$BEFORE_FORK_CALLED, "before_fork should not have been called before job runs"
+    Resque::Job.create(:jobs, SomeJob, 20, '/tmp')
+    workerA.work(0)
+    assert !$BEFORE_FORK_CALLED, "before_fork should not have been called after job runs"
   end
 
   it "Will call an after_fork hook after forking" do
+    Resque.redis.flushall
     $AFTER_FORK_CALLED = false
     Resque.after_fork = Proc.new { $AFTER_FORK_CALLED = true }
     workerA = Resque::Worker.new(:jobs)
@@ -477,7 +472,20 @@ describe "Resque::Worker" do
     assert !$AFTER_FORK_CALLED
     Resque::Job.create(:jobs, SomeJob, 20, '/tmp')
     workerA.work(0)
-    assert $AFTER_FORK_CALLED
+    assert $AFTER_FORK_CALLED == workerA.will_fork?
+  end
+
+  it "Will not call an after_fork hook when the worker can't fork" do
+    Resque.redis.flushall
+    $AFTER_FORK_CALLED = false
+    Resque.after_fork = Proc.new { $AFTER_FORK_CALLED = true }
+    workerA = Resque::Worker.new(:jobs)
+    workerA.cant_fork = true
+
+    assert !$AFTER_FORK_CALLED
+    Resque::Job.create(:jobs, SomeJob, 20, '/tmp')
+    workerA.work(0)
+    assert !$AFTER_FORK_CALLED
   end
 
   it "returns PID of running process" do
@@ -528,11 +536,30 @@ describe "Resque::Worker" do
         end
       end
 
-      @worker.very_verbose = true
-      stdout, stderr = capture_io { @worker.work(0) }
+      class DummyLogger
+        attr_reader :messages
 
-      assert_equal 3, stdout.scan(/retrying/).count
-      assert_equal 1, stdout.scan(/quitting/).count
+        def initialize
+          @messages = []
+        end
+
+        def info(message); @messages << message; end
+        alias_method :debug, :info
+        alias_method :warn,  :info
+        alias_method :error, :info
+        alias_method :fatal, :info
+      end
+
+      Resque.logger = DummyLogger.new
+      begin
+        @worker.work(0)
+        messages = Resque.logger.messages
+      ensure
+        reset_logger
+      end
+
+      assert_equal 3, messages.grep(/retrying/).count
+      assert_equal 1, messages.grep(/quitting/).count
     ensure
       class Redis::Client
         alias_method :reconnect, :original_reconnect
@@ -662,5 +689,37 @@ describe "Resque::Worker" do
         end
       end
     end
+
+    class SuicidalJob
+      @queue = :jobs
+
+      def self.perform
+        Process.kill('KILL', Process.pid)
+      end
+
+      def self.on_failure_store_exception(exc, *args)
+        @@failure_exception = exc
+      end
+    end
+
+    it "will notify failure hooks when a job is killed by a signal" do
+      begin
+        $TESTING = false
+        Resque.enqueue(SuicidalJob)
+        @worker.work(0)
+        assert_equal Resque::DirtyExit, SuicidalJob.send(:class_variable_get, :@@failure_exception).class
+      ensure
+        $TESTING = true
+      end
+    end
   end
+  
+  it "constantizes" do
+    assert_same Kernel, Resque::Worker.constantize(:Kernel)
+    assert_same MiniTest::Unit::TestCase, Resque::Worker.constantize('MiniTest::Unit::TestCase')
+    assert_raises NameError do
+      Resque::Worker.constantize('Object::MissingConstant')
+    end
+  end
+  
 end

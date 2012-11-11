@@ -1,3 +1,4 @@
+require 'logger'
 require 'redis/namespace'
 
 require 'resque/version'
@@ -9,6 +10,7 @@ require 'resque/failure/base'
 
 require 'resque/helpers'
 require 'resque/stat'
+require 'resque/logging'
 require 'resque/job'
 require 'resque/worker'
 require 'resque/plugin'
@@ -33,7 +35,7 @@ module Resque
   def redis=(server)
     case server
     when String
-      if server =~ /redis\:\/\//
+      if server['redis://']
         redis = Redis.connect(:url => server, :thread_safe => true)
       else
         server, namespace = server.split('/', 2)
@@ -79,6 +81,9 @@ module Resque
       redis.client.id
     end
   end
+
+  # Set or retrieve the current logger object
+  attr_accessor :logger
 
   # The `before_first_fork` hook will be run in the **parent** process
   # only once, before forking to run the first job. Be careful- any
@@ -148,6 +153,36 @@ module Resque
     register_hook(:after_pause, block)
   end
 
+  # The `before_perform` hook will be run in the child process before
+  # the job code is performed. This hook will run before any
+  # Job.before_perform hook.
+  #
+  # Call with a block to register a hook.
+  # Call with no arguments to return all registered hooks.
+  def before_perform(&block)
+    block ? register_hook(:before_perform, block) : hooks(:before_perform)
+  end
+
+  # Register an before_perform proc.
+  def before_perform=(block)
+    register_hook(:before_perform, block)
+  end
+
+  # The `after_perform` hook will be run in the child process after
+  # the job code has performed. This hook will run after any
+  # Job.after_perform hook.
+  #
+  # Call with a block to register a hook.
+  # Call with no arguments to return all registered hooks.
+  def after_perform(&block)
+    block ? register_hook(:after_perform, block) : hooks(:after_perform)
+  end
+
+  # Register an after_perform proc.
+  def after_perform=(block)
+    register_hook(:after_perform, block)
+  end
+
   def to_s
     "Resque Client connected to #{redis_id}"
   end
@@ -208,7 +243,15 @@ module Resque
   # To get the 3rd page of a 30 item, paginatied list one would use:
   #   Resque.peek('my_list', 59, 30)
   def peek(queue, start = 0, count = 1)
-    queue(queue).slice start, count
+    result = queue(queue).slice(start, count)
+
+    if result.nil?
+      []
+    elsif result.respond_to?(:to_ary)
+      result.to_ary || [result]
+    else
+      [result]
+    end
   end
 
   # Does the dirty work of fetching a range of items from a Redis list
@@ -324,11 +367,13 @@ module Resque
     end
     return if before_hooks.any? { |result| result == false }
 
-    Job.destroy(queue_from_class(klass), klass, *args)
+    destroyed = Job.destroy(queue_from_class(klass), klass, *args)
 
     Plugin.after_dequeue_hooks(klass).each do |hook|
       klass.send(hook, *args)
     end
+    
+    destroyed
   end
 
   # Given a class, try to extrapolate an appropriate queue based on a
@@ -442,3 +487,5 @@ module Resque
   end
 end
 
+# Log to STDOUT by default
+Resque.logger           = Logger.new(STDOUT)

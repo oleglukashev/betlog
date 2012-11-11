@@ -2,6 +2,19 @@
 
 * Changed failures retry process to requeue. (@KensoDev #703)
 
+## 1.23.0 (2012-10-01)
+
+* don't run `before_fork` hook if Resque can't fork (@kjwierenga, @tarcieri, #672, #697)
+* don't run `after_fork` hook if Resque can't fork (@kjwierenga, @tarcieri, #672, #697)
+* retry connecting to redis up to 3 times (@trevorturk, #693)
+* pass exceptions raised by the worker into the Failure backend (@trevorturk, #693)
+
+## 1.22.0 (2012-08-21)
+
+* unregister signal handlers in child process when ENV["TERM_CHILD"] is set (@dylanasmith, #621)
+* new signal handling for TERM. See http://hone.heroku.com/resque/2012/08/21/resque-signals.html. (@wuputah, @yaaule, #638)
+* supports calling perform hooks when using Resque.inline (@jonhyman, #506)
+
 ## 1.21.0 (2012-07-02)
 
 * Add a flag to make sure failure hooks are only ran once (jakemack, #546)
