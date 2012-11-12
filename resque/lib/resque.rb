@@ -18,6 +18,7 @@ require 'resque/queue'
 require 'resque/multi_queue'
 require 'resque/coder'
 require 'resque/json_coder'
+require 'archive'
 
 require 'resque/vendor/utf8_util'
 
@@ -279,6 +280,7 @@ module Resque
 
   # Return the Resque::Queue object for a given name
   def queue(name)
+    self.queues
     @queues[name.to_s]
   end
 
@@ -372,7 +374,7 @@ module Resque
     Plugin.after_dequeue_hooks(klass).each do |hook|
       klass.send(hook, *args)
     end
-    
+
     destroyed
   end
 

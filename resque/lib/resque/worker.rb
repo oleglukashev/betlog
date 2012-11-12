@@ -1,4 +1,5 @@
 require 'time'
+require 'archive'
 
 module Resque
   # A Resque Worker processes jobs. On platforms that support fork(2),
@@ -270,7 +271,7 @@ module Resque
     # determine if yours does.
     def fork(job)
       return if @cant_fork
-      
+
       # Only run before_fork hooks if we're actually going to fork
       # (after checking @cant_fork)
       run_hook :before_fork, job if will_fork?
@@ -536,7 +537,7 @@ module Resque
     def idle?
       state == :idle
     end
-    
+
     def will_fork?
       !(@cant_fork || $TESTING)
     end
