@@ -1,0 +1,10 @@
+@import 'variables';
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: $main_font_size;
+	line-height: $main_line_height;
+	background-image: url(../asserts/background_pattern.png);
+	background-position: 0 0; 
+}
