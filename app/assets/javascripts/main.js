@@ -27,4 +27,18 @@ $(document).ready(function(){
     pager: false
 	});
 
+	/* event */
+	$('div.event div.event-title').on('click', function() {
+		if ( $(this).next().is(':visible') ) {
+			$(this).next().slideUp();
+			$(this).closest('div.event').find('div.event-hide-full')
+				.removeClass('event-hide-full')
+				.addClass('event-show-full');
+		} else {
+			$(this).next().slideDown();
+			$(this).closest('div.event').find('div.event-show-full')
+				.removeClass('event-show-full')
+				.addClass('event-hide-full');
+		}
+	});
 });
