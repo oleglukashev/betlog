@@ -611,6 +611,25 @@ div.coef-tab table tr.odd td {
 	background-color: #cdecf1;
 }
 
+div.coef-tab table tr td span.coef-position {
+	width: 11px;
+	height: 8px;
+	display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  margin: 5px 0 0 3px; 
+}
+
+div.coef-tab table tr td span.coef-position.up {
+	background: url(../assets/coef-up.png) no-repeat 0 0;
+}
+
+div.coef-tab table tr td span.coef-position.down {
+	background: url(../assets/coef-down.png) no-repeat 0 0;
+}
+
 
 /* Footer */
 div.footer
