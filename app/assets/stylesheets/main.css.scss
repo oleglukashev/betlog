@@ -1,5 +1,50 @@
 @import 'variables';
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 /*@font-face {
     font-family: 'pf_dindisplay_prothin';
     src: url('../assets/pfdindisplaypro-thin/pfdindisplaypro-thin-webfont.eot');
@@ -299,8 +344,8 @@ div.content
 	-moz-border-radius: 8px;
 	border-radius: 8px;
 	-webkit-box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.5);
--moz-box-shadow:    0px 2px 5px rgba(50, 50, 50, 0.5);
-box-shadow:         0px 2px 5px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 2px 5px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 2px 5px rgba(50, 50, 50, 0.5);
 }
 
 div.content-top
@@ -456,7 +501,7 @@ div.event
 	-moz-box-shadow:    0px 1px 1px rgba(50, 50, 50, 0.3);
 	box-shadow:         0px 1px 1px rgba(50, 50, 50, 0.3);
 	background-color: #fff;
-	margin-bottom: 4px;
+	margin-bottom: 5px;
 }
 
 div.event-title
@@ -465,6 +510,8 @@ div.event-title
 	font-size: 0;
 	cursor: pointer;
 }
+
+div.event-full-content { display: none; }
 
 div.event-part,
 div.event-border
@@ -483,17 +530,86 @@ div.event-part:first-child { text-align: right; }
 div.event-border { width: 25px; text-align: center; }
 div.event-date { float: left;}
 
-div.event-show-full { 
+div.event-show-full,
+div.event-hide-full {
 	float: right;
 	width: 17px;
 	height: 12px;
 	margin: 3px -10px 0 0;
+}
+
+div.event-show-full { 
 	background: url(../assets/pointer_down.png) no-repeat 0 0;
 }
 
+div.event-hide-full { 
+	background: url(../assets/pointer_top.png) no-repeat 0 0;
+}
 
+ul.coefs-tabs-title li {
+	margin-left: -10px;
+	background: url(../assets/bet_tab.png) no-repeat 0 0;
+	display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  position: relative;
+  *display: inline;
+}
 
+ul.coefs-tabs-title li:first-child { margin-left: 0; }
 
+ul.coefs-tabs-title li.active { background: url(../assets/bet_tab_active.png) no-repeat 0 0; z-index: 99px;}
+
+li.coefs-title-item-1 { z-index: 10; }
+li.coefs-title-item-2 { z-index: 9; }
+li.coefs-title-item-3 { z-index: 8; }
+li.coefs-title-item-4 { z-index: 7; }
+li.coefs-title-item-5 { z-index: 6; }
+li.coefs-title-item-6 { z-index: 5; }
+li.coefs-title-item-7 { z-index: 4; }
+li.coefs-title-item-8 { z-index: 3; }
+li.coefs-title-item-9 { z-index: 2; }
+li.coefs-title-item-10 { z-index: 1; }
+
+ul.coefs-tabs-title li a {
+	display: block;
+	width: 50px;
+	height: 24px;
+	line-height: 24px;
+	padding-right: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #555;
+	font-weight: bold;
+	text-shadow: 0px 1px 0 #fff;
+}
+
+div.coef-tab table { width: 100%; }
+div.coef-tab table tr th { 
+	height: 28px;
+	background: url(../assets/bet_coef_table_background.png) repeat-x 0 0;
+	vertical-align: middle;
+	font-weight: bold;
+	text-shadow: 0px 1px 0 #fff;
+	padding: 0 10px;
+}
+
+div.coef-tab table tr th:first-child {
+	text-align: left;
+}
+
+div.coef-tab table tr td {
+	padding: 2px 10px;
+	border: 1px solid #d7d7d7;
+	font-weight: bold;
+}
+
+div.coef-tab table tr td.td1 { width: 40%; }
+
+div.coef-tab table tr.odd td {
+	background-color: #cdecf1;
+}
 
 
 /* Footer */
