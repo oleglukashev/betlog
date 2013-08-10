@@ -390,21 +390,23 @@ div.content-body
 {
 	padding: 7px 30px;
 	background-color: #ebebeb;
+	font-size: 0;
 }
 
 
-div.events, div.events-menu
+div.events, div.sport-menu
 {
 	display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
   zoom: 1;
   *display: inline;
+  font-size: 12px;
 }
 
 div.events
 {
-	width: 615px;
+	width: 650px;
 }
 
 div.events-content
@@ -630,6 +632,119 @@ div.coef-tab table tr td span.coef-position.down {
 	background: url(../assets/coef-down.png) no-repeat 0 0;
 }
 
+
+/* Menu */
+
+div.sport-menu { width: 190px; }
+
+div.sport-menu h1 { margin-left: 20px; }
+
+div.sport-menu ul li.active div.sport-menu-item {
+	margin: 2px 3px 2px 0;
+	-webkit-border-radius: 0 6px 6px 0;
+	-moz-border-radius: 0 6px 6px 0;
+	border-radius: 0 6px 6px 0;
+	-webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
+	background: none;
+	text-shadow: 0px 1px 0 #fff;
+	cursor: pointer;
+}
+
+div.sport-menu ul { margin-top: 50px; }
+
+div.sport-menu ul li { overflow: hidden; }
+
+div.sport-menu ul li.active div.sport-menu-item-top
+{
+	padding-right: 6px;
+	background: url(../assets/sec_convex_right_top.png) no-repeat right 0;	
+}
+
+div.sport-menu ul li.active div.sport-menu-item-top div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_top.png) repeat-x 0 0;
+}
+
+div.sport-menu ul li.active div.sport-menu-item-bottom
+{
+	padding-right: 6px;
+	background: url(../assets/sec_convex_right_bottom.png) no-repeat right bottom;	
+}
+
+
+div.sport-menu ul li.active div.sport-menu-item-bottom div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_bottom.png) repeat-x 0 bottom;
+}
+
+div.sport-menu ul li div.sport-menu-item-body
+{
+	padding: 20px 20px 20px 10px;
+	margin: 0 3px 0 10px;
+	font-size: 16px;
+	background: url(../assets/menu_border.png) repeat-x 0 bottom;
+}
+
+div.sport-menu ul li.active div.sport-menu-item-body
+{
+	padding: 14px 20px;
+	margin: 0;
+	background: #f9f9f9;
+}
+
+div.sport-menu ul li ul
+{
+	margin: 0;
+}
+
+div.sport-menu ul li ul li { 
+	margin: 0;
+	padding: 6px 20px;
+}
+
+div.sport-menu ul li ul li.active,
+div.sport-menu ul li ul li:hover
+{
+	color: #000;
+}
+
+div.sport-menu ul li div.sport-submenu
+{
+	margin: -1px 10px 2px 0;
+	-webkit-border-radius: 0 0 6px 0;
+	-moz-border-radius: 0 0 6px 0;
+	border-radius: 0 0 6px 0;
+	-webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
+	text-shadow: 0px 1px 0 #fff;
+	cursor: pointer;
+}
+
+div.sport-menu ul li div.sport-submenu div.sport-submenu-body
+{
+	background-color: #e1e1e1;
+}
+
+div.sport-menu ul li div.sport-submenu div.sport-submenu-bottom
+{
+	padding-right: 5px;
+	background: url(../assets/submenu_right_bottom.png) no-repeat right bottom;	
+}
+
+
+div.sport-menu ul li div.sport-submenu div.sport-submenu-bottom div
+{
+	padding: 0;
+	height: 6px;
+	background: #e1e1e1;
+}
 
 /* Footer */
 div.footer
