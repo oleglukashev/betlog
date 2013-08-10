@@ -12,6 +12,6 @@
 //
 //= require jquery-1.10.2.min
 //= require jquery.placeholder.min
-//= require backbone
+//= require angular.min
 //= require jquery.bxslider.min
 //= require_tree .
