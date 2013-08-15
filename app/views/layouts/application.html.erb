@@ -169,67 +169,21 @@
 				<div class="sport-menu" ng-controller="SportsLists">
 					<h1>Категории</h1>
 					<ul>
-						<li class="active" ng-click="activeSportTab()">
-							<div class="sport-menu-item">
+						<li ng-class="{ active: sport.id == 1 }" ng-repeat="sport in sport_lists">
+							<div class="sport-menu-item" ng-click="activeSportTab($event);">
 								<div class="sport-menu-item-top"><div></div></div>
 								<div class="sport-menu-item-body">
-									Футбол
+									{{ sport.name }}
 								</div>
 								<div class="sport-menu-item-bottom"><div></div></div>
 							</div>
-							<div class="sport-submenu">
-									<div class="sport-submenu-body">
-										<ul>
-											<li class="active">Чемпионат России</li>
-											<li>Чемпионат Украины</li>
-										</ul>
-									</div>
-									<div class="sport-submenu-bottom"><div></div></div>
+							<div ng-class="{ true:'sport-submenu', false:'sport-submenu hide' }[ sport.id == 1 ]">
+								<div class="sport-submenu-body">
+									<ul>
+										<li ng-repeat="champship in championships" ng-class="{ active: champship.id == 1 }">{{ champship.name }}</li>
+									</ul>
 								</div>
-						</li>
-						<li ng-click="activeSportTab()">
-							<div class="sport-menu-item">
-								<div class="sport-menu-item-top"><div></div></div>
-								<div class="sport-menu-item-body">
-									Баскетбол
-								</div>
-								<div class="sport-menu-item-bottom"><div></div></div>
-							</div>
-						</li>
-						<li ng-click="activeSportTab()">
-							<div class="sport-menu-item">
-								<div class="sport-menu-item-top"><div></div></div>
-								<div class="sport-menu-item-body">
-									Волейбол
-								</div>
-								<div class="sport-menu-item-bottom"><div></div></div>
-							</div>
-						</li>
-						<li ng-click="activeSportTab()">
-							<div class="sport-menu-item">
-								<div class="sport-menu-item-top"><div></div></div>
-								<div class="sport-menu-item-body">
-									Теннис
-								</div>
-								<div class="sport-menu-item-bottom"><div></div></div>
-							</div>
-						</li>
-						<li ng-click="activeSportTab()">
-							<div class="sport-menu-item">
-								<div class="sport-menu-item-top"><div></div></div>
-								<div class="sport-menu-item-body">
-									Хоккей
-								</div>
-								<div class="sport-menu-item-bottom"><div></div></div>
-							</div>
-						</li>
-						<li ng-click="activeSportTab()">
-							<div class="sport-menu-item">
-								<div class="sport-menu-item-top"><div></div></div>
-								<div class="sport-menu-item-body">
-									Гандбол
-								</div>
-								<div class="sport-menu-item-bottom"><div></div></div>
+								<div class="sport-submenu-bottom"><div></div></div>
 							</div>
 						</li>
 					</ul>

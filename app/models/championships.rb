@@ -1,3 +1,3 @@
 class Championships < ActiveRecord::Base
-  attr_accessible :index
+  attr_accessible :name, :sport_id
 end
