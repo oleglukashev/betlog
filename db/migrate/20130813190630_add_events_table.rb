@@ -1,3 +1,4 @@
+#encoding: utf-8
 class AddEventsTable < ActiveRecord::Migration
   def up
   	create_table :events do |t|

@@ -1,4 +1,4 @@
-class AddСhampionshipsTable < ActiveRecord::Migration
+class AddChampionshipsTable < ActiveRecord::Migration
   def up
   	create_table :championships do |t|
       t.string :name, :null => false

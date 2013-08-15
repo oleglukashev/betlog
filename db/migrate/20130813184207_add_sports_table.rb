@@ -1,8 +1,8 @@
+#encoding: utf-8
 class AddSportsTable < ActiveRecord::Migration
   def up
   	create_table :sports do |t|
       t.string :name, :null => false
-      
       t.timestamps 
     end
   end

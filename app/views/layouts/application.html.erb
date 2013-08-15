@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="betlog">
 <head>
   <title>Betlog</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
@@ -10,7 +10,7 @@
 	<div id="carcas">
 		<div class="header">
 			<div class="navigation">
-				<a href="/">Войти</a> или <a href="/">Зарегистрироваться</a>
+				<a href="/">Войти</a>
 			</div>
 			<div class="logo"><a href="/"><img src="assets/logo.png" title="Betlog" /></a></div>
 			<div class="search">
@@ -19,99 +19,9 @@
 					<div><div><div><input type="text" placeholder="Поиск..." /></div></div></div>
 				</div>
 			</div>
-			<div class="pastevents">
-				<div class="pastevents-menu">
-					<div class="pastevents-menu-item active"><div><div>Футбол</div></div></div>
-					<div class="pastevents-menu-item"><div><div>Футбол</div></div></div>
-					<div class="pastevents-menu-item"><div><div>Футбол</div></div></div>
-					<div class="pastevents-menu-item"><div><div>Футбол</div></div></div>
-					<div class="pastevents-menu-item"><div><div>Футбол</div></div></div>
-				</div>
-				<div class="pastevents-items"><div><div>
-					<ul class="pastevents-items-carousel">
-						<li>
-							<div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li><div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li>
-							<div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li>
-							<div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li><div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li>
-							<div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li>
-							<div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li><div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li>
-							<div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li>
-							<div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li><div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-						<li>
-							<div class="pastevents-item">
-								<p class="pastevents-item-date">15:00</p>
-								<p class="pastevents-item-team">Спартак<span>3</span></p>
-								<p class="pastevents-item-team">Локомотив<span>0</span></p>
-							</div>
-						</li>
-					</ul>
-				</div></div></div>
-			</div>
+			
+			<%= render 'layouts/past_events' %>
+
 		</div>
 		<div class="content">
 			<div class="content-top"><div><div></div></div></div>
@@ -256,10 +166,10 @@
 						<div class="events-content-bottom"><div><div></div></div></div>
 					</div>
 				</div>
-				<div class="sport-menu">
+				<div class="sport-menu" ng-controller="SportsLists">
 					<h1>Категории</h1>
 					<ul>
-						<li class="active">
+						<li class="active" ng-click="activeSportTab()">
 							<div class="sport-menu-item">
 								<div class="sport-menu-item-top"><div></div></div>
 								<div class="sport-menu-item-body">
@@ -277,11 +187,47 @@
 									<div class="sport-submenu-bottom"><div></div></div>
 								</div>
 						</li>
-						<li>
+						<li ng-click="activeSportTab()">
 							<div class="sport-menu-item">
 								<div class="sport-menu-item-top"><div></div></div>
 								<div class="sport-menu-item-body">
 									Баскетбол
+								</div>
+								<div class="sport-menu-item-bottom"><div></div></div>
+							</div>
+						</li>
+						<li ng-click="activeSportTab()">
+							<div class="sport-menu-item">
+								<div class="sport-menu-item-top"><div></div></div>
+								<div class="sport-menu-item-body">
+									Волейбол
+								</div>
+								<div class="sport-menu-item-bottom"><div></div></div>
+							</div>
+						</li>
+						<li ng-click="activeSportTab()">
+							<div class="sport-menu-item">
+								<div class="sport-menu-item-top"><div></div></div>
+								<div class="sport-menu-item-body">
+									Теннис
+								</div>
+								<div class="sport-menu-item-bottom"><div></div></div>
+							</div>
+						</li>
+						<li ng-click="activeSportTab()">
+							<div class="sport-menu-item">
+								<div class="sport-menu-item-top"><div></div></div>
+								<div class="sport-menu-item-body">
+									Хоккей
+								</div>
+								<div class="sport-menu-item-bottom"><div></div></div>
+							</div>
+						</li>
+						<li ng-click="activeSportTab()">
+							<div class="sport-menu-item">
+								<div class="sport-menu-item-top"><div></div></div>
+								<div class="sport-menu-item-body">
+									Гандбол
 								</div>
 								<div class="sport-menu-item-bottom"><div></div></div>
 							</div>
