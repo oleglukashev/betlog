@@ -1,24 +1,30 @@
-<div id="loginbox" ng-controller="Authorization">
+<div id="loginbox" class="hide" ng-controller="Authorization">
 	<div class="loginbox-content-top"><div><div></div></div></div>
 	<div class="loginbox-content-body">
-		<div class="loginbox-close"></div>
+		<div class="loginbox-close" ng-click="hideLogin();"></div>
 		<p class="loginbox-title">Авторизация</p>
 		<form novalidate name="authorization">
 			<div class="input-wrap">
 				<div><div><div><input type="email" name="login" login-validate placeholder="Логин" ng-model="user.login" required max="10"></div></div></div>
 			</div>
-			<p class="loginbox-input-error" ng-class="lgHasRequired">Введите E-mail адрес</p>
-      <p class="loginbox-input-error" ng-class="lgHasEmail">Введен неправильный E-mail адрес</p>
+			<div class="loginbox-input-error-container">
+				<p class="loginbox-input-error" ng-class="lgHasRequired">Введите E-mail адрес</p>
+      	<p class="loginbox-input-error" ng-class="lgHasEmail">Введен неправильный E-mail адрес</p>
+      	<p class="loginbox-input-error" ng-class="lgAlredyExists">Введенный E-mail уже занят</p>
+			</div>
 			<div class="input-wrap">
 				<div><div><div><input type="password" password-validate placeholder="Пароль" name="passwd" ng-model="user.password" required min="8"></div></div></div>
 			</div>
-			<p class="loginbox-input-error" ng-class="pwdHasLetter">At least <strong>one letter</strong></p>
-      <p class="loginbox-input-error" ng-class="pwdHasNumber">At least <strong>one number</strong></p>
-      <p class="loginbox-input-error" ng-class="pwdValidLength">At least <strong>8 characters long</p>
+			<div class="loginbox-input-error-container">
+				<p class="loginbox-input-error" ng-class="pwdHasLetter">Пароль должен содержать хотя бы одну букву</strong></p>
+      	<p class="loginbox-input-error" ng-class="pwdHasNumber">Пароль должен содержать хотя бы одну цифру</strong></p>
+      	<p class="loginbox-input-error" ng-class="pwdValidLength">Пароль должен содержать не менее 8 символов</p>
+			</div>
 			<div class="loginbox-remember">
 				<p><input type="checkbox" value="1" checked="checked" /></p><p>Запомнить меня</span></p>
 			</div>
-			<p><button ng-disabled="!authorization.$valid" ng-click="loginSubmit();">Войти</button></p>
+			{{ formValidate }} 
+			<p><button ng-disabled="!passwdValidate || ! loginValidate" ng-click="loginSubmit();">Войти</button></p>
 		</form>
 	</div>
 	<div class="loginbox-content-bottom"><div><div></div></div></div>

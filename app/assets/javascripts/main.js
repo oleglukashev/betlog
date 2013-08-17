@@ -1,9 +1,4 @@
 $(document).ready(function(){
-
-	jQuery('#loginbox div.loginbox-close').on('click', function() {
-		$.fancybox.close();
-	})
-
 	
 	/* Search block*/
 	$("div.search input").placeholder();

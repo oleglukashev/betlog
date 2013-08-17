@@ -1,3 +1,11 @@
 class Users < ActiveRecord::Base
-  attr_accessible :login, :email, :crypted_password, :password_salt, :role, :login_count, :last_request_at, :last_login_at, :current_login_at, :last_login_ip, :current_login_ip 
+	require 'digest/md5'
+
+	attr_accessible :login, :name, :role, :password
+
+	before_save :encrypt_password
+
+	def encrypt_password
+		self.password = Digest::MD5.hexdigest( password )
+	end
 end

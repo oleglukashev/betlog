@@ -45,6 +45,7 @@ table {
 }
 
 
+
 /*@font-face {
     font-family: 'pf_dindisplay_prothin';
     src: url('../assets/pfdindisplaypro-thin/pfdindisplaypro-thin-webfont.eot');
@@ -844,11 +845,17 @@ div.loginbox-content-body form div.input-wrap
 	margin-bottom: 10px;
 }
 
-p.loginbox-input-error
+div.loginbox-input-error-container p.loginbox-input-error
 {
+	display: none;
 	color: red;
 	margin-top: -5px;
 	margin-bottom: 10px;
+}
+
+div.loginbox-input-error-container p.novalid
+{
+	display: block;
 }
 
 div.loginbox-remember
