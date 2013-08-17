@@ -1,6 +1,22 @@
 /* Controllers */
 
 angular.module('betlog.controllers', [])
+	.controller('Authorization', function( $scope, $http, $element ) {
+
+		//$scope.user.login = 'me@example.com';
+		$scope.validateLogin = function( $scope ) {
+			console.log($scope)
+		}
+
+		$scope.loginSubmit = function( $event ) {
+			console.dir(authorization.email);
+      /*var request = $http.post('/users', {email: $scope.user.email, password: $scope.user.password});
+      
+      return request.then(function(response) {
+        
+      });*/
+    }
+	})
 	.controller('SportsLists', function( $scope, $http, $element ) {
 
 		$scope.activeSportTab = function( $event ) {

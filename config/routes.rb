@@ -1,5 +1,8 @@
 Betlog::Application.routes.draw do
   resources :homes
+  resources :users, :only => [:new, :create, :edit, :update]
+
+  get 'users/users_exists' => 'users#user_exists'
 
 
   root to: "homes#index"

@@ -10,7 +10,7 @@
 	<div id="carcas">
 		<div class="header">
 			<div class="navigation">
-				<a href="/">Войти</a>
+				<a id="signin" fancybox href="#loginbox">Войти</a>
 			</div>
 			<div class="logo"><a href="/"><img src="assets/logo.png" title="Betlog" /></a></div>
 			<div class="search">
@@ -193,8 +193,9 @@
 			<%= yield %>
 			<div class="content-bottom"><div><div></div></div></div>
 		</div>
-		<div class="footer">
-		</div>
+		
+		<%= render 'layouts/footer'%>
+
 	</div>
 </body>
 </html>

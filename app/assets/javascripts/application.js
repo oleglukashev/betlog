@@ -19,4 +19,5 @@
 //= require directives
 //= require scripts
 //= require jquery.bxslider.min
-//= require_tree .
+//=require jquery.fancybox.pack
+//= require main
