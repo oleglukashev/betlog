@@ -2,6 +2,10 @@
 
 angular.module('betlog.controllers', [])
 	.controller('Authorization', function( $scope, $http, $element ) {
+		$scope.login = '';
+		$scope.password = '';
+		$scope.remember_me = false;
+
 		$scope.hideLogin = function(){
 			$.fancybox.close();
 		}
@@ -23,15 +27,20 @@ angular.module('betlog.controllers', [])
         console.dir(headers);
       });*/
 
+			console.log($scope.login);
+			console.log($scope.password);
+
+			var data = {
+				'user_session[login]': $scope.login,
+				'user_session[password]': $scope.password,
+				'user_session[remember_me]': $scope.remember_me
+			};
+
 			$.ajax({
       	url: '/user_sessions',
         type: "POST",
         dataType: "json",
-        data: { 
-					'user_session[login]': $scope.user.login,
-					'user_session[password]': $scope.user.password,
-					'remember_me': $scope.remember_me 
-				},
+        data: data,
 				success: function( data )
 				{
 					if ( data.id )
