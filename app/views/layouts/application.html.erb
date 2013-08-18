@@ -10,7 +10,11 @@
 	<div id="carcas">
 		<div class="header">
 			<div class="navigation">
-				<a id="signin" fancybox href="#loginbox">Войти</a>
+				<% if current_user %>
+					<a fancybox href="javascript://"><%= current_user.name %></a>
+				<% else %>
+					<a id="signin" fancybox href="#loginbox">Войти</a>
+				<% end %>
 			</div>
 			<div class="logo"><a href="/"><img src="assets/logo.png" title="Betlog" /></a></div>
 			<div class="search">

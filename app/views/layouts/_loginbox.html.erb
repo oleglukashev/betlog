@@ -5,26 +5,15 @@
 		<p class="loginbox-title">Авторизация</p>
 		<form novalidate name="authorization">
 			<div class="input-wrap">
-				<div><div><div><input type="email" name="login" login-validate placeholder="Логин" ng-model="user.login" required max="10"></div></div></div>
-			</div>
-			<div class="loginbox-input-error-container">
-				<p class="loginbox-input-error" ng-class="lgHasRequired">Введите E-mail адрес</p>
-      	<p class="loginbox-input-error" ng-class="lgHasEmail">Введен неправильный E-mail адрес</p>
-      	<p class="loginbox-input-error" ng-class="lgAlredyExists">Введенный E-mail уже занят</p>
+				<div><div><div><input type="email" name="login" placeholder="Логин" ng-model="user.login" required max="10"></div></div></div>
 			</div>
 			<div class="input-wrap">
-				<div><div><div><input type="password" password-validate placeholder="Пароль" name="passwd" ng-model="user.password" required min="8"></div></div></div>
-			</div>
-			<div class="loginbox-input-error-container">
-				<p class="loginbox-input-error" ng-class="pwdHasLetter">Пароль должен содержать хотя бы одну букву</strong></p>
-      	<p class="loginbox-input-error" ng-class="pwdHasNumber">Пароль должен содержать хотя бы одну цифру</strong></p>
-      	<p class="loginbox-input-error" ng-class="pwdValidLength">Пароль должен содержать не менее 8 символов</p>
+				<div><div><div><input type="password" placeholder="Пароль" name="passwd" ng-model="user.password" required min="8"></div></div></div>
 			</div>
 			<div class="loginbox-remember">
-				<p><input type="checkbox" value="1" checked="checked" /></p><p>Запомнить меня</span></p>
+				<p><input type="checkbox" value="1" mg-model="remember_me" name="remember_me" checked="checked" /></p><p>Запомнить меня</span></p>
 			</div>
-			{{ formValidate }} 
-			<p><button ng-disabled="!passwdValidate || ! loginValidate" ng-click="loginSubmit();">Войти</button></p>
+			<p><button ng-click="loginSubmit();" onclick="return false;">Войти</button></p>
 		</form>
 	</div>
 	<div class="loginbox-content-bottom"><div><div></div></div></div>

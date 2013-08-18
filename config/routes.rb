@@ -1,6 +1,10 @@
 Betlog::Application.routes.draw do
+  get "user_sessions/new"
+
   resources :homes
   resources :users, :only => [:new, :create, :edit, :update]
+  resource :user_sessions, :only => [:new, :create, :destroy]
+  
 
   get 'users/user_exists' => 'users#user_exists'
 

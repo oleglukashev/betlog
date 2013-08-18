@@ -7,11 +7,38 @@ angular.module('betlog.controllers', [])
 		}
 
 		$scope.loginSubmit = function( $event ) {
-      /*var request = $http.post('/users', {email: $scope.user.email, password: $scope.user.password});
-      
-      return request.then(function(response) {
-        
+
+			/*$http({
+          url: '/user_sessions',
+          method: "POST",
+          data: { 
+						'user_session[login]': $scope.user.login,
+						'user_session[password]': $scope.user.password,
+						'remember_me': $scope.remember_me 
+					},
+          headers: {'Content-Type': 'application/json'}
+      }).success(function (data, status, headers, config) {
+      	$scope.users = data.users; // assign  $scope.persons here as promise is resolved here 
+      }).error(function (data, status, headers, config) {
+        console.dir(headers);
       });*/
+
+			$.ajax({
+      	url: '/user_sessions',
+        type: "POST",
+        dataType: "json",
+        data: { 
+					'user_session[login]': $scope.user.login,
+					'user_session[password]': $scope.user.password,
+					'remember_me': $scope.remember_me 
+				},
+				success: function( data )
+				{
+					if ( data.id )
+						$scope.hideLogin();
+					//else
+				}
+			});
     }
 	})
 	.controller('SportsLists', function( $scope, $http, $element ) {

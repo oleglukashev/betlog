@@ -29,7 +29,7 @@ angular.module('betlog.directives', [])
             ctrl.$parsers.unshift(function(viewValue) {
                 scope.lgHasRequired = undefined;
                 scope.lgHasEmail = undefined;
-                scope.lgAlredyExists = undefined;
+                //scope.lgAlredyExists = undefined;
                 scope.loginValidate = false;
 
                 scope.lgHasRequired = (viewValue && viewValue.length > 0 ? undefined : 'novalid');
@@ -44,7 +44,7 @@ angular.module('betlog.directives', [])
                     return false;
                 }
 
-                $http({method: 'GET', url: '/users/user_exists?login=' + viewValue}).
+                /*$http({method: 'GET', url: '/users/user_exists?login=' + viewValue}).
 			       success(function(data, status, headers, config) {
                         scope.lgAlredyExists = 'novalid';
 					})
@@ -54,7 +54,7 @@ angular.module('betlog.directives', [])
                 if ( scope.lgAlredyExists )
                 {
                     return false;
-                }
+                }*/
 
                 scope.loginValidate = true;
             });

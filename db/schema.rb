@@ -35,18 +35,25 @@ ActiveRecord::Schema.define(:version => 20130815084617) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login",                                :null => false
-    t.string   "name",                                 :null => false
-    t.string   "password",                             :null => false
-    t.string   "role",             :default => "user"
-    t.integer  "login_count",      :default => 0,      :null => false
+    t.string   "login",                                  :null => false
+    t.string   "name",                                   :null => false
+    t.string   "role",               :default => "user", :null => false
+    t.string   "crypted_password",                       :null => false
+    t.string   "password_salt",                          :null => false
+    t.string   "persistence_token",                      :null => false
+    t.integer  "login_count",        :default => 0,      :null => false
+    t.integer  "failed_login_count", :default => 0,      :null => false
     t.datetime "last_request_at"
-    t.datetime "last_login_at"
     t.datetime "current_login_at"
-    t.string   "last_login_ip"
+    t.datetime "last_login_at"
     t.string   "current_login_ip"
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
+    t.string   "last_login_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
   end
+
+  add_index "users", ["login"], :name => "index_users_on_login", :unique => true
+  add_index "users", ["name"], :name => "index_users_on_name", :unique => true
+  add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token", :unique => true
 
 end
