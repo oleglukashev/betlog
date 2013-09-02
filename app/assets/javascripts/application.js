@@ -12,12 +12,14 @@
 //
 //= require jquery-1.10.2.min
 //= require jquery.placeholder.min
-//= require angular.min
-//= require controllers
-//= require filters
-//= require services
-//= require directives
-//= require scripts
 //= require jquery.bxslider.min
 //=require jquery.fancybox.pack
 //= require main
+
+
+//= require angular
+//= require filters
+//= require services
+//= require directives
+//= require_tree ./angular
+//= require betlog

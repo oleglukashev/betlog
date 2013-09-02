@@ -845,9 +845,9 @@ div.loginbox-content-body form div.input-wrap
 	margin-bottom: 10px;
 }
 
-div.loginbox-input-error-container p.loginbox-input-error
+p.loginbox-input-error
 {
-	display: none;
+	font-weight: bold;
 	color: red;
 	margin-top: -5px;
 	margin-bottom: 10px;
@@ -864,13 +864,21 @@ div.loginbox-remember
 	margin-bottom: 10px;
 }
 
-div.loginbox-remember p {
+div.loginbox-content-body form div p {
 	display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
   zoom: 1;
   *display: inline;
   font-size: 12px;
+}
+
+div.loginbox-content-body form div p button {
+	margin-top: 6px;
+}
+
+p.loginbox-forgot {
+	float: right;
 }
 
 div.loginbox-remember p:first-child

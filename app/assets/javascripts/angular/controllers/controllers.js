@@ -50,7 +50,7 @@ angular.module('betlog.controllers', [])
 			});
     }
 	})
-	.controller('SportsLists', function( $scope, $http, $element ) {
+	.controller('Sports', function( $scope, $http, $element ) {
 
 		$scope.activeSportTab = function( $event ) {
 			$element.find('ul > li')
