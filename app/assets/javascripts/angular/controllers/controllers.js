@@ -1,6 +1,48 @@
 /* Controllers */
 
 angular.module('betlog.controllers', [])
+	.controller('Registration', function( $scope, $http, $element ) {
+		$scope.login = '';
+		$scope.name = '';
+		$scope.password = '';
+
+		$scope.showRegister = function() {
+			
+		}
+
+		$scope.hideRegister = function(){
+			$.fancybox.close();
+		}
+
+		$scope.registerSubmit = function( $event ) {
+
+			var data = {
+				login: $scope.login,
+				name: $scope.name,
+				password: $scope.password
+			};
+
+			$.ajax({
+      	url: '/user/',
+        type: "POST",
+        dataType: "json",
+        data: data,
+				success: function( data )
+				{
+					if ( data.id )
+						$scope.hideLogin();
+		
+				},
+				error: function( xhr, status, errorThrown )
+				{
+					if ( xhr.status == 422 )
+						$element.find('p.loginbox-input-error').text( xhr.responseJSON.login[0] ).removeClass('hide');
+				}
+			});
+    }
+	})
+	
+
 	.controller('Authorization', function( $scope, $http, $element ) {
 		$scope.login = '';
 		$scope.password = '';
@@ -11,24 +53,6 @@ angular.module('betlog.controllers', [])
 		}
 
 		$scope.loginSubmit = function( $event ) {
-
-			/*$http({
-          url: '/user_sessions',
-          method: "POST",
-          data: { 
-						'user_session[login]': $scope.user.login,
-						'user_session[password]': $scope.user.password,
-						'remember_me': $scope.remember_me 
-					},
-          headers: {'Content-Type': 'application/json'}
-      }).success(function (data, status, headers, config) {
-      	$scope.users = data.users; // assign  $scope.persons here as promise is resolved here 
-      }).error(function (data, status, headers, config) {
-        console.dir(headers);
-      });*/
-
-			console.log($scope.login);
-			console.log($scope.password);
 
 			var data = {
 				'user_session[login]': $scope.login,
@@ -45,13 +69,32 @@ angular.module('betlog.controllers', [])
 				{
 					if ( data.id )
 						$scope.hideLogin();
-					//else
+		
+				},
+				error: function( xhr, status, errorThrown )
+				{
+					if ( xhr.status == 422 )
+						$element.find('p.loginbox-input-error').text( xhr.responseJSON.login[0] ).removeClass('hide');
 				}
 			});
     }
 	})
+	
+
 	.controller('Sports', function( $scope, $http, $element ) {
 
+		$scope.init = function() {
+			/* get dates */
+			$http({method: 'GET', url: '/'}).
+	  		success(function(data, status, headers, config) {
+	  			$scope.sport_lists = data.sports;
+	  			$scope.championships = data.championships;
+	  	}).
+	  	error(function(data, status, headers, config) {
+
+	  	});
+		}
+		
 		$scope.activeSportTab = function( $event ) {
 			$element.find('ul > li')
 				.removeClass('active')
@@ -65,13 +108,5 @@ angular.module('betlog.controllers', [])
 						.removeClass('hide');
 		}
 
-		/* get dates */
-		$http({method: 'GET', url: '/'}).
-  		success(function(data, status, headers, config) {
-  			$scope.sport_lists = data.sports;
-  			$scope.championships = data.championships;
-  	}).
-  	error(function(data, status, headers, config) {
-
-  	});
-	});
+		$scope.init();
+	})
