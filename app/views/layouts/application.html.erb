@@ -9,11 +9,11 @@
 <body>
 	<div id="carcas">
 		<div class="header">
-			<div class="navigation">
+			<div class="navigation" ng-controller="Navigation">
 				<% if current_user %>
 					<a fancybox href="javascript://"><%= current_user.name %></a>
 				<% else %>
-					<a id="signin" fancybox href="#loginbox">Войти</a>
+					<a id="signin" ng-click="showAuthorization();" href="#">Войти</a>
 				<% end %>
 			</div>
 			<div class="logo"><a href="/"><img src="assets/logo.png" title="Betlog" /></a></div>
@@ -173,18 +173,18 @@
 				<div class="sport-menu" ng-controller="Sports">
 					<h1>Категории</h1>
 					<ul>
-						<li ng-class="{ active: sport.id == 1 }" ng-repeat="sport in sport_lists">
-							<div class="sport-menu-item" ng-click="activeSportTab($event);">
+						<li ng-class="{ active: sport.isActive }" ng-repeat="sport in sports">
+							<div class="sport-menu-item" ng-click="active( sport );">
 								<div class="sport-menu-item-top"><div></div></div>
-								<div class="sport-menu-item-body">
+								<div class="sport-menu-item-body" ng-class="{ 'no-border': sports[ $index-1 ].isActive }">
 									{{ sport.name }}
 								</div>
 								<div class="sport-menu-item-bottom"><div></div></div>
 							</div>
-							<div ng-class="{ true:'sport-submenu', false:'sport-submenu hide' }[ sport.id == 1 ]">
+							<div class="sport-submenu" ng-show="getChampionshipsBySportId( sport.id ).length">
 								<div class="sport-submenu-body">
 									<ul>
-										<li ng-repeat="champship in championships" ng-class="{ active: champship.id == 1 }">{{ champship.name }}</li>
+										<li ng-repeat="champship in getChampionshipsBySportId( sport.id )" ng-class="{ active: champship.id == 1 }">{{ champship.name }}</li>
 									</ul>
 								</div>
 								<div class="sport-submenu-bottom"><div></div></div>

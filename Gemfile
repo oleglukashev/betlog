@@ -9,6 +9,7 @@ gem 'pg'
 gem "authlogic"
 gem "rails3-generators"
 gem 'rails-i18n', '~> 3.0.0.pre'
+gem 'json'
 
 
 

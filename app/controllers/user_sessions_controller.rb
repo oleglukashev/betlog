@@ -5,6 +5,9 @@ class UserSessionsController < ApplicationController
 
   def create
     @user_session = UserSession.new(params[:user_session])
+
+    ActionController::Base.logger.info 123123123
+    ActionController::Base.logger.info params[:user_session]
     
     if @user_session.save
       respond_to do |format|

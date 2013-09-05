@@ -695,12 +695,18 @@ div.sport-menu ul li div.sport-menu-item-body
 	padding: 20px 20px 20px 10px;
 	margin: 0 3px 0 10px;
 	font-size: 16px;
-	background: url(../assets/menu_border.png) repeat-x 0 bottom;
+	background: url(../assets/menu_border.png) repeat-x 0 top;
+}
+
+div.sport-menu ul li:first-child div.sport-menu-item-body,
+div.sport-menu ul li div.sport-menu-item-body.no-border
+{
+	background-image: none;
 }
 
 div.sport-menu ul li.active div.sport-menu-item-body
 {
-	padding: 14px 20px;
+	padding: 12px 20px;
 	margin: 0;
 	background: #f9f9f9;
 }
@@ -723,6 +729,7 @@ div.sport-menu ul li ul li:hover
 
 div.sport-menu ul li div.sport-submenu
 {
+	display: none;
 	margin: -1px 10px 2px 0;
 	-webkit-border-radius: 0 0 6px 0;
 	-moz-border-radius: 0 0 6px 0;
@@ -732,6 +739,11 @@ div.sport-menu ul li div.sport-submenu
 	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
 	text-shadow: 0px 1px 0 #fff;
 	cursor: pointer;
+}
+
+div.sport-menu ul li.active div.sport-submenu
+{
+	display: block;
 }
 
 div.sport-menu ul li div.sport-submenu div.sport-submenu-body
@@ -770,6 +782,8 @@ div.footer
 
 #loginbox
 {
+	position: absolute;
+	top: 10px;
 	width: 247px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -777,6 +791,7 @@ div.footer
 	-webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
 	-moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.5);
 	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
+	z-index: 2;
 }
 
 div.loginbox-content-top
@@ -884,4 +899,22 @@ p.loginbox-forgot {
 div.loginbox-remember p:first-child
 {
 	margin: 2px 5px 0 0;
+}
+
+
+
+/* Overlay */
+#overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=40);
+	-moz-opacity: 0.4;
+	-khtml-opacity: 0.4;
+	opacity: 0.4;
+	z-index: 1;
 }

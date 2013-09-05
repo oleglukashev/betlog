@@ -124,6 +124,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   execjs
   jquery-rails
+  json
   pg
   rails (= 3.2.14)
   rails-i18n (~> 3.0.0.pre)
