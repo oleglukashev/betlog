@@ -15,12 +15,26 @@ angular.module('betlog.controllers', [])
 		$scope.name = '';
 		$scope.password = '';
 
+		$scope.init = function() {
+			$scope.resize();
+
+			jQuery(window).resize(function() {
+				$scope.resize();
+			});
+		}
+
 		$scope.show = function() {
 			$scope.isActive = true;
+			$rootScope.$broadcast('showOverlay');
 		}
 
 		$scope.close = function() {
 			$scope.isActive = false;
+			$rootScope.$broadcast('closeOverlay');
+		}
+
+		$scope.resize = function() {
+			jQuery('#registration').css( 'left', ( $(document).width() / 2 ) + 205 + 'px' );
 		}
 
 		$scope.submit = function( $event ) {
@@ -58,6 +72,8 @@ angular.module('betlog.controllers', [])
     $rootScope.$on('closeRegistration', function() {
     	$scope.close();
     });
+
+    $scope.init();
 	})
 	
 
