@@ -10,7 +10,21 @@ angular.module('betlog.directives', [])
 		};
 	})
 
+	
+	.directive('nameValidate', function( $http ) {
+		return {
+			require: 'ngModel',
+			link: function(scope, elm, attrs, ctrl) {
+				ctrl.$parsers.unshift(function(viewValue) {
+					scope.nameHasRequired = undefined;
+					scope.nameValidate = false;
+					scope.nameHasRequired = (viewValue && viewValue.length > 0 ? false : true);
+					scope.nameValidate = true;
+			});
+		}};
+	})
 
+	
 	.directive('loginValidate', function( $http ) {
 		return {
 			require: 'ngModel',
@@ -20,36 +34,38 @@ angular.module('betlog.directives', [])
 					scope.lgHasEmail = undefined;
 					//scope.lgAlredyExists = undefined;
 					scope.loginValidate = false;
-					scope.lgHasRequired = (viewValue && viewValue.length > 0 ? undefined : 'novalid');
+					scope.lgHasRequired = (viewValue && viewValue.length > 0 ? false : true);
 
 					if ( scope.lgHasRequired ) {
 						return false;
 
 				}
 
-				scope.lgHasEmail = (viewValue && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/.test(viewValue)) ? undefined : 'novalid';
+				scope.lgHasEmail = (viewValue && /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/.test(viewValue)) ? false : true;
 
 				if ( scope.lgHasEmail ) {
 					return false;
 				}
 
-				/*
 				$http({method: 'GET', url: '/users/user_exists?login=' + viewValue})
 					.success(function(data, status, headers, config) {
-						scope.lgAlredyExists = 'novalid';
+						scope.lgAlredyExists = true;
 					})
 					.error(function(data, status, headers, config) {
-						scope.lgAlredyExists = undefined;
+						scope.lgAlredyExists = false;
 					});
 
 				if ( scope.lgAlredyExists ) {
 					return false;
-				}*/
+				}
 
 				scope.loginValidate = true;
 			});
 		}};
-	}).directive('passwordValidate', function() {
+	})
+
+	
+	.directive('passwordValidate', function() {
 		return {
 			require: 'ngModel',
 			link: function(scope, elm, attrs, ctrl) {
@@ -57,7 +73,7 @@ angular.module('betlog.directives', [])
 					scope.pwdValidLength = undefined;
 					scope.pwdHasLetter = undefined;
 					scope.pwdHasNumber = undefined;
-					scope.passwdValidate = false;
+					scope.pwdValidate = false;
 					scope.pwdValidLength = (viewValue && viewValue.length >= 8 ? undefined : 'novalid' );
 
 					if ( scope.pwdValidLength ) {
@@ -76,7 +92,7 @@ angular.module('betlog.directives', [])
 						return false;
 					}
 
-					scope.passwdValidate = true;
+					scope.pwdValidate = true;
 				});
 			}};
 		}).directive('onKeyup', function() {

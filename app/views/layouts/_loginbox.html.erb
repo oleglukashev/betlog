@@ -32,18 +32,28 @@
 		<p class="loginbox-title">Регистрация</p>
 		<form novalidate name="registration">
 			<div class="input-wrap">
-				<div><div><div><input type="text" name="login" placeholder="E-mail" ng-model="login" required ></div></div></div>
+				<div><div><div><input type="text" name="login" placeholder="E-mail" ng-model="login" login-validate required ></div></div></div>
 			</div>
-			<p class="loginbox-input-error hide"></p>
+			<p class="loginbox-input-error" ng-show="lgHasEmail">Не является E-mail</p>
+			<p class="loginbox-input-error" ng-show="lgHasRequired">Поле не может быть пустым</p>
+			<p class="loginbox-input-error" ng-show="lgAlredyExists">Пользователь уже существует</p>
 			<div class="input-wrap">
-				<div><div><div><input type="text" name="name" placeholder="Имя" ng-model="name" required ></div></div></div>
+				<div><div><div><input type="text" name="name" placeholder="Имя" ng-model="name" name-validate required ></div></div></div>
 			</div>
-			<p class="loginbox-input-error hide"></p>
+			<p class="loginbox-input-error" ng-show="nameHasRequired">Поле не может быть пустым</p>
 			<div class="input-wrap">
-				<div><div><div><input type="password" placeholder="Пароль" name="password" ng-model="password" required min="8"></div></div></div>
+				<div><div><div><input type="password" placeholder="Пароль" name="password" ng-model="password" password-validate required min="8"></div></div></div>
+			</div>
+			<p class="loginbox-input-error" ng-show="pwdValidLength">Пароль должен быть не менее 8 символов</p>
+			<p class="loginbox-input-error" ng-show="pwdHasRequired">Пароль не может быть пустым</p>
+			<p class="loginbox-input-error" ng-show="pwdHasLetter">Пароль должен содержать хотя бы одну букву</p>
+			<p class="loginbox-input-error" ng-show="pwdHasNumber">Пароль должен содержать хотя бы одну цифру</p>
+
+			<div class="loginbox-remember">
+				<p><input type="checkbox" value="1" mg-model="subscribe_me" name="subscribe_me" checked="checked" /></p><p><span>Подписаться на новости</span></p>
 			</div>
 			<div>
-				<p><button ng-disabled="!login || !password" ng-click="submit();" eat-click >Зарегистрироваться</button></p>
+				<p><button ng-disabled="!loginValidate || !pwdValidate || !nameValidate" ng-click="submit();" eat-click >Зарегистрироваться</button></p>
 				<div class="clear"></div>
 			</div>
 		</form>

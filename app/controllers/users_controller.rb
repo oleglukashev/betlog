@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   def user_exists
   	login = params[:login]
 
-    user = Users.find_by_login login
+    user = User.find_by_login login
 
     if user
       render :json => user.id, :status => :ok
