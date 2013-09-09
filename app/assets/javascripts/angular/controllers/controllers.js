@@ -11,9 +11,12 @@ angular.module('betlog.controllers', [])
 	
 	
 	.controller('Registration', function( $scope, $http, $element, $rootScope ) {
-		$scope.login = '';
-		$scope.name = '';
-		$scope.password = '';
+		$scope.register = {
+			login: '',
+			password: '',
+			name: '',
+			subscribed: false
+		}
 
 		$scope.init = function() {
 			$scope.resize();
@@ -37,32 +40,31 @@ angular.module('betlog.controllers', [])
 			jQuery('#registration').css( 'left', ( $(document).width() / 2 ) + 205 + 'px' );
 		}
 
-		$scope.submit = function( $event ) {
+		$scope.submit = function() {
 
 			var data = {
-				login: $scope.login,
-				name: $scope.name,
-				password: $scope.password
-			};
+				'login': $scope.register.login,
+				'name': $scope.register.name,
+				'password': $scope.register.password,
+				'subscribed': $scope.register.subscribed
+			}
 
-			$http({ method: 'POST', url: '/user/', data: data }).
-	  		success(function(data, status, headers, config) {
-	  			if ( status === 200 && data.id )
-	  				$scope.hideLogin();
-	  	}).
-	  	error(function(data, status, headers, config) {
-	  		$scope.login_error = false;
-	  		$scope.password_error = false;
-	  		$element.find('p.loginbox-input-error').text('');
-
-	  		if ( data.login.length )
-	  			$scope.login_error = true;
-
-	  		if ( data.password.length )
-	  			$scope.password_error = true;
-
-	  		$element.find('p.loginbox-input-error:eq(' + ( data.login.length ? 0 : 1 ) + ')').text( data.login.length ? data.login : data.password );
-	  	});
+			$http({ method: 'POST', url: '/users', data: data })
+				.success(function(data, status, headers, config) {
+	  			if ( status === 200 && data.status === "ok" ) {
+	  				$scope.register = {
+							login: '',
+							password: '',
+							name: '',
+							subscribed: false
+						}
+	  				
+	  				$scope.close();
+	  			}
+	  		})
+				.error(function(data, status, headers, config) {
+	  			
+	  		});
     }
 
     $rootScope.$on('showRegistration', function() {
@@ -78,9 +80,11 @@ angular.module('betlog.controllers', [])
 	
 
 	.controller('Authorization', function( $scope, $http, $element, $rootScope ) {
-		$scope.login = '';
-		$scope.password = '';
-		$scope.remember_me = false;
+		$scope.login = {
+			login: '',
+			password: '',
+			remember_me: false
+		}
 
 		$scope.init = function() {
 			$scope.resize();
@@ -109,32 +113,37 @@ angular.module('betlog.controllers', [])
 			jQuery('#loginbox').css( 'left', ( $(document).width() / 2 ) + 205 + 'px' );
 		}
 
-		$scope.submit = function( $event ) {
+		$scope.submit = function() {
 
 			var data = {
-				'login': $scope.login,
-				'password': $scope.password,
-				'remember_me': $scope.remember_me
+				'login': $scope.login.login,
+				'password': $scope.login.password,
+				'remember_me': $scope.login.remember_me
 			};
 
 			$http({ method: 'POST', url: '/user_sessions', data: data }).
 	  		success(function(data, status, headers, config) {
-	  			if ( status === 200 && data.id )
+	  			if ( status === 200 && data.id ) {
+	  				$scope.login = {
+							login: '',
+							password: '',
+							remember_me: false
+						}
+	  				
 	  				$scope.close();
+	  			}
 	  	}).
 	  	error(function(data, status, headers, config) {
-	  		$scope.login_error = false;
-	  		$scope.password_error = false;
-	  		$element.find('p.loginbox-input-error').text('');
+	  		$scope.lgNotFound = false;
+	  		$scope.pwdError = false;
 
-	  		/*if ( data.login.length )
-	  			$scope.login_error = true;
+	  		if ( data.login.length )
+	  			$scope.lgNotFound = true;
 
 	  		if ( data.password.length )
-	  			$scope.password_error = true;
+	  			$scope.pwdError = true;
 
 	  		$element.find('p.loginbox-input-error:eq(' + ( data.login.length ? 0 : 1 ) + ')').text( data.login.length ? data.login : data.password );
-	  		*/
 	  	});
     }
 

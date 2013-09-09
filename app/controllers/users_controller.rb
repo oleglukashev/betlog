@@ -1,19 +1,31 @@
 class UsersController < ApplicationController
   
   def create
-  	@user = Users.new( params[:user] )
+    if ( params[:user][:password] )
+      params[:user][:password_confirmation] = params[:user][:password]
+    end
+  	
+    @user = User.new( params[:user] )
 
-  	if user.save
-  		flash[:notice] = "Account registered!"
-	    format.json { render :json => {:status => 'created'} }
-  	else
-  		errors = {
-  			:login => Array(@user.errors[:login]).first,
-  			:name => Array(@user.errors[:name]).first,
-        :password => Array(@user.errors[:password]).first
-  		}
-	    format.json { render :json => {:errors => errors} }
-  	end
+    respond_to do |format|
+    	if @user.save
+    		flash[:notice] = "Account registered!"
+        user = {
+          :id => @user.id,
+          :login => @user.login,
+          :name => @user.name
+        }
+
+  	    format.json { render :json => { :status => :ok, :user => user } }
+    	else
+    		errors = {
+    			:login => Array(@user.errors[:login]).first,
+    			:name => Array(@user.errors[:name]).first,
+          :password => Array(@user.errors[:password]).first
+    		}
+  	    format.json { render :json => { :status => :unprocessable_entity, :errors => errors } }
+    	end
+    end
   end
   
   def user_exists
