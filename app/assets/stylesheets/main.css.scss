@@ -693,9 +693,10 @@ div.sport-menu ul li.active div.sport-menu-item-bottom div
 
 div.sport-menu ul li div.sport-menu-item-body
 {
-	padding: 20px 20px 20px 10px;
+	padding: 16px 20px 16px 10px;
 	margin: 0 3px 0 10px;
-	font-size: 16px;
+	line-height: 18px;
+	font-size: 15px;
 	background: url(../assets/menu_border.png) repeat-x 0 top;
 }
 
@@ -707,9 +708,10 @@ div.sport-menu ul li div.sport-menu-item-body.no-border
 
 div.sport-menu ul li.active div.sport-menu-item-body
 {
-	padding: 12px 20px;
+	padding: 8px 20px;
 	margin: 0;
 	background: #f9f9f9;
+	
 }
 
 div.sport-menu ul li ul

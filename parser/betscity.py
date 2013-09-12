@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 import urllib
 import lxml.html
-import MySQLdb
-import requests
+#import MySQLdb
+#import requests
 import time
 import datetime
 from teams import teams
