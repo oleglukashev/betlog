@@ -15,16 +15,14 @@ class BaseApp():
   def doAppConfig( self ):
     self.links = yaml.load( open('config/links.yml', 'r') )
     self.database = yaml.load( open('config/database.yml', 'r') )
-    print self.database
-
 
   def doDatabaseConnect( self ):
     self.databaseConnect = create_engine('postgresql://' + self.database["user"] + ':' + self.database["password"] + '@localhost/' + self.database["database"])
 
   def doParse( self ):
-    for key, value in self.links.iteritems():
-      print "Start parse " + key.title() + " page"
+    for key, value in self.links.items():
+      print( 'Start parse ' + key.title() + ' page' )
       instance = eval( key.title() + "Bet" )
       instance = instance( value, self.databaseConnect )
       instance.parse()
-      print "Finished parse " + key.title() + " page"
+      print ( 'Finished parse ' + key.title() + ' page' )

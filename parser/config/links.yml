@@ -1,2 +1,5 @@
-marathon: http://www.marathonbet.com/ru/betting/all
+marathon:
+  url: http://www.marathonbet.com/ru/betting/all
+  data:
+    periodGroupAllEvents: 0
 #betcity: http://betcityru.com/bets/bets2.php

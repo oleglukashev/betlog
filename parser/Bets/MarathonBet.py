@@ -4,20 +4,23 @@ import sqlalchemy
 from sqlalchemy import *
 from sqlalchemy.orm import *
 from sqlalchemy.ext.declarative import declarative_base
-from Bet import Bet
+#from Bets import Bet
 import urllib
 import lxml.html
 import lxml.cssselect
 
-class MarathonBet( Bet ):
+class MarathonBet():
+
   def __init__( self, link, databaseConnect ):
     self.databaseConnect = databaseConnect
     self.link = link
 
   def getContentFromUrl( self ):
-    page = urllib.urlopen( self.link )
-    doc = lxml.html.document_fromstring(page.read())
+    data = urllib.parse.urlencode( self.link['data'] )
 
+    page = urllib.request.urlopen( self.link['url'], data.encode('utf-8') )
+    doc = lxml.html.document_fromstring(page.read().decode('utf-8'))
+    
     return doc
 
   def parse( self ):
@@ -26,8 +29,13 @@ class MarathonBet( Bet ):
 
     s = Session( connect )
 
-    for events in content.cssselect('#container_EVENTS > div.main-block-events'):
-      print events.cssselect('div.block-events-head')[0].text.encode('utf-8').strip(" \r\n")
+    for event in content.cssselect('#container_EVENTS > div.main-block-events'):
+      event_title_elems = event.cssselect('div.block-events-head > *')
+
+      for event_title_elem in event_title_elems:
+        event_title_elem.drop_tree()
+
+      print( event.cssselect('div.block-events-head')[0].text.strip(" \r\n") )
 
     
     
