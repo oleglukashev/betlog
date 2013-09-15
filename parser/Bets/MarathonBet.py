@@ -8,6 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 import urllib
 import lxml.html
 import lxml.cssselect
+from Modules import Dictionary
 
 class MarathonBet():
 
@@ -16,9 +17,11 @@ class MarathonBet():
     self.link = link
 
   def getContentFromUrl( self ):
-    data = urllib.parse.urlencode( self.link['data'] )
+    #data = urllib.parse.urlencode( self.link['data'] )
 
-    page = urllib.request.urlopen( self.link['url'], data.encode('utf-8') )
+    #page = urllib.request.urlopen( self.link['url'], data.encode('utf-8') )
+
+    page = urllib.request.urlopen( self.link['url'] )
     doc = lxml.html.document_fromstring(page.read().decode('utf-8'))
     
     return doc
@@ -35,7 +38,11 @@ class MarathonBet():
       for event_title_elem in event_title_elems:
         event_title_elem.drop_tree()
 
-      print( event.cssselect('div.block-events-head')[0].text.strip(" \r\n") )
+      sport = Dictionary.findSport( event.cssselect('div.block-events-head')[0].text.strip(" \r\n").split(". ")[0] )
+
+      if ( sport ):
+        print( sport )
+
 
     
     
