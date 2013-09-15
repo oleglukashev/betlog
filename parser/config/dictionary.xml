@@ -2,20 +2,215 @@
 
 <dictionary>
   <sports>
-    <sport value="Футбол" id="1">
-      <variant value="Футбол" />
+    <sport value="Австралийский футбол‎" id="1">
+      <variant value="Австралийский футбол‎" />
+    </sport>
+    <sport value="Академическая гребля‎" id="2">
+      <variant value="Академическая гребля‎" />
+    </sport>
+    <sport value="Американский футбол‎" id="3">
+      <variant value="Американский футбол‎" />
+    </sport>
+    <sport value="Баскетбол‎‎" id="4">
+      <variant value="Баскетбол‎‎" />
+    </sport>
+    <sport value="Бейсбол‎" id="5">
+      <variant value="Бейсбол‎" />
+    </sport>
+    <sport value="Водное поло‎" id="6">
+      <variant value="Водное поло‎" />
+    </sport>
+    <sport value="Волейбол‎" id="7">
+      <variant value="Волейбол‎" />
+    </sport>
+    <sport value="Гандбол‎" id="8">
+      <variant value="Гандбол‎" />
+    </sport>
+    <sport value="Канадский футбол‎" id="9">
+      <variant value="Канадский футбол‎" />
+    </sport>
+    <sport value="Кёрлинг‎" id="10">
+      <variant value="Кёрлинг‎" />
+    </sport>
+    <sport value="Крикет‎" id="11">
+      <variant value="Крикет‎" />
+    </sport>
+    <sport value="Лакросс‎" id="12">
+      <variant value="Лакросс‎" />
+    </sport>
+    <sport value="Мини-футбол‎" id="13">
+      <variant value="Мини-футбол‎" />
+    </sport>
+    <sport value="Пляжный волейбол‎" id="14">
+      <variant value="Пляжный волейбол‎ " />
+    </sport>
+    <sport value="Пляжный футбол" id="15">
+      <variant value="Пляжный футбол" />
+    </sport>
+    <sport value="Регби‎" id="16">
+      <variant value="Регби‎" />
+      <variant value="Регби‎-лига" />
+    </sport>
+    <sport value="Софтбол‎" id="17">
+      <variant value="Софтбол‎" />
+    </sport>
+    <sport value="Футбол‎" id="18">
+      <variant value="Футбол‎" />
+    </sport>
+    <sport value="Хоккей‎" id="19">
+      <variant value="Хоккей‎" />
+    </sport>
+    <sport value="Хоккей с мячом‎" id="20">
+      <variant value="Хоккей с мячом‎" />
     </sport>
   </sports>
   <championships>
-    <countries>
-      <country value="Россия">
-        <championship value="Премьер-лига России" sport_id="1">
-          <variant value="Премьер-лига" />
-        </championship>
-        <championship value="ФНЛ России" sport_id="1">
-          <variant value="ФНЛ" />
-        </championship>
-      </country>
-    </countries>
+    <championship value="AFL" sport_id="1">
+      <variant value="АФЛ" />
+    </championship>
+    <championship value="NFL" sport_id="3">
+      <variant value="NFL" />
+    </championship>
+    <championship value="CFL" sport_id="3">
+      <variant value="CFL" />
+    </championship>
+    <championship value="Экс-лига" sport_id="3">
+      <variant value="Экс-лига" />
+    </championship>
+    <championship value="NBA" sport_id="4">
+      <variant value="WNBA" />
+    </championship>
+    <championship value="ЧЕ-2013" sport_id="4">
+      <variant value="ЧЕ-2013" />
+    </championship>
+    <championship value="MLB" sport_id="5">
+      <variant value="MLB" />
+    </championship>
+    <championship value="KPB" sport_id="5">
+      <variant value="KPB" />
+    </championship>
+    <championship value="NPB" sport_id="5">
+      <variant value="NPB" />
+    </championship>
+    <championship value="NORCECA 2013" sport_id="7">
+      <variant value="Чемпионат NORCECA 2013" />
+    </championship>
+    <championship value="Чемпионат Азии 2013" sport_id="7">
+      <variant value="Чемпионат Азии 2013" />
+    </championship>
+    <championship value="ЧМ-2014" sport_id="7">
+      <variant value="ЧМ-2014" />
+    </championship>
+    <championship value="ЧМ-2013" sport_id="15">
+      <variant value="ЧМ-2013" />
+    </championship>
+    <championship value="NRL" sport_id="16">
+      <variant value="NRL" />
+    </championship>
+    <championship value="NRL" sport_id="16">
+      <variant value="NRL" />
+    </championship>
+    <championship value="VPL" sport_id="17">
+      <variant value="VPL" />
+    </championship>
+    <championship value="Премьер-лига" sport_id="17">
+      <variant value="Премьер-лига" />
+    </championship>
+    <championship value="Чемпион-лига" sport_id="17">
+      <variant value="Чемпион-лига" />
+    </championship>
+    <championship value="1-я лига" sport_id="17">
+      <variant value="1-я лига" />
+    </championship>
+    <championship value="Истмийская лига" sport_id="17">
+      <variant value="Истмийская лига" />
+    </championship>
+    <championship value="Национальная конференция" sport_id="17">
+      <variant value="Национальная конференция" />
+    </championship>
+    <championship value="Северная конференция" sport_id="17">
+      <variant value="Северная конференция" />
+    </championship>
+    <championship value="Северная Премьер-лига" sport_id="17">
+      <variant value="Северная Премьер-лига" />
+    </championship>
+    <championship value="Южная конференция" sport_id="17">
+      <variant value="Южная конференция" />
+    </championship>
+    <championship value="Южная футбольная лига" sport_id="17">
+      <variant value="Южная футбольная лига" />
+    </championship>
+    <championship value="Примера дивизион" sport_id="17">
+      <variant value="Примера дивизион" />
+    </championship>
+
+
+    <championship value="Кубок" sport_id="17">
+      <variant value="Кубок" />
+    </championship>
+    <championship value="Примера Б Насьональ" sport_id="17">
+      <variant value="Примера Б Насьональ" />
+    </championship>
+    <championship value="Лига LFPB" sport_id="17">
+      <variant value="Лига LFPB" />
+    </championship>
+    <championship value="Серия А" sport_id="17">
+      <variant value="Серия А" />
+    </championship>
+    <championship value="Серия Б" sport_id="17">
+      <variant value="Серия Б" />
+    </championship>
+    <championship value="Бундеслига" sport_id="17">
+      <variant value="Бундеслига" />
+    </championship>
+    <championship value="2-я бундеслига" sport_id="17">
+      <variant value="2-я бундеслига" />
+    </championship>
+    <championship value="LNP" sport_id="17">
+      <variant value="LNP" />
+    </championship>
+    <championship value="Суперлига" sport_id="17">
+      <variant value="Суперлига" />
+    </championship>
+    <championship value="CSL" sport_id="17">
+      <variant value="CSL" />
+    </championship>
+    <championship value="1-й дивизион" sport_id="17">
+      <variant value="1-й дивизион" />
+    </championship>
+    <championship value="Примера А дивизион" sport_id="17">
+      <variant value="Примера А дивизион" />
+    </championship>
+    <championship value="Высшая лига" sport_id="17">
+      <variant value="Высшая лига" />
+    </championship>
+    <championship value="Лига Европы УЕФА" sport_id="17">
+      <variant value="Лига Европы УЕФА" />
+    </championship>
+    <championship value="Лига чемпионов АФК" sport_id="17">
+      <variant value="Лига чемпионов АФК" />
+    </championship>
+    <championship value="Лига чемпионов УЕФА" sport_id="17">
+      <variant value="Лига чемпионов УЕФА" />
+    </championship>
+    <championship value="Эредивизи" sport_id="17">
+      <variant value="Эредивизи" />
+    </championship>
+    <championship value="Типпелига" sport_id="17">
+      <variant value="Типпелига" />
+    </championship>
+    <championship value="Экстракласа" sport_id="17">
+      <variant value="Экстракласа" />
+    </championship>
+
+
+
+
+    <championship value="Премьер-лига России" sport_id="17">
+      <variant value="Премьер-лига" />
+    </championship>
+    <championship value="ФНЛ России" sport_id="17">
+      <variant value="ФНЛ" />
+    </championship>
   </championships>
 </dictionary>

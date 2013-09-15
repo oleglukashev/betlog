@@ -41,9 +41,11 @@ class MarathonBet():
       title_str = event.cssselect('div.block-events-head')[0].text.strip(" \r\n")
 
       sport = self.getSportFromTitle( title_str )
-      country = self.getCountryFromTitle( title_str )
+      country = self.getCountryFromTitle( title_str ) if self.getCountryFromTitle( title_str ) else 'Other'
+      championship = self.getChampionshipFromTitle( title_str, country )
 
-      print( self.getChampionshipFromTitle( title_str, country ) )
+      if ( championship is not None ):
+        print( self.getChampionshipFromTitle( title_str, country ) )
 
   def getSportFromTitle( self, title ):
     title_array = title.split(". ")
