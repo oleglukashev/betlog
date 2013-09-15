@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <dictionary>
-    <sport value="Футбол">
-        <variant value="Футбол" />
+  <sports>
+    <sport value="Футбол" id="1">
+      <variant value="Футбол" />
     </sport>
+  </sports>
+  <championships>
+    <countries>
+      <country value="Россия">
+        <championship value="Премьер-лига России" sport_id="1">
+          <variant value="Премьер-лига" />
+        </championship>
+        <championship value="ФНЛ России" sport_id="1">
+          <variant value="ФНЛ" />
+        </championship>
+      </country>
+    </countries>
+  </championships>
 </dictionary>

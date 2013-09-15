@@ -17,11 +17,11 @@ class MarathonBet():
     self.link = link
 
   def getContentFromUrl( self ):
-    #data = urllib.parse.urlencode( self.link['data'] )
+    data = urllib.parse.urlencode( self.link['data'] )
 
-    #page = urllib.request.urlopen( self.link['url'], data.encode('utf-8') )
+    page = urllib.request.urlopen( self.link['url'], data.encode('utf-8') )
 
-    page = urllib.request.urlopen( self.link['url'] )
+    #page = urllib.request.urlopen( self.link['url'] )
     doc = lxml.html.document_fromstring(page.read().decode('utf-8'))
     
     return doc
@@ -38,10 +38,34 @@ class MarathonBet():
       for event_title_elem in event_title_elems:
         event_title_elem.drop_tree()
 
-      sport = Dictionary.findSport( event.cssselect('div.block-events-head')[0].text.strip(" \r\n").split(". ")[0] )
+      title_str = event.cssselect('div.block-events-head')[0].text.strip(" \r\n")
 
-      if ( sport ):
-        print( sport )
+      sport = self.getSportFromTitle( title_str )
+      country = self.getCountryFromTitle( title_str )
+
+      print( self.getChampionshipFromTitle( title_str, country ) )
+
+  def getSportFromTitle( self, title ):
+    title_array = title.split(". ")
+
+    for title_element in title_array:
+      if Dictionary.findSport( title_element ):
+        return Dictionary.findSport( title_element )
+
+  def getChampionshipFromTitle( self, title, country ):
+    title_array = title.split(". ")
+
+    for title_element in title_array:
+      if Dictionary.findChampionship( title_element, country ):
+        return Dictionary.findChampionship( title_element, country )
+
+  def getCountryFromTitle( self, title ):
+    title_array = title.split(". ")
+
+    for title_element in title_array:
+      if Dictionary.findCountry( title_element ):
+        return Dictionary.findCountry( title_element )
+
 
 
     
