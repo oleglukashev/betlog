@@ -67,6 +67,191 @@
       <variant value="Хоккей с мячом‎" />
     </sport>
   </sports>
+  <countries>
+    <country value="Австралия">
+      <variant value="Австралия" />
+    </country>
+    <country value="США">
+      <variant value="США" />
+    </country>
+    <country value="Япония">
+      <variant value="Японии" />
+    </country>
+    <country value="Сербия">
+      <variant value="Сербия" />
+    </country>
+    <country value="Словения">
+      <variant value="Словения" />
+    </country>
+    <country value="Филиппины">
+      <variant value="Филиппины" />
+    </country>
+    <country value="Китай">
+      <variant value="Китайский" />
+      <variant value="Китай" />
+    </country>
+    <country value="Нидерландыя">
+      <variant value="Нидерланды" />
+    </country>
+    <country value="Республика Корея">
+      <variant value="Республика Корея" />
+    </country>
+    <country value="Австралия">
+      <variant value="Республика Корея" />
+    </country>
+    <country value="Австрия">
+      <variant value="Австрия" />
+    </country>
+    <country value="Германия">
+      <variant value="Германия" />
+    </country>
+    <country value="Дания">
+      <variant value="Дания" />
+    </country>
+    <country value="Исландия">
+      <variant value="Исландия" />
+    </country>
+    <country value="Испания">
+      <variant value="Испания" />
+    </country>
+    <country value="Норвегия">
+      <variant value="Норвегия" />
+    </country>
+    <country value="Россия">
+      <variant value="Россия" />
+    </country>
+    <country value="Франция">
+      <variant value="Франция" />
+    </country>
+    <country value="Швейцария">
+      <variant value="Швейцария" />
+    </country>
+    <country value="Швеция">
+      <variant value="Швеция" />
+    </country>
+    <country value="Ирландия">
+      <variant value="Ирландии" />
+      <variant value="Ирландия" />
+      <variant value="Чемпионат Ирландии" />
+    </country>
+    <country value="Бельгия">
+      <variant value="Бельгия" />
+    </country>
+    <country value="Греция">
+      <variant value="Греция" />
+    </country>
+    <country value="Гонконг">
+      <variant value="Гонконг" />
+    </country>
+    <country value="Англия">
+      <variant value="Англия" />
+    </country>
+    <country value="Аргентина">
+      <variant value="Аргентина" />
+    </country>
+    <country value="Армения">
+      <variant value="Армения" />
+    </country>
+    <country value="Беларусь">
+      <variant value="Беларусь" />
+    </country>
+    <country value="Боливия">
+      <variant value="Боливия" />
+    </country>
+    <country value="Бразилия">
+      <variant value="Бразилия" />
+    </country>
+    <country value="Венесуэла">
+      <variant value="Венесуэла" />
+    </country>
+    <country value="Гондурас">
+      <variant value="Гондурас" />
+    </country>
+    <country value="Индонезия">
+      <variant value="Индонезия" />
+    </country>
+    <country value="Иран">
+      <variant value="Иран" />
+    </country>
+    <country value="Италия">
+      <variant value="Италия" />
+    </country>
+    <country value="Колумбия">
+      <variant value="Колумбия" />
+    </country>
+    <country value="Литва">
+      <variant value="Литва" />
+    </country>
+    <country value="Македония">
+      <variant value="Македония" />
+    </country>
+    <country value="Малайзия">
+      <variant value="Малайзия" />
+    </country>
+    <country value="Мексика">
+      <variant value="Мексика" />
+    </country>
+    <country value="Парагвай">
+      <variant value="Парагвай" />
+    </country>
+    <country value="Перу">
+      <variant value="Перу" />
+    </country>
+    <country value="Польша">
+      <variant value="Польша" />
+    </country>
+    <country value="Португалия">
+      <variant value="Португалия" />
+    </country>
+    <country value="Сингапур">
+      <variant value="Сингапур" />
+    </country>
+    <country value="Словакия">
+      <variant value="Словакия" />
+    </country>
+    <country value="Словения">
+      <variant value="Словения" />
+    </country>
+    <country value="Турция">
+      <variant value="Турция" />
+    </country>
+    <country value="Украина">
+      <variant value="Украина" />
+    </country>
+    <country value="Уругвай">
+      <variant value="Уругвай" />
+    </country>
+    <country value="Фарерские острова">
+      <variant value="Фарерские острова" />
+    </country>
+    <country value="Хорватия">
+      <variant value="Хорватия" />
+    </country>
+    <country value="Чехия">
+      <variant value="Чехия" />
+    </country>
+    <country value="Шотландия">
+      <variant value="Шотландия" />
+    </country>
+    <country value="Эквадор">
+      <variant value="Эквадор" />
+    </country>
+    <country value="ЮАР">
+      <variant value="ЮАР" />
+    </country>
+    <country value="Северная Ирландия">
+      <variant value="Северная Ирландия" />
+    </country>
+    <country value="Уэльс">
+      <variant value="Уэльс" />
+    </country>
+    <country value="Великобритания">
+      <variant value="Великобритания" />
+    </country>
+    <country value="Финляндия">
+      <variant value="Финляндия" />
+    </country>
+  </countries>
   <championships>
     <championship value="AFL" sport_id="1">
       <variant value="АФЛ" />
