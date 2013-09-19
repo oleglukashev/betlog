@@ -14,19 +14,18 @@ def findSport( sport_str ):
       if ( variant.getAttribute("value") == sport_str ):
         return sport.getAttribute("value")
 
-def findChampionship( championship_str, country_str ):
-  countries = dictionary.getElementsByTagName('country')
+def findChampionship( championship_str ):
+  championships = dictionary.getElementsByTagName('championship')
 
-  for country in countries:
-    if ( country.getAttribute("value") == country_str ):
-      for championship in country.getElementsByTagName('championship'):
-        for variant in championship.getElementsByTagName('variant'):
-          if ( variant.getAttribute("value") == championship_str ):
-            return championship.getAttribute("value")
+  for championship in championships:
+    for variant in championship.getElementsByTagName('variant'):
+      if ( variant.getAttribute("value") == championship_str ):
+        return championship.getAttribute("value")
 
 def findCountry( country_str ):
   countries = dictionary.getElementsByTagName('country')
 
   for country in countries:
-    if ( country.getAttribute("value") == country_str ):
-      return country.getAttribute("value")
+    for variant in country.getElementsByTagName('variant'):
+      if ( variant.getAttribute("value") == country_str ):
+        return country.getAttribute("value")

@@ -2,69 +2,69 @@
 
 <dictionary>
   <sports>
-    <sport value="Австралийский футбол‎" id="1">
-      <variant value="Австралийский футбол‎" />
+    <sport value="Австралийский футбол" id="1">
+      <variant value="Австралийский футбол" />
     </sport>
     <sport value="Академическая гребля‎" id="2">
       <variant value="Академическая гребля‎" />
     </sport>
-    <sport value="Американский футбол‎" id="3">
-      <variant value="Американский футбол‎" />
+    <sport value="Американский футбол" id="3">
+      <variant value="Американский футбол" />
     </sport>
-    <sport value="Баскетбол‎‎" id="4">
-      <variant value="Баскетбол‎‎" />
+    <sport value="Баскетбол" id="4">
+      <variant value="Баскетбол" />
     </sport>
-    <sport value="Бейсбол‎" id="5">
-      <variant value="Бейсбол‎" />
+    <sport value="Бейсбол" id="5">
+      <variant value="Бейсбол" />
     </sport>
-    <sport value="Водное поло‎" id="6">
-      <variant value="Водное поло‎" />
+    <sport value="Водное поло" id="6">
+      <variant value="Водное поло" />
     </sport>
     <sport value="Волейбол‎" id="7">
       <variant value="Волейбол‎" />
     </sport>
-    <sport value="Гандбол‎" id="8">
-      <variant value="Гандбол‎" />
+    <sport value="Гандбол" id="8">
+      <variant value="Гандбол" />
     </sport>
     <sport value="Канадский футбол‎" id="9">
       <variant value="Канадский футбол‎" />
     </sport>
-    <sport value="Кёрлинг‎" id="10">
-      <variant value="Кёрлинг‎" />
+    <sport value="Кёрлинг" id="10">
+      <variant value="Кёрлинг" />
     </sport>
-    <sport value="Крикет‎" id="11">
-      <variant value="Крикет‎" />
+    <sport value="Крикет" id="11">
+      <variant value="Крикет" />
     </sport>
-    <sport value="Лакросс‎" id="12">
-      <variant value="Лакросс‎" />
+    <sport value="Лакросс" id="12">
+      <variant value="Лакросс" />
     </sport>
     <sport value="Мини-футбол‎" id="13">
       <variant value="Мини-футбол‎" />
     </sport>
-    <sport value="Пляжный волейбол‎" id="14">
-      <variant value="Пляжный волейбол‎ " />
+    <sport value="Пляжный волейбол" id="14">
+      <variant value="Пляжный волейбол" />
     </sport>
     <sport value="Пляжный футбол" id="15">
       <variant value="Пляжный футбол" />
     </sport>
-    <sport value="Регби‎" id="16">
-      <variant value="Регби‎" />
-      <variant value="Регби‎-лига" />
+    <sport value="Регби" id="16">
+      <variant value="Регби" />
+      <variant value="Регби-лига" />
     </sport>
-    <sport value="Софтбол‎" id="17">
-      <variant value="Софтбол‎" />
+    <sport value="Софтбол" id="17">
+      <variant value="Софтбол" />
     </sport>
-    <sport value="Футбол‎" id="18">
-      <variant value="Футбол‎" />
+    <sport value="Футбол" id="18">
+      <variant value="Футбол" />
     </sport>
-    <sport value="Футзал" id="19">
+    <sport value="Футзал" id="15">
       <variant value="Футзал" />
     </sport>
-    <sport value="Хоккей‎" id="20">
-      <variant value="Хоккей‎" />
+    <sport value="Хоккей" id="20">
+      <variant value="Хоккей" />
     </sport>
-    <sport value="Хоккей с мячом‎" id="21">
-      <variant value="Хоккей с мячом‎" />
+    <sport value="Хоккей с мячом" id="21">
+      <variant value="Хоккей с мячом" />
     </sport>
   </sports>
   <countries>
@@ -457,64 +457,64 @@
     <championship value="ЧЕ-2014" sport_id="18">
       <variant value="ЧЕ-2014" />
     </championship>
-    <championship value="EBEL" sport_id="19">
+    <championship value="EBEL" sport_id="20">
       <variant value="EBEL" />
     </championship>
-    <championship value="Азиатская лига" sport_id="19">
+    <championship value="Азиатская лига" sport_id="20">
       <variant value="Азиатская лига" />
     </championship>
-    <championship value="Экстралига" sport_id="19">
+    <championship value="Экстралига" sport_id="20">
       <variant value="Экстралига" />
     </championship>
-    <championship value="EIHL" sport_id="19">
+    <championship value="EIHL" sport_id="20">
       <variant value="EIHL" />
     </championship>
-    <championship value="DEL" sport_id="19">
+    <championship value="DEL" sport_id="20">
       <variant value="DEL" />
     </championship>
-    <championship value="OHL" sport_id="19">
+    <championship value="OHL" sport_id="20">
       <variant value="OHL" />
     </championship>
-    <championship value="WHL" sport_id="19">
+    <championship value="WHL" sport_id="20">
       <variant value="WHL" />
     </championship>
-    <championship value="GET-лига" sport_id="19">
+    <championship value="GET-лига" sport_id="20">
       <variant value="GET-лига" />
     </championship>
-    <championship value="НХЛ" sport_id="19">
+    <championship value="НХЛ" sport_id="20">
       <variant value="НХЛ" />
     </championship>
-    <championship value="КХЛ" sport_id="19">
+    <championship value="КХЛ" sport_id="20">
       <variant value="КХЛ" />
     </championship>
-    <championship value="ВХЛ" sport_id="19">
+    <championship value="ВХЛ" sport_id="20">
       <variant value="ВХЛ" />
     </championship>
-    <championship value="МХЛ" sport_id="19">
+    <championship value="МХЛ" sport_id="20">
       <variant value="МХЛ" />
     </championship>
-    <championship value="ECHL" sport_id="19">
+    <championship value="ECHL" sport_id="20">
       <variant value="ECHL" />
     </championship>
-    <championship value="Местис" sport_id="19">
+    <championship value="Местис" sport_id="20">
       <variant value="Местис" />
     </championship>
-    <championship value="СМ-лига" sport_id="19">
+    <championship value="СМ-лига" sport_id="20">
       <variant value="СМ-лига" />
     </championship>
-    <championship value="Национальная лига А" sport_id="19">
+    <championship value="Национальная лига А" sport_id="20">
       <variant value="Национальная лига А" />
     </championship>
-    <championship value="Национальная лига Б" sport_id="19">
+    <championship value="Национальная лига Б" sport_id="20">
       <variant value="Национальная лига Б" />
     </championship>
-    <championship value="Аллсвенскан" sport_id="19">
+    <championship value="Аллсвенскан" sport_id="20">
       <variant value="Аллсвенскан" />
     </championship>
-    <championship value="СМ-лига" sport_id="19">
+    <championship value="СМ-лига" sport_id="20">
       <variant value="СМ-лига" />
     </championship>
-    <championship value="Национальная лига А" sport_id="19">
+    <championship value="Национальная лига А" sport_id="20">
       <variant value="Национальная лига А" />
     </championship>
   </championships>

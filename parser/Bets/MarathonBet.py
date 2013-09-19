@@ -41,11 +41,12 @@ class MarathonBet():
       title_str = event.cssselect('div.block-events-head')[0].text.strip(" \r\n")
 
       sport = self.getSportFromTitle( title_str )
-      country = self.getCountryFromTitle( title_str ) if self.getCountryFromTitle( title_str ) else 'Other'
-      championship = self.getChampionshipFromTitle( title_str, country )
+      country = self.getCountryFromTitle( title_str )
+      championship = self.getChampionshipFromTitle( title_str )
 
-      if ( championship is not None ):
-        print( self.getChampionshipFromTitle( title_str, country ) )
+      print( sport )
+
+
 
   def getSportFromTitle( self, title ):
     title_array = title.split(". ")
@@ -54,12 +55,12 @@ class MarathonBet():
       if Dictionary.findSport( title_element ):
         return Dictionary.findSport( title_element )
 
-  def getChampionshipFromTitle( self, title, country ):
+  def getChampionshipFromTitle( self, title ):
     title_array = title.split(". ")
 
     for title_element in title_array:
-      if Dictionary.findChampionship( title_element, country ):
-        return Dictionary.findChampionship( title_element, country )
+      if Dictionary.findChampionship( title_element ):
+        return Dictionary.findChampionship( title_element )
 
   def getCountryFromTitle( self, title ):
     title_array = title.split(". ")
