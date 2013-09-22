@@ -518,4 +518,385 @@
       <variant value="Национальная лига А" />
     </championship>
   </championships>
+  <teams>
+    <!--Австралийский футбол-->
+    <!--AFL-->
+    <team value="Хоуторн Хокс">
+      <variant value="Хоуторн Хокс" />
+    </team>
+    <team value="Фримантл Докерс">
+      <variant value="Фримантл Докерс" />
+    </team>
+    <team value="Норт Мельбурн Кенгэрус">
+      <variant value="Норт Мельбурн Кенгэрус" />
+    </team>
+    <team value="Джилонг Катс">
+      <variant value="Джилонг Катс" />
+    </team>
+    <team value="ГВС Джайнтс">
+      <variant value="ГВС Джайнтс" />
+    </team>
+    <team value="Мельбурн Демонс">
+      <variant value="Мельбурн Демонс" />
+    </team>
+    <team value="Ричмонд Тайгерс">
+      <variant value="Ричмонд Тайгерс" />
+    </team>
+    <team value="Вест Коуст Иглз">
+      <variant value="Вест Коуст Иглз" />
+    </team>
+    <team value="Голд Коуст Санс">
+      <variant value="Голд Коуст Санс" />
+    </team>
+    <team value="Брисбэйн Лайонс">
+      <variant value="Брисбэйн Лайонс" />
+    </team>
+    <team value="Сент Килда Сэйнтс">
+      <variant value="Сент Килда Сэйнтс" />
+    </team>
+    <team value="Карлтон Блюс">
+      <variant value="Карлтон Блюс" />
+    </team>
+    <team value="Вестерн Бульдогс">
+      <variant value="Вестерн Бульдогс" />
+    </team>
+    <team value="Сидней Суонс">
+      <variant value="Сидней Суонс" />
+    </team>
+    <team value="Аделаида Кроус">
+      <variant value="Аделаида Кроус" />
+    </team>
+    <team value="Порт Аделаида Пауэр">
+      <variant value="Порт Аделаида Пауэр" />
+    </team>
+    <team value="Коллингвуд Магпайс">
+      <variant value="Коллингвуд Магпайс" />
+    </team>
+    <team value="Ессендон Бомберс">
+      <variant value="Ессендон Бомберс" />
+    </team>
+
+    <!--Американский футбол-->
+    <!--NCAA-->
+    <team value="Кент Стэйт Голден Флэшс">
+      <variant value="Кент Стэйт Голден Флэшс" />
+    </team>
+    <team value="Либерти Флеймз">
+      <variant value="Либерти Флеймз" />
+    </team>
+    <team value="Саут Каролина Геймкокс">
+      <variant value="Саут Каролина Геймкокс" />
+    </team>
+    <team value="Норт Каролина Тейр Хилз">
+      <variant value="Норт Каролина Тейр Хилз" />
+    </team>
+    <team value="Уэйк Форест Демон Диконз">
+      <variant value="Уэйк Форест Демон Диконз" />
+    </team>
+    <team value="Пресбитерьен Блю Хоуз">
+      <variant value="Пресбитерьен Блю Хоуз" />
+    </team>
+    <team value="Болл Стэйт Кердинелз">
+      <variant value="Болл Стэйт Кердинелз" />
+    </team>
+    <team value="Иллинойс Стэйт Редбёрдз">
+      <variant value="Иллинойс Стэйт Редбёрдз" />
+    </team>
+    <team value="Боулинг Грин Фэлконз">
+      <variant value="Боулинг Грин Фэлконз" />
+    </team>
+    <team value="Талса Голден Харрикейн">
+      <variant value="Талса Голден Харрикейн" />
+    </team>
+    <team value="Индиана Хузьерз">
+      <variant value="Индиана Хузьерз" />
+    </team>
+    <team value="Миннесота Голден Гоферз">
+      <variant value="Миннесота Голден Гоферз" />
+    </team>
+    <team value="Невада Лас-Вегас Ребелз">
+      <variant value="Невада Лас-Вегас Ребелз" />
+    </team>
+    <team value="Сентрал Флорида Найтс">
+      <variant value="Сентрал Флорида Найтс" />
+    </team>
+    <team value="Экрон Зипс">
+      <variant value="Экрон Зипс" />
+    </team>
+    <team value="Коннектикут Хоскис">
+      <variant value="Коннектикут Хоскис" />
+    </team>
+    <team value="Таусон Тайгерз">
+      <variant value="Таусон Тайгерз" />
+    </team>
+    <team value="Миддл Теннесси Блю Рейдерз">
+      <variant value="Миддл Теннесси Блю Рейдерз" />
+    </team>
+    <team value="Вестерн Каролина Кэтамаунтс">
+      <variant value="Вестерн Каролина Кэтамаунтс" />
+    </team>
+    <team value="Саут Алабама Джагьюарз">
+      <variant value="Саут Алабама Джагьюарз" />
+    </team>
+    <team value="Саутерн Юта Тандербёрдз">
+      <variant value="Саутерн Юта Тандербёрдз" />
+    </team>
+    <team value="Талейн Грин Вейв">
+      <variant value="Талейн Грин Вейв" />
+    </team>
+    <team value="Джексон Стэйт Тайгерз">
+      <variant value="Джексон Стэйт Тайгерз" />
+    </team>
+    <team value="Юта Ютс">
+      <variant value="Юта Ютс" />
+    </team>
+    <team value="Юта Стэйт Эджис">
+      <variant value="Юта Стэйт Эджис" />
+    </team>
+    <team value="Вандербилт Коммодорз">
+      <variant value="Вандербилт Коммодорз" />
+    </team>
+    <team value="Миссисипи Ребелз">
+      <variant value="Миссисипи Ребелз" />
+    </team>
+    <team value="Сан-Хосе Стэйт Спертанз">
+      <variant value="Сан-Хосе Стэйт Спертанз" />
+    </team>
+    <team value="Сакраменто Ст. Хорнетс">
+      <variant value="Сакраменто Ст. Хорнетс" />
+    </team>
+    <team value="Фресно Стэйт Буллдогз">
+      <variant value="Фресно Стэйт Буллдогз" />
+    </team>
+    <team value="Ратгерс Скарлет Найтс">
+      <variant value="Ратгерс Скарлет Найтс" />
+    </team>
+    <team value="Гавайи Уорриорз">
+      <variant value="Саутерн Калифорния Тройанз" />
+    </team>
+    <team value="Арми Блэк Найтс">
+      <variant value="Арми Блэк Найтс" />
+    </team>
+    <team value="Морган Стэйт Беаз">
+      <variant value="Морган Стэйт Беаз" />
+    </team>
+    
+    <!--NFL-->
+    <team value="Денвер Бронкос">
+      <variant value="Денвер Бронкос" />
+    </team>
+    <team value="Балтимор Рэйвенз">
+      <variant value="Балтимор Рэйвенз" />
+    </team>
+    <team value="Баффало Биллз">
+      <variant value="Баффало Биллз" />
+    </team>
+    <team value="Нью-Ингленд Пэтриотс">
+      <variant value="Нью-Ингленд Пэтриотс" />
+    </team>
+    <team value="Детройт Лайонз">
+      <variant value="Детройт Лайонз" />
+    </team>
+    <team value="Миннесота Викингз">
+      <variant value="Миннесота Викингз" />
+    </team>
+    <team value="Джексонвиль Джэгерз">
+      <variant value="Джексонвиль Джэгерз" />
+    </team>
+    <team value="Канзас-Сити Чифс">
+      <variant value="Канзас-Сити Чифс" />
+    </team>
+
+    <team value="Индианаполис Колтс">
+      <variant value="Индианаполис Колтс" />
+    </team>
+    <team value="Окленд Рэйдерз">
+      <variant value="Окленд Рэйдерз" />
+    </team>
+    <team value="Каролина Пантерз">
+      <variant value="Каролина Пантерз" />
+    </team>
+    <team value="Сиэтл Сихокс">
+      <variant value="Сиэтл Сихокс" />
+    </team>
+    <team value="Кливленд Браунз">
+      <variant value="Кливленд Браунз" />
+    </team>
+    <team value="Майами Долфинз">
+      <variant value="Майами Долфинз" />
+    </team>
+    <team value="Нью-Йорк Джетс">
+      <variant value="Нью-Йорк Джетс" />
+    </team>
+    <team value="Канзас-Сити Чифс">
+      <variant value="Канзас-Сити Чифс" />
+    </team>
+
+    <!--Футбол-->
+    <!--Австралия a-лига-->
+    <team value="Мельбурн Харт">
+      <variant value="Мельбурн Херт" />
+      <variant value="Мельбурн Харт" />
+    </team>
+    <team value="Ньюкасл Джетс">
+      <variant value="Ньюкасл Джетс" />
+    </team>
+    <team value="Вест Сидней">
+      <variant value="Вест Сидней" />
+    </team>
+    <team value="Мельбурн Виктори">
+      <variant value="Мельбурн Виктори" />
+    </team>
+    <team value="Брисбен Роар">
+      <variant value="Брисбен Роар" />
+    </team>
+    <team value="Веллингтон Феникс">
+      <variant value="Веллингтон Фен." />
+      <variant value="Веллингтон Феникс" />
+    </team>
+    <team value="Аделаида Юнайтед">
+      <variant value="Аделаида Юнайтед" />
+    </team>
+    <team value="Перт Глори">
+      <variant value="Перт Глори" />
+    </team>
+    <team value="Сидней ФК">
+      <variant value="Сидней ФК" />
+    </team>
+    <team value="Брисбен Роар">
+      <variant value="Брисбен Роар" />
+    </team>
+    <team value="Централ Кост">
+      <variant value="Централ Кост" />
+    </team>
+    <team value="Сидней">
+      <variant value="Сидней" />
+    </team>
+
+
+    <!--Алжир 1-лига-->    
+    <team value="ЖС Кабилия">
+      <variant value="ЖС Кабилия" />
+    </team>
+    <team value="УСМ Эль-Харраш">
+      <variant value="УСМ Эль-Харраш" />
+    </team>
+    <team value="КР Белуиздад">
+      <variant value="КР Белуиздад" />
+    </team>
+    <team value="ЖС Саура">
+      <variant value="ЖС Саура" />
+    </team>
+    <team value="КС Константин">
+      <variant value="КС Константин" />
+    </team>
+    <team value="УСМ Алжир">
+      <variant value="УСМ Алжир" />
+    </team>
+    <team value="УСМ Бель Аббес">
+      <variant value="УСМ Бель Аббес" />
+    </team>
+    <team value="АСО Шлеф">
+      <variant value="АСО Шлеф" />
+    </team>
+    <team value="ЖСМ Беджая">
+      <variant value="ЖСМ Беджая" />
+    </team>
+    <team value="МК Оран">
+      <variant value="МК Оран" />
+    </team>
+    <team value="КА Бордж Бу Арреридж">
+      <variant value="КА Бордж Бу Арреридж" />
+    </team>
+    <team value="КА Батна">
+      <variant value="КА Батна" />
+    </team>
+    <team value="МК Алжир">
+      <variant value="МК Алжир" />
+    </team>
+    <team value="ВА Тлемсен">
+      <variant value="ВА Тлемсен" />
+    </team>
+    <team value="ЕС Сетиф">
+      <variant value="ЕС Сетиф" />
+    </team>
+    <team value="МК Эль-Элма">
+      <variant value="МК Эль-Элма" />
+    </team>
+
+    <!--Англия-->
+    <team value="Вест Бромвич Албион">
+      <variant value="Вест Бромвич Албион" />
+    </team>
+    <team value="Фулхэм">
+      <variant value="Фулхэм" />
+    </team>
+    <team value="Вест Хэм Юнайтед">
+      <variant value="Вест Хэм Юнайтед" />
+    </team>
+    <team value="Норвич Сити">
+      <variant value="Норвич Сити" />
+    </team>
+    <team value="Манчестер Сити">
+      <variant value="Манчестер Сити" />
+    </team>
+    <team value="Сток Сити">
+      <variant value="Сток Сити" />
+    </team>
+    <team value="Суонси Сити">
+      <variant value="Суонси Сити" />
+    </team>
+    <team value="Астон Вилла">
+      <variant value="Астон Вилла" />
+    </team>
+    <team value="Тоттенхэм Хотспур">
+      <variant value="Тоттенхэм Хотспур" />
+    </team>
+    <team value="Рединг">
+      <variant value="Рединг" />
+    </team>
+    <team value="Уиган Атлетик">
+      <variant value="Уиган Атлетик" />
+    </team>
+    <team value="Манчестер Юнайтед">
+      <variant value="Манчестер Юнайтед" />
+    </team>
+    <team value="Саутгемптон">
+      <variant value="Саутгемптон" />
+    </team>
+    <team value="Арсенал">
+      <variant value="Арсенал" />
+    </team>
+    <team value="Ливерпуль">
+      <variant value="Ливерпуль" />
+    </team>
+    <team value="Сандерленд">
+      <variant value="Сандерленд" />
+    </team>
+    <team value="Челси">
+      <variant value="Челси" />
+    </team>
+    <team value="Куинз Парк Рейнджерс">
+      <variant value="Куинз Парк Рейнджерс" />
+    </team>
+    <team value="Ньюкасл Юнайтед">
+      <variant value="Ньюкасл Юнайтед" />
+    </team>
+    <team value="Эвертон">
+      <variant value="Эвертон" />
+    </team>
+    <team value="Сток Сити">
+      <variant value="Сток Сити" />
+    </team>
+
+
+
+    <!--Баскетбол(Фоллипины)-->
+    <team value="Эйр 21 Экспресс">
+      <variant value="Эйр 21 Экспресс" />
+    </team>
+    <team value="Аласка Эйсес">
+      <variant value="Аласка Эйсес" />
+    </team>
+  </teams>
 </dictionary>
