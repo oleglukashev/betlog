@@ -889,6 +889,393 @@
       <variant value="Сток Сити" />
     </team>
 
+    <!-- Австрия Бундеслига-->
+    <team value="Рид">
+      <variant value="Рид" />
+    </team>
+    <team value="Ваккер Инсбрук">
+      <variant value="Ваккер Инсбрук" />
+    </team>
+    <team value="Адмира">
+      <variant value="Адмира" />
+    </team>
+    <team value="Винер-Нойштадт">
+      <variant value="Винер-Нойштадт" />
+    </team>
+    <team value="Вольфсбергер АК">
+      <variant value="Вольфсбергер АК" />
+    </team>
+    <team value="Ред Булл Зальцбург">
+      <variant value="Ред Булл Зальцбург" />
+    </team>
+    <team value="Маттерсбург">
+      <variant value="Маттерсбург" />
+    </team>
+    <team value="Штурм Грац">
+      <variant value="Штурм Грац" />
+    </team>
+    <team value="Рапид Вена">
+      <variant value="Рапид Вена" />
+    </team>
+    <team value="Аустрия Вена">
+      <variant value="Аустрия Вена" />
+    </team>
+
+    <!-- Аргентина Примера дивизион-->
+    <team value="Индепендьенте">
+      <variant value="Индепендьенте" />
+    </team>
+    <team value="Тигре">
+      <variant value="Тигре" />
+    </team>
+    <team value="Унион де Санта-Фе">
+      <variant value="Унион де Санта-Фе" />
+    </team>
+    <team value="Арсенал Саранди">
+      <variant value="Арсенал Саранди" />
+    </team>
+    <team value="Архентинос Джуниорс">
+      <variant value="Архентинос Джуниорс" />
+    </team>
+    <team value="Велес Сарсфилд">
+      <variant value="Велес Сарсфилд" />
+    </team>
+    <team value="Эстудиантес">
+      <variant value="Эстудиантес" />
+    </team>
+    <team value="Олл Бойз">
+      <variant value="Олл Бойз" />
+    </team>
+    <team value="Годой Крус">
+      <variant value="Годой Крус" />
+    </team>
+    <team value="Бока Хуниорс">
+      <variant value="Бока Хуниорс" />
+    </team>
+    <team value="Килмес">
+      <variant value="Килмес" />
+    </team>
+    <team value="Сан Мартин Сан-Хуан">
+      <variant value="Сан Мартин Сан-Хуан" />
+    </team>
+    <team value="Сан-Лоренсо">
+      <variant value="Сан-Лоренсо" />
+    </team>
+    <team value="Атлетико Рафаэла">
+      <variant value="Атлетико Рафаэла" />
+    </team>
+    <team value="Расинг Авельянеда">
+      <variant value="Расинг Авельянеда" />
+    </team>
+    <team value="Ньюэлз Олд Бойз">
+      <variant value="Ньюэлз Олд Бойз" />
+    </team>
+    <team value="Бельграно">
+      <variant value="Бельграно" />
+    </team>
+    <team value="Ривер Плейт">
+      <variant value="Ривер Плейт" />
+    </team>
+    <team value="Ланус">
+      <variant value="Ланус" />
+    </team>
+    <team value="Колон">
+      <variant value="Колон" />
+    </team>
+
+    <!-- Беларусь -->
+    <team value="Минск">
+      <variant value="Минск" />
+    </team>
+    <team value="Торпедо-БелАЗ">
+      <variant value="Торпедо-БелАЗ" />
+    </team>
+    <team value="Нафтан">
+      <variant value="Нафтан" />
+    </team>
+    <team value="Шахтёр Солигорск">
+      <variant value="Шахтёр Солигорск" />
+    </team>
+    <team value="Днепр Могилёв">
+      <variant value="Днепр Могилёв" />
+    </team>
+    <team value="Гомель">
+      <variant value="Гомель" />
+    </team>
+    <team value="Белшина">
+      <variant value="Белшина" />
+    </team>
+    <team value="Динамо Брест">
+      <variant value="Динамо Брест" />
+    </team>
+    <team value="Неман Гродно">
+      <variant value="Неман Гродно" />
+    </team>
+    <team value="Славия-Мозырь">
+      <variant value="Славия-Мозырь" />
+    </team>
+    <team value="БАТЭ">
+      <variant value="БАТЭ" />
+    </team>
+    <team value="Динамо Минск">
+      <variant value="Динамо Минск" />
+    </team>
+
+    <!-- Бельгия -->
+    <team value="Гент">
+      <variant value="Гент" />
+    </team>
+    <team value="Стандард">
+      <variant value="Стандард" />
+    </team>
+    <team value="Ауд-Хеверле Левен">
+      <variant value="Ауд-Хеверле Левен" />
+    </team>
+    <team value="Локерен">
+      <variant value="Локерен" />
+    </team>
+    <team value="Генк">
+      <variant value="Генк" />
+    </team>
+    <team value="Шарлеруа">
+      <variant value="Шарлеруа" />
+    </team>
+    <team value="Кортрейк">
+      <variant value="Кортрейк" />
+    </team>
+    <team value="Эксельсиор Виртон">
+      <variant value="Эксельсиор Виртон" />
+    </team>
+    <team value="Льерс">
+      <variant value="Льерс" />
+    </team>
+    <team value="Васланд-Беверен">
+      <variant value="Васланд-Беверен" />
+    </team>
+    <team value="Монс">
+      <variant value="Монс" />
+    </team>
+    <team value="Мехелен">
+      <variant value="Мехелен" />
+    </team>
+    <team value="Серкль Брюгге">
+      <variant value="Серкль Брюгге" />
+    </team>
+    <team value="Брюгге">
+      <variant value="Брюгге" />
+    </team>
+    <team value="Андерлехт">
+      <variant value="Андерлехт" />
+    </team>
+    <team value="Зулте-Варегем">
+      <variant value="Зулте-Варегем" />
+    </team>
+
+    <!-- Бразилия -->
+    <team value="Васко да Гама">
+      <variant value="Васко да Гама" />
+    </team>
+    <team value="Португеза-СП">
+      <variant value="Португеза-СП" />
+    </team>
+    <team value="Витория-БА">
+      <variant value="Витория-БА" />
+    </team>
+    <team value="Интернаcионал-РС">
+      <variant value="Интернаcионал-РС" />
+    </team>
+    <team value="Коринтианс">
+      <variant value="Коринтианс" />
+    </team>
+    <team value="Ботафого-РЖ">
+      <variant value="Ботафого-РЖ" />
+    </team>
+    <team value="Гремио">
+      <variant value="Гремио" />
+    </team>
+    <team value="Наутико">
+      <variant value="Наутико" />
+    </team>
+    <team value="Крисиума">
+      <variant value="Крисиума" />
+    </team>
+    <team value="Баия">
+      <variant value="Баия" />
+    </team>
+    <team value="Понте Прета">
+      <variant value="Понте Прета" />
+    </team>
+    <team value="Сан-Паулу">
+      <variant value="Сан-Паулу" />
+    </team>
+    <team value="Сантос">
+      <variant value="Сантос" />
+    </team>
+    <team value="Фламенго">
+      <variant value="Фламенго" />
+    </team>
+    <team value="Коритиба">
+      <variant value="Коритиба" />
+    </team>
+    <team value="Атлетико Минейро">
+      <variant value="Атлетико Минейро" />
+    </team>
+    <team value="Крузейро">
+      <variant value="Крузейро" />
+    </team>
+    <team value="Гояс">
+      <variant value="Гояс" />
+    </team>
+    <team value="Флуминенсе">
+      <variant value="Флуминенсе" />
+    </team>
+    <team value="Атлетико Паранаэнсе">
+      <variant value="Атлетико Паранаэнсе" />
+    </team>
+
+    <!-- Германия -->
+
+    <team value="Шальке 04">
+      <variant value="Шальке 04" />
+    </team>
+    <team value="Ганновер 96">
+      <variant value="Ганновер 96" />
+    </team>
+    <team value="Гройтер Фюрт">
+      <variant value="Гройтер Фюрт" />
+    </team>
+    <team value="Бавария">
+      <variant value="Бавария" />
+    </team>
+    <team value="Байер 04">
+      <variant value="Байер 04" />
+    </team>
+    <team value="Айнтрахт Франкфурт">
+      <variant value="Айнтрахт Франкфурт" />
+    </team>
+    <team value="Вольфсбург">
+      <variant value="Вольфсбург" />
+    </team>
+    <team value="Штутгарт">
+      <variant value="Штутгарт" />
+    </team>
+    <team value="Майнц 05">
+      <variant value="Майнц 05" />
+    </team>
+    <team value="Фрайбург">
+      <variant value="Фрайбург" />
+    </team>
+    <team value="Хоффенхайм">
+      <variant value="Хоффенхайм" />
+    </team>
+    <team value="Боруссия Мёнхенгладбах">
+      <variant value="Боруссия Мёнхенгладбах" />
+    </team>
+    <team value="Вердер Бремен">
+      <variant value="Вердер Бремен" />
+    </team>
+    <team value="Боруссия Дортмунд">
+      <variant value="Боруссия Дортмунд" />
+    </team>
+    <team value="Нюрнберг">
+      <variant value="Нюрнберг" />
+    </team>
+    <team value="Гамбург">
+      <variant value="Гамбург" />
+    </team>
+    <team value="Фортуна Дюссельдорф">
+      <variant value="Фортуна Дюссельдорф" />
+    </team>
+    <team value="Аугсбург">
+      <variant value="Аугсбург" />
+    </team>
+
+    <!-- Дания -->
+    <team value="Силькеборг">
+      <variant value="Силькеборг" />
+    </team>
+    <team value="Ольборг">
+      <variant value="Ольборг" />
+    </team>
+    <team value="Мидтъюлланн">
+      <variant value="Мидтъюлланн" />
+    </team>
+    <team value="Сённерйюск">
+      <variant value="Сённерйюск" />
+    </team>
+    <team value="Норшелланн">
+      <variant value="Норшелланн" />
+    </team>
+    <team value="Хорсенс">
+      <variant value="Хорсенс" />
+    </team>
+    <team value="Брондбю">
+      <variant value="Брондбю" />
+    </team>
+    <team value="Раннерс">
+      <variant value="Раннерс" />
+    </team>
+    <team value="Оденсе">
+      <variant value="Оденсе" />
+    </team>
+    <team value="ФК Копенгаген">
+      <variant value="ФК Копенгаген" />
+    </team>
+    <team value="Эсбьерг">
+      <variant value="Эсбьерг" />
+    </team>
+    <team value="Орхус">
+      <variant value="Орхус" />
+    </team>
+
+    <!--Израиль-->
+
+    <team value="Хапоэль Тель-Авив">
+      <variant value="Хапоэль Тель-Ав." />
+    </team>
+    <team value="Ирони Нир Рамат.">
+      <variant value="Ирони Нир Рамат." />
+    </team>
+    <team value="Хапоэль Беэр-Шева">
+      <variant value="Хапоэль Беэр-Шева" />
+    </team>
+    <team value="Маккаби Нетания">
+      <variant value="Маккаби Нетания" />
+    </team>
+    <team value="Хапоэль Р-Г">
+      <variant value="Хапоэль Р-Г" />
+    </team>
+    <team value="Бней Сахнин">
+      <variant value="Бней Сахнин" />
+    </team>
+    <team value="Хапоэль Хайфа">
+      <variant value="Хапоэль Хайфа" />
+    </team>
+    <team value="Бней Иегуда">
+      <variant value="Бней Иегуда" />
+    </team>
+    <team value="Хапоэль Акко">
+      <variant value="Хапоэль Акко" />
+    </team>
+    <team value="Бейтар Иерусалим">
+      <variant value="Бейтар Иерусалим" />
+    </team>
+    <team value="Ашдод">
+      <variant value="Ашдод" />
+    </team>
+    <team value="Маккаби Хайфа">
+      <variant value="Маккаби Хайфа" />
+    </team>
+    <team value="Ирони Кирьят-Шмона">
+      <variant value="Ирони Кирьят-Шмона" />
+    </team>
+    <team value="Маккаби Тель-Авив">
+      <variant value="Маккаби Тель-Авив" />
+    </team>
+
+    
+    Ваккер Инсбрук
+
 
 
     <!--Баскетбол(Фоллипины)-->
