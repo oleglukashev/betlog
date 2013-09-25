@@ -44,7 +44,13 @@ class MarathonBet():
       country = self.getCountryFromTitle( title_str )
       championship = self.getChampionshipFromTitle( title_str )
 
-      print( sport )
+      if ( sport == "Футбол"):
+        for event_item in event.cssselect('table.foot-market > tbody[id]'):
+          if ( len( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name') ) ):
+            if ( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')[0] ):
+              print( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')[0].text.strip(" \r\n") )
+            if ( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')[1] ):
+              print( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')[1].text.strip(" \r\n") )
 
 
 
