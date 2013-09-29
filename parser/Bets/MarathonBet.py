@@ -16,6 +16,7 @@ class MarathonBet():
     self.databaseConnect = databaseConnect
     self.link = link
 
+
   def getContentFromUrl( self ):
     data = urllib.parse.urlencode( self.link['data'] )
 
@@ -25,6 +26,7 @@ class MarathonBet():
     doc = lxml.html.document_fromstring(page.read().decode('utf-8'))
     
     return doc
+
 
   def parse( self ):
     content = self.getContentFromUrl()
@@ -44,14 +46,18 @@ class MarathonBet():
       country = self.getCountryFromTitle( title_str )
       championship = self.getChampionshipFromTitle( title_str )
 
-      if ( sport == "Футбол"):
+
+      if ( sport != None ):
         for event_item in event.cssselect('table.foot-market > tbody[id]'):
           if ( len( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name') ) ):
-            if ( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')[0] ):
-              print( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')[0].text.strip(" \r\n") )
-            if ( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')[1] ):
-              print( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')[1].text.strip(" \r\n") )
-
+            if ( country != None ):
+              print( sport )
+              print ( country )
+              print ( championship )
+              for team in event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name'):
+                print( self.getTeam( team.text.strip(" \r\n") ) )
+              print("----")
+            
 
 
   def getSportFromTitle( self, title ):
@@ -75,6 +81,9 @@ class MarathonBet():
       if Dictionary.findCountry( title_element ):
         return Dictionary.findCountry( title_element )
 
+  def getTeam( self, team ):
+    if Dictionary.findTeam( team ):
+      return Dictionary.findTeam( team )
 
 
     

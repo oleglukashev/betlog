@@ -29,3 +29,11 @@ def findCountry( country_str ):
     for variant in country.getElementsByTagName('variant'):
       if ( variant.getAttribute("value") == country_str ):
         return country.getAttribute("value")
+
+def findTeam( team_str ):
+  teams = dictionary.getElementsByTagName('team')
+
+  for team in teams:
+    for variant in team.getElementsByTagName('variant'):
+      if ( variant.getAttribute("value") == team_str ):
+        return team.getAttribute("value")

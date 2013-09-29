@@ -2,70 +2,31 @@
 
 <dictionary>
   <sports>
-    <sport value="Австралийский футбол" id="1">
-      <variant value="Австралийский футбол" />
-    </sport>
-    <sport value="Академическая гребля‎" id="2">
-      <variant value="Академическая гребля‎" />
-    </sport>
-    <sport value="Американский футбол" id="3">
-      <variant value="Американский футбол" />
-    </sport>
-    <sport value="Баскетбол" id="4">
+    <!--<sport value="Баскетбол">
       <variant value="Баскетбол" />
     </sport>
-    <sport value="Бейсбол" id="5">
-      <variant value="Бейсбол" />
+    <sport value="Бокс">
+      <variant value="Бокс" />
     </sport>
-    <sport value="Водное поло" id="6">
-      <variant value="Водное поло" />
-    </sport>
-    <sport value="Волейбол‎" id="7">
+    <sport value="Волейбол‎">
       <variant value="Волейбол‎" />
     </sport>
-    <sport value="Гандбол" id="8">
+    <sport value="Гандбол">
       <variant value="Гандбол" />
     </sport>
-    <sport value="Канадский футбол‎" id="9">
-      <variant value="Канадский футбол‎" />
-    </sport>
-    <sport value="Кёрлинг" id="10">
-      <variant value="Кёрлинг" />
-    </sport>
-    <sport value="Крикет" id="11">
-      <variant value="Крикет" />
-    </sport>
-    <sport value="Лакросс" id="12">
-      <variant value="Лакросс" />
-    </sport>
-    <sport value="Мини-футбол‎" id="13">
-      <variant value="Мини-футбол‎" />
-    </sport>
-    <sport value="Пляжный волейбол" id="14">
-      <variant value="Пляжный волейбол" />
-    </sport>
-    <sport value="Пляжный футбол" id="15">
-      <variant value="Пляжный футбол" />
-    </sport>
-    <sport value="Регби" id="16">
+    <sport value="Регби">
       <variant value="Регби" />
       <variant value="Регби-лига" />
-    </sport>
-    <sport value="Софтбол" id="17">
-      <variant value="Софтбол" />
-    </sport>
-    <sport value="Футбол" id="18">
+    </sport>-->
+    <sport value="Футбол">
       <variant value="Футбол" />
     </sport>
-    <sport value="Футзал" id="15">
-      <variant value="Футзал" />
-    </sport>
-    <sport value="Хоккей" id="20">
+    <!--<sport value="Хоккей">
       <variant value="Хоккей" />
     </sport>
-    <sport value="Хоккей с мячом" id="21">
-      <variant value="Хоккей с мячом" />
-    </sport>
+    <sport value="Теннис">
+      <variant value="Теннис" />
+    </sport>-->
   </sports>
   <countries>
     <country value="Австралия">
@@ -253,487 +214,121 @@
     </country>
   </countries>
   <championships>
-    <championship value="AFL" sport_id="1">
-      <variant value="АФЛ" />
-    </championship>
-    <championship value="NFL" sport_id="3">
-      <variant value="NFL" />
-    </championship>
-    <championship value="CFL" sport_id="3">
-      <variant value="CFL" />
-    </championship>
-    <championship value="Экс-лига" sport_id="3">
-      <variant value="Экс-лига" />
-    </championship>
-    <championship value="NBA" sport_id="4">
-      <variant value="WNBA" />
-    </championship>
-    <championship value="ЧЕ-2013" sport_id="4">
-      <variant value="ЧЕ-2013" />
-    </championship>
-    <championship value="MLB" sport_id="5">
-      <variant value="MLB" />
-    </championship>
-    <championship value="KPB" sport_id="5">
-      <variant value="KPB" />
-    </championship>
-    <championship value="NPB" sport_id="5">
-      <variant value="NPB" />
-    </championship>
-    <championship value="NORCECA 2013" sport_id="7">
-      <variant value="Чемпионат NORCECA 2013" />
-    </championship>
-    <championship value="Чемпионат Азии 2013" sport_id="7">
-      <variant value="Чемпионат Азии 2013" />
-    </championship>
-    <championship value="ЧМ-2014" sport_id="7">
-      <variant value="ЧМ-2014" />
-    </championship>
-    <championship value="ЧМ-2013" sport_id="15">
-      <variant value="ЧМ-2013" />
-    </championship>
-    <championship value="NRL" sport_id="16">
-      <variant value="NRL" />
-    </championship>
-    <championship value="NRL" sport_id="16">
-      <variant value="NRL" />
-    </championship>
-    <championship value="VPL" sport_id="17">
-      <variant value="VPL" />
-    </championship>
-    <championship value="Премьер-лига" sport_id="17">
+    <!-- Футбол -->
+    <championship value="Премьер-лига">
       <variant value="Премьер-лига" />
     </championship>
-    <championship value="Чемпион-лига" sport_id="17">
-      <variant value="Чемпион-лига" />
-    </championship>
-    <championship value="1-я лига" sport_id="17">
-      <variant value="1-я лига" />
-    </championship>
-    <championship value="Истмийская лига" sport_id="17">
-      <variant value="Истмийская лига" />
-    </championship>
-    <championship value="Национальная конференция" sport_id="17">
-      <variant value="Национальная конференция" />
-    </championship>
-    <championship value="Северная конференция" sport_id="17">
-      <variant value="Северная конференция" />
-    </championship>
-    <championship value="Северная Премьер-лига" sport_id="17">
-      <variant value="Северная Премьер-лига" />
-    </championship>
-    <championship value="Южная конференция" sport_id="17">
-      <variant value="Южная конференция" />
-    </championship>
-    <championship value="Южная футбольная лига" sport_id="17">
-      <variant value="Южная футбольная лига" />
-    </championship>
-    <championship value="Примера дивизион" sport_id="17">
-      <variant value="Примера дивизион" />
-    </championship>
-    <championship value="Кубок" sport_id="17">
-      <variant value="Кубок" />
-    </championship>
-    <championship value="Примера Б Насьональ" sport_id="17">
-      <variant value="Примера Б Насьональ" />
-    </championship>
-    <championship value="Лига LFPB" sport_id="17">
-      <variant value="Лига LFPB" />
-    </championship>
-    <championship value="Серия А" sport_id="17">
-      <variant value="Серия А" />
-    </championship>
-    <championship value="Серия Б" sport_id="17">
-      <variant value="Серия Б" />
-    </championship>
-    <championship value="Бундеслига" sport_id="17">
-      <variant value="Бундеслига" />
-    </championship>
-    <championship value="2-я бундеслига" sport_id="17">
-      <variant value="2-я бундеслига" />
-    </championship>
-    <championship value="LNP" sport_id="17">
-      <variant value="LNP" />
-    </championship>
-    <championship value="Суперлига" sport_id="17">
-      <variant value="Суперлига" />
-    </championship>
-    <championship value="CSL" sport_id="17">
-      <variant value="CSL" />
-    </championship>
-    <championship value="1-й дивизион" sport_id="17">
-      <variant value="1-й дивизион" />
-    </championship>
-    <championship value="Примера А дивизион" sport_id="17">
-      <variant value="Примера А дивизион" />
-    </championship>
-    <championship value="Высшая лига" sport_id="17">
-      <variant value="Высшая лига" />
-    </championship>
-    <championship value="Лига Европы УЕФА" sport_id="17">
-      <variant value="Лига Европы УЕФА" />
-    </championship>
-    <championship value="Лига чемпионов АФК" sport_id="17">
-      <variant value="Лига чемпионов АФК" />
-    </championship>
-    <championship value="Лига чемпионов УЕФА" sport_id="17">
-      <variant value="Лига чемпионов УЕФА" />
-    </championship>
-    <championship value="Эредивизи" sport_id="17">
-      <variant value="Эредивизи" />
-    </championship>
-    <championship value="Типпелига" sport_id="17">
-      <variant value="Типпелига" />
-    </championship>
-    <championship value="Экстракласа" sport_id="17">
-      <variant value="Экстракласа" />
-    </championship>
-    <championship value="Лига ди Онра" sport_id="17">
-      <variant value="Лига ди Онра" />
-    </championship>
-    <championship value="Примейра-лига" sport_id="17">
-      <variant value="Примейра-лига" />
-    </championship>
-    <championship value="К-лига" sport_id="17">
-      <variant value="К-лига" />
-    </championship>
-    <championship value="С.Лига" sport_id="17">
-      <variant value="С.Лига" />
-    </championship>
-    <championship value="ФНЛ России" sport_id="17">
-      <variant value="ФНЛ" />
-    </championship>
-    <championship value="Цоргонь-лига" sport_id="17">
-      <variant value="Цоргонь-лига" />
-    </championship>
-    <championship value="MLS" sport_id="17">
-      <variant value="MLS" />
-    </championship>
-    <championship value="Эффодейлдин" sport_id="17">
-      <variant value="Эффодейлдин" />
-    </championship>
-    <championship value="Лига 1" sport_id="17">
-      <variant value="Лига 1" />
-    </championship>
-    <championship value="Лига 2" sport_id="17">
-      <variant value="Лига 2" />
-    </championship>
-    <championship value="Гамбринус-лига" sport_id="17">
-      <variant value="Гамбринус-лига" />
-    </championship>
-    <championship value="Аллсвенскан" sport_id="17">
-      <variant value="Аллсвенскан" />
-    </championship>
-    <championship value="Суперэттан" sport_id="17">
-      <variant value="Суперэттан" />
-    </championship>    
-    <championship value="Челлендж Кап" sport_id="17">
-      <variant value="Челлендж Кап" />
-    </championship>
-    <championship value="PSL" sport_id="17">
-      <variant value="PSL" />
-    </championship>
-    <championship value="Южноамериканский Кубок" sport_id="17">
-      <variant value="Южноамериканский Кубок" />
-    </championship>
-    <championship value="Юношеская лига УЕФА" sport_id="17">
-      <variant value="Юношеская лига УЕФА" />
-    </championship>
-    <championship value="Джей-лига" sport_id="17">
-      <variant value="Джей-лига" />
-    </championship>
-    <championship value="Топпсериен" sport_id="17">
-      <variant value="Топпсериен" />
-    </championship>    
-    <championship value="Эй-лига" sport_id="17">
+    <championship value="А-лига">
       <variant value="Эй-лига" />
     </championship>
-    <championship value="PSL" sport_id="17">
-      <variant value="PSL" />
+    <championship value="Бундеслига">
+      <variant value="Бундеслига" />
     </championship>
-    <championship value="Южноамериканский Кубок" sport_id="17">
-      <variant value="Южноамериканский Кубок" />
+    <championship value="Примера дивизион">
+      <variant value="Примера дивизион" />
     </championship>
-    <championship value="ЧЕ-2014" sport_id="18">
-      <variant value="ЧЕ-2014" />
+    <championship value="Серия А">
+      <variant value="Серия А" />
     </championship>
-    <championship value="EBEL" sport_id="20">
-      <variant value="EBEL" />
+    <championship value="Суперлига">
+      <variant value="Суперлига" />
     </championship>
-    <championship value="Азиатская лига" sport_id="20">
-      <variant value="Азиатская лига" />
+    <championship value="Эредивизи">
+      <variant value="Эредивизи" />
     </championship>
-    <championship value="Экстралига" sport_id="20">
-      <variant value="Экстралига" />
+    <championship value="Примейра-лига">
+      <variant value="Примейра-лига" />
     </championship>
-    <championship value="EIHL" sport_id="20">
-      <variant value="EIHL" />
+    <championship value="Лига 1">
+      <variant value="Лига 1" />
     </championship>
-    <championship value="DEL" sport_id="20">
-      <variant value="DEL" />
+    <championship value="Суперлига">
+      <variant value="Суперлига" />
     </championship>
-    <championship value="OHL" sport_id="20">
-      <variant value="OHL" />
-    </championship>
-    <championship value="WHL" sport_id="20">
-      <variant value="WHL" />
-    </championship>
-    <championship value="GET-лига" sport_id="20">
-      <variant value="GET-лига" />
-    </championship>
-    <championship value="НХЛ" sport_id="20">
-      <variant value="НХЛ" />
-    </championship>
-    <championship value="КХЛ" sport_id="20">
-      <variant value="КХЛ" />
-    </championship>
-    <championship value="ВХЛ" sport_id="20">
-      <variant value="ВХЛ" />
-    </championship>
-    <championship value="МХЛ" sport_id="20">
-      <variant value="МХЛ" />
-    </championship>
-    <championship value="ECHL" sport_id="20">
-      <variant value="ECHL" />
-    </championship>
-    <championship value="Местис" sport_id="20">
-      <variant value="Местис" />
-    </championship>
-    <championship value="СМ-лига" sport_id="20">
-      <variant value="СМ-лига" />
-    </championship>
-    <championship value="Национальная лига А" sport_id="20">
-      <variant value="Национальная лига А" />
-    </championship>
-    <championship value="Национальная лига Б" sport_id="20">
-      <variant value="Национальная лига Б" />
-    </championship>
-    <championship value="Аллсвенскан" sport_id="20">
+    <championship value="Аллсвенскан">
       <variant value="Аллсвенскан" />
     </championship>
-    <championship value="СМ-лига" sport_id="20">
-      <variant value="СМ-лига" />
+    <championship value="Джей-лига">
+      <variant value="JFL" />
     </championship>
-    <championship value="Национальная лига А" sport_id="20">
-      <variant value="Национальная лига А" />
+    <championship value="Лига чемпионов">
+      <variant value="Лига чемпионов" />
     </championship>
+    <championship value="Лига Европы">
+      <variant value="Лига Европы" />
+    </championship>
+
+
+    <!--<championship value="Англия (Премьер-лига)">
+      <variant value="Премьер-лига" />
+    </championship>
+    <championship value="Австралия (А-лига)">
+      <variant value="Эй-лига" />
+    </championship>
+    <championship value="Австрия (Бундеслига)">
+      <variant value="Бундеслига" />
+    </championship>
+    <championship value="Аргентина (Примера дивизион)">
+      <variant value="Примера дивизион" />
+    </championship>
+    <championship value="Беларусь (Премьер-лига)">
+      <variant value="Премьер-лига" />
+    </championship>
+    <championship value="Бразилия (Серия А)">
+      <variant value="Серия А" />
+    </championship>
+    <championship value="Германия (Бундеслига)">
+      <variant value="Бундеслига" />
+    </championship>
+    <championship value="Дания (Суперлига)">
+      <variant value="Суперлига" />
+    </championship>
+    <championship value="Израиль (Премьер-лига)">
+      <variant value="Премьер-лига" />
+    </championship>
+    <championship value="Испания (Примера дивизион)">
+      <variant value="Примера дивизион" />
+    </championship>
+    <championship value="Италия (Серия А)">
+      <variant value="Серия А" />
+    </championship>
+    <championship value="Нидерланды (Эредивизи)">
+      <variant value="Эредивизи" />
+    </championship>
+    <championship value="Португалия (Примейра-лига)">
+      <variant value="Примейра-лига" />
+    </championship>
+    <championship value="Россия (Премьер-лига)">
+      <variant value="Премьер-лига" />
+    </championship>
+    <championship value="Украина (Премьер-лига)">
+      <variant value="Премьер-лига" />
+    </championship>
+    <championship value="Франция (Лига 1)">
+      <variant value="Лига 1" />
+    </championship>
+    <championship value="Швейцария (Суперлига)">
+      <variant value="Суперлига" />
+    </championship>
+    <championship value="Швеция (Аллсвенскан)">
+      <variant value="Аллсвенскан" />
+    </championship>
+    <championship value="Шотландия (Премьер-лига)">
+      <variant value="Премьер-лига" />
+    </championship>
+    <championship value="Япония (Джей-лига)">
+      <variant value="JFL" />
+    </championship>
+    <championship value="Лига чемпионов">
+      <variant value="Лига чемпионов" />
+    </championship>
+    <championship value="Лига Европы">
+      <variant value="Лига Европы" />
+    </championship>-->
   </championships>
   <teams>
-    <!--Австралийский футбол-->
-    <!--AFL-->
-    <team value="Хоуторн Хокс">
-      <variant value="Хоуторн Хокс" />
-    </team>
-    <team value="Фримантл Докерс">
-      <variant value="Фримантл Докерс" />
-    </team>
-    <team value="Норт Мельбурн Кенгэрус">
-      <variant value="Норт Мельбурн Кенгэрус" />
-    </team>
-    <team value="Джилонг Катс">
-      <variant value="Джилонг Катс" />
-    </team>
-    <team value="ГВС Джайнтс">
-      <variant value="ГВС Джайнтс" />
-    </team>
-    <team value="Мельбурн Демонс">
-      <variant value="Мельбурн Демонс" />
-    </team>
-    <team value="Ричмонд Тайгерс">
-      <variant value="Ричмонд Тайгерс" />
-    </team>
-    <team value="Вест Коуст Иглз">
-      <variant value="Вест Коуст Иглз" />
-    </team>
-    <team value="Голд Коуст Санс">
-      <variant value="Голд Коуст Санс" />
-    </team>
-    <team value="Брисбэйн Лайонс">
-      <variant value="Брисбэйн Лайонс" />
-    </team>
-    <team value="Сент Килда Сэйнтс">
-      <variant value="Сент Килда Сэйнтс" />
-    </team>
-    <team value="Карлтон Блюс">
-      <variant value="Карлтон Блюс" />
-    </team>
-    <team value="Вестерн Бульдогс">
-      <variant value="Вестерн Бульдогс" />
-    </team>
-    <team value="Сидней Суонс">
-      <variant value="Сидней Суонс" />
-    </team>
-    <team value="Аделаида Кроус">
-      <variant value="Аделаида Кроус" />
-    </team>
-    <team value="Порт Аделаида Пауэр">
-      <variant value="Порт Аделаида Пауэр" />
-    </team>
-    <team value="Коллингвуд Магпайс">
-      <variant value="Коллингвуд Магпайс" />
-    </team>
-    <team value="Ессендон Бомберс">
-      <variant value="Ессендон Бомберс" />
-    </team>
-
-    <!--Американский футбол-->
-    <!--NCAA-->
-    <team value="Кент Стэйт Голден Флэшс">
-      <variant value="Кент Стэйт Голден Флэшс" />
-    </team>
-    <team value="Либерти Флеймз">
-      <variant value="Либерти Флеймз" />
-    </team>
-    <team value="Саут Каролина Геймкокс">
-      <variant value="Саут Каролина Геймкокс" />
-    </team>
-    <team value="Норт Каролина Тейр Хилз">
-      <variant value="Норт Каролина Тейр Хилз" />
-    </team>
-    <team value="Уэйк Форест Демон Диконз">
-      <variant value="Уэйк Форест Демон Диконз" />
-    </team>
-    <team value="Пресбитерьен Блю Хоуз">
-      <variant value="Пресбитерьен Блю Хоуз" />
-    </team>
-    <team value="Болл Стэйт Кердинелз">
-      <variant value="Болл Стэйт Кердинелз" />
-    </team>
-    <team value="Иллинойс Стэйт Редбёрдз">
-      <variant value="Иллинойс Стэйт Редбёрдз" />
-    </team>
-    <team value="Боулинг Грин Фэлконз">
-      <variant value="Боулинг Грин Фэлконз" />
-    </team>
-    <team value="Талса Голден Харрикейн">
-      <variant value="Талса Голден Харрикейн" />
-    </team>
-    <team value="Индиана Хузьерз">
-      <variant value="Индиана Хузьерз" />
-    </team>
-    <team value="Миннесота Голден Гоферз">
-      <variant value="Миннесота Голден Гоферз" />
-    </team>
-    <team value="Невада Лас-Вегас Ребелз">
-      <variant value="Невада Лас-Вегас Ребелз" />
-    </team>
-    <team value="Сентрал Флорида Найтс">
-      <variant value="Сентрал Флорида Найтс" />
-    </team>
-    <team value="Экрон Зипс">
-      <variant value="Экрон Зипс" />
-    </team>
-    <team value="Коннектикут Хоскис">
-      <variant value="Коннектикут Хоскис" />
-    </team>
-    <team value="Таусон Тайгерз">
-      <variant value="Таусон Тайгерз" />
-    </team>
-    <team value="Миддл Теннесси Блю Рейдерз">
-      <variant value="Миддл Теннесси Блю Рейдерз" />
-    </team>
-    <team value="Вестерн Каролина Кэтамаунтс">
-      <variant value="Вестерн Каролина Кэтамаунтс" />
-    </team>
-    <team value="Саут Алабама Джагьюарз">
-      <variant value="Саут Алабама Джагьюарз" />
-    </team>
-    <team value="Саутерн Юта Тандербёрдз">
-      <variant value="Саутерн Юта Тандербёрдз" />
-    </team>
-    <team value="Талейн Грин Вейв">
-      <variant value="Талейн Грин Вейв" />
-    </team>
-    <team value="Джексон Стэйт Тайгерз">
-      <variant value="Джексон Стэйт Тайгерз" />
-    </team>
-    <team value="Юта Ютс">
-      <variant value="Юта Ютс" />
-    </team>
-    <team value="Юта Стэйт Эджис">
-      <variant value="Юта Стэйт Эджис" />
-    </team>
-    <team value="Вандербилт Коммодорз">
-      <variant value="Вандербилт Коммодорз" />
-    </team>
-    <team value="Миссисипи Ребелз">
-      <variant value="Миссисипи Ребелз" />
-    </team>
-    <team value="Сан-Хосе Стэйт Спертанз">
-      <variant value="Сан-Хосе Стэйт Спертанз" />
-    </team>
-    <team value="Сакраменто Ст. Хорнетс">
-      <variant value="Сакраменто Ст. Хорнетс" />
-    </team>
-    <team value="Фресно Стэйт Буллдогз">
-      <variant value="Фресно Стэйт Буллдогз" />
-    </team>
-    <team value="Ратгерс Скарлет Найтс">
-      <variant value="Ратгерс Скарлет Найтс" />
-    </team>
-    <team value="Гавайи Уорриорз">
-      <variant value="Саутерн Калифорния Тройанз" />
-    </team>
-    <team value="Арми Блэк Найтс">
-      <variant value="Арми Блэк Найтс" />
-    </team>
-    <team value="Морган Стэйт Беаз">
-      <variant value="Морган Стэйт Беаз" />
-    </team>
-    
-    <!--NFL-->
-    <team value="Денвер Бронкос">
-      <variant value="Денвер Бронкос" />
-    </team>
-    <team value="Балтимор Рэйвенз">
-      <variant value="Балтимор Рэйвенз" />
-    </team>
-    <team value="Баффало Биллз">
-      <variant value="Баффало Биллз" />
-    </team>
-    <team value="Нью-Ингленд Пэтриотс">
-      <variant value="Нью-Ингленд Пэтриотс" />
-    </team>
-    <team value="Детройт Лайонз">
-      <variant value="Детройт Лайонз" />
-    </team>
-    <team value="Миннесота Викингз">
-      <variant value="Миннесота Викингз" />
-    </team>
-    <team value="Джексонвиль Джэгерз">
-      <variant value="Джексонвиль Джэгерз" />
-    </team>
-    <team value="Канзас-Сити Чифс">
-      <variant value="Канзас-Сити Чифс" />
-    </team>
-
-    <team value="Индианаполис Колтс">
-      <variant value="Индианаполис Колтс" />
-    </team>
-    <team value="Окленд Рэйдерз">
-      <variant value="Окленд Рэйдерз" />
-    </team>
-    <team value="Каролина Пантерз">
-      <variant value="Каролина Пантерз" />
-    </team>
-    <team value="Сиэтл Сихокс">
-      <variant value="Сиэтл Сихокс" />
-    </team>
-    <team value="Кливленд Браунз">
-      <variant value="Кливленд Браунз" />
-    </team>
-    <team value="Майами Долфинз">
-      <variant value="Майами Долфинз" />
-    </team>
-    <team value="Нью-Йорк Джетс">
-      <variant value="Нью-Йорк Джетс" />
-    </team>
-    <team value="Канзас-Сити Чифс">
-      <variant value="Канзас-Сити Чифс" />
-    </team>
-
     <!--Футбол-->
-    <!--Австралия a-лига-->
+    <!--Австралия -->
     <team value="Мельбурн Харт">
       <variant value="Мельбурн Херт" />
       <variant value="Мельбурн Харт" />
@@ -771,57 +366,6 @@
     </team>
     <team value="Сидней">
       <variant value="Сидней" />
-    </team>
-
-
-    <!--Алжир 1-лига-->    
-    <team value="ЖС Кабилия">
-      <variant value="ЖС Кабилия" />
-    </team>
-    <team value="УСМ Эль-Харраш">
-      <variant value="УСМ Эль-Харраш" />
-    </team>
-    <team value="КР Белуиздад">
-      <variant value="КР Белуиздад" />
-    </team>
-    <team value="ЖС Саура">
-      <variant value="ЖС Саура" />
-    </team>
-    <team value="КС Константин">
-      <variant value="КС Константин" />
-    </team>
-    <team value="УСМ Алжир">
-      <variant value="УСМ Алжир" />
-    </team>
-    <team value="УСМ Бель Аббес">
-      <variant value="УСМ Бель Аббес" />
-    </team>
-    <team value="АСО Шлеф">
-      <variant value="АСО Шлеф" />
-    </team>
-    <team value="ЖСМ Беджая">
-      <variant value="ЖСМ Беджая" />
-    </team>
-    <team value="МК Оран">
-      <variant value="МК Оран" />
-    </team>
-    <team value="КА Бордж Бу Арреридж">
-      <variant value="КА Бордж Бу Арреридж" />
-    </team>
-    <team value="КА Батна">
-      <variant value="КА Батна" />
-    </team>
-    <team value="МК Алжир">
-      <variant value="МК Алжир" />
-    </team>
-    <team value="ВА Тлемсен">
-      <variant value="ВА Тлемсен" />
-    </team>
-    <team value="ЕС Сетиф">
-      <variant value="ЕС Сетиф" />
-    </team>
-    <team value="МК Эль-Элма">
-      <variant value="МК Эль-Элма" />
     </team>
 
     <!--Англия-->
@@ -889,7 +433,7 @@
       <variant value="Сток Сити" />
     </team>
 
-    <!-- Австрия Бундеслига-->
+    <!-- Австрия -->
     <team value="Рид">
       <variant value="Рид" />
     </team>
@@ -921,7 +465,7 @@
       <variant value="Аустрия Вена" />
     </team>
 
-    <!-- Аргентина Примера дивизион-->
+    <!-- Аргентина -->
     <team value="Индепендьенте">
       <variant value="Индепендьенте" />
     </team>
@@ -1819,127 +1363,132 @@
       <variant value="Цвайген Каназава" />
     </team>
 
+    <!-- Баскетбол -->
+    <team value="Индиана Пэйсерз">
+      <variant value="Индиана Пэйсерз" />
+    </team>
+    <team value="Мемфис Гризлиз">
+      <variant value="Мемфис Гризлиз" />
+    </team>
+    <team value="Чикаго Буллз">
+      <variant value="Чикаго Буллз" />
+    </team>
+    <team value="Шарлотт Бобкэтс">
+      <variant value="Шарлотт Бобкэтс" />
+    </team>
+    <team value="Орландо Мэджик">
+      <variant value="Орландо Мэджик" />
+    </team>
+    <team value="Майами Хит">
+      <variant value="Майами Хит" />
+    </team>
+    <team value="Сан-Антонио Спёрс">
+      <variant value="Сан-Антонио Спёрс" />
+    </team>
+    <team value="Бруклин Нетс">
+      <variant value="Бруклин Нетс" />
+    </team>
+    <team value="Хьюстон Рокетс">
+      <variant value="Хьюстон Рокетс" />
+    </team>
+    <team value="Атланта Хокс">
+      <variant value="Атланта Хокс" />
+    </team>
+    <team value="Оклахома-Сити Тандер">
+      <variant value="Оклахома-Сити Тандер" />
+    </team>
+    <team value="Финикс Санз">
+      <variant value="Финикс Санз" />
+    </team>
+    <team value="Вашингтон Уизардз">
+      <variant value="Вашингтон Уизардз" />
+    </team>
+    <team value="Даллас Маверикс">
+      <variant value="Даллас Маверикс" />
+    </team>
+    <team value="Детройт Пистонс">
+      <variant value="Детройт Пистонс" />
+    </team>
+    <team value="Сакраменто Кингз">
+      <variant value="Сакраменто Кингз" />
+    </team>
+    <team value="Нью-Йорк Никс">
+      <variant value="Нью-Йорк Никс" />
+    </team>
+    <team value="Портленд Трэйл Блэйзерс">
+      <variant value="Портленд Трэйл Блэйзерс" />
+    </team>
+    <team value="Нью-Орлеан Хорнетс">
+      <variant value="Нью-Орлеан Хорнетс" />
+    </team>
+    <team value="Денвер Наггетс">
+      <variant value="Денвер Наггетс" />
+    </team>
+    <team value="Лос-Анджелес Клипперс">
+      <variant value="Лос-Анджелес Клипперс" />
+    </team>
+    <team value="Лос-Анджелес Лейкерс">
+      <variant value="Лос-Анджелес Лейкерс" />
+    </team>
+    <team value="Филадельфия 76-е">
+      <variant value="Филадельфия 76-е" />
+    </team>
+    <team value="Кливленд Кавальерс">
+      <variant value="Кливленд Кавальерс" />
+    </team>
+    <team value="Торонто Рэпторз">
+      <variant value="Торонто Рэпторз" />
+    </team>
+    <team value="Бостон Селтикс">
+      <variant value="Бостон Селтикс" />
+    </team>
+    <team value="Милуоки Бакс">
+      <variant value="Милуоки Бакс" />
+    </team>
+    <team value="Юта Джаз">
+      <variant value="Юта Джаз" />
+    </team>
+    <team value="Миннесота Тимбервулвз">
+      <variant value="Миннесота Тимбервулвз" />
+    </team>
+    <team value="Голден Стэйт Уорриорз">
+      <variant value="Голден Стэйт Уорриорз" />
+    </team>
+
+    <!-- Австралия -->
+    <team value="Канберра Кэпиталз">
+      <variant value="Канберра Кэпиталз" />
+    </team>
+    <team value="Данденонг Рэнджерс">
+      <variant value="Данденонг Рэнджерс" />
+    </team>
+    <team value="Таунсвилл Файер">
+      <variant value="Таунсвилл Файер" />
+    </team>
+    <team value="Аделаида Лайтнинг">
+      <variant value="Аделаида Лайтнинг" />
+    </team>
+    <team value="Сидней Юни Флеймз">
+      <variant value="Сидней Юни Флеймз" />
+    </team>
+    <team value="Данденонг Рэнджерс">
+      <variant value="Данденонг Рэнджерс" />
+    </team>
+    <team value="Бендиго Спирит">
+      <variant value="Бендиго Спирит" />
+    </team>
+    <team value="Бэллин Мельбурн Бумерс">
+      <variant value="Бэллин Мельбурн Бумерс" />
+    </team>
+    <team value="Логан Тандер">
+      <variant value="Логан Тандер" />
+    </team>
+    <team value="Аделаида Лайтнинг">
+      <variant value="Аделаида Лайтнинг" />
+    </team>
+
+
     
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
-    <team value="">
-      <variant value="" />
-    </team>
     <team value="">
       <variant value="" />
     </team>
