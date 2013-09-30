@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<sports>
+  <sport value="Футбол">
+    <countries>
+        <country value="Англия">
+            <championship value="Премьер-лига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Австралия">
+            <championship value="А-лига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Австрия">
+            <championship value="Бундеслига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Аргентина">
+            <championship value="Примера дивизион" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Беларусь">
+            <championship value="Премьер-лига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Бельгия">
+            <championship value="Про-лига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Бразилия">
+            <championship value="Серия А" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Германия">
+            <championship value="Бундеслига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Дания">
+            <championship value="Суперлига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Израиль">
+            <championship value="Премьер-лига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Испания">
+            <championship value="Примера дивизион" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Италия">
+            <championship value="Серия А" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Нидерланды">
+            <championship value="Эредивизи" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Португалия">
+            <championship value="Примейра-лига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Россия">
+            <championship value="Премьер-лига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Украина">
+            <championship value="Премьер-лига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Франция">
+            <championship value="Лига 1" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Швейцария">
+            <championship value="Суперлига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Швеция">
+            <championship value="Аллсвенскан" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Шотландия">
+            <championship value="Премьер-лига" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Япония">
+            <championship value="Джей-лига" />
+        </country>
+    </countries>
+  </sport>
+</sports>

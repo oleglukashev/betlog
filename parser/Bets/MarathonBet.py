@@ -9,6 +9,7 @@ import urllib
 import lxml.html
 import lxml.cssselect
 from Modules import Dictionary
+from Modules import UsedChampionships
 
 class MarathonBet():
 
@@ -45,18 +46,23 @@ class MarathonBet():
       sport = self.getSportFromTitle( title_str )
       country = self.getCountryFromTitle( title_str )
       championship = self.getChampionshipFromTitle( title_str )
+      
+      if ( country == None ):
+        country = UsedChampionships.findCountryByChampionship( championship )
+      
 
-
-      if ( sport != None ):
-        for event_item in event.cssselect('table.foot-market > tbody[id]'):
-          if ( len( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name') ) ):
-            if ( country != None ):
-              print( sport )
-              print ( country )
-              print ( championship )
-              for team in event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name'):
-                print( self.getTeam( team.text.strip(" \r\n") ) )
-              print("----")
+      if ( UsedChampionships.findSport( sport ) != None ):
+        if ( UsedChampionships.findCountryBySport( country, sport ) != None ):
+          if ( UsedChampionships.findChampionshipBySport( championship, sport ) != None ):
+            for event_item in event.cssselect('table.foot-market > tbody[id]'):
+              if ( len( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name') ) ):
+                if ( country != None ):
+                  print( sport )
+                  print ( country )
+                  print ( championship )
+                  for team in event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name'):
+                    print( self.getTeam( team.text.strip(" \r\n") ) )
+                  print("----")
             
 
 
