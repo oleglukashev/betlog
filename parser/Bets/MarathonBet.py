@@ -57,12 +57,17 @@ class MarathonBet():
             for event_item in event.cssselect('table.foot-market > tbody[id]'):
               if ( len( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name') ) ):
                 if ( country != None ):
-                  print( sport )
-                  print ( country )
-                  print ( championship )
+                  #print( sport )
+                  #print ( country )
+                  #print ( championship )
                   for team in event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name'):
-                    print( self.getTeam( team.text.strip(" \r\n") ) )
-                  print("----")
+                    #print( self.getTeam( team.text.strip(" \r\n") ) )
+                    if ( self.getTeam( team.text.strip(" \r\n") ) == None ):
+                      print( sport )
+                      print ( country )
+                      print ( championship )
+                      print( team.text.strip(" \r\n") )
+                      print("----")
             
 
 
