@@ -1478,6 +1478,1038 @@
       <variant value="Цвайген Каназава" />
     </team>
 
+    <!-- Хоккей -->
+    <!-- Австрия -->
+    <team value="Вена Кэпиталз">
+      <variant value="Вена Кэпиталз" />
+    </team>
+    <team value="Фехервар АВ">
+      <variant value="Фехервар АВ" />
+    </team>
+    <team value="Грац 99-е">
+      <variant value="Грац 99-е" />
+    </team>
+    <team value="Блэк Уингз Линц">
+      <variant value="Блэк Уингз Линц" />
+    </team>
+    <team value="Дорнбирн">
+      <variant value="Дорнбирн" />
+    </team>
+    <team value="Ред Булл Зальцбург">
+      <variant value="Ред Булл Зальцбург" />
+    </team>
+    <team value="Инсбрук">
+      <variant value="Инсбрук" />
+    </team>
+    <team value="Филлах">
+      <variant value="Филлах" />
+    </team>
+    <team value="Клагенфурт">
+      <variant value="Клагенфурт" />
+    </team>
+    <team value="Олимпия Любляна">
+      <variant value="Олимпия Любляна" />
+    </team>
+    <team value="Орли Зноймо">
+      <variant value="Орли Зноймо" />
+    </team>
+    <team value="Медвещак Загреб">
+      <variant value="Медвещак Загреб" />
+    </team>
+
+    <!-- Беларусь -->
+    <team value="Лиепаяс Металургс">
+      <variant value="Лиепаяс Металургс" />
+    </team>
+    <team value="Химик-СКА">
+      <variant value="Химик-СКА" />
+    </team>
+    <team value="Лида">
+      <variant value="Лида" />
+    </team>
+    <team value="Гомель">
+      <variant value="Гомель" />
+    </team>
+    <team value="Могилёв">
+      <variant value="Могилёв" />
+    </team>
+    <team value="Юниор-Минск">
+      <variant value="Юниор-Минск" />
+    </team>
+    <team value="Неман Гродно">
+      <variant value="Неман Гродно" />
+    </team>
+    <team value="Металлург Жлобин">
+      <variant value="Металлург Жлобин" />
+    </team>
+    <team value="Шахтёр Солигорск">
+      <variant value="Шахтёр Солигорск" />
+    </team>
+    <team value="Брест">
+      <variant value="Брест" />
+    </team>
+
+    <!-- Британия -->
+    <team value="Ковентри Блэйз">
+      <variant value="Ковентри Блэйз" />
+    </team>
+    <team value="Шеффилд Стилерз">
+      <variant value="Шеффилд Стилерз" />
+    </team>
+    <team value="Брэхэд Клан">
+      <variant value="Брэхэд Клан" />
+    </team>
+    <team value="Белфаст Джайнтс">
+      <variant value="Белфаст Джайнтс" />
+    </team>
+    <team value="Файф Флайерз">
+      <variant value="Файф Флайерз" />
+    </team>
+    <team value="Данди Старз">
+      <variant value="Данди Старз" />
+    </team>
+    <team value="Эдинбург Кэпиталз">
+      <variant value="Эдинбург Кэпиталз" />
+    </team>
+    <team value="Кардифф Дэвилз">
+      <variant value="Кардифф Дэвилз" />
+    </team>
+    <team value="Халл Стингрэйз">
+      <variant value="Халл Стингрэйз" />
+    </team>
+    <team value="Ноттингем Пэнтерз">
+      <variant value="Ноттингем Пэнтерз" />
+    </team>
+
+    <!-- Германия -->
+
+    <team value="Аугсбург">
+      <variant value="Аугсбург" />
+    </team>
+    <team value="Крефельд">
+      <variant value="Крефельд" />
+    </team>
+    <team value="Вольфсбург">
+      <variant value="Вольфсбург" />
+    </team>
+    <team value="Кельн">
+      <variant value="Кельн" />
+    </team>
+    <team value="Дюссельдорф">
+      <variant value="Дюссельдорф" />
+    </team>
+    <team value="Ганновер">
+      <variant value="Ганновер" />
+    </team>
+    <team value="Ингольштадт">
+      <variant value="Ингольштадт" />
+    </team>
+    <team value="Изерлон">
+      <variant value="Изерлон" />
+    </team>
+    <team value="Мюнхен">
+      <variant value="Мюнхен" />
+    </team>
+    <team value="Манхейм">
+      <variant value="Манхейм" />
+    </team>
+    <team value="Штраубинг">
+      <variant value="Штраубинг" />
+    </team>
+    <team value="Гамбург">
+      <variant value="Гамбург" />
+    </team>
+    <team value="Нюрнберг">
+      <variant value="Нюрнберг" />
+    </team>
+    <team value="Айсберен">
+      <variant value="Айсберен" />
+    </team>
+
+
+    <!-- Канада -->
+    <team value="Су-Сен-Мари Грейхаундз">
+      <variant value="Су-Сен-Мари Грейхаундз" />
+    </team>
+    <team value="Сагино Спирит">
+      <variant value="Сагино Спирит" />
+    </team>
+    <team value="Сарния Стинг">
+      <variant value="Сарния Стинг" />
+    </team>
+    <team value="Лондон Найтс">
+      <variant value="Лондон Найтс" />
+    </team>
+    <team value="Ниагара АйсДогз">
+      <variant value="Ниагара АйсДогз" />
+    </team>
+    <team value="Эри Оттерз">
+      <variant value="Эри Оттерз" />
+    </team>
+    <team value="Барри Колтс">
+      <variant value="Барри Колтс" />
+    </team>
+    <team value="Садбери Вулвз">
+      <variant value="Садбери Вулвз" />
+    </team>
+    <team value="Кингстон Фронтенакс">
+      <variant value="Кингстон Фронтенакс" />
+    </team>
+    <team value="Оттава 67-е">
+      <variant value="Оттава 67-е" />
+    </team>
+    <team value="Ошава Дженерэлз">
+      <variant value="Ошава Дженерэлз" />
+    </team>
+    <team value="Гелф Сторм">
+      <variant value="Гелф Сторм" />
+    </team>
+    <team value="Бельвиль Буллз">
+      <variant value="Бельвиль Буллз" />
+    </team>
+    <team value="Питерборо Питс">
+      <variant value="Питерборо Питс" />
+    </team>
+
+    <!-- Норвегия -->
+    <team value="Ставангер Ойлерз">
+      <variant value="Ставангер Ойлерз" />
+    </team>
+    <team value="Сторхамар Драгонз">
+      <variant value="Сторхамар Драгонз" />
+    </team>
+    <team value="Лёренскуг">
+      <variant value="Лёренскуг" />
+    </team>
+    <team value="Спарта Прага">
+      <variant value="Спарта Прага" />
+    </team>
+    <team value="Стьернен">
+      <variant value="Стьернен" />
+    </team>
+    <team value="Фриск Аскер">
+      <variant value="Фриск Аскер" />
+    </team>
+    <team value="Тёнсберг Вайкингз">
+      <variant value="Тёнсберг Вайкингз" />
+    </team>
+    <team value="Русенборг">
+      <variant value="Русенборг" />
+    </team>
+    <team value="Лиллехаммер">
+      <variant value="Лиллехаммер" />
+    </team>
+    <team value="Волеранга">
+      <variant value="Волеранга" />
+    </team>
+
+    <!-- USA -->
+    <team value="Виннипег Джетс">
+      <variant value="Виннипег Джетс" />
+    </team>
+    <team value="Оттава Сенаторз">
+      <variant value="Оттава Сенаторз" />
+    </team>
+    <team value="Лос-Анджелес Кингз">
+      <variant value="Лос-Анджелес Кингз" />
+    </team>
+    <team value="Чикаго Блэкхокс">
+      <variant value="Чикаго Блэкхокс" />
+    </team>
+    <team value="Филадельфия Флайерз">
+      <variant value="Филадельфия Флайерз" />
+    </team>
+    <team value="Питтсбург Пингвинз">
+      <variant value="Питтсбург Пингвинз" />
+    </team>
+    <team value="Нью-Йорк Айлендерс">
+      <variant value="Нью-Йорк Айлендерс" />
+    </team>
+    <team value="Нью-Джерси Девилз">
+      <variant value="Нью-Джерси Девилз" />
+    </team>
+    <team value="Бостон Брюинз">
+      <variant value="Бостон Брюинз" />
+    </team>
+    <team value="Нью-Йорк Рейнджерс">
+      <variant value="Нью-Йорк Рейнджерс" />
+    </team>
+    <team value="Тампа Бэй Лайтнинг">
+      <variant value="Тампа Бэй Лайтнинг" />
+    </team>
+    <team value="Вашингтон Кэпиталз">
+      <variant value="Вашингтон Кэпиталз" />
+    </team>
+    <team value="Монреаль Канадиенс">
+      <variant value="Монреаль Канадиенс" />
+    </team>
+    <team value="Торонто Мэйпл Лифс">
+      <variant value="Торонто Мэйпл Лифс" />
+    </team>
+    <team value="Флорида Пантерз">
+      <variant value="Флорида Пантерз" />
+    </team>
+    <team value="Каролина Харрикейнз">
+      <variant value="Каролина Харрикейнз" />
+    </team>
+    <team value="Даллас Старз">
+      <variant value="Даллас Старз" />
+    </team>
+    <team value="Финикс Койотс">
+      <variant value="Финикс Койотс" />
+    </team>
+    <team value="Нэшвилл Предаторз">
+      <variant value="Нэшвилл Предаторз" />
+    </team>
+    <team value="Коламбус Блю Джекетс">
+      <variant value="Коламбус Блю Джекетс" />
+    </team>
+    <team value="Сент-Луис Блюз">
+      <variant value="Сент-Луис Блюз" />
+    </team>
+    <team value="Детройт Ред Уингз">
+      <variant value="Детройт Ред Уингз" />
+    </team>
+    <team value="Миннесота Уайлд">
+      <variant value="Миннесота Уайлд" />
+    </team>
+    <team value="Колорадо Эвеланш">
+      <variant value="Колорадо Эвеланш" />
+    </team>
+    <team value="Ванкувер Кэнакс">
+      <variant value="Ванкувер Кэнакс" />
+    </team>
+    <team value="Анахайм Дакс">
+      <variant value="Анахайм Дакс" />
+    </team>
+    <team value="Баффало Сейбрз">
+      <variant value="Баффало Сейбрз" />
+    </team>
+    <team value="Филадельфия Флайерз">
+      <variant value="Филадельфия Флайерз" />
+    </team>
+
+    <!-- KHL -->
+    <team value="Витязь">
+      <variant value="Витязь" />
+    </team>
+    <team value="Салават Юлаев">
+      <variant value="Салават Юлаев" />
+    </team>
+    <team value="Северсталь">
+      <variant value="Северсталь" />
+    </team>
+    <team value="Спартак">
+      <variant value="Спартак" />
+    </team>
+    <team value="Динамо Минск">
+      <variant value="Динамо Минск" />
+    </team>
+    <team value="Динамо Рига">
+      <variant value="Динамо Рига" />
+    </team>
+    <team value="Металлург Магнитогорск">
+      <variant value="Металлург Магнитогорск" />
+    </team>
+    <team value="Трактор">
+      <variant value="Трактор" />
+    </team>
+    <team value="ЦСКА">
+      <variant value="ЦСКА" />
+    </team>
+    <team value="Нефтехимик">
+      <variant value="Нефтехимик" />
+    </team>
+    <team value="Динамо Москва">
+      <variant value="Динамо Москва" />
+    </team>
+    <team value="Торпедо">
+      <variant value="Торпедо" />
+    </team>
+    <team value="СКА">
+      <variant value="СКА" />
+    </team>
+    <team value="Локомотив">
+      <variant value="Локомотив" />
+    </team>
+    <team value="Слован Братислава">
+      <variant value="Слован Братислава" />
+    </team>
+    <team value="Автомобилист">
+      <variant value="Автомобилист" />
+    </team>
+    <team value="Амур">
+      <variant value="Амур" />
+    </team>
+    <team value="Барыс">
+      <variant value="Барыс" />
+    </team>
+    <team value="Металлург Новокузнецк">
+      <variant value="Металлург Новокузнецк" />
+    </team>
+    <team value="Югра">
+      <variant value="Югра" />
+    </team>
+    <team value="Сибирь">
+      <variant value="Сибирь" />
+    </team>
+    <team value="Авангард">
+      <variant value="Авангард" />
+    </team>
+    <team value="Ак Барс">
+      <variant value="Ак Барс" />
+    </team>
+    <team value="Донбасс">
+      <variant value="Донбасс" />
+    </team>
+    <team value="Лев Прага">
+      <variant value="Лев Прага" />
+    </team>
+
+
+    <!-- Украина -->
+    <team value="Донбасс-2">
+      <variant value="Донбасс-2" />
+    </team>
+    <team value="Сокол Киев">
+      <variant value="Сокол Киев" />
+    </team>
+    <team value="Львы Львов">
+      <variant value="Львы Львов" />
+    </team>
+    <team value="Динамо Харьков">
+      <variant value="Динамо Харьков" />
+    </team>
+    <team value="Компаньон-Нефтегаз">
+      <variant value="Компаньон-Нефтегаз" />
+    </team>
+    <team value="Беркут">
+      <variant value="Беркут" />
+    </team>
+    <team value="Белый барс">
+      <variant value="Белый барс" />
+    </team>
+
+    <!-- Финляндия -->
+    <team value="Блюз">
+      <variant value="Блюз" />
+    </team>
+    <team value="ХИФК">
+      <variant value="ХИФК" />
+    </team>
+    <team value="Ильвес">
+      <variant value="Ильвес" />
+    </team>
+    <team value="Пеликанс">
+      <variant value="Пеликанс" />
+    </team>
+    <team value="Кярпят">
+      <variant value="Кярпят" />
+    </team>
+    <team value="Таппара">
+      <variant value="Таппара" />
+    </team>
+    <team value="Лукко">
+      <variant value="Лукко" />
+    </team>
+    <team value="ТПС">
+      <variant value="ТПС" />
+    </team>
+    <team value="СейПа">
+      <variant value="СейПа" />
+    </team>
+    <team value="Йокерит">
+      <variant value="Йокерит" />
+    </team>
+    <team value="ХПК">
+      <variant value="ХПК" />
+    </team>
+    <team value="Эссят">
+      <variant value="Эссят" />
+    </team>
+    <team value="Ювяскюля">
+      <variant value="Ювяскюля" />
+    </team>
+    <team value="КалПа">
+      <variant value="КалПа" />
+    </team>
+
+    <!-- Чехия -->
+
+    <team value="Либерец">
+      <variant value="Либерец" />
+    </team>
+    <team value="Пардубице">
+      <variant value="Пардубице" />
+    </team>
+    <team value="Тршинец">
+      <variant value="Тршинец" />
+    </team>
+    <team value="Злин">
+      <variant value="Злин" />
+    </team>
+    <team value="Кладно">
+      <variant value="Кладно" />
+    </team>
+    <team value="Славия Лрага">
+      <variant value="Славия Лрага" />
+    </team>
+    <team value="Хомутов">
+      <variant value="Хомутов" />
+    </team>
+    <team value="Карловы Вары">
+      <variant value="Карловы Вары" />
+    </team>
+    <team value="Комета Брно">
+      <variant value="Комета Брно" />
+    </team>
+    <team value="Витковице">
+      <variant value="Витковице" />
+    </team>
+    <team value="Спарта Прага">
+      <variant value="Спарта Прага" />
+    </team>
+    <team value="Литвинов">
+      <variant value="Литвинов" />
+    </team>
+    <team value="Мотор Ческе-Будеевице">
+      <variant value="Мотор Ческе-Будеевице" />
+    </team>
+    <team value="Пльзень">
+      <variant value="Пльзень" />
+    </team>
+
+    <!-- Швейцария -->
+    <team value="Цюрих">
+      <variant value="Цюрих" />
+    </team>
+    <team value="Берн">
+      <variant value="Берн" />
+    </team>
+    <team value="Амбри-Пиотта">
+      <variant value="Амбри-Пиотта" />
+    </team>
+    <team value="Давос">
+      <variant value="Давос" />
+    </team>
+    <team value="Женева">
+      <variant value="Женева" />
+    </team>
+    <team value="Лангнау">
+      <variant value="Лангнау" />
+    </team>
+    <team value="Клотен Флайерз">
+      <variant value="Клотен Флайерз" />
+    </team>
+    <team value="Лугано">
+      <variant value="Лугано" />
+    </team>
+    <team value="Фрибур-Готтерон">
+      <variant value="Фрибур-Готтерон" />
+    </team>
+    <team value="Рапперсвил">
+      <variant value="Рапперсвил" />
+    </team>
+    <team value="Цуг">
+      <variant value="Цуг" />
+    </team>
+    <team value="Биль">
+      <variant value="Биль" />
+    </team>
+
+    <!-- Швеция -->
+    <team value="Альмтуна">
+      <variant value="Альмтуна" />
+    </team>
+    <team value="Тингсрюд">
+      <variant value="Тингсрюд" />
+    </team>
+    <team value="Мальмё">
+      <variant value="Мальмё" />
+    </team>
+    <team value="Вестерос">
+      <variant value="Вестерос" />
+    </team>
+    <team value="Мора">
+      <variant value="Мора" />
+    </team>
+    <team value="Эребру">
+      <variant value="Эребру" />
+    </team>
+    <team value="Оскарсхамн">
+      <variant value="Оскарсхамн" />
+    </team>
+    <team value="Лександ">
+      <variant value="Лександ" />
+    </team>
+    <team value="Троя/Юнгбю">
+      <variant value="Троя/Юнгбю" />
+    </team>
+    <team value="Асплёвен">
+      <variant value="Асплёвен" />
+    </team>
+    <team value="Седертелье">
+      <variant value="Седертелье" />
+    </team>
+    <team value="Карлскруна">
+      <variant value="Карлскруна" />
+    </team>
+    <team value="Юргорден">
+      <variant value="Юргорден" />
+    </team>
+    <team value="Бофор">
+      <variant value="Бофор" />
+    </team>
+
+    
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+
     <!-- Баскетбол -->
     <team value="Индиана Пэйсерз">
       <variant value="Индиана Пэйсерз" />
