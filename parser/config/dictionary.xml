@@ -2,16 +2,16 @@
 
 <dictionary>
   <sports>
-    <!--<sport value="Баскетбол">
+    <sport value="Баскетбол">
       <variant value="Баскетбол" />
     </sport>
-    <sport value="Бокс">
+    <!--<sport value="Бокс">
       <variant value="Бокс" />
+    </sport>-->
+    <sport value="Волейбол">
+      <variant value="Волейбол" />
     </sport>
-    <sport value="Волейбол‎">
-      <variant value="Волейбол‎" />
-    </sport>
-    <sport value="Гандбол">
+    <!--<sport value="Гандбол">
       <variant value="Гандбол" />
     </sport>
     <sport value="Регби">
@@ -51,7 +51,7 @@
       <variant value="Китайский" />
       <variant value="Китай" />
     </country>
-    <country value="Нидерландыя">
+    <country value="Нидерланды">
       <variant value="Нидерланды" />
     </country>
     <country value="Республика Корея">
@@ -68,6 +68,9 @@
     </country>
     <country value="Дания">
       <variant value="Дания" />
+    </country>
+    <country value="Израиль">
+      <variant value="Израиль" />
     </country>
     <country value="Исландия">
       <variant value="Исландия" />
@@ -214,7 +217,6 @@
     </country>
   </countries>
   <championships>
-    <!-- Футбол -->
     <championship value="Премьер-лига">
       <variant value="Премьер-лига" />
     </championship>
@@ -250,12 +252,49 @@
     </championship>
     <championship value="Джей-лига">
       <variant value="JFL" />
+      <variant value="Джей-лига" />
     </championship>
     <championship value="Лига чемпионов">
       <variant value="Лига чемпионов" />
     </championship>
     <championship value="Лига Европы">
       <variant value="Лига Европы" />
+    </championship>
+    <championship value="EBEL">
+      <variant value="EBEL" />
+    </championship>
+    <championship value="EIHL">
+      <variant value="EIHL" />
+    </championship>
+    <championship value="DEL">
+      <variant value="DEL" />
+    </championship>
+    <championship value="Про-лига">
+      <variant value="Про-лига" />
+    </championship>
+    <championship value="Эредивизи">
+      <variant value="Эредивизи" />
+    </championship>
+    <championship value="Лига 1">
+      <variant value="Лига 1" />
+    </championship>
+    <championship value="NBA">
+      <variant value="NBA" />
+    </championship>
+    <championship value="NBL">
+      <variant value="NBL" />
+    </championship>
+    <championship value="BBL">
+      <variant value="BBL" />
+    </championship>
+    <championship value="А1 Этники">
+      <variant value="А1 Этники" />
+    </championship>
+    <championship value="АСВ">
+      <variant value="АСВ" />
+    </championship>
+    <championship value="ПБЛ">
+      <variant value="ПБЛ" />
     </championship>
 
 
@@ -2494,7 +2533,7 @@
     </team>
 
 
-    
+
     <team value="">
       <variant value="" />
     </team>
@@ -2539,6 +2578,7 @@
     </team>
 
     <!-- Баскетбол -->
+    <!-- NBA -->
     <team value="Индиана Пэйсерз">
       <variant value="Индиана Пэйсерз" />
     </team>

@@ -52,67 +52,71 @@ class MarathonBet():
       if ( country == None ):
         country = UsedChampionships.findCountryByChampionship( championship )
       
+      file = open("display.txt", "a",encoding='utf-8')
 
       if ( UsedChampionships.findSport( sport ) != None ):
         if ( UsedChampionships.findCountryBySport( country, sport ) != None ):
           if ( UsedChampionships.findChampionshipBySport( championship, sport ) != None ):
+            #file.write( str( UsedChampionships.findSport( sport ) ) + "\r\n")
+            #file.write( str( UsedChampionships.findCountryBySport( country, sport ) ) + "\r\n")
+            #file.write( str( UsedChampionships.findChampionshipBySport( championship, sport ) ) + "\r\n")
+            #file.write( "-------------------" + "\r\n\r\n")
+
             for event_item in event.cssselect('table.foot-market > tbody[id]'):
               if ( len( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name') ) ):
                 if ( country != None ):
                   for team in event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name'):
-                    print( self.getTeam( team.text.strip(" \r\n") ) )
+                    a = 6
+                    #if ( self.getTeam( team.text.strip(" \r\n") ) == None ):
 
               if ( len( event_item.cssselect('tr.event-header > td')[1] ) ):
                 first_win_container = event_item.cssselect('tr.event-header > td')[1]
                 first_win = first_win_container.cssselect('span')[0].text.strip(" \r\n")
-                print( first_win )
 
               if ( len( event_item.cssselect('tr.event-header > td')[2] ) ):
                 evenly_container = event_item.cssselect('tr.event-header > td')[2]
                 evenly = evenly_container.cssselect('span')[0].text.strip(" \r\n")
-                print( evenly )
 
               if ( len( event_item.cssselect('tr.event-header > td')[3] ) ):
                 second_win_container = event_item.cssselect('tr.event-header > td')[3]
                 second_win = second_win_container.cssselect('span')[0].text.strip(" \r\n")
-                print( second_win )
 
               if ( len( event_item.cssselect('tr.event-header > td')[4] ) ):
                 first_win_or_evenly_container = event_item.cssselect('tr.event-header > td')[4]
                 first_win_or_evenly = first_win_or_evenly_container.cssselect('span')[0].text.strip(" \r\n")
-                print( first_win_or_evenly )
 
               if ( len( event_item.cssselect('tr.event-header > td')[5] ) ):
                 first_or_second_win_container = event_item.cssselect('tr.event-header > td')[5]
                 first_or_second_win = first_or_second_win_container.cssselect('span')[0].text.strip(" \r\n")
-                print( first_or_second_win )
 
               if ( len( event_item.cssselect('tr.event-header > td')[6] ) ):
                 second_win_or_evenly_container = event_item.cssselect('tr.event-header > td')[6]
                 second_win_or_evenly = second_win_or_evenly_container.cssselect('span')[0].text.strip(" \r\n")
-                print( second_win_or_evenly )
 
               if ( len( event_item.cssselect('tr.event-header > td')[7] ) ):
                 fora_first_container = event_item.cssselect('tr.event-header > td')[7]
                 fora_first = fora_first_container.cssselect('span')[0].text.strip(" \r\n")
-                print( fora_first )
 
               if ( len( event_item.cssselect('tr.event-header > td')[8] ) ):
                 fora_second_container = event_item.cssselect('tr.event-header > td')[8]
                 fora_second = fora_second_container.cssselect('span')[0].text.strip(" \r\n")
-                print( fora_second )
 
               if ( len( event_item.cssselect('tr.event-header > td')[9] ) ):
                 total_less_container = event_item.cssselect('tr.event-header > td')[9]
                 total_less = total_less_container.cssselect('span')[0].text.strip(" \r\n")
-                print( total_less )
 
               if ( len( event_item.cssselect('tr.event-header > td')[10] ) ):
                 total_more_container = event_item.cssselect('tr.event-header > td')[10]
                 total_more = total_more_container.cssselect('span')[0].text.strip(" \r\n")
-                print( total_more )
-      
-      print("----")       
+          else:
+            file.write( title_str + "Чемпионат\r\n")
+        else:
+          file.write( title_str + "Страна\r\n") 
+      else:
+        file.write( title_str + "Спорт\r\n")
+
+    file.close()
+             
             
 
 

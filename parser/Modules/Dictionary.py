@@ -1,6 +1,5 @@
 from xml.dom.minidom import parseString
 
-
 dictionary_file = open('config/dictionary.xml', 'r')
 dictionary_read = dictionary_file.read()
 dictionary_file.close()

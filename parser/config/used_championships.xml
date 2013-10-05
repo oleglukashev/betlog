@@ -217,23 +217,18 @@
   </sport>
   <sport value="Баскетбол">
     <countries>
+        <country value="Международные">
+            <championship value="NBA" />
+        </country>
+    </countries>
+    <countries>
+        <country value="Австралия">
+            <championship value="NBL" />
+        </country>
+    </countries>
+    <countries>
         <country value="Австрия">
-            <championship value="EBEL" />
-        </country>
-    </countries>
-    <countries>
-        <country value="Беларусь">
-            <championship value="Экстралига" />
-        </country>
-    </countries>
-    <countries>
-        <country value="Великобритания">
-            <championship value="EIHL" />
-        </country>
-    </countries>
-    <countries>
-        <country value="Германия">
-            <championship value="DEL" />
+            <championship value="Бундеслига" />
         </country>
     </countries>
     <countries>
@@ -242,13 +237,8 @@
         </country>
     </countries>
     <countries>
-        <country value="Бельгия">
-            <championship value="Про-лига" />
-        </country>
-    </countries>
-    <countries>
-        <country value="Бразилия">
-            <championship value="Серия А" />
+        <country value="Великобритания">
+            <championship value="BBL" />
         </country>
     </countries>
     <countries>
@@ -257,18 +247,18 @@
         </country>
     </countries>
     <countries>
-        <country value="Дания">
-            <championship value="Суперлига" />
+        <country value="Греция">
+            <championship value="А1 Этники" />
         </country>
     </countries>
     <countries>
         <country value="Израиль">
-            <championship value="Премьер-лига" />
+            <championship value="Суперлига" />
         </country>
     </countries>
     <countries>
         <country value="Испания">
-            <championship value="Примера дивизион" />
+            <championship value="АСВ" />
         </country>
     </countries>
     <countries>
@@ -277,49 +267,16 @@
         </country>
     </countries>
     <countries>
-        <country value="Нидерланды">
-            <championship value="Эредивизи" />
-        </country>
-    </countries>
-    <countries>
-        <country value="Португалия">
-            <championship value="Примейра-лига" />
-        </country>
-    </countries>
-    <countries>
         <country value="Россия">
-            <championship value="Премьер-лига" />
+            <championship value="ПБЛ" />
         </country>
     </countries>
     <countries>
         <country value="Украина">
-            <championship value="Премьер-лига" />
-        </country>
-    </countries>
-    <countries>
-        <country value="Франция">
-            <championship value="Лига 1" />
-        </country>
-    </countries>
-    <countries>
-        <country value="Швейцария">
             <championship value="Суперлига" />
         </country>
     </countries>
-    <countries>
-        <country value="Швеция">
-            <championship value="Аллсвенскан" />
-        </country>
-    </countries>
-    <countries>
-        <country value="Шотландия">
-            <championship value="Премьер-лига" />
-        </country>
-    </countries>
-    <countries>
-        <country value="Япония">
-            <championship value="Джей-лига" />
-        </country>
-    </countries>
+  </sport>
+  <sport value="Волейбол">
   </sport>
 </sports>
