@@ -1,373 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <dictionary>
-  <sports>
-    <sport value="Баскетбол">
-      <variant value="Баскетбол" />
-    </sport>
-    <!--<sport value="Бокс">
-      <variant value="Бокс" />
-    </sport>-->
-    <sport value="Волейбол">
-      <variant value="Волейбол" />
-    </sport>
-    <!--<sport value="Гандбол">
-      <variant value="Гандбол" />
-    </sport>
-    <sport value="Регби">
-      <variant value="Регби" />
-      <variant value="Регби-лига" />
-    </sport>-->
-    <sport value="Футбол">
-      <variant value="Футбол" />
-    </sport>
-    <sport value="Хоккей">
-      <variant value="Хоккей" />
-    </sport>
-    <!--<sport value="Теннис">
-      <variant value="Теннис" />
-    </sport>-->
-  </sports>
-  <countries>
-    <country value="Австралия">
-      <variant value="Австралия" />
-    </country>
-    <country value="США">
-      <variant value="США" />
-    </country>
-    <country value="Япония">
-      <variant value="Японии" />
-    </country>
-    <country value="Сербия">
-      <variant value="Сербия" />
-    </country>
-    <country value="Словения">
-      <variant value="Словения" />
-    </country>
-    <country value="Филиппины">
-      <variant value="Филиппины" />
-    </country>
-    <country value="Китай">
-      <variant value="Китайский" />
-      <variant value="Китай" />
-    </country>
-    <country value="Нидерланды">
-      <variant value="Нидерланды" />
-    </country>
-    <country value="Республика Корея">
-      <variant value="Республика Корея" />
-    </country>
-    <country value="Австралия">
-      <variant value="Республика Корея" />
-    </country>
-    <country value="Австрия">
-      <variant value="Австрия" />
-    </country>
-    <country value="Германия">
-      <variant value="Германия" />
-    </country>
-    <country value="Дания">
-      <variant value="Дания" />
-    </country>
-    <country value="Израиль">
-      <variant value="Израиль" />
-    </country>
-    <country value="Исландия">
-      <variant value="Исландия" />
-    </country>
-    <country value="Испания">
-      <variant value="Испания" />
-    </country>
-    <country value="Норвегия">
-      <variant value="Норвегия" />
-    </country>
-    <country value="Россия">
-      <variant value="Россия" />
-    </country>
-    <country value="Франция">
-      <variant value="Франция" />
-    </country>
-    <country value="Швейцария">
-      <variant value="Швейцария" />
-    </country>
-    <country value="Швеция">
-      <variant value="Швеция" />
-    </country>
-    <country value="Ирландия">
-      <variant value="Ирландии" />
-      <variant value="Ирландия" />
-      <variant value="Чемпионат Ирландии" />
-    </country>
-    <country value="Бельгия">
-      <variant value="Бельгия" />
-    </country>
-    <country value="Греция">
-      <variant value="Греция" />
-    </country>
-    <country value="Гонконг">
-      <variant value="Гонконг" />
-    </country>
-    <country value="Англия">
-      <variant value="Англия" />
-    </country>
-    <country value="Аргентина">
-      <variant value="Аргентина" />
-    </country>
-    <country value="Армения">
-      <variant value="Армения" />
-    </country>
-    <country value="Беларусь">
-      <variant value="Беларусь" />
-    </country>
-    <country value="Боливия">
-      <variant value="Боливия" />
-    </country>
-    <country value="Бразилия">
-      <variant value="Бразилия" />
-    </country>
-    <country value="Венесуэла">
-      <variant value="Венесуэла" />
-    </country>
-    <country value="Гондурас">
-      <variant value="Гондурас" />
-    </country>
-    <country value="Индонезия">
-      <variant value="Индонезия" />
-    </country>
-    <country value="Иран">
-      <variant value="Иран" />
-    </country>
-    <country value="Италия">
-      <variant value="Италия" />
-    </country>
-    <country value="Колумбия">
-      <variant value="Колумбия" />
-    </country>
-    <country value="Литва">
-      <variant value="Литва" />
-    </country>
-    <country value="Македония">
-      <variant value="Македония" />
-    </country>
-    <country value="Малайзия">
-      <variant value="Малайзия" />
-    </country>
-    <country value="Мексика">
-      <variant value="Мексика" />
-    </country>
-    <country value="Парагвай">
-      <variant value="Парагвай" />
-    </country>
-    <country value="Перу">
-      <variant value="Перу" />
-    </country>
-    <country value="Польша">
-      <variant value="Польша" />
-    </country>
-    <country value="Португалия">
-      <variant value="Португалия" />
-    </country>
-    <country value="Сингапур">
-      <variant value="Сингапур" />
-    </country>
-    <country value="Словакия">
-      <variant value="Словакия" />
-    </country>
-    <country value="Словения">
-      <variant value="Словения" />
-    </country>
-    <country value="Турция">
-      <variant value="Турция" />
-    </country>
-    <country value="Украина">
-      <variant value="Украина" />
-    </country>
-    <country value="Уругвай">
-      <variant value="Уругвай" />
-    </country>
-    <country value="Фарерские острова">
-      <variant value="Фарерские острова" />
-    </country>
-    <country value="Хорватия">
-      <variant value="Хорватия" />
-    </country>
-    <country value="Чехия">
-      <variant value="Чехия" />
-    </country>
-    <country value="Шотландия">
-      <variant value="Шотландия" />
-    </country>
-    <country value="Эквадор">
-      <variant value="Эквадор" />
-    </country>
-    <country value="ЮАР">
-      <variant value="ЮАР" />
-    </country>
-    <country value="Северная Ирландия">
-      <variant value="Северная Ирландия" />
-    </country>
-    <country value="Уэльс">
-      <variant value="Уэльс" />
-    </country>
-    <country value="Великобритания">
-      <variant value="Великобритания" />
-    </country>
-    <country value="Финляндия">
-      <variant value="Финляндия" />
-    </country>
-  </countries>
-  <championships>
-    <championship value="Премьер-лига">
-      <variant value="Премьер-лига" />
-    </championship>
-    <championship value="А-лига">
-      <variant value="Эй-лига" />
-    </championship>
-    <championship value="Бундеслига">
-      <variant value="Бундеслига" />
-    </championship>
-    <championship value="Примера дивизион">
-      <variant value="Примера дивизион" />
-    </championship>
-    <championship value="Серия А">
-      <variant value="Серия А" />
-    </championship>
-    <championship value="Суперлига">
-      <variant value="Суперлига" />
-    </championship>
-    <championship value="Эредивизи">
-      <variant value="Эредивизи" />
-    </championship>
-    <championship value="Примейра-лига">
-      <variant value="Примейра-лига" />
-    </championship>
-    <championship value="Лига 1">
-      <variant value="Лига 1" />
-    </championship>
-    <championship value="Суперлига">
-      <variant value="Суперлига" />
-    </championship>
-    <championship value="Аллсвенскан">
-      <variant value="Аллсвенскан" />
-    </championship>
-    <championship value="Джей-лига">
-      <variant value="JFL" />
-      <variant value="Джей-лига" />
-    </championship>
-    <championship value="Лига чемпионов">
-      <variant value="Лига чемпионов" />
-    </championship>
-    <championship value="Лига Европы">
-      <variant value="Лига Европы" />
-    </championship>
-    <championship value="EBEL">
-      <variant value="EBEL" />
-    </championship>
-    <championship value="EIHL">
-      <variant value="EIHL" />
-    </championship>
-    <championship value="DEL">
-      <variant value="DEL" />
-    </championship>
-    <championship value="Про-лига">
-      <variant value="Про-лига" />
-    </championship>
-    <championship value="Эредивизи">
-      <variant value="Эредивизи" />
-    </championship>
-    <championship value="Лига 1">
-      <variant value="Лига 1" />
-    </championship>
-    <championship value="NBA">
-      <variant value="NBA" />
-    </championship>
-    <championship value="NBL">
-      <variant value="NBL" />
-    </championship>
-    <championship value="BBL">
-      <variant value="BBL" />
-    </championship>
-    <championship value="А1 Этники">
-      <variant value="А1 Этники" />
-    </championship>
-    <championship value="АСВ">
-      <variant value="АСВ" />
-    </championship>
-    <championship value="ПБЛ">
-      <variant value="ПБЛ" />
-    </championship>
-
-
-    <!--<championship value="Англия (Премьер-лига)">
-      <variant value="Премьер-лига" />
-    </championship>
-    <championship value="Австралия (А-лига)">
-      <variant value="Эй-лига" />
-    </championship>
-    <championship value="Австрия (Бундеслига)">
-      <variant value="Бундеслига" />
-    </championship>
-    <championship value="Аргентина (Примера дивизион)">
-      <variant value="Примера дивизион" />
-    </championship>
-    <championship value="Беларусь (Премьер-лига)">
-      <variant value="Премьер-лига" />
-    </championship>
-    <championship value="Бразилия (Серия А)">
-      <variant value="Серия А" />
-    </championship>
-    <championship value="Германия (Бундеслига)">
-      <variant value="Бундеслига" />
-    </championship>
-    <championship value="Дания (Суперлига)">
-      <variant value="Суперлига" />
-    </championship>
-    <championship value="Израиль (Премьер-лига)">
-      <variant value="Премьер-лига" />
-    </championship>
-    <championship value="Испания (Примера дивизион)">
-      <variant value="Примера дивизион" />
-    </championship>
-    <championship value="Италия (Серия А)">
-      <variant value="Серия А" />
-    </championship>
-    <championship value="Нидерланды (Эредивизи)">
-      <variant value="Эредивизи" />
-    </championship>
-    <championship value="Португалия (Примейра-лига)">
-      <variant value="Примейра-лига" />
-    </championship>
-    <championship value="Россия (Премьер-лига)">
-      <variant value="Премьер-лига" />
-    </championship>
-    <championship value="Украина (Премьер-лига)">
-      <variant value="Премьер-лига" />
-    </championship>
-    <championship value="Франция (Лига 1)">
-      <variant value="Лига 1" />
-    </championship>
-    <championship value="Швейцария (Суперлига)">
-      <variant value="Суперлига" />
-    </championship>
-    <championship value="Швеция (Аллсвенскан)">
-      <variant value="Аллсвенскан" />
-    </championship>
-    <championship value="Шотландия (Премьер-лига)">
-      <variant value="Премьер-лига" />
-    </championship>
-    <championship value="Япония (Джей-лига)">
-      <variant value="JFL" />
-    </championship>
-    <championship value="Лига чемпионов">
-      <variant value="Лига чемпионов" />
-    </championship>
-    <championship value="Лига Европы">
-      <variant value="Лига Европы" />
-    </championship>-->
-  </championships>
   <teams>
+    
+
+
     <!--Футбол-->
     <!--Австралия -->
+    
     <team value="Мельбурн Харт">
       <variant value="Мельбурн Херт" />
       <variant value="Мельбурн Харт" />
@@ -408,6 +48,7 @@
     </team>
 
     <!--Англия-->
+    
     <team value="Вест Бромвич Албион">
       <variant value="Вест Бромвич Албион" />
       <variant value="Вест Бромвич Альбион" />
@@ -482,9 +123,8 @@
       <variant value="Кристал Пэлас" />
     </team>
 
-
-
     <!-- Австрия -->
+    
     <team value="Рид">
       <variant value="Рид" />
     </team>
@@ -519,8 +159,8 @@
       <variant value="Грёдиг" />
     </team>
 
-
     <!-- Аргентина -->
+    
     <team value="Индепендьенте">
       <variant value="Индепендьенте" />
     </team>
@@ -594,10 +234,8 @@
       <variant value="Олимпо Байя-Бланка" />
     </team>
 
-
-
-
     <!-- Беларусь -->
+    
     <team value="Минск">
       <variant value="Минск" />
     </team>
@@ -636,6 +274,7 @@
     </team>
 
     <!-- Бельгия -->
+    
     <team value="Гент">
       <variant value="Гент" />
     </team>
@@ -686,6 +325,7 @@
     </team>
 
     <!-- Бразилия -->
+    
     <team value="Васко да Гама">
       <variant value="Васко да Гама" />
     </team>
@@ -811,9 +451,8 @@
       <variant value="Герта Берлин" />
     </team>
 
-
-
     <!-- Дания -->
+    
     <team value="Силькеборг">
       <variant value="Силькеборг" />
     </team>
@@ -904,6 +543,7 @@
     </team>
 
     <!-- Испания -->
+    
     <team value="Сарагоса">
       <variant value="Сарагоса" />
     </team>
@@ -975,6 +615,7 @@
     </team>
 
     <!-- Италия -->
+    
     <team value="Катания">
       <variant value="Катания" />
     </team>
@@ -1050,6 +691,7 @@
     </team>
 
     <!-- Нидерланды -->
+   
     <team value="ПСВ Эйндховен">
       <variant value="ПСВ Эйндховен" />
     </team>
@@ -1106,6 +748,7 @@
     </team>
 
     <!-- Португалия-->
+   
     <team value="Жил Висенте">
       <variant value="Жил Висенте" />
     </team>
@@ -1222,6 +865,7 @@
     </team>
 
     <!-- Украина -->
+    
     <team value="Шахтер Донецк">
       <variant value="Шахтер Донецк" />
       <variant value="Шахтёр Донецк" />
@@ -1278,6 +922,7 @@
 
 
     <!-- Франция -->
+    
     <team value="Сент-Этьен">
       <variant value="Сент-Этьен" />
     </team>
@@ -1350,6 +995,7 @@
 
 
     <!-- Шейцария -->
+    
     <team value="Серветт">
       <variant value="Серветт" />
     </team>
@@ -1382,6 +1028,7 @@
     </team>
 
     <!-- Швеция -->
+    
     <team value="Хеккен">
       <variant value="Хеккен" />
     </team>
@@ -1438,6 +1085,7 @@
     </team>
 
     <!-- Шотландия -->
+    
     <team value="Сент-Джонстон">
       <variant value="Сент-Джонстон" />
     </team>
@@ -1480,6 +1128,7 @@
 
 
     <!-- Япония -->
+    
     <team value="Сагамихара">
       <variant value="Сагамихара" />
     </team>
@@ -1517,8 +1166,48 @@
       <variant value="Цвайген Каназава" />
     </team>
 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Хоккей -->
     <!-- Австрия -->
+    
     <team value="Вена Кэпиталз">
       <variant value="Вена Кэпиталз" />
     </team>
@@ -1557,6 +1246,7 @@
     </team>
 
     <!-- Беларусь -->
+    
     <team value="Лиепаяс Металургс">
       <variant value="Лиепаяс Металургс" />
     </team>
@@ -1589,6 +1279,7 @@
     </team>
 
     <!-- Британия -->
+    
     <team value="Ковентри Блэйз">
       <variant value="Ковентри Блэйз" />
     </team>
@@ -1667,6 +1358,7 @@
 
 
     <!-- Канада -->
+    
     <team value="Су-Сен-Мари Грейхаундз">
       <variant value="Су-Сен-Мари Грейхаундз" />
     </team>
@@ -1711,6 +1403,7 @@
     </team>
 
     <!-- Норвегия -->
+    
     <team value="Ставангер Ойлерз">
       <variant value="Ставангер Ойлерз" />
     </team>
@@ -1742,7 +1435,8 @@
       <variant value="Волеранга" />
     </team>
 
-    <!-- USA -->
+    <!-- NHL -->
+    
     <team value="Виннипег Джетс">
       <variant value="Виннипег Джетс" />
     </team>
@@ -1829,6 +1523,7 @@
     </team>
 
     <!-- KHL -->
+    
     <team value="Витязь">
       <variant value="Витязь" />
     </team>
@@ -1905,8 +1600,8 @@
       <variant value="Лев Прага" />
     </team>
 
-
     <!-- Украина -->
+    
     <team value="Донбасс-2">
       <variant value="Донбасс-2" />
     </team>
@@ -1930,6 +1625,7 @@
     </team>
 
     <!-- Финляндия -->
+    
     <team value="Блюз">
       <variant value="Блюз" />
     </team>
@@ -2019,6 +1715,7 @@
     </team>
 
     <!-- Швейцария -->
+    
     <team value="Цюрих">
       <variant value="Цюрих" />
     </team>
@@ -2057,6 +1754,7 @@
     </team>
 
     <!-- Швеция -->
+    
     <team value="Альмтуна">
       <variant value="Альмтуна" />
     </team>
@@ -2100,6 +1798,27 @@
       <variant value="Бофор" />
     </team>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Баскетбол-->
     <!-- Австралия -->
 
     <team value="Аделаида 36е">
@@ -2128,6 +1847,7 @@
     </team>
 
     <!-- Австрия -->
+    
     <team value="Клостернойбург Дюкс">
       <variant value="Клостернойбург Дюкс" />
     </team>
@@ -2160,6 +1880,7 @@
     </team>
 
     <!-- Беларусь -->
+    
     <team value="Сож">
       <variant value="Сож" />
     </team>
@@ -2182,7 +1903,8 @@
       <variant value="БГУИР" />
     </team>
 
-    <!-- Великобритани -->
+    <!-- Великобритания -->
+    
     <team value="Суррей Юнайтед">
       <variant value="Суррей Юнайтед" />
     </team>
@@ -2218,6 +1940,7 @@
     </team>
 
     <!-- Германия -->
+    
     <team value="Бавария">
       <variant value="Бавария" />
     </team>
@@ -2268,6 +1991,7 @@
     </team>
 
     <!-- Греция -->
+    
     <team value="Паниониос">
       <variant value="Паниониос" />
     </team>
@@ -2312,6 +2036,7 @@
     </team>
 
     <!-- Израиль -->
+    
     <team value="Маккаби Ришон-ле-Цион">
       <variant value="Маккаби Ришон-ле-Цион" />
     </team>
@@ -2350,6 +2075,7 @@
     </team>
 
     <!-- Испания -->
+    
     <team value="Сарагоса">
       <variant value="Сарагоса" />
     </team>
@@ -2456,9 +2182,7 @@
       <variant value="Монтегранаро" />
     </team>
 
-
     <!-- Россия -->
-
 
     <team value="Енисей">
       <variant value="Енисей" />
@@ -2489,6 +2213,7 @@
     </team>
 
     <!-- Украина -->
+    
     <team value="Говерла">
       <variant value="Говерла" />
     </team>
@@ -2533,6 +2258,22 @@
     </team>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Волейбол -->
     <!-- Австрия -->
 
@@ -2554,7 +2295,6 @@
     <team value="Амштеттен НО">
       <variant value="Амштеттен НО" />
     </team>
-
 
     <!-- Аргентина -->
 
@@ -2588,7 +2328,6 @@
     <team value="Буэнос-Айрес Унидос">
       <variant value="Буэнос-Айрес Унидос" />
     </team>
-
 
     <!-- Бельгия -->
 
@@ -3131,7 +2870,6 @@
 
     <!-- Швеция -->
 
-
     <team value="Тьерп">
       <variant value="Тьерп" />
     </team>
@@ -3163,8 +2901,8 @@
       <variant value="Хабо" />
     </team>
 
-    
-    
+
+
     <team value="">
       <variant value="" />
     </team>

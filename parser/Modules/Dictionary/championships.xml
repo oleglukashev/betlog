@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<dictionary>
+  <championships>
+    <championship value="Премьер-лига">
+      <variant value="Премьер-лига" />
+    </championship>
+    <championship value="А-лига">
+      <variant value="Эй-лига" />
+    </championship>
+    <championship value="Бундеслига">
+      <variant value="Бундеслига" />
+    </championship>
+    <championship value="Примера дивизион">
+      <variant value="Примера дивизион" />
+    </championship>
+    <championship value="Серия А">
+      <variant value="Серия А" />
+    </championship>
+    <championship value="Суперлига">
+      <variant value="Суперлига" />
+    </championship>
+    <championship value="Эредивизи">
+      <variant value="Эредивизи" />
+    </championship>
+    <championship value="Примейра-лига">
+      <variant value="Примейра-лига" />
+    </championship>
+    <championship value="Лига 1">
+      <variant value="Лига 1" />
+    </championship>
+    <championship value="Суперлига">
+      <variant value="Суперлига" />
+    </championship>
+    <championship value="Аллсвенскан">
+      <variant value="Аллсвенскан" />
+    </championship>
+    <championship value="Джей-лига">
+      <variant value="JFL" />
+      <variant value="Джей-лига" />
+    </championship>
+    <championship value="Лига чемпионов">
+      <variant value="Лига чемпионов" />
+    </championship>
+    <championship value="Лига Европы">
+      <variant value="Лига Европы" />
+    </championship>
+    <championship value="EBEL">
+      <variant value="EBEL" />
+    </championship>
+    <championship value="EIHL">
+      <variant value="EIHL" />
+    </championship>
+    <championship value="DEL">
+      <variant value="DEL" />
+    </championship>
+    <championship value="Про-лига">
+      <variant value="Про-лига" />
+    </championship>
+    <championship value="Эредивизи">
+      <variant value="Эредивизи" />
+    </championship>
+    <championship value="Лига 1">
+      <variant value="Лига 1" />
+    </championship>
+    <championship value="NBA">
+      <variant value="NBA" />
+    </championship>
+    <championship value="NBL">
+      <variant value="NBL" />
+    </championship>
+    <championship value="BBL">
+      <variant value="BBL" />
+    </championship>
+    <championship value="А1 Этники">
+      <variant value="А1 Этники" />
+    </championship>
+    <championship value="АСВ">
+      <variant value="АСВ" />
+    </championship>
+    <championship value="ПБЛ">
+      <variant value="ПБЛ" />
+    </championship>
+    <championship value="Серия А1">
+      <variant value="Серия А1" />
+    </championship>
+  </championships>
+</dictionary>
