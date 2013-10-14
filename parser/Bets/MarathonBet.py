@@ -45,8 +45,6 @@ class MarathonBet():
       title_str = event.cssselect('div.block-events-head')[0].text.strip(" \r\n")
 
       if ( self.skipOrNotTitleByWord( title_str ) == False ):
-        print( title_str )
-
         sport = self.getSportFromTitle( title_str )
         country = self.getCountryFromTitle( title_str )
         championship = self.getChampionshipFromTitle( title_str )
@@ -57,14 +55,14 @@ class MarathonBet():
         file = open("display.txt", "a",encoding='utf-8')
 
         if ( UsedChampionships.findSport( sport ) is not None ):
-          result['sport'] = UsedChampionships.findSport( sport )
-          
           if ( UsedChampionships.findCountryBySport( country, sport ) is not None ):
-            result['championship'] = UsedChampionships.findCountryBySport( country, sport )
-            
             if ( UsedChampionships.findChampionshipBySport( championship, sport ) is not None ):
-              result['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
               result = self.getEventCoefficientFromDom( event )
+              result['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
+              result['country'] = UsedChampionships.findCountryBySport( country, sport )
+              result['sport'] = UsedChampionships.findSport( sport )
+
+              print( result )
             else:
               file.write( title_str + " - не найден Чемпионат\r\n")
           else:
@@ -74,7 +72,59 @@ class MarathonBet():
 
     file.close()
              
-            
+  
+  def getEventCoefficientFromDom( self, event_dom ):
+    result = {}
+
+    for event_item in event_dom.cssselect('table.foot-market > tbody'):
+      title_teams_dom = event_item.cssselect('tr.event-header > td.first table tr td.name span.command div.member-name')
+
+      if ( len( title_teams_dom ) ):
+        coefficients_title_dom = event_dom.cssselect('table.foot-market > tr')[0]
+        coefficients_dom = coefficients_title_dom.cssselect('th.coupone')
+
+        if ( title_teams_dom[0] in title_teams_dom ):
+          team1 = title_teams_dom[0]
+          if ( self.getTeam( team1.text.strip(" \r\n") ) is not None ):
+            result['first_team'] = self.getTeam( team1.text.strip(" \r\n") )
+
+        if ( title_teams_dom[1] in title_teams_dom ):
+          team2 = title_teams_dom[1]
+          if ( self.getTeam( team2.text.strip(" \r\n") ) is not None ):
+            result['second_team'] = self.getTeam( team2.text.strip(" \r\n") )
+
+
+        if ( len( coefficients_dom ) > 0 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 0)] = self.getCoefficientFromHtml( event_item, 0)
+
+        if ( len( coefficients_dom ) >= 2 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 1)] = self.getCoefficientFromHtml( event_item, 1)
+
+        if ( len( coefficients_dom ) >= 3 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 2)] = self.getCoefficientFromHtml( event_item, 2)
+
+        if ( len( coefficients_dom ) >= 4 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 3)] = self.getCoefficientFromHtml( event_item, 3)
+
+        if ( len( coefficients_dom ) >= 5 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 4)] = self.getCoefficientFromHtml( event_item, 4)
+
+        if ( len( coefficients_dom ) >= 6 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 5)] = self.getCoefficientFromHtml( event_item, 5)
+
+        if ( len( coefficients_dom ) >= 7 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 6)] = self.getCoefficientFromHtml( event_item, 6)
+
+        if ( len( coefficients_dom ) >= 8 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 7)] = self.getCoefficientFromHtml( event_item, 7)
+
+        if ( len( coefficients_dom ) >= 9 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 8)] = self.getCoefficientFromHtml( event_item, 8)
+
+        if ( len( coefficients_dom ) >= 10 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 9)] = self.getCoefficientFromHtml( event_item, 9)
+
+    return result         
 
 
   def getSportFromTitle( self, title ):
@@ -114,71 +164,20 @@ class MarathonBet():
       '1X' : 'first_or_draw',
       '12' : 'first_or_second',
       'X2' : 'draw_or_second',
-      'фора1' : 'first_fora',
+      'Фора1' : 'first_fora',
       'Фора2' : 'second_fora',
       'Тотал мен.' : 'total_less',
       'Тотал бол.' : 'total_more',
     }
     
     tr_dom = container.cssselect('table.foot-market > tr')[0]
-    th_dom = tr_dom.cssselect('th')[position]
-    key = tr_dom.cssselect('a > b')[0].text.strip(" \r\n")
+    th_dom = tr_dom.cssselect('th.coupone')[position]
+    key = th_dom.cssselect('a')[0].text_content().strip(" \r\n")
     return coefficients_type_association[ key ]
 
-  def getEventCoefficientFromDom( self, event_dom ):
-    result = {}
-
-    print( self.getCoefficientTitleFromHtml( event_dom, 0))
-
-    for event_item in event_dom.cssselect('table.foot-market > tbody[id]'):
-
-      if ( len( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name') ) ):
-
-        title_teams_dom = event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')
-        coefficients_dom = event_item.cssselect('tr.event-header > td')
-
-        if ( title_teams_dom[0] in title_teams_dom ):
-          team = title_teams_dom[0]
-          if ( self.getTeam( team.text.strip(" \r\n") ) is not None ):
-            result['first_team'] = self.getTeam( team.text.strip(" \r\n") )
-
-        if ( title_teams_dom[1] in title_teams_dom ):
-          team = title_teams_dom[1] 
-          if ( self.getTeam( team.text.strip(" \r\n") ) is not None ):
-            result['second_team'] = self.getTeam( team.text.strip(" \r\n") )
-
-        if ( len( coefficients_dom ) > 0 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 0)] = self.getCoefficientFromHtml( event_item, 0)
-
-        if ( len( coefficients_dom ) >= 2 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 1)] = self.getCoefficientFromHtml( event_item, 1)
-
-        if ( len( coefficients_dom ) >= 3 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 2)] = self.getCoefficientFromHtml( event_item, 2)
-
-        if ( len( coefficients_dom ) >= 4 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 3)] = self.getCoefficientFromHtml( event_item, 3)
-
-        if ( len( coefficients_dom ) >= 5 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 4)] = self.getCoefficientFromHtml( event_item, 4)
-
-        if ( len( coefficients_dom ) >= 6 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 5)] = self.getCoefficientFromHtml( event_item, 5)
-
-        if ( len( coefficients_dom ) >= 7 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 6)] = self.getCoefficientFromHtml( event_item, 6)
-
-        if ( len( coefficients_dom ) >= 8 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 7)] = self.getCoefficientFromHtml( event_item, 7)
-
-        if ( len( coefficients_dom ) >= 9 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 8)] = self.getCoefficientFromHtml( event_item, 8)
-
-        if ( len( coefficients_dom ) >= 10 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 9)] = self.getCoefficientFromHtml( event_item, 9)
 
   def skipOrNotTitleByWord( self, title ):
-    ignore_words = ['Итоги']
+    ignore_words = ['Итоги', 'Женщины']
     
     for item in ignore_words:
       if ( title.find( item ) != -1 ):
