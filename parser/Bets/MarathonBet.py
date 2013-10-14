@@ -8,7 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 import urllib
 import lxml.html
 import lxml.cssselect
-from Modules import Dictionary
+from Modules.Dictionary import Dictionary
 from Modules import UsedChampionships
 
 class MarathonBet():
@@ -32,88 +32,45 @@ class MarathonBet():
   def parse( self ):
     content = self.getContentFromUrl()
     print("--- Content has loaded ---")
-    
     connect = self.databaseConnect
-
     s = Session( connect )
 
     for event in content.cssselect('#container_EVENTS > div.main-block-events'):
-      event_title_elems = event.cssselect('div.block-events-head > *')
+      result = {}
 
+      event_title_elems = event.cssselect('div.block-events-head > *')
       for event_title_elem in event_title_elems:
         event_title_elem.drop_tree()
 
       title_str = event.cssselect('div.block-events-head')[0].text.strip(" \r\n")
 
-      sport = self.getSportFromTitle( title_str )
-      country = self.getCountryFromTitle( title_str )
-      championship = self.getChampionshipFromTitle( title_str )
-      
-      if ( country == None ):
-        country = UsedChampionships.findCountryByChampionship( championship )
-      
-      file = open("display.txt", "a",encoding='utf-8')
+      if ( self.skipOrNotTitleByWord( title_str ) == False ):
+        print( title_str )
 
-      if ( UsedChampionships.findSport( sport ) != None ):
-        if ( UsedChampionships.findCountryBySport( country, sport ) != None ):
-          if ( UsedChampionships.findChampionshipBySport( championship, sport ) != None ):
-            #file.write( str( UsedChampionships.findSport( sport ) ) + "\r\n")
-            #file.write( str( UsedChampionships.findCountryBySport( country, sport ) ) + "\r\n")
-            #file.write( str( UsedChampionships.findChampionshipBySport( championship, sport ) ) + "\r\n")
-            #file.write( "-------------------" + "\r\n\r\n")
+        sport = self.getSportFromTitle( title_str )
+        country = self.getCountryFromTitle( title_str )
+        championship = self.getChampionshipFromTitle( title_str )
+        
+        if ( country == None ):
+          country = UsedChampionships.findCountryByChampionship( championship )
+        
+        file = open("display.txt", "a",encoding='utf-8')
 
-            for event_item in event.cssselect('table.foot-market > tbody[id]'):
-              if ( len( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name') ) ):
-                if ( country != None ):
-                  for team in event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name'):
-                    a = 6
-                    #if ( self.getTeam( team.text.strip(" \r\n") ) == None ):
-
-              if ( len( event_item.cssselect('tr.event-header > td')[1] ) ):
-                first_win_container = event_item.cssselect('tr.event-header > td')[1]
-                first_win = first_win_container.cssselect('span')[0].text.strip(" \r\n")
-
-              if ( len( event_item.cssselect('tr.event-header > td')[2] ) ):
-                evenly_container = event_item.cssselect('tr.event-header > td')[2]
-                evenly = evenly_container.cssselect('span')[0].text.strip(" \r\n")
-
-              if ( len( event_item.cssselect('tr.event-header > td')[3] ) ):
-                second_win_container = event_item.cssselect('tr.event-header > td')[3]
-                second_win = second_win_container.cssselect('span')[0].text.strip(" \r\n")
-
-              if ( len( event_item.cssselect('tr.event-header > td')[4] ) ):
-                first_win_or_evenly_container = event_item.cssselect('tr.event-header > td')[4]
-                first_win_or_evenly = first_win_or_evenly_container.cssselect('span')[0].text.strip(" \r\n")
-
-              if ( len( event_item.cssselect('tr.event-header > td')[5] ) ):
-                first_or_second_win_container = event_item.cssselect('tr.event-header > td')[5]
-                first_or_second_win = first_or_second_win_container.cssselect('span')[0].text.strip(" \r\n")
-
-              if ( len( event_item.cssselect('tr.event-header > td')[6] ) ):
-                second_win_or_evenly_container = event_item.cssselect('tr.event-header > td')[6]
-                second_win_or_evenly = second_win_or_evenly_container.cssselect('span')[0].text.strip(" \r\n")
-
-              if ( len( event_item.cssselect('tr.event-header > td')[7] ) ):
-                fora_first_container = event_item.cssselect('tr.event-header > td')[7]
-                fora_first = fora_first_container.cssselect('span')[0].text.strip(" \r\n")
-
-              if ( len( event_item.cssselect('tr.event-header > td')[8] ) ):
-                fora_second_container = event_item.cssselect('tr.event-header > td')[8]
-                fora_second = fora_second_container.cssselect('span')[0].text.strip(" \r\n")
-
-              if ( len( event_item.cssselect('tr.event-header > td')[9] ) ):
-                total_less_container = event_item.cssselect('tr.event-header > td')[9]
-                total_less = total_less_container.cssselect('span')[0].text.strip(" \r\n")
-
-              if ( len( event_item.cssselect('tr.event-header > td')[10] ) ):
-                total_more_container = event_item.cssselect('tr.event-header > td')[10]
-                total_more = total_more_container.cssselect('span')[0].text.strip(" \r\n")
+        if ( UsedChampionships.findSport( sport ) is not None ):
+          result['sport'] = UsedChampionships.findSport( sport )
+          
+          if ( UsedChampionships.findCountryBySport( country, sport ) is not None ):
+            result['championship'] = UsedChampionships.findCountryBySport( country, sport )
+            
+            if ( UsedChampionships.findChampionshipBySport( championship, sport ) is not None ):
+              result['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
+              result = self.getEventCoefficientFromDom( event )
+            else:
+              file.write( title_str + " - не найден Чемпионат\r\n")
           else:
-            file.write( title_str + "Чемпионат\r\n")
+            file.write( title_str + " - не найдена Страна\r\n") 
         else:
-          file.write( title_str + "Страна\r\n") 
-      else:
-        file.write( title_str + "Спорт\r\n")
+          file.write( title_str + " - не найдне Спорт\r\n")
 
     file.close()
              
@@ -145,6 +102,86 @@ class MarathonBet():
     if Dictionary.findTeam( team ):
       return Dictionary.findTeam( team )
 
+  def getCoefficientFromHtml( self, container, position ):
+    container = container.cssselect('tr.event-header > td')[position]
+    return container.cssselect('span')[0].text.strip(" \r\n")
 
+  def getCoefficientTitleFromHtml( self, container, position ):
+    coefficients_type_association = {
+      '1' : 'first',
+      'X' : 'draw',
+      '2' : 'second',
+      '1X' : 'first_or_draw',
+      '12' : 'first_or_second',
+      'X2' : 'draw_or_second',
+      'фора1' : 'first_fora',
+      'Фора2' : 'second_fora',
+      'Тотал мен.' : 'total_less',
+      'Тотал бол.' : 'total_more',
+    }
     
+    tr_dom = container.cssselect('table.foot-market > tr')[0]
+    th_dom = tr_dom.cssselect('th')[position]
+    key = tr_dom.cssselect('a > b')[0].text.strip(" \r\n")
+    return coefficients_type_association[ key ]
+
+  def getEventCoefficientFromDom( self, event_dom ):
+    result = {}
+
+    print( self.getCoefficientTitleFromHtml( event_dom, 0))
+
+    for event_item in event_dom.cssselect('table.foot-market > tbody[id]'):
+
+      if ( len( event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name') ) ):
+
+        title_teams_dom = event_item.cssselect('tr.event-header td.first table tr td.name span.command div.member-name')
+        coefficients_dom = event_item.cssselect('tr.event-header > td')
+
+        if ( title_teams_dom[0] in title_teams_dom ):
+          team = title_teams_dom[0]
+          if ( self.getTeam( team.text.strip(" \r\n") ) is not None ):
+            result['first_team'] = self.getTeam( team.text.strip(" \r\n") )
+
+        if ( title_teams_dom[1] in title_teams_dom ):
+          team = title_teams_dom[1] 
+          if ( self.getTeam( team.text.strip(" \r\n") ) is not None ):
+            result['second_team'] = self.getTeam( team.text.strip(" \r\n") )
+
+        if ( len( coefficients_dom ) > 0 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 0)] = self.getCoefficientFromHtml( event_item, 0)
+
+        if ( len( coefficients_dom ) >= 2 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 1)] = self.getCoefficientFromHtml( event_item, 1)
+
+        if ( len( coefficients_dom ) >= 3 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 2)] = self.getCoefficientFromHtml( event_item, 2)
+
+        if ( len( coefficients_dom ) >= 4 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 3)] = self.getCoefficientFromHtml( event_item, 3)
+
+        if ( len( coefficients_dom ) >= 5 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 4)] = self.getCoefficientFromHtml( event_item, 4)
+
+        if ( len( coefficients_dom ) >= 6 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 5)] = self.getCoefficientFromHtml( event_item, 5)
+
+        if ( len( coefficients_dom ) >= 7 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 6)] = self.getCoefficientFromHtml( event_item, 6)
+
+        if ( len( coefficients_dom ) >= 8 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 7)] = self.getCoefficientFromHtml( event_item, 7)
+
+        if ( len( coefficients_dom ) >= 9 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 8)] = self.getCoefficientFromHtml( event_item, 8)
+
+        if ( len( coefficients_dom ) >= 10 ):
+          result[self.getCoefficientTitleFromHtml( event_dom, 9)] = self.getCoefficientFromHtml( event_item, 9)
+
+  def skipOrNotTitleByWord( self, title ):
+    ignore_words = ['Итоги']
     
+    for item in ignore_words:
+      if ( title.find( item ) != -1 ):
+        return True
+
+    return False

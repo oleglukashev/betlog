@@ -84,5 +84,46 @@
     <championship value="Серия А1">
       <variant value="Серия А1" />
     </championship>
+    <championship value="Кубок ITM">
+      <variant value="Кубок ITM" />
+    </championship>
+    <championship value="Бундеслига 1">
+      <variant value="Бундеслига 1" />
+    </championship>
+    <championship value="Дивизион А1">
+      <variant value="Дивизион А1" />
+    </championship>
+    <championship value="Национальная лига">
+      <variant value="Национальная лига" />
+    </championship>
+    <championship value="Национальная лига">
+      <variant value="Национальная лига" />
+    </championship>
+    <championship value="Местраууслига">
+      <variant value="Местраууслига" />
+    </championship>
+    <championship value="NLA">
+      <variant value="NLA" />
+    </championship>
+    <championship value="Элитсериен">
+      <variant value="Элитсериен" />
+    </championship>
+    <championship value="Топ 14">
+      <variant value="Топ 14" />
+    </championship>
+    <championship value="Кубок ITM">
+      <variant value="Кубок ITM" />
+    </championship>
+    <championship value="Постенлигаен">
+      <variant value="Постенлигаен" />
+    </championship>
+    <championship value="Лига ASOBAL">
+      <variant value="Лига ASOBAL" />
+    </championship>
+    <championship value="Экстракласа">
+      <variant value="Экстракласа" />
+    </championship>
+
+
   </championships>
 </dictionary>

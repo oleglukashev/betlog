@@ -54,8 +54,14 @@
     <country value="Норвегия">
       <variant value="Норвегия" />
     </country>
+    <country value="Новая Зеландия">
+      <variant value="Новая Зеландия" />
+    </country>
     <country value="Россия">
       <variant value="Россия" />
+    </country>
+    <country value="Румыния">
+      <variant value="Румыния" />
     </country>
     <country value="Франция">
       <variant value="Франция" />
