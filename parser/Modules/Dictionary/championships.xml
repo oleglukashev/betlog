@@ -123,6 +123,9 @@
     <championship value="Экстракласа">
       <variant value="Экстракласа" />
     </championship>
+    <championship value="AVL">
+      <variant value="AVL" />
+    </championship>
 
 
   </championships>
