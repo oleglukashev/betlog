@@ -27,7 +27,7 @@ def findCountryByChampionship( championship_str ):
 
   for championship in championships:
     if ( championship.getAttribute("value") == championship_str ):
-      return championship.parentNode
+      return championship.parentNode.getAttribute("value")
 
 def findCountryBySport( country_str, sport_str ):
   sports = used_championships.getElementsByTagName('sport')
