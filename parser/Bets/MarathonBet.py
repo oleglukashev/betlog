@@ -61,8 +61,6 @@ class MarathonBet():
               result['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
               result['country'] = UsedChampionships.findCountryBySport( country, sport )
               result['sport'] = UsedChampionships.findSport( sport )
-
-              print( result )
             else:
               file.write( title_str + " - не найден Чемпионат\r\n")
           else:
@@ -173,7 +171,11 @@ class MarathonBet():
     tr_dom = container.cssselect('table.foot-market > tr')[0]
     th_dom = tr_dom.cssselect('th.coupone')[position]
     key = th_dom.cssselect('a')[0].text_content().strip(" \r\n")
-    return coefficients_type_association[ key ]
+
+    if key in coefficients_type_association.keys():
+      return coefficients_type_association[ key ]
+    else:
+      return None
 
 
   def skipOrNotTitleByWord( self, title ):
