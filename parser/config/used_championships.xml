@@ -70,6 +70,8 @@
   </sport>
   <sport value="Хоккей">
     <countries>
+        <country value="Международный">
+        </country>
         <country value="Австрия">
             <championship value="EBEL" />
         </country>
@@ -137,7 +139,7 @@
   </sport>
   <sport value="Баскетбол">
     <countries>
-        <country value="Международные">
+        <country value="Международный">
             <championship value="NBA" />
         </country>
         <country value="Австралия">
@@ -180,7 +182,7 @@
         <country value="Международные">
         </country>
         <country value="Австрия">
-            <championship value="Суперлига" />
+            <championship value="AVL" />
         </country>
         <country value="Аргентина">
             <championship value="Серия А1" />
