@@ -11,13 +11,14 @@
     <sport value="Волейбол">
       <variant value="Волейбол" />
     </sport>
-    <!--<sport value="Гандбол">
+    <sport value="Гандбол">
       <variant value="Гандбол" />
     </sport>
     <sport value="Регби">
       <variant value="Регби" />
       <variant value="Регби-лига" />
-    </sport>-->
+      <variant value="Регби-союз" />
+    </sport>
     <sport value="Футбол">
       <variant value="Футбол" />
     </sport>

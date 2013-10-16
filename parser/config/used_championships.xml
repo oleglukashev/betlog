@@ -71,6 +71,7 @@
   <sport value="Хоккей">
     <countries>
         <country value="Международный">
+            <championship value="NHL" />
         </country>
         <country value="Австрия">
             <championship value="EBEL" />
@@ -116,6 +117,7 @@
         </country>
         <country value="Россия">
             <championship value="Премьер-лига" />
+            <championship value="КХЛ" />
         </country>
         <country value="Украина">
             <championship value="Премьер-лига" />
@@ -188,7 +190,7 @@
             <championship value="Серия А1" />
         </country>
         <country value="Бельгия">
-            <championship value="Лига А" />
+            <championship value="Лига A" />
         </country>
         <country value="Бразилия">
             <championship value="Суперлига" />
@@ -206,7 +208,7 @@
             <championship value="Суперлига" />
         </country>
         <country value="Италия">
-            <championship value="Серия А1" />
+            <championship value="Серия A1" />
         </country>
         <country value="Нидерланды">
             <championship value="Эредивизи" />
@@ -224,7 +226,7 @@
             <championship value="Местраууслига" />
         </country>
         <country value="Франиция">
-            <championship value="Лига А" />
+            <championship value="Лига A" />
         </country>
         <country value="Чехия">
             <championship value="Экстралига" />
@@ -257,7 +259,7 @@
         <country value="Международные">
         </country>
         <country value="Дания">
-            <championship value="JJ-лига" />
+            <championship value="J&amp;J-лига" />
         </country>
         <country value="Венгрия">
             <championship value="HB" />

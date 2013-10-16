@@ -56,6 +56,7 @@
     </championship>
     <championship value="Про-лига">
       <variant value="Про-лига" />
+      <variant value="Жюпиле Про-лига" />
     </championship>
     <championship value="Эредивизи">
       <variant value="Эредивизи" />
@@ -81,8 +82,8 @@
     <championship value="ПБЛ">
       <variant value="ПБЛ" />
     </championship>
-    <championship value="Серия А1">
-      <variant value="Серия А1" />
+    <championship value="Серия A1">
+      <variant value="Серия A1" />
     </championship>
     <championship value="Кубок ITM">
       <variant value="Кубок ITM" />
@@ -126,7 +127,23 @@
     <championship value="AVL">
       <variant value="AVL" />
     </championship>
+    <championship value="Лига A">
+      <variant value="Лига A" />
+    </championship>
+    <championship value="J&amp;J-лига">
+      <variant value="J&amp;J-лига" />
+    </championship>
+    <championship value="Экстралига">
+      <variant value="Экстралига" />
+    </championship>
+    <championship value="NHL">
+      <variant value="NHL" />
+    </championship>
+    <championship value="КХЛ">
+      <variant value="КХЛ" />
+    </championship>
 
+    
 
   </championships>
 </dictionary>
