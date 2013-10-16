@@ -138,6 +138,7 @@
     </championship>
     <championship value="NHL">
       <variant value="NHL" />
+      <variant value="НХЛ" />
     </championship>
     <championship value="КХЛ">
       <variant value="КХЛ" />
