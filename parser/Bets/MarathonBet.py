@@ -170,7 +170,12 @@ class MarathonBet():
     
     tr_dom = container.cssselect('table.foot-market > tr')[0]
     th_dom = tr_dom.cssselect('th.coupone')[position]
-    key = th_dom.cssselect('a')[0].text_content().strip(" \r\n")
+    a_dom = th_dom.cssselect('a')
+
+    if ( len( a_dom ) ):
+      key = a_dom[0].text_content().strip(" \r\n")
+    else:
+      return None
 
     if key in coefficients_type_association.keys():
       return coefficients_type_association[ key ]
