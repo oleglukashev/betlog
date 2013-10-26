@@ -1,11 +1,12 @@
 import sqlalchemy
 import yaml
 from sqlalchemy import *
-from sqlalchemy.orm import *
-from sqlalchemy.ext.declarative import declarative_base
+
+from Entities.Sports import Sports
 
 from Bets.Bet import Bet
 from Bets.MarathonBet import MarathonBet
+
 
 class BaseApp():
   def __init__( self):
@@ -24,5 +25,12 @@ class BaseApp():
       print( 'Start parse ' + key.title() + ' page' )
       instance = eval( key.title() + "Bet" )
       instance = instance( value, self.databaseConnect )
-      instance.parse()
+      #events = instance.parse()
+
+      sports = Sports('Footbal')
+      sports.name = "Vilo"
+
+      print( sports )
+
+
       print ( 'Finished parse ' + key.title() + ' page' )
