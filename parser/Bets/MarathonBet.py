@@ -1,5 +1,7 @@
 #!/usr/local/bin/python3.3
 # -*- coding: utf-8 -*-
+import logger
+
 import sqlalchemy
 from sqlalchemy import *
 from sqlalchemy.orm import *
@@ -13,30 +15,26 @@ from Modules import UsedChampionships
 
 class MarathonBet():
 
-  def __init__( self, link, databaseConnect ):
-    self.databaseConnect = databaseConnect
+  def __init__( self, link ):
     self.link = link
 
 
   def getContentFromUrl( self ):
     data = urllib.parse.urlencode( self.link['data'] )
-
     page = urllib.request.urlopen( self.link['url'], data.encode('utf-8') )
-
     #page = urllib.request.urlopen( self.link['url'] )
     doc = lxml.html.document_fromstring(page.read().decode('utf-8'))
-    
     return doc
 
 
   def parse( self ):
     content = self.getContentFromUrl()
     print("--- Content has loaded ---")
-    connect = self.databaseConnect
-    s = Session( connect )
+
+    result = {}
+    i = 0
 
     for event in content.cssselect('#container_EVENTS > div.main-block-events'):
-      result = {}
 
       event_title_elems = event.cssselect('div.block-events-head > *')
       for event_title_elem in event_title_elems:
@@ -48,29 +46,35 @@ class MarathonBet():
         sport = self.getSportFromTitle( title_str )
         country = self.getCountryFromTitle( title_str )
         championship = self.getChampionshipFromTitle( title_str )
-        
+
         if ( country == None ):
           country = UsedChampionships.findCountryByChampionship( championship )
-        
+
         file = open("display.txt", "a",encoding='utf-8')
 
         if ( UsedChampionships.findSport( sport ) is not None ):
           if ( UsedChampionships.findCountryBySport( country, sport ) is not None ):
             if ( UsedChampionships.findChampionshipBySport( championship, sport ) is not None ):
-              result = self.getEventCoefficientFromDom( event )
-              result['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
-              result['country'] = UsedChampionships.findCountryBySport( country, sport )
-              result['sport'] = UsedChampionships.findSport( sport )
+              result[i] = self.getEventCoefficientFromDom( event )
+              result[i]['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
+              result[i]['country'] = UsedChampionships.findCountryBySport( country, sport )
+              result[i]['sport'] = UsedChampionships.findSport( sport )
+
+              i += 1
             else:
               file.write( title_str + " - не найден Чемпионат\r\n")
           else:
-            file.write( title_str + " - не найдена Страна\r\n") 
+            file.write( title_str + " - не найдена Страна\r\n")
         else:
           file.write( title_str + " - не найдне Спорт\r\n")
 
     file.close()
-             
-  
+
+    return result
+
+
+
+
   def getEventCoefficientFromDom( self, event_dom ):
     result = {}
 
@@ -122,7 +126,7 @@ class MarathonBet():
         if ( len( coefficients_dom ) >= 10 ):
           result[self.getCoefficientTitleFromHtml( event_dom, 9)] = self.getCoefficientFromHtml( event_item, 9)
 
-    return result         
+    return result
 
 
   def getSportFromTitle( self, title ):
@@ -167,7 +171,7 @@ class MarathonBet():
       'Тотал мен.' : 'total_less',
       'Тотал бол.' : 'total_more',
     }
-    
+
     tr_dom = container.cssselect('table.foot-market > tr')[0]
     th_dom = tr_dom.cssselect('th.coupone')[position]
     a_dom = th_dom.cssselect('a')
@@ -185,7 +189,7 @@ class MarathonBet():
 
   def skipOrNotTitleByWord( self, title ):
     ignore_words = ['Итоги', 'Женщины']
-    
+
     for item in ignore_words:
       if ( title.find( item ) != -1 ):
         return True
