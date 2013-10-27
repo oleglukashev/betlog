@@ -1,10 +1,11 @@
 import sqlalchemy
 import yaml
 
-from Entities.Sports import Sports
 
 from Bets.Bet import Bet
 from Bets.MarathonBet import MarathonBet
+
+from processingbet import ProcessingBet
 
 
 class BaseApp():
@@ -19,12 +20,8 @@ class BaseApp():
       print( 'Start parse ' + key.title() + ' page' )
       instance = eval( key.title() + "Bet" )
       instance = instance( value )
-      #events = instance.parse()
+      events = instance.parse()
 
-      sports = Sports('Footbal')
-      sports.name = "Vilo"
-
-      print( sports )
-
+      processing_bet = ProcessingBet(events)
 
       print ( 'Finished parse ' + key.title() + ' page' )

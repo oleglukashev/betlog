@@ -1,15 +1,16 @@
-from sqlalchemy import Column, Integer, String, Sequence
+from sqlalchemy import Column, Integer, String, Sequence, Date
 from sqlalchemy.ext.declarative import declarative_base
-
-from Entities.BaseEntity import BaseEntity
+import datetime
 
 Base = declarative_base()
 
-class Sports(Base, BaseEntity):
+class Sports(Base):
   __tablename__ = 'sports'
 
   id = Column(Integer, Sequence('sports_id_seq'), primary_key=True)
   name = Column(String)
+  created_at = Column(Date, default=datetime.datetime.now())
+  updated_at = Column(Date, default=datetime.datetime.now(), onupdate=datetime.datetime.now())
 
   def __init__(self, name):
     self.name = name

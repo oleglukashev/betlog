@@ -35,6 +35,7 @@ class MarathonBet():
     i = 0
 
     for event in content.cssselect('#container_EVENTS > div.main-block-events'):
+      event_hash = {}
 
       event_title_elems = event.cssselect('div.block-events-head > *')
       for event_title_elem in event_title_elems:
@@ -55,10 +56,12 @@ class MarathonBet():
         if ( UsedChampionships.findSport( sport ) is not None ):
           if ( UsedChampionships.findCountryBySport( country, sport ) is not None ):
             if ( UsedChampionships.findChampionshipBySport( championship, sport ) is not None ):
-              result[i] = self.getEventCoefficientFromDom( event )
-              result[i]['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
-              result[i]['country'] = UsedChampionships.findCountryBySport( country, sport )
-              result[i]['sport'] = UsedChampionships.findSport( sport )
+              event_hash['teams_and_coefficients'] = self.getEventCoefficientFromDom( event )
+              event_hash['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
+              event_hash['country'] = UsedChampionships.findCountryBySport( country, sport )
+              event_hash['sport'] = UsedChampionships.findSport( sport )
+
+              result[i] = event_hash
 
               i += 1
             else:
