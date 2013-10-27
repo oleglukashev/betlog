@@ -1,0 +1,1047 @@
+@import 'variables';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*@font-face {
+    font-family: 'pf_dindisplay_prothin';
+    src: url('../assets/pfdindisplaypro-thin/pfdindisplaypro-thin-webfont.eot');
+    src: url('../assets/pfdindisplaypro-thin/pfdindisplaypro-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/pfdindisplaypro-thin/pfdindisplaypro-thin-webfont.woff') format('woff'),
+         url('../assets/pfdindisplaypro-thin/pfdindisplaypro-thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+* {
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyrThin';
+    src: url('../assets/helveticaneuecyr-thin/helveticaneuecyr-thin-webfont.eot');
+    src: url('../assets/helveticaneuecyr-thin/helveticaneuecyr-thin-webfont.woff') format('woff'),
+    url('../assets/helveticaneuecyr-thin/helveticaneuecyr-thin-webfont.ttf') format('truetype'),
+    url('../assets/helveticaneuecyr-thin/helveticaneuecyr-thin-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueCyrBold';
+    src: url('../assets/helveticaneuecyr-bold/helveticaneuecyr-bold-webfont.eot');
+    src: url('../assets/helveticaneuecyr-bold/helveticaneuecyr-bold-webfont.woff') format('woff'),
+    url('../assets/helveticaneuecyr-bold/helveticaneuecyr-bold-webfont.ttf') format('truetype'),
+    url('../assets/helveticaneuecyr-bold/helveticaneuecyr-bold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body
+{
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    font-family: 'arial', 'verdana', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #555;
+    background: #b8dde3 url('../assets/background.gif') repeat 0 0;
+}
+
+a {
+    color:#4B6F7D;
+}
+
+h1,h2
+{
+    font-family:"HelveticaNeueCyrThin";
+    color:#555;
+    font-size:30px;
+    line-height: 30px;
+    font-weight:normal;
+    text-shadow: 0px 1px 0 #fff;
+    margin-bottom: 20px;
+}
+
+.clear
+{
+    height:0;
+    line-height:0;
+    font-size:0;
+    clear:both;
+}
+
+.hide
+{
+	display: none;
+}
+
+div.input-wrap 
+{
+  height: 24px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  _height: 24px;
+	background: url(../assets/mini_bulged_left.png) no-repeat 0 0;
+	padding-left: 6px;
+}
+
+div.input-wrap div
+{
+	background: url(../assets/mini_bulged_right.png) no-repeat right 0;
+	padding: 0 6px 0 0;
+}
+
+div.input-wrap div div
+{
+	background: url(../assets/mini_bulged_center.png) repeat-x 0 0;
+	padding: 0;
+	height: 24px; 
+}
+
+div.input-wrap div div input
+{
+	width: 194px;
+	background-color: transparent;
+	border: 0 solid transparent;
+	outline: 0;
+	height: 22px;
+	padding: 1px 0;
+	color: #555;
+}
+
+
+/*
+*MAIN
+*/
+
+#carcas
+{
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	background: url(../assets/top_background_gradient.png) repeat-x 0 0;
+}
+
+
+/* Header */
+
+div.header
+{
+	width: 900px;
+	margin: 0 auto;
+  padding: 10px 0;
+}
+
+div.header div.navigation {
+	text-align: right;
+}
+
+div.header div.navigation a
+{
+	text-decoration: none;
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+div.logo
+{
+	width: 235px;
+	height: 57px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  _height: 57px;
+}
+
+div.search
+{
+	position: relative;
+	height: 57px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  _height: 57px;
+  margin: 16px 0 0 100px;
+}
+
+div.search div.lupa
+{
+	position: absolute;
+	width: 17px;
+	height: 14px;
+	background: url(../assets/lupa.png) no-repeat 0 0;
+	left: 0;
+	top: 0;
+	margin: 4px 0 0 6px;
+}
+
+div.search div div div input
+{
+	width: 100px;
+	margin-left: 22px;
+	color: #fff;
+}
+
+div.search div div div input:-moz-placeholder { color: #fff; }
+div.search div div div input::-webkit-input-placeholder { color: #fff; }
+
+/* Pastevents */
+
+div.pastevents
+{
+	margin-bottom: 10px;
+}
+
+div.pastevents-menu
+{
+	padding: 0 32px;
+	position: relative;
+	z-index: 1;
+}
+
+div.pastevents-menu-item
+{
+	display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+div.pastevents-menu-item.active
+{
+	padding-left: 6px;
+	background: url(../assets/mini_bulged_left.png) no-repeat 0 0;
+}
+
+div.pastevents-menu-item.active div
+{
+	padding: 0 6px 0 0;
+	background: url(../assets/mini_bulged_right.png) no-repeat right 0;
+}
+
+div.pastevents-menu-item.active div div
+{
+	padding: 2px 0;
+	background: url(../assets/mini_bulged_center.png) repeat-x 0 0;
+}
+
+div.pastevents-items
+{
+	padding-left: 30px;
+	margin-top: -2px;
+	background: url(../assets/medium_bulged_left.png) no-repeat 0 0;
+}
+
+div.pastevents-items div
+{
+	padding: 0 30px 0 0;
+	background: url(../assets/medium_bulged_right.png) no-repeat right 0;
+}
+
+div.pastevents-items div div
+{
+	height: 38px;
+	padding: 4px 0px;
+	background: url(../assets/medium_bulged_center.png) repeat-x 0 0;
+}
+
+div.pastevents-items div div div
+{
+	padding: 0;
+	height: auto;
+	background: none;
+}
+
+ul.pastevents-items-carousel li
+{
+	height: 34px;
+	padding: 2px;
+	background-color: #f9f9f9;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+div.pastevents-item p
+{
+	font-size: 10px;
+	line-height: 11px;
+	font-weight: bold;
+}
+
+div.pastevents-item p.pastevents-item-date
+{
+	font-weight: normal;
+	line-height: 10px;
+	margin-bottom: 2px;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+div.pastevents-item p.pastevents-item-team span
+{
+	text-align: right;
+	float: right;
+}
+
+
+
+/* Content */
+
+div.content
+{
+	width: 900px;
+	margin: 0 auto;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 2px 5px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 2px 5px rgba(50, 50, 50, 0.5);
+}
+
+div.content-top
+{
+	padding-left: 11px;
+	background: url(../assets/main_convex_left_top.png) no-repeat 0 0;	
+}
+
+div.content-top div
+{
+	padding: 0 11px 0 0;
+	background: url(../assets/main_convex_right_top.png) no-repeat right 0;
+}
+
+div.content-top div div
+{
+	padding: 0;
+	height: 13px;
+	background: url(../assets/main_convex_top.png) repeat-x 0 0;
+}
+
+div.content-bottom
+{
+	padding-left: 11px;
+	background: url(../assets/main_convex_left_bottom.png) no-repeat 0 bottom;	
+}
+
+div.content-bottom div
+{
+	padding: 0 11px 0 0;
+	background: url(../assets/main_convex_right_bottom.png) no-repeat right bottom;
+}
+
+div.content-bottom div div
+{
+	padding: 0;
+	height: 13px;
+	background: url(../assets/main_convex_bottom.png) repeat-x 0 bottom;
+}
+
+div.content-body
+{
+	padding: 7px 30px;
+	background-color: #ebebeb;
+	font-size: 0;
+}
+
+
+div.events, div.sport-menu
+{
+	display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  font-size: 12px;
+}
+
+div.events
+{
+	width: 650px;
+}
+
+div.events-content
+{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
+}
+
+div.events-content-top
+{
+	padding-left: 6px;
+	background: url(../assets/sec_convex_left_top.png) no-repeat 0 0;	
+}
+
+div.events-content-top div
+{
+	padding: 0 6px 0 0;
+	background: url(../assets/sec_convex_right_top.png) no-repeat right 0;
+}
+
+div.events-content-top div div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_top.png) repeat-x 0 0;
+}
+
+div.events-content-bottom
+{
+	padding-left: 6px;
+	background: url(../assets/sec_convex_left_bottom.png) no-repeat 0 bottom;	
+}
+
+div.events-content-bottom div
+{
+	padding: 0 6px 0 0;
+	background: url(../assets/sec_convex_right_bottom.png) no-repeat right bottom;
+}
+
+div.events-content-bottom div div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_bottom.png) repeat-x 0 bottom;
+}
+
+div.events-content-body
+{
+	padding: 14px 30px;
+	background-color: #f9f9f9;
+}
+
+
+
+/* Event */
+
+div.event-group
+{
+	margin-bottom: 30px;
+}
+
+div.event-group-date
+{
+	float: left;
+	width: 66px;
+	height: 57px;
+	padding-top: 12px;
+	margin-left: -82px;
+	background: url(../assets/date_background.png) no-repeat 0 0;
+}
+
+div.event-group-date p
+{
+	text-align: center;
+	font-size: 12px;
+	text-shadow: 0px 1px 0 #fff;
+}
+
+div.event-group-date p:first-child
+{
+	font-size: 26px;
+}
+
+div.event
+{
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    0px 1px 1px rgba(50, 50, 50, 0.3);
+	box-shadow:         0px 1px 1px rgba(50, 50, 50, 0.3);
+	background-color: #fff;
+	margin-bottom: 5px;
+}
+
+div.event-title
+{
+	padding: 12px 30px;
+	font-size: 0;
+	cursor: pointer;
+}
+
+div.event-full-content { display: none; }
+
+div.event-part,
+div.event-border
+{
+	font-size: 16px;
+	display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;	
+}
+
+div.event-part { width: 235px; }
+div.event-part:first-child { text-align: right; }
+
+div.event-border { width: 25px; text-align: center; }
+div.event-date { float: left;}
+
+div.event-show-full,
+div.event-hide-full {
+	float: right;
+	width: 17px;
+	height: 12px;
+	margin: 3px -10px 0 0;
+}
+
+div.event-show-full { 
+	background: url(../assets/pointer_down.png) no-repeat 0 0;
+}
+
+div.event-hide-full { 
+	background: url(../assets/pointer_top.png) no-repeat 0 0;
+}
+
+ul.coefs-tabs-title li {
+	margin-left: -10px;
+	background: url(../assets/bet_tab.png) no-repeat 0 0;
+	display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  position: relative;
+  *display: inline;
+}
+
+ul.coefs-tabs-title li:first-child { margin-left: 0; }
+
+ul.coefs-tabs-title li.active { background: url(../assets/bet_tab_active.png) no-repeat 0 0; z-index: 99px;}
+
+li.coefs-title-item-1 { z-index: 10; }
+li.coefs-title-item-2 { z-index: 9; }
+li.coefs-title-item-3 { z-index: 8; }
+li.coefs-title-item-4 { z-index: 7; }
+li.coefs-title-item-5 { z-index: 6; }
+li.coefs-title-item-6 { z-index: 5; }
+li.coefs-title-item-7 { z-index: 4; }
+li.coefs-title-item-8 { z-index: 3; }
+li.coefs-title-item-9 { z-index: 2; }
+li.coefs-title-item-10 { z-index: 1; }
+
+ul.coefs-tabs-title li a {
+	display: block;
+	width: 50px;
+	height: 24px;
+	line-height: 24px;
+	padding-right: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: #555;
+	font-weight: bold;
+	text-shadow: 0px 1px 0 #fff;
+}
+
+div.coef-tab table { width: 100%; }
+div.coef-tab table tr th { 
+	height: 28px;
+	background: url(../assets/bet_coef_table_background.png) repeat-x 0 0;
+	vertical-align: middle;
+	font-weight: bold;
+	text-shadow: 0px 1px 0 #fff;
+	padding: 0 10px;
+}
+
+div.coef-tab table tr th:first-child {
+	text-align: left;
+}
+
+div.coef-tab table tr td {
+	padding: 2px 10px;
+	border: 1px solid #d7d7d7;
+	font-weight: bold;
+}
+
+div.coef-tab table tr td.td1 { width: 40%; }
+
+div.coef-tab table tr.odd td {
+	background-color: #cdecf1;
+}
+
+div.coef-tab table tr td span.coef-position {
+	width: 11px;
+	height: 8px;
+	display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  margin: 5px 0 0 3px; 
+}
+
+div.coef-tab table tr td span.coef-position.up {
+	background: url(../assets/coef-up.png) no-repeat 0 0;
+}
+
+div.coef-tab table tr td span.coef-position.down {
+	background: url(../assets/coef-down.png) no-repeat 0 0;
+}
+
+
+/* Menu */
+
+div.sport-menu { width: 190px; }
+
+div.sport-menu h1 { margin-left: 20px; }
+
+div.sport-menu ul li.active div.sport-menu-item {
+	margin: 2px 3px 2px 0;
+	-webkit-border-radius: 0 6px 6px 0;
+	-moz-border-radius: 0 6px 6px 0;
+	border-radius: 0 6px 6px 0;
+	-webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
+	background: none;
+	text-shadow: 0px 1px 0 #fff;
+	cursor: pointer;
+}
+
+div.sport-menu ul { margin-top: 50px; }
+
+div.sport-menu ul li { overflow: hidden; cursor: pointer; }
+
+div.sport-menu ul li.active div.sport-menu-item-top
+{
+	padding-right: 6px;
+	background: url(../assets/sec_convex_right_top.png) no-repeat right 0;	
+}
+
+div.sport-menu ul li.active div.sport-menu-item-top div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_top.png) repeat-x 0 0;
+}
+
+div.sport-menu ul li.active div.sport-menu-item-bottom
+{
+	padding-right: 6px;
+	background: url(../assets/sec_convex_right_bottom.png) no-repeat right bottom;	
+}
+
+
+div.sport-menu ul li.active div.sport-menu-item-bottom div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_bottom.png) repeat-x 0 bottom;
+}
+
+div.sport-menu ul li div.sport-menu-item-body
+{
+	padding: 16px 20px 16px 10px;
+	margin: 0 3px 0 10px;
+	line-height: 18px;
+	font-size: 15px;
+	background: url(../assets/menu_border.png) repeat-x 0 top;
+}
+
+div.sport-menu ul li:first-child div.sport-menu-item-body,
+div.sport-menu ul li div.sport-menu-item-body.no-border
+{
+	background-image: none;
+}
+
+div.sport-menu ul li.active div.sport-menu-item-body
+{
+	padding: 8px 20px;
+	margin: 0;
+	background: #f9f9f9;
+	
+}
+
+div.sport-menu ul li ul
+{
+	margin: 0;
+}
+
+div.sport-menu ul li ul li { 
+	margin: 0;
+	padding: 6px 20px;
+}
+
+div.sport-menu ul li ul li.active,
+div.sport-menu ul li ul li:hover
+{
+	color: #000;
+}
+
+div.sport-menu ul li div.sport-submenu
+{
+	display: none;
+	margin: -1px 10px 2px 0;
+	-webkit-border-radius: 0 0 6px 0;
+	-moz-border-radius: 0 0 6px 0;
+	border-radius: 0 0 6px 0;
+	-webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
+	text-shadow: 0px 1px 0 #fff;
+	cursor: pointer;
+}
+
+div.sport-menu ul li.active div.sport-submenu
+{
+	display: block;
+}
+
+div.sport-menu ul li div.sport-submenu div.sport-submenu-body
+{
+	background-color: #e1e1e1;
+}
+
+div.sport-menu ul li div.sport-submenu div.sport-submenu-bottom
+{
+	padding-right: 5px;
+	background: url(../assets/submenu_right_bottom.png) no-repeat right bottom;	
+}
+
+
+div.sport-menu ul li div.sport-submenu div.sport-submenu-bottom div
+{
+	padding: 0;
+	height: 6px;
+	background: #e1e1e1;
+}
+
+/* Footer */
+div.footer
+{
+	width: 900px;
+	margin: 0 auto;
+}
+
+
+/* Loginbox */
+.fancybox-wrap-1
+{
+	position: static !important;
+	margin-top: 10px !important;
+}
+
+#loginbox
+{
+	position: absolute;
+	top: 10px;
+	width: 247px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
+	z-index: 2;
+}
+
+div.loginbox-content-top
+{
+	padding-left: 6px;
+	background: url(../assets/sec_convex_left_top.png) no-repeat 0 0;	
+}
+
+div.loginbox-content-top div
+{
+	padding: 0 6px 0 0;
+	background: url(../assets/sec_convex_right_top.png) no-repeat right 0;
+}
+
+div.loginbox-content-top div div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_top.png) repeat-x 0 0;
+}
+
+div.loginbox-content-bottom
+{
+	padding-left: 6px;
+	background: url(../assets/sec_convex_left_bottom.png) no-repeat 0 bottom;	
+}
+
+div.loginbox-content-bottom div
+{
+	padding: 0 6px 0 0;
+	background: url(../assets/sec_convex_right_bottom.png) no-repeat right bottom;
+}
+
+div.loginbox-content-bottom div div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_bottom.png) repeat-x 0 bottom;
+}
+
+div.loginbox-content-body
+{
+	padding: 8px 20px;
+	background-color: #f9f9f9;
+}
+
+p.loginbox-title
+{
+	font-family: "HelveticaNeueCyrThin";
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+
+div.loginbox-close
+{
+	width: 17px;
+	height: 17px;
+	float: right;
+	background: url(../assets/close.png) no-repeat 0 0;
+	cursor: pointer;
+	margin-right: -5px;
+}
+
+div.loginbox-content-body form div.input-wrap
+{
+	margin-bottom: 10px;
+}
+
+p.loginbox-input-error
+{
+	font-weight: bold;
+	color: red;
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+
+div.loginbox-input-error-container p.novalid
+{
+	display: block;
+}
+
+div.loginbox-remember
+{
+	font-size: 0;
+	margin-bottom: 10px;
+}
+
+div.loginbox-content-body form div p {
+	display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  font-size: 12px;
+}
+
+div.loginbox-content-body form div p button {
+	margin-top: 6px;
+}
+
+p.loginbox-forgot {
+	float: right;
+}
+
+div.loginbox-remember p:first-child
+{
+	margin: 2px 5px 0 0;
+}
+
+
+/* registration */
+
+#registration
+{
+	position: absolute;
+	top: 10px;
+	width: 247px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 1px 2px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
+	z-index: 2;
+}
+
+div.loginbox-content-top
+{
+	padding-left: 6px;
+	background: url(../assets/sec_convex_left_top.png) no-repeat 0 0;	
+}
+
+div.loginbox-content-top div
+{
+	padding: 0 6px 0 0;
+	background: url(../assets/sec_convex_right_top.png) no-repeat right 0;
+}
+
+div.loginbox-content-top div div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_top.png) repeat-x 0 0;
+}
+
+div.loginbox-content-bottom
+{
+	padding-left: 6px;
+	background: url(../assets/sec_convex_left_bottom.png) no-repeat 0 bottom;	
+}
+
+div.loginbox-content-bottom div
+{
+	padding: 0 6px 0 0;
+	background: url(../assets/sec_convex_right_bottom.png) no-repeat right bottom;
+}
+
+div.loginbox-content-bottom div div
+{
+	padding: 0;
+	height: 6px;
+	background: url(../assets/sec_convex_bottom.png) repeat-x 0 bottom;
+}
+
+div.loginbox-content-body
+{
+	padding: 8px 20px;
+	background-color: #f9f9f9;
+}
+
+p.loginbox-title
+{
+	font-family: "HelveticaNeueCyrThin";
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+
+div.loginbox-close
+{
+	width: 17px;
+	height: 17px;
+	float: right;
+	background: url(../assets/close.png) no-repeat 0 0;
+	cursor: pointer;
+	margin-right: -5px;
+}
+
+div.loginbox-content-body form div.input-wrap
+{
+	margin-bottom: 10px;
+}
+
+p.loginbox-input-error
+{
+	font-weight: bold;
+	color: red;
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+
+div.loginbox-input-error-container p.novalid
+{
+	display: block;
+}
+
+div.loginbox-remember
+{
+	font-size: 0;
+	margin-bottom: 10px;
+}
+
+div.loginbox-content-body form div p {
+	display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  font-size: 12px;
+}
+
+div.loginbox-content-body form div p button {
+	margin-top: 6px;
+}
+
+p.loginbox-forgot {
+	float: right;
+}
+
+div.loginbox-remember p:first-child
+{
+	margin: 2px 5px 0 0;
+}
+
+
+
+/* Overlay */
+#overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=40);
+	-moz-opacity: 0.4;
+	-khtml-opacity: 0.4;
+	opacity: 0.4;
+	z-index: 1;
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<dictionary>
+  <sports>
+    <sport value="Баскетбол">
+      <variant value="Баскетбол" />
+    </sport>
+    <!--<sport value="Бокс">
+      <variant value="Бокс" />
+    </sport>-->
+    <sport value="Волейбол">
+      <variant value="Волейбол" />
+    </sport>
+    <sport value="Гандбол">
+      <variant value="Гандбол" />
+    </sport>
+    <sport value="Регби">
+      <variant value="Регби" />
+      <variant value="Регби-лига" />
+      <variant value="Регби-союз" />
+    </sport>
+    <sport value="Футбол">
+      <variant value="Футбол" />
+    </sport>
+    <sport value="Хоккей">
+      <variant value="Хоккей" />
+    </sport>
+    <!--<sport value="Теннис">
+      <variant value="Теннис" />
+    </sport>-->
+  </sports>
+</dictionary>
