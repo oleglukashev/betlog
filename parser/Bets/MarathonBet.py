@@ -77,54 +77,60 @@ class MarathonBet():
 
   def getEventCoefficientFromDom( self, event_dom ):
     result = {}
+    i = 0
 
     for event_item in event_dom.cssselect('table.foot-market > tbody'):
-      title_teams_dom = event_item.cssselect('tr.event-header > td.first table tr td.name span.command div.member-name')
+      title_teams_dom = event_item.cssselect('tr.event-header > td.first table tr td span.command div')
 
       if ( len( title_teams_dom ) ):
+        event_hash = {}
+
         coefficients_title_dom = event_dom.cssselect('table.foot-market > tr')[0]
         coefficients_dom = coefficients_title_dom.cssselect('th.coupone')
 
         if ( title_teams_dom[0] in title_teams_dom ):
           team1 = title_teams_dom[0]
           if ( self.getTeam( team1.text.strip(" \r\n") ) is not None ):
-            result['first_team'] = self.getTeam( team1.text.strip(" \r\n") )
+            event_hash['first_team'] = self.getTeam( team1.text.strip(" \r\n") )
 
         if ( title_teams_dom[1] in title_teams_dom ):
           team2 = title_teams_dom[1]
           if ( self.getTeam( team2.text.strip(" \r\n") ) is not None ):
-            result['second_team'] = self.getTeam( team2.text.strip(" \r\n") )
+            event_hash['second_team'] = self.getTeam( team2.text.strip(" \r\n") )
 
 
         if ( len( coefficients_dom ) > 0 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 0)] = self.getCoefficientFromHtml( event_item, 0)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 0)] = self.getCoefficientFromHtml( event_item, 0)
 
         if ( len( coefficients_dom ) >= 2 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 1)] = self.getCoefficientFromHtml( event_item, 1)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 1)] = self.getCoefficientFromHtml( event_item, 1)
 
         if ( len( coefficients_dom ) >= 3 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 2)] = self.getCoefficientFromHtml( event_item, 2)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 2)] = self.getCoefficientFromHtml( event_item, 2)
 
         if ( len( coefficients_dom ) >= 4 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 3)] = self.getCoefficientFromHtml( event_item, 3)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 3)] = self.getCoefficientFromHtml( event_item, 3)
 
         if ( len( coefficients_dom ) >= 5 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 4)] = self.getCoefficientFromHtml( event_item, 4)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 4)] = self.getCoefficientFromHtml( event_item, 4)
 
         if ( len( coefficients_dom ) >= 6 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 5)] = self.getCoefficientFromHtml( event_item, 5)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 5)] = self.getCoefficientFromHtml( event_item, 5)
 
         if ( len( coefficients_dom ) >= 7 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 6)] = self.getCoefficientFromHtml( event_item, 6)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 6)] = self.getCoefficientFromHtml( event_item, 6)
 
         if ( len( coefficients_dom ) >= 8 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 7)] = self.getCoefficientFromHtml( event_item, 7)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 7)] = self.getCoefficientFromHtml( event_item, 7)
 
         if ( len( coefficients_dom ) >= 9 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 8)] = self.getCoefficientFromHtml( event_item, 8)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 8)] = self.getCoefficientFromHtml( event_item, 8)
 
         if ( len( coefficients_dom ) >= 10 ):
-          result[self.getCoefficientTitleFromHtml( event_dom, 9)] = self.getCoefficientFromHtml( event_item, 9)
+          event_hash[self.getCoefficientTitleFromHtml( event_dom, 9)] = self.getCoefficientFromHtml( event_item, 9)
+
+        result[i] = event_hash
+        i += 1
 
     return result
 
