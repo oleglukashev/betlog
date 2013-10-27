@@ -4,16 +4,18 @@ import datetime
 
 Base = declarative_base()
 
-class Sports(Base):
-  __tablename__ = 'sports'
+class Countries(Base):
+  __tablename__ = 'countries'
 
-  id = Column(Integer, Sequence('sports_id_seq'), primary_key=True)
+  id = Column(Integer, Sequence('countries_id_seq'), primary_key=True)
   name = Column(String)
+  sport_id = Column(Integer)
   created_at = Column(Date, default=datetime.datetime.now())
   updated_at = Column(Date, default=datetime.datetime.now(), onupdate=datetime.datetime.now())
 
-  def __init__(self, name):
+  def __init__(self, name, sport_id):
     self.name = name
+    self.sport_id = sport_id
 
   def __repr__(self):
-    return "<Sport('%s')>" % (self.name)
+    return "<Country('%s', '%s')>" % (self.name, self.sport_id)

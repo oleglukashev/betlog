@@ -1,6 +1,8 @@
 #!/usr/local/bin/python3.3
 # -*- coding: utf-8 -*-
 import logger
+import datetime
+from datetime import date
 
 import sqlalchemy
 from sqlalchemy import *
@@ -12,6 +14,7 @@ import lxml.html
 import lxml.cssselect
 from Modules.Dictionary import Dictionary
 from Modules import UsedChampionships
+
 
 class MarathonBet():
 
@@ -91,16 +94,19 @@ class MarathonBet():
         coefficients_title_dom = event_dom.cssselect('table.foot-market > tr')[0]
         coefficients_dom = coefficients_title_dom.cssselect('th.coupone')
 
-        if ( title_teams_dom[0] in title_teams_dom ):
+        if ( len( title_teams_dom ) >= 1 ):
           team1 = title_teams_dom[0]
           if ( self.getTeam( team1.text.strip(" \r\n") ) is not None ):
             event_hash['first_team'] = self.getTeam( team1.text.strip(" \r\n") )
 
-        if ( title_teams_dom[1] in title_teams_dom ):
+        if ( len( title_teams_dom ) >= 2 ):
           team2 = title_teams_dom[1]
           if ( self.getTeam( team2.text.strip(" \r\n") ) is not None ):
             event_hash['second_team'] = self.getTeam( team2.text.strip(" \r\n") )
 
+        event_date = event_item.cssselect('tr.event-header > td.first table tr td.date')
+        if ( len( event_date ) > 0 ):
+          event_hash['date'] = self.getDate( event_date[0].text.strip(" \r\n") )
 
         if ( len( coefficients_dom ) > 0 ):
           event_hash[self.getCoefficientTitleFromHtml( event_dom, 0)] = self.getCoefficientFromHtml( event_item, 0)
@@ -204,3 +210,15 @@ class MarathonBet():
         return True
 
     return False
+
+  def getDate(self, str_date):
+    months_sample = { 'янв': '01', 'фев': '02', 'мар': '03', 'апр': '04', 'май': '05', 'июн': '06', 'июл': '07', 'авг': '08', 'сен': '09', 'окт': '10', 'ноя': '11', 'дек': '12'  }
+    date_array = str_date.split(" ")
+
+    if ( len( date_array ) == 1 ):
+      result_date = str( date.today().day ) + '.' + str( date.today().month ) + '.' + str( date.today().year ) + ' ' + date_array[0]
+    else:
+      result_date = str( date_array[0] ) + '.' + months_sample[date_array[1]] + '.' + str( date.today().year ) + ' ' + date_array[2]
+
+    return datetime.datetime.strptime(result_date, "%d.%m.%Y %H:%M")
+
