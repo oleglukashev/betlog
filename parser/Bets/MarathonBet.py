@@ -59,6 +59,7 @@ class MarathonBet():
         if ( UsedChampionships.findSport( sport ) is not None ):
           if ( UsedChampionships.findCountryBySport( country, sport ) is not None ):
             if ( UsedChampionships.findChampionshipBySport( championship, sport ) is not None ):
+              event_hash['bookmaker'] = "MarathonBet"
               event_hash['teams_and_coefficients'] = self.getEventCoefficientFromDom( event )
               event_hash['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
               event_hash['country'] = UsedChampionships.findCountryBySport( country, sport )
@@ -104,9 +105,9 @@ class MarathonBet():
           if ( self.getTeam( team2.text.strip(" \r\n") ) is not None ):
             event_hash['second_team'] = self.getTeam( team2.text.strip(" \r\n") )
 
-        event_date = event_item.cssselect('tr.event-header > td.first table tr td.date')
-        if ( len( event_date ) > 0 ):
-          event_hash['date'] = self.getDate( event_date[0].text.strip(" \r\n") )
+        date_event = event_item.cssselect('tr.event-header > td.first table tr td.date')
+        if ( len( date_event ) > 0 ):
+          event_hash['date_event'] = self.getDate( date_event[0].text.strip(" \r\n") )
 
         if ( len( coefficients_dom ) > 0 ):
           event_hash[self.getCoefficientTitleFromHtml( event_dom, 0)] = self.getCoefficientFromHtml( event_item, 0)

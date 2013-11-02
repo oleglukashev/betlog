@@ -2,12 +2,12 @@
 class AddEventsTable < ActiveRecord::Migration
   def up
   	create_table :events do |t|
-      t.integer :championships_id, :null => false
+      t.integer :championship_id, :null => false
       t.string :opponent_1, :null => false
       t.string :opponent_2, :null => false
-      t.timestamps :date, :null => false
-      
-      t.timestamps 
+      t.datetime :date_event, :null => false
+
+      t.timestamps
     end
   end
 

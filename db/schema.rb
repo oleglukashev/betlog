@@ -31,9 +31,10 @@ ActiveRecord::Schema.define(version: 20131027163050) do
   end
 
   create_table "events", force: true do |t|
-    t.integer  "championships_id", null: false
-    t.string   "opponent_1",       null: false
-    t.string   "opponent_2",       null: false
+    t.integer  "championship_id", null: false
+    t.string   "opponent_1",      null: false
+    t.string   "opponent_2",      null: false
+    t.datetime "date_event",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
