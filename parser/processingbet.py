@@ -17,6 +17,10 @@ class ProcessingBet(Database):
   def doProcess(self, data):
     for key, events_block in data.items():
 
+      bookmaker_query = self.session.query(Bookmakers).filter(Bookmakers.name == events_block['bookmaker'])
+      bookmaker = bookmaker_query.first()
+      bookmaker_id = bookmaker.id
+
       sport_query = self.session.query(Sports).filter(Sports.name == events_block['sport'])
       if ( sport_query.first() == None ):
         sport = self.session.add(Sports(events_block['sport']))
@@ -49,6 +53,8 @@ class ProcessingBet(Database):
           self.session.commit()
         event = events_query.first()
         event_id = event.id
+
+        coefficients = self.session.add(Coefficients(event_id))
 
     self.session.commit()
 
