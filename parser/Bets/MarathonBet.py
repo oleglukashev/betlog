@@ -48,22 +48,23 @@ class MarathonBet():
 
       if ( self.skipOrNotTitleByWord( title_str ) == False ):
         sport = self.getSportFromTitle( title_str )
-        country = self.getCountryFromTitle( title_str )
+        country = self.getCountryFromTitle( title_str ) if self.getCountryFromTitle( title_str ) else "Международный"
         championship = self.getChampionshipFromTitle( title_str )
 
-        if ( country == None ):
-          country = UsedChampionships.findCountryByChampionship( championship )
-
-        file = open("display.txt", "a",encoding='utf-8')
+        file = open('display.txt', 'a', encoding='utf-8')
 
         if ( UsedChampionships.findSport( sport ) is not None ):
           if ( UsedChampionships.findCountryBySport( country, sport ) is not None ):
-            if ( UsedChampionships.findChampionshipBySport( championship, sport ) is not None ):
-              event_hash['bookmaker'] = "MarathonBet"
+            if ( UsedChampionships.findChampionshipBySportAndCountry( championship, sport, country ) is not None ):
+              print('-----')
+              event_hash['bookmaker'] = "Marathon"
               event_hash['teams_and_coefficients'] = self.getEventCoefficientFromDom( event )
-              event_hash['championship'] = UsedChampionships.findChampionshipBySport( championship, sport )
+              event_hash['championship'] = UsedChampionships.findChampionshipBySportAndCountry( championship, sport, country )
               event_hash['country'] = UsedChampionships.findCountryBySport( country, sport )
               event_hash['sport'] = UsedChampionships.findSport( sport )
+              print(event_hash['championship'])
+              print(event_hash['sport'])
+              print('-----')
 
               result[i] = event_hash
 
@@ -99,45 +100,50 @@ class MarathonBet():
           team1 = title_teams_dom[0]
           if ( self.getTeam( team1.text.strip(" \r\n") ) is not None ):
             event_hash['first_team'] = self.getTeam( team1.text.strip(" \r\n") )
+          else:
+            print(team1.text.strip(" \r\n"))
 
         if ( len( title_teams_dom ) >= 2 ):
           team2 = title_teams_dom[1]
           if ( self.getTeam( team2.text.strip(" \r\n") ) is not None ):
             event_hash['second_team'] = self.getTeam( team2.text.strip(" \r\n") )
+          else:
+            print(team2.text.strip(" \r\n"))
 
         date_event = event_item.cssselect('tr.event-header > td.first table tr td.date')
         if ( len( date_event ) > 0 ):
           event_hash['date_event'] = self.getDate( date_event[0].text.strip(" \r\n") )
 
-        if ( len( coefficients_dom ) > 0 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 0)] = self.getCoefficientFromHtml( event_item, 0)
 
-        if ( len( coefficients_dom ) >= 2 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 1)] = self.getCoefficientFromHtml( event_item, 1)
+        first_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'first' )
+        event_hash['first'] = self.getCoefficientFromHtmlByPosition( event_item, first_position ) if first_position is not None else None
 
-        if ( len( coefficients_dom ) >= 3 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 2)] = self.getCoefficientFromHtml( event_item, 2)
+        draw_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'draw' )
+        event_hash['draw'] = self.getCoefficientFromHtmlByPosition( event_item, draw_position ) if draw_position is not None else None
 
-        if ( len( coefficients_dom ) >= 4 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 3)] = self.getCoefficientFromHtml( event_item, 3)
+        second_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'second' )
+        event_hash['second'] = self.getCoefficientFromHtmlByPosition( event_item, second_position ) if second_position is not None else None
 
-        if ( len( coefficients_dom ) >= 5 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 4)] = self.getCoefficientFromHtml( event_item, 4)
+        first_or_draw_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'first_or_draw' )
+        event_hash['first_or_draw'] = self.getCoefficientFromHtmlByPosition( event_item, first_or_draw_position ) if first_or_draw_position is not None else None
 
-        if ( len( coefficients_dom ) >= 6 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 5)] = self.getCoefficientFromHtml( event_item, 5)
+        first_or_second_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'first_or_second' )
+        event_hash['first_or_second'] = self.getCoefficientFromHtmlByPosition( event_item, first_or_second_position ) if first_or_second_position is not None else None
 
-        if ( len( coefficients_dom ) >= 7 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 6)] = self.getCoefficientFromHtml( event_item, 6)
+        draw_or_second_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'draw_or_second' )
+        event_hash['draw_or_second'] = self.getCoefficientFromHtmlByPosition( event_item, draw_or_second_position ) if draw_or_second_position is not None else None
 
-        if ( len( coefficients_dom ) >= 8 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 7)] = self.getCoefficientFromHtml( event_item, 7)
+        first_fora_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'first_fora' )
+        event_hash['first_fora'] = self.getCoefficientFromHtmlByPosition( event_item, first_fora_position ) if first_fora_position is not None else None
 
-        if ( len( coefficients_dom ) >= 9 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 8)] = self.getCoefficientFromHtml( event_item, 8)
+        second_fora_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'second_fora' )
+        event_hash['second_fora'] = self.getCoefficientFromHtmlByPosition( event_item, second_fora_position ) if second_fora_position is not None else None
 
-        if ( len( coefficients_dom ) >= 10 ):
-          event_hash[self.getCoefficientTitleFromHtml( event_dom, 9)] = self.getCoefficientFromHtml( event_item, 9)
+        total_less_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'total_less' )
+        event_hash['total_less'] = self.getCoefficientFromHtmlByPosition( event_item, total_less_position ) if total_less_position is not None else None
+
+        total_more_position = self.getPositionFromHtmlByCoefficientType( event_dom, 'total_more' )
+        event_hash['total_more'] = self.getCoefficientFromHtmlByPosition( event_item, total_more_position ) if total_more_position is not None else None
 
         result[i] = event_hash
         i += 1
@@ -170,11 +176,7 @@ class MarathonBet():
     if Dictionary.findTeam( team ):
       return Dictionary.findTeam( team )
 
-  def getCoefficientFromHtml( self, container, position ):
-    container = container.cssselect('tr.event-header > td')[position]
-    return container.cssselect('span')[0].text.strip(" \r\n")
-
-  def getCoefficientTitleFromHtml( self, container, position ):
+  def getPositionFromHtmlByCoefficientType( self, container, coefficient_type ):
     coefficients_type_association = {
       '1' : 'first',
       'X' : 'draw',
@@ -188,17 +190,29 @@ class MarathonBet():
       'Тотал бол.' : 'total_more',
     }
 
+
     tr_dom = container.cssselect('table.foot-market > tr')[0]
-    th_dom = tr_dom.cssselect('th.coupone')[position]
-    a_dom = th_dom.cssselect('a')
 
-    if ( len( a_dom ) ):
-      key = a_dom[0].text_content().strip(" \r\n")
-    else:
-      return None
+    count = 0
+    for th_dom in tr_dom.cssselect('th.coupone'):
+      a_dom = th_dom.cssselect('a')
 
-    if key in coefficients_type_association.keys():
-      return coefficients_type_association[ key ]
+      if ( len( a_dom ) ):
+        key = a_dom[0].text_content().strip(" \r\n")
+
+        if key in coefficients_type_association.keys():
+          if coefficients_type_association[ key ] == coefficient_type:
+            return count
+      count += 1
+
+
+  def getCoefficientFromHtmlByPosition( self, container, position ):
+    '''количество тн на 1 меньше чем тд'''
+    result = container.cssselect('tr.event-header > td')[position + 1]
+    result = result.cssselect('span')[0].text.strip(" \r\n")
+
+    if ( len(result) ):
+      return float(result)
     else:
       return None
 

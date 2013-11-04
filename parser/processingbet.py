@@ -7,6 +7,8 @@ from Entities.Sports import Sports
 from Entities.Countries import Countries
 from Entities.Championships import Championships
 from Entities.Events import Events
+from Entities.Bookmakers import Bookmakers
+from Entities.Coefficients import Coefficients
 
 class ProcessingBet(Database):
   def __init__(self, data):
@@ -18,8 +20,10 @@ class ProcessingBet(Database):
     for key, events_block in data.items():
 
       bookmaker_query = self.session.query(Bookmakers).filter(Bookmakers.name == events_block['bookmaker'])
+      self.session.commit()
       bookmaker = bookmaker_query.first()
       bookmaker_id = bookmaker.id
+
 
       sport_query = self.session.query(Sports).filter(Sports.name == events_block['sport'])
       if ( sport_query.first() == None ):
@@ -54,7 +58,8 @@ class ProcessingBet(Database):
         event = events_query.first()
         event_id = event.id
 
-        coefficients = self.session.add(Coefficients(event_id))
+        coefficients_block = self.session.add(Coefficients(event_id, bookmaker_id, coefficients['first'], coefficients['draw'], coefficients['second'], coefficients['first_or_draw'], coefficients['first_or_second'], coefficients['draw_or_second'], coefficients['first_fora'], coefficients['second_fora'], coefficients['total_less'], coefficients['total_more']))
+        self.session.commit()
 
     self.session.commit()
 

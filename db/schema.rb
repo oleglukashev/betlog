@@ -11,14 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131027163050) do
+ActiveRecord::Schema.define(version: 20131103184138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookmakers", force: true do |t|
+    t.string   "name",       null: false
+    t.float    "rating",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "championships", force: true do |t|
     t.string   "name",       null: false
     t.integer  "country_id", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "coefficients", force: true do |t|
+    t.integer  "event_id",        null: false
+    t.integer  "bookmaker_id",    null: false
+    t.float    "first"
+    t.float    "draw"
+    t.float    "second"
+    t.float    "first_or_draw"
+    t.float    "first_or_second"
+    t.float    "draw_or_second"
+    t.float    "first_fora"
+    t.float    "second_fora"
+    t.float    "total_less"
+    t.float    "total_more"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -2,7 +2,7 @@ class AddCoefficients < ActiveRecord::Migration
   def up
   	create_table :coefficients do |t|
       t.integer :event_id, :null => false
-      t.string :bookmaker_id, :null => false
+      t.integer :bookmaker_id, :null => false
       t.float :first
       t.float :draw
       t.float :second
