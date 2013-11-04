@@ -3,11 +3,11 @@
 <sports>
   <sport value="Футбол">
     <countries>
-        <country value="Англия">
-            <championship value="Премьер-лига" />
-        </country>
         <country value="Австралия">
             <championship value="А-лига" />
+        </country>
+        <country value="Англия">
+            <championship value="Премьер-лига" />
         </country>
         <country value="Австрия">
             <championship value="Бундеслига" />
@@ -87,6 +87,9 @@
         </country>
         <country value="Италия">
             <championship value="Серия А" />
+        </country>
+        <country value="Норвегия">
+            <championship value="GET-лига" />
         </country>
         <country value="Россия">
             <championship value="Премьер-лига" />

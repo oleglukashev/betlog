@@ -8,6 +8,9 @@
     <championship value="СМ-лига">
       <variant value="СМ-лига" />
     </championship>
+    <championship value="GET-лига">
+      <variant value="GET-лига" />
+    </championship>
     <championship value="А-лига">
       <variant value="Эй-лига" />
     </championship>

@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 
+gem 'unicorn'
 gem 'pg'
 gem "authlogic"
 gem 'rails-i18n'
@@ -33,6 +34,11 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :development do
+  gem "capistrano"
+  gem "rvm-capistrano"
 end
 
 gem 'jquery-rails'
