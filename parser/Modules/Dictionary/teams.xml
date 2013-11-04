@@ -1472,51 +1472,6 @@
       <variant value="Валь Пустерия" />
     </team>
 
-    <!-- Канада -->
-
-    <team value="Су-Сен-Мари Грейхаундз">
-      <variant value="Су-Сен-Мари Грейхаундз" />
-    </team>
-    <team value="Сагино Спирит">
-      <variant value="Сагино Спирит" />
-    </team>
-    <team value="Сарния Стинг">
-      <variant value="Сарния Стинг" />
-    </team>
-    <team value="Лондон Найтс">
-      <variant value="Лондон Найтс" />
-    </team>
-    <team value="Ниагара АйсДогз">
-      <variant value="Ниагара АйсДогз" />
-    </team>
-    <team value="Эри Оттерз">
-      <variant value="Эри Оттерз" />
-    </team>
-    <team value="Барри Колтс">
-      <variant value="Барри Колтс" />
-    </team>
-    <team value="Садбери Вулвз">
-      <variant value="Садбери Вулвз" />
-    </team>
-    <team value="Кингстон Фронтенакс">
-      <variant value="Кингстон Фронтенакс" />
-    </team>
-    <team value="Оттава 67-е">
-      <variant value="Оттава 67-е" />
-    </team>
-    <team value="Ошава Дженерэлз">
-      <variant value="Ошава Дженерэлз" />
-    </team>
-    <team value="Гелф Сторм">
-      <variant value="Гелф Сторм" />
-    </team>
-    <team value="Бельвиль Буллз">
-      <variant value="Бельвиль Буллз" />
-    </team>
-    <team value="Питерборо Питс">
-      <variant value="Питерборо Питс" />
-    </team>
-
     <!-- Норвегия -->
 
     <team value="Ставангер Ойлерз">
@@ -2520,6 +2475,12 @@
     </team>
     <team value="Амштеттен НО">
       <variant value="Амштеттен НО" />
+    </team>
+    <team value="Хотволейс Вена">
+      <variant value="Хотволейс Вена" />
+    </team>
+    <team value="Клагенфурт">
+      <variant value="Клагенфурт" />
     </team>
 
     <!-- Аргентина -->

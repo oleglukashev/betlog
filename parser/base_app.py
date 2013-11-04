@@ -21,7 +21,5 @@ class BaseApp():
       instance = eval( key.title() + "Bet" )
       instance = instance( value )
       events = instance.parse()
-
       processing_bet = ProcessingBet(events)
-
       print ( 'Finished parse ' + key.title() + ' page' )

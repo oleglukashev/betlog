@@ -85,57 +85,27 @@
         <country value="Германия">
             <championship value="DEL" />
         </country>
-        <country value="Беларусь">
-            <championship value="Премьер-лига" />
-        </country>
-        <country value="Бельгия">
-            <championship value="Про-лига" />
-        </country>
-        <country value="Бразилия">
-            <championship value="Серия А" />
-        </country>
-        <country value="Германия">
-            <championship value="Бундеслига" />
-        </country>
-        <country value="Дания">
-            <championship value="Суперлига" />
-        </country>
-        <country value="Израиль">
-            <championship value="Премьер-лига" />
-        </country>
-        <country value="Испания">
-            <championship value="Примера дивизион" />
-        </country>
         <country value="Италия">
             <championship value="Серия А" />
-        </country>
-        <country value="Нидерланды">
-            <championship value="Эредивизи" />
-        </country>
-        <country value="Португалия">
-            <championship value="Примейра-лига" />
         </country>
         <country value="Россия">
             <championship value="Премьер-лига" />
             <championship value="КХЛ" />
         </country>
         <country value="Украина">
-            <championship value="Премьер-лига" />
+            <championship value="ПХЛ" />
         </country>
-        <country value="Франция">
-            <championship value="Лига 1" />
+        <country value="Финляндия">
+            <championship value="СМ-лига" />
+        </country>
+        <country value="Чехия">
+            <championship value="Экстралига" />
         </country>
         <country value="Швейцария">
-            <championship value="Суперлига" />
+            <championship value="NLA" />
         </country>
         <country value="Швеция">
             <championship value="Аллсвенскан" />
-        </country>
-        <country value="Шотландия">
-            <championship value="Премьер-лига" />
-        </country>
-        <country value="Япония">
-            <championship value="Джей-лига" />
         </country>
     </countries>
   </sport>

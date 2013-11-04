@@ -5,6 +5,9 @@
     <championship value="Премьер-лига">
       <variant value="Премьер-лига" />
     </championship>
+    <championship value="СМ-лига">
+      <variant value="СМ-лига" />
+    </championship>
     <championship value="А-лига">
       <variant value="Эй-лига" />
     </championship>
@@ -105,6 +108,7 @@
     </championship>
     <championship value="NLA">
       <variant value="NLA" />
+      <variant value="Национальная лига А" />
     </championship>
     <championship value="Элитсериен">
       <variant value="Элитсериен" />
@@ -143,8 +147,11 @@
     <championship value="КХЛ">
       <variant value="КХЛ" />
     </championship>
+    <championship value="ПХЛ">
+      <variant value="ПХЛ" />
+    </championship>
 
-    
+
 
   </championships>
 </dictionary>
