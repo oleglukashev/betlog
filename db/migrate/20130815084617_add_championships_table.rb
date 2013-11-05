@@ -1,3 +1,4 @@
+#encoding: utf-8
 class AddChampionshipsTable < ActiveRecord::Migration
   def up
   	create_table :championships do |t|

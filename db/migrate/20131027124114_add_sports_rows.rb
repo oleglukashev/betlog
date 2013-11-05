@@ -1,3 +1,4 @@
+#encoding: utf-8
 class AddSportsRows < ActiveRecord::Migration
   def up
     Sports.create( :name => 'Футбол')

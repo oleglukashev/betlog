@@ -1,3 +1,4 @@
+#encoding: utf-8
 class AddBookmakersRows < ActiveRecord::Migration
   def up
     Bookmakers.create( :name => 'Marathon', :rating => 0 )

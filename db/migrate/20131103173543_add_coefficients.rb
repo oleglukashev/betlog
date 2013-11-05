@@ -1,3 +1,4 @@
+#encoding: utf-8
 class AddCoefficients < ActiveRecord::Migration
   def up
   	create_table :coefficients do |t|
