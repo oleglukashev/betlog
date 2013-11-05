@@ -14,3 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/current
+/releases
+/shared
+/config/unicorn.rb
