@@ -16,9 +16,7 @@
 //= require jquery.fancybox.pack
 //= require main
 
- 
-//= require filters
-//= require services
-//= require directives
+
+//= require angular.min
 //= require_tree ./angular
 //= require betlog

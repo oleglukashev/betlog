@@ -91,7 +91,9 @@ html, body
     font-size: 12px;
     line-height: 16px;
     color: #555;
-    background: #b8dde3 url('../assets/background.gif') repeat 0 0;
+    background-color: #b8dde3
+    background-image: image-url("../assets/background.gif");
+    background-repeat 0 0;
 }
 
 a {
