@@ -13,11 +13,10 @@
 //= require jquery-1.10.2.min
 //= require jquery.placeholder.min
 //= require jquery.bxslider.min
-//=require jquery.fancybox.pack
+//= require jquery.fancybox.pack
 //= require main
 
-
-//= require angular
+ 
 //= require filters
 //= require services
 //= require directives

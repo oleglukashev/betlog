@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
 	acts_as_authentic
 
-	attr_accessible :login, :name, :role, :password, :password_confirmation
+	#attr_accessible :login, :name, :role, :password, :password_confirmation
 
 	validates :name,  :presence => true, 
                     :length => {:minimum => 1, :maximum => 128}
