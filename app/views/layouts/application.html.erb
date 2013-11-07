@@ -1,14 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="betlog">
 <head>
   <title>Betlog</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="carcas">
+		<div class="header">
+			<div class="navigation" ng-controller="Navigation">
+				<% if current_user %>
+					<a fancybox href="javascript://"><%= current_user.name %></a>
+				<% else %>
+					<a id="signin" ng-click="showAuthorization();" href="#">Войти</a>
+				<% end %>
+			</div>
+			<div class="logo"><a href="/"><img src="assets/logo.png" title="Betlog" /></a></div>
+			<div class="search">
+				<div class="lupa"></div>
+				<div class="input-wrap">
+					<div><div><div><input type="text" placeholder="Поиск..." /></div></div></div>
+				</div>
+			</div>
+			
+			<%= render 'layouts/past_events' %>
 
-<%= yield %>
+		</div>
+		<div class="content">
+			<div class="content-top"><div><div></div></div></div>
+			<div class="content-body">
+				<div class="events">
+					<h1>События</h1>
+					<div class="events-content">
+						<div class="events-content-top"><div><div></div></div></div>
+						<div class="events-content-body">
+							<div class="event-group">
+								<div class="event-group-date">
+									<p>30</p>
+									<p>сентября</p>
+								</div>
+								<div id="event-1" class="event">
+									<div class="event-title">
+										<div class="event-part">
+											<div class="event-date">15:00</div>Польша</div>
+										<div class="event-border">&mdash;</div>
+										<div class="event-part">Германия<div class="event-show-full"></div></div>
+									</div>
+									<div class="event-full-content">
+										<ul class="coefs-tabs-title">
+										  <li class="coefs-title-item-1 active"><a href="#">1x2</a></li>
+										  <li class="coefs-title-item-2"><a href="#">1x2</a></li>
+										  <li class="coefs-title-item-3"><a href="#">1x2</a></li>
+										</ul>
+										<div class="coef-tab">
+											<table>
+												<tr>
+													<th>Букмекеры</th>
+													<th>1</th>
+													<th>x</th>
+													<th>2</th>
+													<th>Процент</th>
+												</tr>
+												<tr class="odd">
+													<td class="td1">10bet</td>
+													<td class="td2">1.44</td>
+													<td class="td3">1.56</td>
+													<td class="td4">2.57</td>
+													<td>95%</td>
+												</tr>
+												<tr>
+													<td>10bet</td>
+													<td>1.44<span class="coef-position up"></span></td>
+													<td>1.56<span class="coef-position down"></span></td>
+													<td>2.57</td>
+													<td>95%</td>
+												</tr>
+												<tr class="odd">
+													<td>10bet</td>
+													<td>1.44</td>
+													<td>1.56</td>
+													<td>2.57</td>
+													<td>95%</td>
+												</tr>
+												<tr>
+													<td>10bet</td>
+													<td>1.44</td>
+													<td>1.56</td>
+													<td>2.57</td>
+													<td>95%</td>
+												</tr>
+											</table>
+										</div>
+										<div class="coef-tab">
+										</div>
+										<div class="coef-tab">
+										</div>
+									</div>
+								</div>
+								<div id="event-2" class="event">
+									<div class="event-title">
+										<div class="event-part">
+											<div class="event-date">15:00</div>Польша</div>
+										<div class="event-border">&mdash;</div>
+										<div class="event-part">Германия<div class="event-show-full"></div></div>
+									</div>
+								</div>
+								<div id="event-3" class="event">
+									<div class="event-title">
+										<div class="event-part">
+											<div class="event-date">15:00</div>Польша</div>
+										<div class="event-border">&mdash;</div>
+										<div class="event-part">Германия<div class="event-show-full"></div></div>
+									</div>
+									<div class="event-full-content">
+										<ul class="coefs-tabs-title">
+										  <li class="coefs-title-item-1 active"><a href="#">1x2</a></li>
+										  <li class="coefs-title-item-2"><a href="#">1x2</a></li>
+										  <li class="coefs-title-item-3"><a href="#">1x2</a></li>
+										</ul>
+										<div class="coef-tab">
+											<table>
+												<tr>
+													<th>Букмекеры</th>
+													<th>1</th>
+													<th>x</th>
+													<th>2</th>
+													<th>Процент</th>
+												</tr>
+												<tr class="odd">
+													<td class="td1">10bet</td>
+													<td class="td2">1.44</td>
+													<td class="td3">1.56</td>
+													<td class="td4">2.57</td>
+													<td>95%</td>
+												</tr>
+												<tr>
+													<td>10bet</td>
+													<td>1.44<span class="coef-position up"></span></td>
+													<td>1.56<span class="coef-position down"></span></td>
+													<td>2.57</td>
+													<td>95%</td>
+												</tr>
+												<tr class="odd">
+													<td>10bet</td>
+													<td>1.44</td>
+													<td>1.56</td>
+													<td>2.57</td>
+													<td>95%</td>
+												</tr>
+												<tr>
+													<td>10bet</td>
+													<td>1.44</td>
+													<td>1.56</td>
+													<td>2.57</td>
+													<td>95%</td>
+												</tr>
+											</table>
+										</div>
+										<div class="coef-tab">
+										</div>
+										<div class="coef-tab">
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="events-content-bottom"><div><div></div></div></div>
+					</div>
+				</div>
+				<div class="sport-menu" ng-controller="Sports">
+					<h1>Категории</h1>
+					<ul>
+						<li ng-class="{ active: sport.isActive }" ng-repeat="sport in sports">
+							<div class="sport-menu-item" ng-click="active( sport );">
+								<div class="sport-menu-item-top"><div></div></div>
+								<div class="sport-menu-item-body" ng-class="{ 'no-border': sports[ $index-1 ].isActive }">
+									{{ sport.name }}
+								</div>
+								<div class="sport-menu-item-bottom"><div></div></div>
+							</div>
+							<div class="sport-submenu" ng-show="getChampionshipsBySportId( sport.id ).length">
+								<div class="sport-submenu-body">
+									<ul>
+										<li ng-repeat="champship in getChampionshipsBySportId( sport.id )" ng-class="{ active: champship.id == 1 }">{{ champship.name }}</li>
+									</ul>
+								</div>
+								<div class="sport-submenu-bottom"><div></div></div>
+							</div>
+						</li>
+					</ul>
+					<div class="event-menu-top"><div></div></div>
+				</div>
+			</div>
+			<%= yield %>
+			<div class="content-bottom"><div><div></div></div></div>
+		</div>
+		
+		<%= render 'layouts/footer'%>
 
+	</div>
 </body>
 </html>

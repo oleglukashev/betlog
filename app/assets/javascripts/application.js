@@ -15,8 +15,6 @@
 //= require jquery.bxslider.min
 //= require jquery.fancybox.pack
 //= require main
-
-
 //= require angular.min
-//= require_tree ./angular
 //= require betlog
+//= require_tree ./angular

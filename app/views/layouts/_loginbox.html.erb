@@ -1,0 +1,60 @@
+<div id="loginbox" ng-show="isActive" ng-controller="Authorization">
+	<div class="loginbox-content-top"><div><div></div></div></div>
+	<div class="loginbox-content-body">
+		<div class="loginbox-close" ng-click="close('overlay');"></div>
+		<p class="loginbox-title">Авторизация</p>
+		<form novalidate name="authorization">
+			<div class="input-wrap">
+				<div><div><div><input type="text" name="login" placeholder="E-mail" ng-model="login.login" required ></div></div></div>
+			</div>
+			<p class="loginbox-input-error" :ng-show="lgNotFound"></p>
+			<div class="input-wrap">
+				<div><div><div><input type="password" placeholder="Пароль" name="password" ng-model="login.password" required min="8"></div></div></div>
+			</div>
+			<p class="loginbox-input-error" :ng-show="password_error"></p>
+			<div class="loginbox-remember">
+				<p><input type="checkbox" value="1" mg-model="login.remember_me" name="remember_me" checked="checked" /></p><p>Запомнить меня</span></p>
+			</div>
+			<div>
+				<p><button ng-disabled="!login.login || !login.password" ng-click="submit();" eat-click >Войти</button></p>
+				<p class="loginbox-forgot"><a href="/">Забыли пароль?</a><br/ ><a href="#" ng-click="showRegistration();" >Регистрация</a></p>
+				<div class="clear"></div>
+			</div>
+		</form>
+	</div>
+	<div class="loginbox-content-bottom"><div><div></div></div></div>
+</div>
+<div id="registration" ng-show="isActive" ng-controller="Registration">
+	<div class="loginbox-content-top"><div><div></div></div></div>
+	<div class="loginbox-content-body">
+		<div class="loginbox-close" ng-click="close('overlay');"></div>
+		<p class="loginbox-title">Регистрация</p>
+		<form novalidate name="registration">
+			<div class="input-wrap">
+				<div><div><div><input type="text" name="login" placeholder="E-mail" ng-model="register.login" login-validate required ></div></div></div>
+			</div>
+			<p class="loginbox-input-error" ng-show="lgHasEmail && !lgHasRequired && !lgAlredyExists">Не является E-mail</p>
+			<p class="loginbox-input-error" ng-show="lgHasRequired && !lgAlredyExists">Поле не может быть пустым</p>
+			<p class="loginbox-input-error" ng-show="lgAlredyExists">Пользователь уже существует</p>
+			<div class="input-wrap">
+				<div><div><div><input type="text" name="name" placeholder="Имя" ng-model="register.name" name-validate required ></div></div></div>
+			</div>
+			<p class="loginbox-input-error" ng-show="nameHasRequired">Поле не может быть пустым</p>
+			<div class="input-wrap">
+				<div><div><div><input type="password" placeholder="Пароль" name="password" ng-model="register.password" password-validate required min="8"></div></div></div>
+			</div>
+			<p class="loginbox-input-error" ng-show="pwdValidLength && !pwdHasRequired && !pwdHasLetter">Пароль должен быть не менее 8 символов</p>
+			<p class="loginbox-input-error" ng-show="pwdHasRequired && !pwdHasLetter">Пароль не может быть пустым</p>
+			<p class="loginbox-input-error" ng-show="pwdHasLetter">Пароль должен содержать хотя бы одну букву</p>
+
+			<div class="loginbox-remember">
+				<p><input type="checkbox" value="1" mg-model="register.subscribed" name="subscribed" checked="checked" /></p><p><span>Подписаться на новости</span></p>
+			</div>
+			<div>
+				<p><button ng-disabled="!loginValidate || !pwdValidate || !nameValidate" ng-click="submit();" eat-click >Зарегистрироваться</button></p>
+				<div class="clear"></div>
+			</div>
+		</form>
+	</div>
+	<div class="loginbox-content-bottom"><div><div></div></div></div>
+</div>
