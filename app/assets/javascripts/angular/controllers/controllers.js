@@ -2,15 +2,13 @@
 
 angular.module('betlog.controllers', [])
 
-	.controller('Navigation', function( $scope, $http, $element, $rootScope ) {
+	.controller('Navigation', ['$scope', '$http', '$element', '$rootScope', function( $scope, $http, $element, $rootScope ) {
 		$scope.showAuthorization = function() {
 			$rootScope.$broadcast( 'showAuthorization' );
 			$rootScope.$broadcast( 'showOverlay' );
 		}
-	})
-	
-	
-	.controller('Registration', function( $scope, $http, $element, $rootScope ) {
+	}])
+	.controller('Registration', ['$scope', '$http', '$element', '$rootScope', function( $scope, $http, $element, $rootScope ) {
 		$scope.register = {
 			login: '',
 			password: '',
@@ -76,10 +74,9 @@ angular.module('betlog.controllers', [])
     });
 
     $scope.init();
-	})
 	
-
-	.controller('Authorization', function( $scope, $http, $element, $rootScope ) {
+	}])
+	.controller('Authorization', ['$scope', '$http', '$element', '$rootScope', function( $scope, $http, $element, $rootScope ) {
 		$scope.login = {
 			login: '',
 			password: '',
@@ -160,10 +157,9 @@ angular.module('betlog.controllers', [])
     })
 
     $scope.init();
-	})
 	
-
-	.controller('Sports', function( $scope, $http, $element ) {
+	}])
+	.controller('Sports', ['$scope', '$http', '$element', function( $scope, $http, $element ) {
 		$scope.sports = [];
 		$scope.championships = [];
 
@@ -225,11 +221,9 @@ angular.module('betlog.controllers', [])
 		}
 
 		$scope.init();
-	})
-
-
-
-	.controller('Overlay', function( $scope, $http, $element, $rootScope ) {
+	
+	}])
+	.controller('Overlay', ['$scope', '$http', '$element', '$rootScope', function( $scope, $http, $element, $rootScope ) {
 		$scope.isActive = false;
 		
 		$scope.init = function() {
@@ -257,12 +251,12 @@ angular.module('betlog.controllers', [])
 		}
 
 		$rootScope.$on('showOverlay', function() {
-    	$scope.show();
-    });
+    		$scope.show();
+    	});
 
-    $rootScope.$on('closeOverlay', function() {
-    	$scope.close();
-    })
+    	$rootScope.$on('closeOverlay', function() {
+    		$scope.close();
+    	});
 
 		$scope.init();
-	});
+	}]);
