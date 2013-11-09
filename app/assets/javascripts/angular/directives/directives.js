@@ -8,10 +8,7 @@ angular.module('betlog.directives', [])
 				$rootScope.$broadcast('showAuthorization');
 			}
 		};
-	}])
-
-	
-	.directive('nameValidate', ['$http', function( $http ) {
+	}]).directive('nameValidate', ['$http', function( $http ) {
 		return {
 			require: 'ngModel',
 			link: function(scope, elm, attrs, ctrl) {
@@ -29,10 +26,7 @@ angular.module('betlog.directives', [])
           }
 			});
 		}};
-	}])
-
-	
-	.directive('loginValidate', ['$http', function( $http ) {
+	}]).directive('loginValidate', ['$http', function( $http ) {
 		return {
 			require: 'ngModel',
 			link: function(scope, elm, attrs, ctrl) {
@@ -65,9 +59,7 @@ angular.module('betlog.directives', [])
 			});
 		}};
 	}])
-
-	
-	.directive('passwordValidate', function() {
+	.directive('passwordValidate', [function() {
 		return {
 			require: 'ngModel',
 			link: function(scope, elm, attrs, ctrl) {
@@ -87,19 +79,18 @@ angular.module('betlog.directives', [])
             			return undefined;
           			}
 				});
-			}};
-		}).directive('onKeyup', function() {
-			return function(scope, elm, attrs) {
-				elm.bind("keyup", function() {
-					scope.$apply(attrs.onKeyup);
-				});
-			};
-		})
-
-		.directive('eatClick', function() {
-    	return function(scope, element, attrs) {
-        $(element).click(function(event) {
-            event.preventDefault();
-        });
-    }
-})
+			}
+		};
+	}]).directive('onKeyup', [function() {
+		return function(scope, elm, attrs) {
+			elm.bind("keyup", function() {
+				scope.$apply(attrs.onKeyup);
+			});
+		};
+	}]).directive('eatClick', [function() {
+		return function(scope, element, attrs) {	
+    		$(element).click(function(event) {
+        		event.preventDefault();
+    		});
+		}	
+	}]);
