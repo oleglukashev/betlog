@@ -1,17 +1,17 @@
 'use strict';
 /* Directives */
 angular.module('betlog.directives', [])
-	.directive('fancyboxLogin', function( $rootScope ) {
+	.directive('fancyboxLogin', ['$rootScope', function( $rootScope ) {
 		return {
 			restrict: 'AC',
 			link: function( scope, element ) {
 				$rootScope.$broadcast('showAuthorization');
 			}
 		};
-	})
+	}])
 
 	
-	.directive('nameValidate', function( $http ) {
+	.directive('nameValidate', ['$http', function( $http ) {
 		return {
 			require: 'ngModel',
 			link: function(scope, elm, attrs, ctrl) {
@@ -29,7 +29,7 @@ angular.module('betlog.directives', [])
           }
 			});
 		}};
-	})
+	}])
 
 	
 	.directive('loginValidate', ['$http', function( $http ) {
@@ -82,10 +82,10 @@ angular.module('betlog.directives', [])
 
 					if( ! scope.pwdHasLetter && ! scope.pwdHasNumber && ! scope.pwdValidLength ) {
 						scope.pwdValidate = true;
-          	return viewValue;
-          } else {                    
-            return undefined;
-          }
+          				return viewValue;
+          			} else {                    
+            			return undefined;
+          			}
 				});
 			}};
 		}).directive('onKeyup', function() {
