@@ -133,19 +133,25 @@ div.input-wrap
   zoom: 1;
   *display: inline;
   _height: 24px;
-	background: url(../assets/mini_bulged_left.png) no-repeat 0 0;
+	background-images: image-url("mini_bulged_left.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 	padding-left: 6px;
 }
 
 div.input-wrap div
 {
-	background: url(../assets/mini_bulged_right.png) no-repeat right 0;
+	background-image: image-url("mini_bulged_right.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
 	padding: 0 6px 0 0;
 }
 
 div.input-wrap div div
 {
-	background: url(../assets/mini_bulged_center.png) repeat-x 0 0;
+	background-image: image-url("mini_bulged_center.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 	padding: 0;
 	height: 24px; 
 }
@@ -171,7 +177,9 @@ div.input-wrap div div input
 	width: 100%;
 	height: 100%;
 	min-height: 100%;
-	background: url(../assets/top_background_gradient.png) repeat-x 0 0;
+	background-image: image-url("top_background_gradient.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 }
 
 
@@ -225,7 +233,9 @@ div.search div.lupa
 	position: absolute;
 	width: 17px;
 	height: 14px;
-	background: url(../assets/lupa.png) no-repeat 0 0;
+	background-image: image-url("lupa.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 	left: 0;
 	top: 0;
 	margin: 4px 0 0 6px;
@@ -269,39 +279,51 @@ div.pastevents-menu-item
 div.pastevents-menu-item.active
 {
 	padding-left: 6px;
-	background: url(../assets/mini_bulged_left.png) no-repeat 0 0;
+	background-image: image-url("mini_bulged_left.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 div.pastevents-menu-item.active div
 {
 	padding: 0 6px 0 0;
-	background: url(../assets/mini_bulged_right.png) no-repeat right 0;
+	background-image: image-url("mini_bulged_right.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
 }
 
 div.pastevents-menu-item.active div div
 {
 	padding: 2px 0;
-	background: url(../assets/mini_bulged_center.png) repeat-x 0 0;
+	background-image: image-url("mini_bulged_center.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 }
 
 div.pastevents-items
 {
 	padding-left: 30px;
 	margin-top: -2px;
-	background: url(../assets/medium_bulged_left.png) no-repeat 0 0;
+	background-image: image-url("medium_bulged_left.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 div.pastevents-items div
 {
 	padding: 0 30px 0 0;
-	background: url(../assets/medium_bulged_right.png) no-repeat right 0;
+	background-image: image-url("medium_bulged_right.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
 }
 
 div.pastevents-items div div
 {
 	height: 38px;
 	padding: 4px 0px;
-	background: url(../assets/medium_bulged_center.png) repeat-x 0 0;
+	background-image: image-url("medium_bulged_center.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 }
 
 div.pastevents-items div div div
@@ -361,39 +383,51 @@ div.content
 div.content-top
 {
 	padding-left: 11px;
-	background: url(../assets/main_convex_left_top.png) no-repeat 0 0;	
+	background-image: image-url("main_convex_left_top.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;	
 }
 
 div.content-top div
 {
 	padding: 0 11px 0 0;
-	background: url(../assets/main_convex_right_top.png) no-repeat right 0;
+	background-image: image-url("main_convex_right_top.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
 }
 
 div.content-top div div
 {
 	padding: 0;
 	height: 13px;
-	background: url(../assets/main_convex_top.png) repeat-x 0 0;
+	background-image: image-url("main_convex_top.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 }
 
 div.content-bottom
 {
 	padding-left: 11px;
-	background: url(../assets/main_convex_left_bottom.png) no-repeat 0 bottom;	
+	background-image: image-url("main_convex_left_bottom.png");
+	background-repeat: no-repeat;
+	background-position: 0 bottom;	
 }
 
 div.content-bottom div
 {
 	padding: 0 11px 0 0;
-	background: url(../assets/main_convex_right_bottom.png) no-repeat right bottom;
+	background-image: image-url("main_convex_right_bottom.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 div.content-bottom div div
 {
 	padding: 0;
 	height: 13px;
-	background: url(../assets/main_convex_bottom.png) repeat-x 0 bottom;
+	background-image: image-url("main_convex_bottom.png");
+	background-repeat: repeat-x;
+	background-position: 0 bottom;
 }
 
 div.content-body
@@ -432,39 +466,51 @@ div.events-content
 div.events-content-top
 {
 	padding-left: 6px;
-	background: url(../assets/sec_convex_left_top.png) no-repeat 0 0;	
+	background-image: image-url("sec_convex_left_top.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;	
 }
 
 div.events-content-top div
 {
 	padding: 0 6px 0 0;
-	background: url(../assets/sec_convex_right_top.png) no-repeat right 0;
+	background-image: image-url("sec_convex_right_top.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
 }
 
 div.events-content-top div div
 {
 	padding: 0;
 	height: 6px;
-	background: url(../assets/sec_convex_top.png) repeat-x 0 0;
+	background-image: image-url("sec_convex_top.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 }
 
 div.events-content-bottom
 {
 	padding-left: 6px;
-	background: url(../assets/sec_convex_left_bottom.png) no-repeat 0 bottom;	
+	background-image: image-url("sec_convex_left_bottom.png");
+	background-repeat: no-repeat;
+	background-position: 0 bottom;	
 }
 
 div.events-content-bottom div
 {
 	padding: 0 6px 0 0;
-	background: url(../assets/sec_convex_right_bottom.png) no-repeat right bottom;
+	background-image: image-url("sec_convex_right_bottom.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 div.events-content-bottom div div
 {
 	padding: 0;
 	height: 6px;
-	background: url(../assets/sec_convex_bottom.png) repeat-x 0 bottom;
+	background-image: image-url("sec_convex_bottom.png");
+	background-repeat: repeat-x;
+	background-position: 0 bottom;
 }
 
 div.events-content-body
@@ -489,7 +535,9 @@ div.event-group-date
 	height: 57px;
 	padding-top: 12px;
 	margin-left: -82px;
-	background: url(../assets/date_background.png) no-repeat 0 0;
+	background-image: image-url("date_background.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 div.event-group-date p
@@ -551,27 +599,38 @@ div.event-hide-full {
 }
 
 div.event-show-full { 
-	background: url(../assets/pointer_down.png) no-repeat 0 0;
+	background-image: image-url("pointer_down.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 div.event-hide-full { 
-	background: url(../assets/pointer_top.png) no-repeat 0 0;
+	background-image: image-url("pointer_top.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 ul.coefs-tabs-title li {
 	margin-left: -10px;
-	background: url(../assets/bet_tab.png) no-repeat 0 0;
+	background-image: image-url("bet_tab.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 	display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  zoom: 1;
-  position: relative;
-  *display: inline;
+  	display: inline-block;
+  	vertical-align: top;
+  	zoom: 1;
+  	position: relative;
+  	*display: inline;
 }
 
 ul.coefs-tabs-title li:first-child { margin-left: 0; }
 
-ul.coefs-tabs-title li.active { background: url(../assets/bet_tab_active.png) no-repeat 0 0; z-index: 99px;}
+ul.coefs-tabs-title li.active {
+	background-image: image-url("bet_tab_active.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	z-index: 99px;
+}
 
 li.coefs-title-item-1 { z-index: 10; }
 li.coefs-title-item-2 { z-index: 9; }
@@ -600,7 +659,9 @@ ul.coefs-tabs-title li a {
 div.coef-tab table { width: 100%; }
 div.coef-tab table tr th { 
 	height: 28px;
-	background: url(../assets/bet_coef_table_background.png) repeat-x 0 0;
+	background-image: image-url("bet_coef_table_background.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 	vertical-align: middle;
 	font-weight: bold;
 	text-shadow: 0px 1px 0 #fff;
@@ -635,11 +696,15 @@ div.coef-tab table tr td span.coef-position {
 }
 
 div.coef-tab table tr td span.coef-position.up {
-	background: url(../assets/coef-up.png) no-repeat 0 0;
+	background-image: image-url("coef-up.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 div.coef-tab table tr td span.coef-position.down {
-	background: url(../assets/coef-down.png) no-repeat 0 0;
+	background-image: image-url("coef-down.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 
@@ -669,20 +734,26 @@ div.sport-menu ul li { overflow: hidden; cursor: pointer; }
 div.sport-menu ul li.active div.sport-menu-item-top
 {
 	padding-right: 6px;
-	background: url(../assets/sec_convex_right_top.png) no-repeat right 0;	
+	background-image: image-url("sec_convex_right_top.png");
+	background-repeat: no-repeat;
+	background-position: right 0;	
 }
 
 div.sport-menu ul li.active div.sport-menu-item-top div
 {
 	padding: 0;
 	height: 6px;
-	background: url(../assets/sec_convex_top.png) repeat-x 0 0;
+	background-image: image-url("sec_convex_top.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 }
 
 div.sport-menu ul li.active div.sport-menu-item-bottom
 {
 	padding-right: 6px;
-	background: url(../assets/sec_convex_right_bottom.png) no-repeat right bottom;	
+	background-image: image-url("sec_convex_right_bottom.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;	
 }
 
 
@@ -690,7 +761,9 @@ div.sport-menu ul li.active div.sport-menu-item-bottom div
 {
 	padding: 0;
 	height: 6px;
-	background: url(../assets/sec_convex_bottom.png) repeat-x 0 bottom;
+	background-image: image-url("sec_convex_bottom.png");
+	background-repeat: repeat-x;
+	background-position: 0 bottom;
 }
 
 div.sport-menu ul li div.sport-menu-item-body
@@ -699,7 +772,9 @@ div.sport-menu ul li div.sport-menu-item-body
 	margin: 0 3px 0 10px;
 	line-height: 18px;
 	font-size: 15px;
-	background: url(../assets/menu_border.png) repeat-x 0 top;
+	background-image: image-url("menu_border.png");
+	background-repeat: repeat-x;
+	background-position: 0 top;
 }
 
 div.sport-menu ul li:first-child div.sport-menu-item-body,
@@ -759,7 +834,9 @@ div.sport-menu ul li div.sport-submenu div.sport-submenu-body
 div.sport-menu ul li div.sport-submenu div.sport-submenu-bottom
 {
 	padding-right: 5px;
-	background: url(../assets/submenu_right_bottom.png) no-repeat right bottom;	
+	background-image: image-url("submenu_right_bottom.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;	
 }
 
 
@@ -802,39 +879,51 @@ div.footer
 div.loginbox-content-top
 {
 	padding-left: 6px;
-	background: url(../assets/sec_convex_left_top.png) no-repeat 0 0;	
+	background-image: image-url("sec_convex_left_top.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;	
 }
 
 div.loginbox-content-top div
 {
 	padding: 0 6px 0 0;
-	background: url(../assets/sec_convex_right_top.png) no-repeat right 0;
+	background-image: image-url("sec_convex_right_top.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
 }
 
 div.loginbox-content-top div div
 {
 	padding: 0;
 	height: 6px;
-	background: url(../assets/sec_convex_top.png) repeat-x 0 0;
+	background-image: image-url("sec_convex_top.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 }
 
 div.loginbox-content-bottom
 {
 	padding-left: 6px;
-	background: url(../assets/sec_convex_left_bottom.png) no-repeat 0 bottom;	
+	background-image: image-url("sec_convex_left_bottom.png");
+	background-repeat: no-repeat;
+	background-position: 0 bottom;	
 }
 
 div.loginbox-content-bottom div
 {
 	padding: 0 6px 0 0;
-	background: url(../assets/sec_convex_right_bottom.png) no-repeat right bottom;
+	background-image: image-url("sec_convex_right_bottom.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 div.loginbox-content-bottom div div
 {
 	padding: 0;
 	height: 6px;
-	background: url(../assets/sec_convex_bottom.png) repeat-x 0 bottom;
+	background-image: image-url("sec_convex_bottom.png");
+	background-repeat: repeat-x;
+	background-position: 0 bottom;
 }
 
 div.loginbox-content-body
@@ -855,7 +944,9 @@ div.loginbox-close
 	width: 17px;
 	height: 17px;
 	float: right;
-	background: url(../assets/close.png) no-repeat 0 0;
+	background-image: image-url("close.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 	cursor: pointer;
 	margin-right: -5px;
 }
@@ -926,39 +1017,51 @@ div.loginbox-remember p:first-child
 div.loginbox-content-top
 {
 	padding-left: 6px;
-	background: url(../assets/sec_convex_left_top.png) no-repeat 0 0;	
+	background-image: image-url("sec_convex_left_top.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;	
 }
 
 div.loginbox-content-top div
 {
 	padding: 0 6px 0 0;
-	background: url(../assets/sec_convex_right_top.png) no-repeat right 0;
+	background-image: image-url("sec_convex_right_top.png");
+	background-repeat: no-repeat;
+	background-position: right 0;
 }
 
 div.loginbox-content-top div div
 {
 	padding: 0;
 	height: 6px;
-	background: url(../assets/sec_convex_top.png) repeat-x 0 0;
+	background-image: image-url("sec_convex_top.png");
+	background-repeat: repeat-x;
+	background-position: 0 0;
 }
 
 div.loginbox-content-bottom
 {
 	padding-left: 6px;
-	background: url(../assets/sec_convex_left_bottom.png) no-repeat 0 bottom;	
+	background-image: image-url("sec_convex_left_bottom.png");
+	background-repeat: no-repeat;
+	background-position: 0 bottom;	
 }
 
 div.loginbox-content-bottom div
 {
 	padding: 0 6px 0 0;
-	background: url(../assets/sec_convex_right_bottom.png) no-repeat right bottom;
+	background-image: image-url("sec_convex_right_bottom.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
 }
 
 div.loginbox-content-bottom div div
 {
 	padding: 0;
 	height: 6px;
-	background: url(../assets/sec_convex_bottom.png) repeat-x 0 bottom;
+	background-image: image-url("sec_convex_bottom.png");
+	background-repeat: repeat-x;
+	background-position: 0 bottom;
 }
 
 div.loginbox-content-body
@@ -979,7 +1082,9 @@ div.loginbox-close
 	width: 17px;
 	height: 17px;
 	float: right;
-	background: url(../assets/close.png) no-repeat 0 0;
+	background-image: image-url("close.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 	cursor: pointer;
 	margin-right: -5px;
 }
