@@ -20,6 +20,5 @@
 //= require vendor/angular/angular-animate
 //= require vendor/angular/angular-resource
 //= require vendor/angular/angular-route
-//= require angular-route.min
 //= require betlog
 //= require_tree ./angular
