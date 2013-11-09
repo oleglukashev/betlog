@@ -32,7 +32,7 @@ angular.module('betlog.directives', [])
 	})
 
 	
-	.directive('loginValidate', function( $http ) {
+	.directive('loginValidate', ['$http', function( $http ) {
 		return {
 			require: 'ngModel',
 			link: function(scope, elm, attrs, ctrl) {
@@ -64,7 +64,7 @@ angular.module('betlog.directives', [])
           }
 			});
 		}};
-	})
+	}])
 
 	
 	.directive('passwordValidate', function() {
