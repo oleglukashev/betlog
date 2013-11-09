@@ -44,7 +44,10 @@
 
 .bx-wrapper .bx-loading {
 	min-height: 50px;
-	background: url(images/bx_loader.gif) center center no-repeat #fff;
+	background-image: image-url("bx_loader.gif");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #fff;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -93,12 +96,16 @@
 
 .bx-wrapper .bx-prev {
 	left: -32px;
-	background: url(../assets/pointer_left.png) no-repeat center center;
+	background-image: url("pointer_left.png");
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .bx-wrapper .bx-next {
 	right: -32px;
-	background: url(../assets/pointer_right.png) no-repeat center center;
+	background-image: url("pointer_right.png");
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .bx-wrapper .bx-prev:hover {
