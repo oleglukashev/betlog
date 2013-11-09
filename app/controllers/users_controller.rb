@@ -5,7 +5,7 @@ class UsersController < ApplicationController
       params[:user][:password_confirmation] = params[:user][:password]
     end
   	
-    @user = User.new( params[:user] )
+    @user = User.new( user_params )
 
     respond_to do |format|
     	if @user.save
@@ -38,5 +38,11 @@ class UsersController < ApplicationController
     else
     	render :json => false, :status => 'not_found'
     end
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:login, :name, :role, :password, :password_confirmation)
   end
 end
