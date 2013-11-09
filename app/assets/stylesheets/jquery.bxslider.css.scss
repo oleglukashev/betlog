@@ -96,14 +96,14 @@
 
 .bx-wrapper .bx-prev {
 	left: -32px;
-	background-image: url("pointer_left.png");
+	background-image: image-url("pointer_left.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 }
 
 .bx-wrapper .bx-next {
 	right: -32px;
-	background-image: url("pointer_right.png");
+	background-image: image-url("pointer_right.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 }
