@@ -1,4 +1,4 @@
-betlog_controllers.controller('Sports', ['$scope', '$http', '$element', function( $scope, $http, $element ) {
+betlog_controllers.controller('Sports', ['$scope', '$http', '$element', 'filterFilter', function( $scope, $http, $element, filterFilter ) {
     $scope.sports = [];
 
     $scope.init = function() {
@@ -28,18 +28,6 @@ betlog_controllers.controller('Sports', ['$scope', '$http', '$element', function
 
       sport.isActive = true;
     }
-
-    /*$scope.getChampionshipsBySportId = function( sport_id ) {
-      var championships_for_sport = [];
-
-
-      for( var i = 0; i < $scope.championships.length; i++ ) {
-        if ( $scope.championships[i].sport_id === sport_id)
-          championships_for_sport.push( $scope.championships[i] );
-      }
-
-      return championships_for_sport;
-    }*/
 
     $scope.init();
   

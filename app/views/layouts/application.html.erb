@@ -170,24 +170,24 @@
 						<div class="events-content-bottom"><div><div></div></div></div>
 					</div>
 				</div>
-				<div class="sport-menu" ng-controller="Sports">
+				<div class="country-menu" ng-controller="Countries">
 					<h1>Категории</h1>
 					<ul>
-						<li ng-class="{ active: sport.isActive }" ng-repeat="sport in sports">
-							<div class="sport-menu-item" ng-click="active( sport );">
-								<div class="sport-menu-item-top"><div></div></div>
-								<div class="sport-menu-item-body" ng-class="{ 'no-border': sports[ $index-1 ].isActive }">
-									{{ sport.name }}
+						<li ng-class="{ active: country.isActive }" ng-repeat="country in countries">
+							<div class="country-menu-item" ng-click="active( country );">
+								<div class="country-menu-item-top"><div></div></div>
+								<div class="country-menu-item-body" ng-class="{ 'no-border': countries[ $index-1 ].isActive }">
+									{{ country.name }}
 								</div>
-								<div class="sport-menu-item-bottom"><div></div></div>
+								<div class="country-menu-item-bottom"><div></div></div>
 							</div>
-							<div class="sport-submenu" ng-show="getChampionshipsBySportId( sport.id ).length">
-								<div class="sport-submenu-body">
+							<div class="country-submenu" ng-controller="Championships" ng-show="getChampionshipsByCountryId( country.id ).length">
+								<div class="country-submenu-body">
 									<ul>
-										<li ng-repeat="champship in getChampionshipsBySportId( sport.id )" ng-class="{ active: champship.id == 1 }">{{ champship.name }}</li>
+										<li ng-repeat="champship in getChampionshipsByCountryId( country.id )" ng-class="{ active: champship.id == 1 }">{{ champship.name }}</li>
 									</ul>
 								</div>
-								<div class="sport-submenu-bottom"><div></div></div>
+								<div class="country-submenu-bottom"><div></div></div>
 							</div>
 						</li>
 					</ul>
