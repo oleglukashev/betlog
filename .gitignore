@@ -17,3 +17,6 @@
 /current
 /releases
 /shared
+
+*.pyc
+*.swp
