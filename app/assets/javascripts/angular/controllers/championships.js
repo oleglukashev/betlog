@@ -32,8 +32,15 @@ betlog_controllers.controller('Championships', ['$scope', '$http', '$element', '
     }
 
     $scope.getChampionshipsByCountryId = function( country_id ) {
-      console.log( $scope.championships );
-      return filterFilter( $scope.championships, { country_id: country_id} )
+      var result = [];
+
+      $scope.championships.map(function(championship, i) {
+        if ( championship.country_id === country_id ) {
+          result.push( championship );
+        }
+      });
+
+      return result;
     }
 
     $scope.init();
