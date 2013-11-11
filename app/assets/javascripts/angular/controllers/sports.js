@@ -1,4 +1,4 @@
-betlog_controllers.controller('Sports', ['$scope', '$http', '$element', 'filterFilter', function( $scope, $http, $element, filterFilter ) {
+betlog_controllers.controller('Sports', ['$scope', '$rootScope', '$http', '$element', 'filterFilter', function( $scope, $rootScope, $http, $element, filterFilter ) {
     $scope.sports = [];
 
     $scope.init = function() {
@@ -14,6 +14,8 @@ betlog_controllers.controller('Sports', ['$scope', '$http', '$element', 'filterF
 
               $scope.sports.push( new_sport );
             });
+
+            $scope.active( $scope.sports[0] );
           }
         })
         .error(function(data, status, headers, config) {
@@ -27,7 +29,18 @@ betlog_controllers.controller('Sports', ['$scope', '$http', '$element', 'filterF
       })
 
       sport.isActive = true;
+
+      $rootScope.$broadcast( 'sportSelected', sport );
     }
+
+
+
+
+
+
+
+
+    /* init */
 
     $scope.init();
   

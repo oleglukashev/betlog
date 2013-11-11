@@ -32,6 +32,9 @@
 			<div class="content-body">
 				<div class="events">
 					<h1>События</h1>
+					<div ng-controller="Sports">
+						<a href="javascript://" ng-repeat="sport in sports">{{ sport.name }}</a>
+					</div>
 					<div class="events-content" ng-controller="Events">
 						<div class="events-content-top"><div><div></div></div></div>
 						<div class="events-content-body">
@@ -108,10 +111,10 @@
 				<div class="country-menu" ng-controller="Countries">
 					<h1>Категории</h1>
 					<ul>
-						<li ng-class="{ active: country.isActive }" ng-repeat="country in countries">
+						<li ng-class="{ active: country.isActive }" ng-repeat="country in getCountriesByActiveSport()">
 							<div class="country-menu-item" ng-click="active( country );">
 								<div class="country-menu-item-top"><div></div></div>
-								<div class="country-menu-item-body" ng-class="{ 'no-border': countries[ $index-1 ].isActive }">
+								<div class="country-menu-item-body" ng-class="{ 'no-border': getCountriesByActiveSport()[ $index-1 ].isActive }">
 									{{ country.name }}
 								</div>
 								<div class="country-menu-item-bottom"><div></div></div>

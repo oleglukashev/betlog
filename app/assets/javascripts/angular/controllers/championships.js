@@ -1,4 +1,4 @@
-betlog_controllers.controller('Championships', ['$scope', '$http', '$element', 'filterFilter', function( $scope, $http, $element, filterFilter ) {
+betlog_controllers.controller('Championships', ['$scope', '$rootScope', '$http', '$element', 'filterFilter', function( $scope, $rootScope, $http, $element, filterFilter ) {
     $scope.championships = [];
 
     $scope.init = function() {
@@ -42,6 +42,31 @@ betlog_controllers.controller('Championships', ['$scope', '$http', '$element', '
 
       return result;
     }
+
+
+    $scope.getChampionshipsByActiveCountry = function() {
+      var result = filterFilter( $scope.championships, { country_id: $scope.activeCountry.id });
+
+      if ( result.length ) {
+        if ( ! filterFilter( $scope.championships, { isActive: true }).length ) {
+          $scope.active( result[0] );
+        }
+      }
+
+      return result;
+    }
+
+
+
+    /* on */
+
+    $rootScope.$on('countrySelected', function(event, country) {
+      $scope.activeCountry = country;
+
+    });
+
+
+    /* init */
 
     $scope.init();
   
