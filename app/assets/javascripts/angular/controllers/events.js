@@ -1,4 +1,4 @@
-betlog_controllers.controller('Events', ['$scope', '$http', '$element', 'filterFilter', function( $scope, $http, $element, filterFilter ) {
+betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$element', 'filterFilter', function( $scope, $rootScope, $http, $element, filterFilter ) {
     $scope.events = [];
 
     $scope.init = function() {
@@ -46,6 +46,20 @@ betlog_controllers.controller('Events', ['$scope', '$http', '$element', 'filterF
 
       event.isActive = true;
     }
+
+    $scope.getEventsByActiveChampionshipAndEventDate = function(date_event) {
+      return filterFilter( $scope.events, { championship_id: $scope.activeChampionship.id, date_event: date_event });
+    }
+
+
+    /* on */
+
+    $rootScope.$on('championshipSelected', function(event, championship) {
+      $scope.activeChampionship = championship;
+    });
+
+
+    /* init */
 
     $scope.init();
   

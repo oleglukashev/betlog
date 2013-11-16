@@ -108,21 +108,21 @@
 						<div class="events-content-bottom"><div><div></div></div></div>
 					</div>
 				</div>
-				<div class="country-menu" ng-controller="Countries">
+				<div class="country-menu" ng-controller="Championships">
 					<h1>Категории</h1>
 					<ul>
 						<li ng-class="{ active: country.isActive }" ng-repeat="country in getCountriesByActiveSport()">
-							<div class="country-menu-item" ng-click="active( country );">
+							<div class="country-menu-item" ng-click="selectCountry( country );">
 								<div class="country-menu-item-top"><div></div></div>
 								<div class="country-menu-item-body" ng-class="{ 'no-border': getCountriesByActiveSport()[ $index-1 ].isActive }">
 									{{ country.name }}
 								</div>
 								<div class="country-menu-item-bottom"><div></div></div>
 							</div>
-							<div class="country-submenu" ng-controller="Championships" ng-show="getChampionshipsByCountryId( country.id ).length">
+							<div class="country-submenu" ng-show="getChampionshipsByActiveCountry().length">
 								<div class="country-submenu-body">
 									<ul>
-										<li ng-repeat="champship in getChampionshipsByCountryId( country.id )" ng-class="{ active: champship.id == 1 }">{{ champship.name }}</li>
+										<li ng-repeat="champship in getChampionshipsByActiveCountry()" ng-class="{ active: champship.isActive }">{{ champship.name }}</li>
 									</ul>
 								</div>
 								<div class="country-submenu-bottom"><div></div></div>

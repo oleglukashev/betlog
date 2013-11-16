@@ -33,12 +33,16 @@ betlog_controllers.controller('Sports', ['$scope', '$rootScope', '$http', '$elem
       $rootScope.$broadcast( 'sportSelected', sport );
     }
 
+    /* watch */
 
+    $scope.$watch('sports', function() {
+      if ($scope.sports.length) {
+        sport = filterFilter($scope.sports, { isActive: true})[0];
+        $rootScope.$broadcast( 'sportSelected', sport ); 
+      } 
+    })
 
-
-
-
-
+   
 
     /* init */
 

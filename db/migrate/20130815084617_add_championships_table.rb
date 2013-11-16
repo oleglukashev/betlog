@@ -4,6 +4,7 @@ class AddChampionshipsTable < ActiveRecord::Migration
   	create_table :championships do |t|
       t.string :name, :null => false
       t.integer :country_id, :null => false
+      t.integer :sport_id, :null => false
 
       t.timestamps
     end
