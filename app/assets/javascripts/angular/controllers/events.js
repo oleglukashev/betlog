@@ -40,8 +40,9 @@ betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$elem
       var result = [];
 
       $scope.getChampionshipEvents().map(function(event, i) {
-        if ( ! filterFilter( result, event.date_event ).length ) {
-          result.push( event.date_event );
+        var day = event.date_event.slice(0, 10);
+        if ( ! filterFilter( result, day ).length ) {
+          result.push( day );
         }
       });
 
