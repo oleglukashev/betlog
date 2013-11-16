@@ -38,12 +38,12 @@
 					<div class="events-content" ng-controller="Events">
 						<div class="events-content-top"><div><div></div></div></div>
 						<div class="events-content-body">
-							<div class="event-group" ng-repeat="events_date in getDatesFromEvents()">
+							<div class="event-group" ng-repeat="events_date in getDatesFromCmapionshipEvents();">
 								<div class="event-group-date">
 									<p>{{events_date | date:'d'}}</p>
 									<p>{{events_date | date:'MMMM'}}</p>
 								</div>
-								<div id="event-1" class="event" ng-repeat="event in getEventsByDate( events_date )">
+								<div id="event-1" class="event" ng-repeat="event in getChampionshipEventsByEventDate(events_date);">
 									<div class="event-title">
 										<div class="event-part">
 											<div class="event-date">{{event.date_event | date:'HH:mm'}}</div>{{ event.opponent_1}}</div>

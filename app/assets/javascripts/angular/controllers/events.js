@@ -1,5 +1,6 @@
 betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$element', 'filterFilter', function( $scope, $rootScope, $http, $element, filterFilter ) {
     $scope.events = [];
+    $scope.active_championship = false;
 
     $scope.init = function() {
       $http.get('/events.json')
@@ -23,22 +24,6 @@ betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$elem
         });
     }
 
-    $scope.getDatesFromEvents = function() {
-      var result = [];
-
-      $scope.events.map(function(event, i) {
-        if ( ! filterFilter( result, event.date_event ).length ) {
-          result.push( event.date_event );
-        }
-      });
-
-      return result.sort();
-    }
-
-    $scope.getEventsByDate = function( date ) {
-      return filterFilter( $scope.events, { date_event: date });
-    }
-    
     $scope.active = function( event ) {
       $scope.events.map(function(event, i) {
         event.isActive = false;  
@@ -47,15 +32,31 @@ betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$elem
       event.isActive = true;
     }
 
-    $scope.getEventsByActiveChampionshipAndEventDate = function(date_event) {
-      return filterFilter( $scope.events, { championship_id: $scope.activeChampionship.id, date_event: date_event });
+    $scope.getChampionshipEvents = function() {
+      return filterFilter($scope.events, { championship_id: $scope.active_championship.id });
+    }
+
+    $scope.getDatesFromCmapionshipEvents = function() {
+      var result = [];
+
+      $scope.getChampionshipEvents().map(function(event, i) {
+        if ( ! filterFilter( result, event.date_event ).length ) {
+          result.push( event.date_event );
+        }
+      });
+
+      return result.sort();
+    }
+
+    $scope.getChampionshipEventsByEventDate = function(date_event) {
+      return filterFilter( $scope.events, { championship_id: $scope.active_championship.id, date_event: date_event });
     }
 
 
     /* on */
 
     $rootScope.$on('championshipSelected', function(event, championship) {
-      $scope.activeChampionship = championship;
+      $scope.active_championship = championship;
     });
 
 
