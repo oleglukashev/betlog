@@ -36,6 +36,8 @@ betlog_controllers.controller('Championships', ['$scope', '$rootScope', '$http',
       $http.get('/countries.json')
         .success(function(data, status, headers, config) {
           if ( status === 200 && data.length ) {
+            var count_countries_by_sport_id = {};
+
             data.map(function(country, i) {
               var new_country = {
                 id: country.id,
@@ -45,7 +47,11 @@ betlog_controllers.controller('Championships', ['$scope', '$rootScope', '$http',
               }
 
               $scope.countries.push( new_country );
+
+              count_countries_by_sport_id[country['sport_id']] = !count_countries_by_sport_id[country['sport_id']] ? 1 : count_countries_by_sport_id[country['sport_id']] + 1;
             });
+
+            $rootScope.$broadcast('countCountries', count_countries_by_sport_id);
           }
         })
         .error(function(data, status, headers, config) {

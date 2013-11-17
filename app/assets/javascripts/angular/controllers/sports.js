@@ -40,14 +40,26 @@ betlog_controllers.controller('Sports', ['$scope', '$rootScope', '$http', '$elem
       $scope.activeSportAndSendHimToBroadcast(sport); 
     }
 
+    $scope.hasEvents = function(sport) {
+      return sport.count_of_countries;
+    }
+
     /* watch */
 
     $scope.$watch('sports', function() {
       if ($scope.sports.length) {
-        sport = filterFilter($scope.sports, { isActive: true})[0];
+        sport = filterFilter($scope.sports, { isActive: true })[0];
         $rootScope.$broadcast( 'sportSelected', sport ); 
       } 
-    })
+    });
+
+    /* on */
+
+    $scope.$on('countCountries', function(event, count_countries_by_sport_id) {
+      $scope.sports.map(function(sport) {
+        sport.count_of_countries = count_countries_by_sport_id[sport.id];
+      });
+    });
 
    
 
