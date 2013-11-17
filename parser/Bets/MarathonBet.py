@@ -56,11 +56,18 @@ class MarathonBet():
         if ( UsedChampionships.findSport( sport ) is not None ):
           if ( UsedChampionships.findCountryBySport( country, sport ) is not None ):
             if ( UsedChampionships.findChampionshipBySportAndCountry( championship, sport, country ) is not None ):
+              print("----")
+
               event_hash['bookmaker'] = "Marathon"
               event_hash['teams_and_coefficients'] = self.getEventCoefficientFromDom( event )
               event_hash['championship'] = UsedChampionships.findChampionshipBySportAndCountry( championship, sport, country )
               event_hash['country'] = UsedChampionships.findCountryBySport( country, sport )
               event_hash['sport'] = UsedChampionships.findSport( sport )
+
+              print(event_hash['championship'])
+              print(event_hash['country'])
+              print(event_hash['sport'])
+              print("----")
 
               result[i] = event_hash
 

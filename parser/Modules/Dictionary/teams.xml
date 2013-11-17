@@ -1337,6 +1337,9 @@
 
     <!-- Беларусь -->
 
+    <team value="Витебск">
+      <variant value="Витебск" />
+    </team>
     <team value="Лиепаяс Металургс">
       <variant value="Лиепаяс Металургс" />
     </team>
@@ -1471,6 +1474,12 @@
     <team value="Валь Пустерия">
       <variant value="Валь Пустерия" />
     </team>
+    <team value="Кортина">
+      <variant value="Кортина" />
+    </team>
+    <team value="Фасса">
+      <variant value="Фасса" />
+    </team>
 
     <!-- Норвегия -->
 
@@ -1482,6 +1491,7 @@
     </team>
     <team value="Лёренскуг">
       <variant value="Лёренскуг" />
+      <variant value="Леренскуг" />
     </team>
     <team value="Спарта Прага">
       <variant value="Спарта Прага" />
@@ -1494,6 +1504,7 @@
     </team>
     <team value="Тёнсберг Вайкингз">
       <variant value="Тёнсберг Вайкингз" />
+      <variant value="Тенсберг Вайкингз" />
     </team>
     <team value="Русенборг">
       <variant value="Русенборг" />
@@ -1798,6 +1809,9 @@
     <team value="Пльзень">
       <variant value="Пльзень" />
     </team>
+    <team value="Градец Кралове">
+      <variant value="Градец Кралове" />
+    </team>
 
     <!-- Швейцария -->
 
@@ -1866,6 +1880,7 @@
     </team>
     <team value="Троя/Юнгбю">
       <variant value="Троя/Юнгбю" />
+      <variant value="Троя / Юнгбю" />
     </team>
     <team value="Асплёвен">
       <variant value="Асплёвен" />
@@ -1879,8 +1894,9 @@
     <team value="Юргорден">
       <variant value="Юргорден" />
     </team>
-    <team value="Бофор">
+    <team value="Бофор ИК Карлскуга">
       <variant value="Бофор" />
+      <variant value="Бофор ИК Карлскуга" />
     </team>
 
 
@@ -1996,6 +2012,9 @@
     <team value="Голден Стэйт Уорриорз">
       <variant value="Голден Стэйт Уорриорз" />
     </team>
+    <team value="Нью-Орлеан Пеликанс">
+      <variant value="Нью-Орлеан Пеликанс" />
+    </team>
 
     <!-- Австралия -->
 
@@ -2055,6 +2074,9 @@
     </team>
     <team value="Капфенберг Буллз">
       <variant value="Капфенберг Буллз" />
+    </team>
+    <team value="Гмунден Суонс">
+      <variant value="Гмунден Суонс" />
     </team>
 
     <!-- Беларусь -->
@@ -2167,6 +2189,9 @@
     <team value="Трир">
       <variant value="Трир" />
     </team>
+    <team value="Айсбарен">
+      <variant value="Айсбарен" />
+    </team>
 
     <!-- Греция -->
 
@@ -2185,8 +2210,9 @@
     <team value="Илисиакос">
       <variant value="Илисиакос" />
     </team>
-    <team value="Икарос">
+    <team value="Икарос Халкида">
       <variant value="Икарос" />
+      <variant value="Икарос Халкида" />
     </team>
     <team value="Арис">
       <variant value="Арис" />
@@ -2250,6 +2276,9 @@
     </team>
     <team value="Маккаби Хайфа">
       <variant value="Маккаби Хайфа" />
+    </team>
+    <team value="Хапоэль Несс Циона">
+      <variant value="Хапоэль Несс Циона" />
     </team>
 
     <!-- Испания -->
@@ -3487,6 +3516,7 @@
     </team>
     <team value="БСК/НИФ">
       <variant value="БСК/НИФ" />
+      <variant value="БСК / НИФ" />
     </team>
     <team value="Фюллинген">
       <variant value="Фюллинген" />
@@ -3508,6 +3538,9 @@
     </team>
     <team value="Эльверум">
       <variant value="Эльверум" />
+    </team>
+    <team value="Сторр">
+      <variant value="Сторр" />
     </team>
 
     <!-- Польша -->

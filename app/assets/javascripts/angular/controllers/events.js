@@ -33,7 +33,15 @@ betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$elem
     }
 
     $scope.getChampionshipEvents = function() {
-      return filterFilter($scope.events, { championship_id: $scope.active_championship.id });
+      var result = [];
+
+      $scope.events.map(function(event, i) {
+        if (event.championship_id === $scope.active_championship.id) {
+          result.push(event);
+        }
+      });
+
+      return result;
     }
 
     $scope.getDatesFromCmapionshipEvents = function() {
@@ -50,7 +58,15 @@ betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$elem
     }
 
     $scope.getChampionshipEventsByEventDate = function(date_event) {
-      return filterFilter( $scope.events, { championship_id: $scope.active_championship.id, date_event: date_event });
+      var result = [];
+
+      $scope.events.map(function(event, i) {
+        if (event.championship_id === $scope.active_championship.id && event.date_event.indexOf(date_event) != -1) {
+          result.push(event);
+        }
+      });
+
+      return result;
     }
 
 
