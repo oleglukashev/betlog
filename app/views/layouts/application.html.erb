@@ -33,7 +33,7 @@
 				<div class="events">
 					<h1>События</h1>
 					<div ng-controller="Sports">
-						<a href="javascript://" ng-repeat="sport in sports" ng-click="selectSport(sport);">{{ sport.name }}</a>
+						<a href="javascript://" ng-repeat="sport in sports" ng-click="selectSport(sport);" ng-show="hasEvents(sport);">{{ sport.name }}</a>
 					</div>
 					<div class="events-content" ng-controller="Events">
 						<div class="events-content-top"><div><div></div></div></div>
