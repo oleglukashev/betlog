@@ -39,9 +39,9 @@ class ProcessingBet(Database):
       country = country_query.first()
       country_id = country.id
 
-      championships_query = self.session.query(Championships).filter(Championships.name == events_block['championship'])
+      championships_query = self.session.query(Championships).filter(Championships.name == events_block['championship']).filter(Championships.country_id == country_id).filter(Championships.sport_id == sport_id)
       if ( championships_query.first() == None ):
-        championship = self.session.add(Championships(events_block['championship'], country_id ))
+        championship = self.session.add(Championships(events_block['championship'], country_id, sport_id ))
         self.session.commit()
       championship = championships_query.first()
       championship_id = championship.id
@@ -49,16 +49,19 @@ class ProcessingBet(Database):
       for key, coefficients in events_block['teams_and_coefficients'].items():
         first_team = coefficients['first_team'] if 'first_team' in coefficients.keys() else ""
         second_team = coefficients['second_team'] if 'second_team' in coefficients.keys() else ""
-        date_event = coefficients['date_event'] if 'date_event' in coefficients.keys() else ""
-        events_query = self.session.query(Events).filter(Events.opponent_1 == first_team).filter(Events.opponent_2 == second_team).filter(Events.date_event == date_event)
 
-        if ( events_query.first() == None ):
-          event = self.session.add(Events(championship_id, first_team, second_team, date_event))
-          self.session.commit()
-        event = events_query.first()
-        event_id = event.id
+        if ( len( first_team ) > 0 and len( second_team ) > 0 ):
+          date_event = coefficients['date_event'] if 'date_event' in coefficients.keys() else ""
+          events_query = self.session.query(Events).filter(Events.opponent_1 == first_team).filter(Events.opponent_2 == second_team).filter(Events.date_event == date_event)
 
-        coefficients_block = self.session.add(Coefficients(event_id, bookmaker_id, coefficients['first'], coefficients['draw'], coefficients['second'], coefficients['first_or_draw'], coefficients['first_or_second'], coefficients['draw_or_second'], coefficients['first_fora'], coefficients['second_fora'], coefficients['total_less'], coefficients['total_more']))
+          if ( events_query.first() == None ):
+            event = self.session.add(Events(championship_id, first_team, second_team, date_event))
+            self.session.commit()
+          event = events_query.first()
+          event_id = event.id
+
+          coefficients_block = self.session.add(Coefficients(event_id, bookmaker_id, coefficients['first'], coefficients['draw'], coefficients['second'], coefficients['first_or_draw'], coefficients['first_or_second'], coefficients['draw_or_second'], coefficients['first_fora'], coefficients['second_fora'], coefficients['total_less'], coefficients['total_more']))
+        
         self.session.commit()
 
     self.session.commit()
