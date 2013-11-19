@@ -84,38 +84,15 @@ betlog_controllers.controller('Championships', ['$scope', '$rootScope', '$http',
     }
 
     $scope.getChampionshipsByCountryId = function( country_id ) {
-      var result = [];
-
-      $scope.championships.map(function(championship, i) {
-        if ( championship.country_id === country_id ) {
-          result.push( championship );
-        }
-      });
-
-      return result;
+      return filterFilter( $scope.championships, { country_id: $scope.active_country.id }, true);
     }
 
     $scope.getCountriesByActiveSport = function() {
-      var result = [];
-
-      $scope.countries.map(function(country, i) {
-        if (country.sport_id === $scope.active_sport.id) {
-          result.push(country);
-        }
-      });
-
-      return result;
+      return filterFilter( $scope.countries, { sport_id: $scope.active_sport.id }, true);
     }
 
     $scope.getChampionshipsByActiveCountry = function() {
-      var result = [];
-
-      $scope.championships.map(function(championship, i) {
-        if (championship.country_id === $scope.active_country.id && championship.sport_id === $scope.active_sport.id) {
-          result.push(championship);
-        }
-      });
-      return result;
+      return filterFilter( $scope. championships, { country_id: $scope.active_country.id, sport_id: $scope.active_sport.id }, true);
     }
 
     $scope.activeCountryAndSendHimToBroadcast = function(country) {
