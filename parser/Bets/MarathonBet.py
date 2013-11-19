@@ -17,9 +17,13 @@ from Modules import UsedChampionships
 
 
 class MarathonBet():
-
+  
   def __init__( self, link ):
     self.link = link
+    self.teams_not_found = {}
+    self.current_sport = ""
+    self.current_country = ""
+    self.current_championship = ""
 
 
   def getContentFromUrl( self ):
@@ -56,18 +60,11 @@ class MarathonBet():
         if ( UsedChampionships.findSport( sport ) is not None ):
           if ( UsedChampionships.findCountryBySport( country, sport ) is not None ):
             if ( UsedChampionships.findChampionshipBySportAndCountry( championship, sport, country ) is not None ):
-              print("----")
-
               event_hash['bookmaker'] = "Marathon"
+              self.current_championship = event_hash['championship'] = UsedChampionships.findChampionshipBySportAndCountry( championship, sport, country )
+              self.current_country = event_hash['country'] = UsedChampionships.findCountryBySport( country, sport )
+              self.current_sport = event_hash['sport'] = UsedChampionships.findSport( sport )
               event_hash['teams_and_coefficients'] = self.getEventCoefficientFromDom( event )
-              event_hash['championship'] = UsedChampionships.findChampionshipBySportAndCountry( championship, sport, country )
-              event_hash['country'] = UsedChampionships.findCountryBySport( country, sport )
-              event_hash['sport'] = UsedChampionships.findSport( sport )
-
-              print(event_hash['championship'])
-              print(event_hash['country'])
-              print(event_hash['sport'])
-              print("----")
 
               result[i] = event_hash
 
@@ -104,14 +101,14 @@ class MarathonBet():
           if ( self.getTeam( team1.text.strip(" \r\n") ) is not None ):
             event_hash['first_team'] = self.getTeam( team1.text.strip(" \r\n") )
           else:
-            print(team1.text.strip(" \r\n"))
+            self.showTeamNotFound( team1.text.strip(" \r\n") )
 
         if ( len( title_teams_dom ) >= 2 ):
           team2 = title_teams_dom[1]
           if ( self.getTeam( team2.text.strip(" \r\n") ) is not None ):
             event_hash['second_team'] = self.getTeam( team2.text.strip(" \r\n") )
           else:
-            print(team2.text.strip(" \r\n"))
+            self.showTeamNotFound( team2.text.strip(" \r\n") )
 
         date_event = event_item.cssselect('tr.event-header > td.first table tr td.date')
         if ( len( date_event ) > 0 ):
@@ -239,4 +236,12 @@ class MarathonBet():
       result_date = str( date_array[0] ) + '.' + months_sample[date_array[1]] + '.' + str( date.today().year ) + ' ' + date_array[2]
 
     return datetime.datetime.strptime(result_date, "%d.%m.%Y %H:%M")
+
+
+  def showTeamNotFound( self, not_found_team_str ):
+    print("------ team not found -------")
+    print("sport: " + self.current_sport )
+    print("country: " + self.current_country )
+    print("championship: " + self.current_championship)
+    print("team: " + not_found_team_str + "\r\n")
 
