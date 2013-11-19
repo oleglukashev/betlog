@@ -42,6 +42,7 @@
     </team>
     <team value="Централ Кост">
       <variant value="Централ Кост" />
+      <variant value="Сентрал Кост" />
     </team>
     <team value="Сидней">
       <variant value="Сидней" />
@@ -1055,6 +1056,9 @@
     <team value="Сьон">
       <variant value="Сьон" />
     </team>
+    <team value="Арау">
+      <variant value="Арау" />
+    </team>
 
     <!-- Швеция -->
 
@@ -1515,6 +1519,9 @@
     <team value="Волеранга">
       <variant value="Волеранга" />
     </team>
+    <team value="Спарта Уорриорз">
+      <variant value="Спарта Уорриорз" />
+    </team>
 
     <!-- NHL -->
 
@@ -1827,8 +1834,8 @@
     <team value="Давос">
       <variant value="Давос" />
     </team>
-    <team value="Женева">
-      <variant value="Женева" />
+    <team value="Женева-Серветт">
+      <variant value="Женева-Серветт" />
     </team>
     <team value="Лангнау">
       <variant value="Лангнау" />
@@ -1897,6 +1904,15 @@
     <team value="Бофор ИК Карлскуга">
       <variant value="Бофор" />
       <variant value="Бофор ИК Карлскуга" />
+    </team>
+    <team value="Тимро">
+      <variant value="Тимро" />
+    </team>
+    <team value="Бьорклевен">
+      <variant value="Бьорклевен" />
+    </team>
+    <team value="Регле">
+      <variant value="Регле" />
     </team>
 
 
@@ -2161,6 +2177,7 @@
     </team>
     <team value="Миттельдойче">
       <variant value="Миттельдойче" />
+      <variant value="Миттельдойчер" />
     </team>
     <team value="с.Оливер Баскетс Вюрцбург">
       <variant value="с.Оливер Баскетс Вюрцбург" />
@@ -3360,6 +3377,9 @@
     <team value="Морс-Тю">
       <variant value="Морс-Тю" />
     </team>
+    <team value="ГОГ">
+      <variant value="ГОГ" />
+    </team>
 
     <!-- Израиль -->
 
@@ -3394,6 +3414,9 @@
 
     <!-- Германия -->
 
+    <team value="Айзенах">
+      <variant value="Айзенах" />
+    </team>
     <team value="Фриш Ауф Гёппинген">
       <variant value="Фриш Ауф Гёппинген" />
     </team>
@@ -3448,6 +3471,9 @@
     <team value="Рейн-Неккар Лёвен">
       <variant value="Рейн-Неккар Лёвен" />
     </team>
+    <team value="Эмсдеттен">
+      <variant value="Эмсдеттен" />
+    </team>
 
     <!-- Испания -->
 
@@ -3499,6 +3525,12 @@
     <team value="Адемар Леон">
       <variant value="Адемар Леон" />
     </team>
+    <team value="Ла Риоха">
+      <variant value="Ла Риоха" />
+    </team>
+    <team value="Бидасоа">
+      <variant value="Бидасоа" />
+    </team>
 
     <!-- Норвегия -->
 
@@ -3541,6 +3573,9 @@
     </team>
     <team value="Сторр">
       <variant value="Сторр" />
+    </team>
+    <team value="Фальк">
+      <variant value="Фальк" />
     </team>
 
     <!-- Польша -->
