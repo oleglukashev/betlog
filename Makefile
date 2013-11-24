@@ -1,2 +1,2 @@
 parse:
-	python3.3 parser/runapp.py
+	python3.3 parser/runapp.py $(VAR)
