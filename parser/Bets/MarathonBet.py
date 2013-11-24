@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import logger
 import datetime
+import yaml
 from datetime import date
 
 import sqlalchemy
@@ -18,13 +19,18 @@ from Modules import UsedChampionships
 
 class MarathonBet():
   
-  def __init__( self, link ):
-    self.link = link
+  def __init__( self ):
+    self.link = self.setConfigData()
     self.teams_not_found = {}
     self.current_sport = ""
     self.current_country = ""
     self.current_championship = ""
 
+  def setConfigData( self ):
+    bookmakers = yaml.load( open('parser/config/bookmakers.yml', 'r') )
+    for key, value in bookmakers.items():
+      if key == 'marathon':
+        return value
 
   def getContentFromUrl( self ):
     data = urllib.parse.urlencode( self.link['data'] )

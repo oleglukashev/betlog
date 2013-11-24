@@ -38,7 +38,7 @@ def parseDictionaryFile( dictionary_file ):
   file.close()
   return parseString( file_read )
 
-dictionary_sports = parseDictionaryFile( 'Modules/Dictionary/sports.xml' )
-dictionary_championships = parseDictionaryFile( 'Modules/Dictionary/championships.xml' )
-dictionary_countries = parseDictionaryFile( 'Modules/Dictionary/countries.xml' )
-dictionary_teams = parseDictionaryFile( 'Modules/Dictionary/teams.xml' )
+dictionary_sports = parseDictionaryFile( 'parser/Modules/Dictionary/sports.xml' )
+dictionary_championships = parseDictionaryFile( 'parser/Modules/Dictionary/championships.xml' )
+dictionary_countries = parseDictionaryFile( 'parser/Modules/Dictionary/countries.xml' )
+dictionary_teams = parseDictionaryFile( 'parser/Modules/Dictionary/teams.xml' )

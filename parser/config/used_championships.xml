@@ -257,4 +257,10 @@
         </country>
     </countries>
   </sport>
+  <sport value="Теннис">
+    <countries>
+        <country value="Международные">
+        </country>
+    </countries>    
+  </sport>
 </sports>

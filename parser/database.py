@@ -8,7 +8,7 @@ class Database:
     self.doDatabaseConnect()
 
   def doAppConfig( self ):
-    self.database = yaml.load( open('config/database.yml', 'r') )
+    self.database = yaml.load( open('parser/config/database.yml', 'r') )
 
   def doDatabaseConnect(self):
     self.databaseConnect = create_engine('postgresql://' + self.database["user"] + ':' + self.database["password"] + '@localhost/' + self.database["database"])

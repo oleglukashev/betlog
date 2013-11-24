@@ -1,7 +1,7 @@
 from xml.dom.minidom import parseString
 
 
-used_championships_file = open('config/used_championships.xml', 'r')
+used_championships_file = open('parser/config/used_championships.xml', 'r')
 used_championships_read = used_championships_file.read()
 used_championships_file.close()
 used_championships = parseString( used_championships_read )

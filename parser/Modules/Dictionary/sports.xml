@@ -5,9 +5,9 @@
     <sport value="Баскетбол">
       <variant value="Баскетбол" />
     </sport>
-    <!--<sport value="Бокс">
+    <sport value="Бокс">
       <variant value="Бокс" />
-    </sport>-->
+    </sport>
     <sport value="Воллейбол">
       <variant value="Воллейбол" />
       <variant value="Волейбол" />
@@ -26,8 +26,8 @@
     <sport value="Хоккей">
       <variant value="Хоккей" />
     </sport>
-    <!--<sport value="Теннис">
+    <sport value="Теннис">
       <variant value="Теннис" />
-    </sport>-->
+    </sport>
   </sports>
 </dictionary>
