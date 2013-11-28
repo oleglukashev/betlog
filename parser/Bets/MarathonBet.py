@@ -17,16 +17,16 @@ import lxml.html
 import lxml.cssselect
 from xml.dom.minidom import parseString
 from Modules.Dictionary import Dictionary
-from Modules import UsedChampionships
 
 
 class MarathonBet():
   
   def __init__( self ):
+    self.bookmaker = "Marathon"
     self.teams_not_found = {}
-    self.current_sport = ""
-    self.current_country = ""
-    self.current_championship = ""
+    self.current_sport = None
+    self.current_country = None
+    self.current_championship = None
 
 
 
@@ -58,9 +58,8 @@ class MarathonBet():
     
     for championship in championships:
       for bookmaker in championship.getElementsByTagName('bookmaker'):
-        if bookmaker.getAttribute("value") == "Marathon":
+        if bookmaker.getAttribute("value") == self.bookmaker:
           for link in bookmaker.getElementsByTagName("link"):
-            time.sleep( random.randint(1,5) )
 
             championship_content = None
             
@@ -71,12 +70,15 @@ class MarathonBet():
 
             if ( championship_content is not None ):
               if ( len( championship_content.cssselect("div.main-block-events") ) ):
+                self.current_sport = championship.parentNode.parentNode.parentNode.getAttribute("value")
+                self.current_country = championship.parentNode.getAttribute("value")
+                self.current_championship = championship.getAttribute("value")
                 
                 event_hash = {
-                  "bookmaker": "Marathon",
-                  "sport": championship.parentNode.parentNode.parentNode.getAttribute("value"),
-                  "country": championship.parentNode.getAttribute("value"),
-                  "championship": championship.getAttribute("value"),
+                  "bookmaker": self.bookmaker,
+                  "sport": self.current_sport,
+                  "country": self.current_country,
+                  "championship": self.current_championship,
                   "events_data": self.getTeamsAndCoefficientsFromEventDom( championship_content )
                 }
 
@@ -122,6 +124,7 @@ class MarathonBet():
         date_event = event_block.cssselect('tr.event-header > td.first table tr td.date')
         if ( len( date_event ) > 0 ):
           event_hash['date_event'] = self.getDate( date_event[0].text.strip(" \r\n") )
+          print(event_hash)
 
 
         first_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'first' )

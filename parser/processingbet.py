@@ -18,12 +18,12 @@ class ProcessingBet(Database):
 
   def doProcess(self, data):
     for key, events_block in data.items():
-
       bookmaker_query = self.session.query(Bookmakers).filter(Bookmakers.name == events_block['bookmaker'])
-      self.session.commit()
+      if ( bookmaker_query.first() == None ):
+        bookmaker = self.session.add(Bookmakers( events_block['bookmaker'], 0 ))
+        self.session.commit()
       bookmaker = bookmaker_query.first()
       bookmaker_id = bookmaker.id
-
 
       sport_query = self.session.query(Sports).filter(Sports.name == events_block['sport'])
       if ( sport_query.first() == None ):

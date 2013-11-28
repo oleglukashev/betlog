@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20131103184138) do
   end
 
   create_table "coefficients", force: true do |t|
-    t.integer  "event_id",        null: false
-    t.integer  "bookmaker_id",    null: false
+    t.integer  "event_id",           null: false
+    t.integer  "bookmaker_id",       null: false
     t.float    "first"
     t.float    "draw"
     t.float    "second"
@@ -42,8 +42,12 @@ ActiveRecord::Schema.define(version: 20131103184138) do
     t.float    "draw_or_second"
     t.float    "first_fora"
     t.float    "second_fora"
-    t.float    "total_less"
+    t.float    "coeff_first_fora"
+    t.float    "coeff_second_forad"
     t.float    "total_more"
+    t.float    "total_less"
+    t.float    "coeff_first_total"
+    t.float    "coeff_second_total"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

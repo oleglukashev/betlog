@@ -61,6 +61,7 @@ class BetcityBet():
             championship_content = None
             
             if ( len( link.getAttribute("value") ) > 0 ):
+              time.sleep( random.randint(3, 6) )
               championship_content = self.getContentByUrl( link.getAttribute("value") )
             else:
               print("-- warning: no url for championship: " + championship.getAttribute("value") )
@@ -81,12 +82,14 @@ class BetcityBet():
 
                 self.result[i] = event_hash
 
+                return self.result
+
                 i += 1
 
               else:
                 print("-- data on this page not founded --")
 
-    return result
+    return self.result
 
 
   def getTeamsAndCoefficientsFromEventDom( self, championship_content ):
@@ -115,13 +118,17 @@ class BetcityBet():
             if ( key in event_hash ):
               key = self.getKeyByHeadTitle( head_tbody.cssselect("tr > td")[count].text_content().strip(" \r\n"), 'skip_first' )
             
+            if ( key == "date_event" ):
+              event_hash[key] = self.getDate( date + " " + td.text_content().strip(" \r\n") )
+              print(event_hash)
+
             event_hash[key] = td.text_content().strip(" \r\n")
 
             count += 1
 
             result[i] = event_hash
-            i += 1
-    print(result)   
+            i += 1  
+    
     return result
 
 
@@ -129,22 +136,22 @@ class BetcityBet():
   def getKeyByHeadTitle( self, title, skip_first ):
     title_asscociation = {
       'время' : ['date_event'],
-      'команда 1' : ['team1'],
-      'игрок 1' : ['team1'],
-      'спортсмен 1' : ['team1'],
-      'команда 2' : ['team2'],
-      'игрок 2' : ['team2'],
-      'спортсмен 2' : ['team2'],
+      'Команда 1' : ['first_team'],
+      'Игрок 1' : ['first_team'],
+      'Спортсмен 1' : ['first_team'],
+      'Команда 2' : ['second_team'],
+      'Игрок 2' : ['second_team'],
+      'Спортсмен 2' : ['second_team'],
       '1': ['first'],
       'X': ['draw'],
       '2': ['second'],
       '1X': ['first_or_draw'],
       'X2': ['draw_or_second'],
-      'кф': ['first_fora', 'second_fora'],
-      'фора': ['coeff_first_fora', 'coeff_second_fora'],
-      'тотал': ['total'],
-      'мен': ['total_less_position'],
-      'бол': ['total_more_position']
+      'кф': ['coeff_first_fora', 'coeff_second_fora'],
+      'фора': ['first_fora', 'second_fora'],
+      'тотал': ['total_less', 'total_more'],
+      'мен': ['coeff_first_total'],
+      'бол': ['coeff_second_total']
     }
 
     for key, value in title_asscociation.items():
