@@ -46,7 +46,7 @@ class ProcessingBet(Database):
       championship = championships_query.first()
       championship_id = championship.id
 
-      for key, coefficients in events_block['teams_and_coefficients'].items():
+      for key, coefficients in events_block['events_data'].items():
         first_team = coefficients['first_team'] if 'first_team' in coefficients.keys() else ""
         second_team = coefficients['second_team'] if 'second_team' in coefficients.keys() else ""
 

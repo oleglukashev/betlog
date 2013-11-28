@@ -77,7 +77,7 @@ class MarathonBet():
                   "sport": championship.parentNode.parentNode.parentNode.getAttribute("value"),
                   "country": championship.parentNode.getAttribute("value"),
                   "championship": championship.getAttribute("value"),
-                  "events_date": self.getTeamsAndCoefficientsFromEventDom( championship_content )
+                  "events_data": self.getTeamsAndCoefficientsFromEventDom( championship_content )
                 }
 
                 result[i] = event_hash
