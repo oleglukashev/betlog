@@ -1,6 +1,2 @@
 marathon:
-  url: http://www.marathonbet.com/ru/betting/all
-  data:
-    periodGroupAllEvents: 0
 betcity:
-  url: http://betcityru.com/bets/bets2.php?rnd=1385277886
