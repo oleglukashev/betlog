@@ -64,6 +64,8 @@ class MarathonBet():
             championship_content = None
             
             if ( len( link.getAttribute("value") ) > 0 ):
+              time.sleep( random.randint(3, 6) )
+
               championship_content = self.getContentByUrl( link.getAttribute("value") )
             else:
               print("-- warning: no url for championship: " + championship.getAttribute("value") )
@@ -83,7 +85,7 @@ class MarathonBet():
                 }
 
                 result[i] = event_hash
-
+                return result
                 i += 1
 
               else:
@@ -124,8 +126,6 @@ class MarathonBet():
         date_event = event_block.cssselect('tr.event-header > td.first table tr td.date')
         if ( len( date_event ) > 0 ):
           event_hash['date_event'] = self.getDate( date_event[0].text.strip(" \r\n") )
-          print(event_hash)
-
 
         first_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'first' )
         event_hash['first'] = self.getCoefficientFromHtmlByPosition( event_block, first_position ) if first_position is not None else None
@@ -145,17 +145,23 @@ class MarathonBet():
         draw_or_second_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'draw_or_second' )
         event_hash['draw_or_second'] = self.getCoefficientFromHtmlByPosition( event_block, draw_or_second_position ) if draw_or_second_position is not None else None
 
-        first_fora_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'first_fora' )
-        event_hash['first_fora'] = self.getCoefficientFromHtmlByPosition( event_block, first_fora_position ) if first_fora_position is not None else None
+        event_hash['first_fora'] = None
+        event_hash['second_fora'] = None
 
-        second_fora_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'second_fora' )
-        event_hash['second_fora'] = self.getCoefficientFromHtmlByPosition( event_block, second_fora_position ) if second_fora_position is not None else None
+        first_fora_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'coeff_first_fora' )
+        event_hash['coeff_first_fora'] = self.getCoefficientFromHtmlByPosition( event_block, first_fora_position ) if first_fora_position is not None else None
 
-        total_less_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'total_less' )
-        event_hash['total_less'] = self.getCoefficientFromHtmlByPosition( event_block, total_less_position ) if total_less_position is not None else None
+        second_fora_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'coeff_second_fora' )
+        event_hash['coeff_second_fora'] = self.getCoefficientFromHtmlByPosition( event_block, second_fora_position ) if second_fora_position is not None else None
 
-        total_more_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'total_more' )
-        event_hash['total_more'] = self.getCoefficientFromHtmlByPosition( event_block, total_more_position ) if total_more_position is not None else None
+        event_hash['total_less'] = None
+        event_hash['total_more'] = None
+
+        total_less_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'coeff_total_less' )
+        event_hash['coeff_first_total'] = self.getCoefficientFromHtmlByPosition( event_block, total_less_position ) if total_less_position is not None else None
+
+        total_more_position = self.getPositionFromHtmlByCoefficientType( championship_content, 'coeff_total_more' )
+        event_hash['coeff_second_total'] = self.getCoefficientFromHtmlByPosition( event_block, total_more_position ) if total_more_position is not None else None
 
         result[i] = event_hash
         i += 1
@@ -177,10 +183,10 @@ class MarathonBet():
       '1X' : 'first_or_draw',
       '12' : 'first_or_second',
       'X2' : 'draw_or_second',
-      'Фора1' : 'first_fora',
-      'Фора2' : 'second_fora',
-      'Тотал мен.' : 'total_less',
-      'Тотал бол.' : 'total_more',
+      'Фора1' : 'coeff_first_fora',
+      'Фора2' : 'coeff_second_fora',
+      'Тотал мен.' : 'coeff_first_total',
+      'Тотал бол.' : 'coeff_second_total',
     }
 
     tr_dom = container.cssselect('table.foot-market > tr')[0]

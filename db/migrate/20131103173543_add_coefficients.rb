@@ -13,9 +13,9 @@ class AddCoefficients < ActiveRecord::Migration
       t.float :first_fora
       t.float :second_fora
       t.float :coeff_first_fora
-      t.float :coeff_second_forad
-      t.float :total_more
+      t.float :coeff_second_fora
       t.float :total_less
+      t.float :total_more
       t.float :coeff_first_total
       t.float :coeff_second_total
 

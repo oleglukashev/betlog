@@ -120,15 +120,16 @@ class BetcityBet():
             
             if ( key == "date_event" ):
               event_hash[key] = self.getDate( date + " " + td.text_content().strip(" \r\n") )
-              print(event_hash)
-
-            event_hash[key] = td.text_content().strip(" \r\n")
+            elif ( key == "first_team" or key == "second_team" ):
+              event_hash[key] = self.getTeam( td.text_content().strip(" \r\n") )
+            else:
+              event_hash[key] = td.text_content().strip(" \r\n")
 
             count += 1
 
-            result[i] = event_hash
-            i += 1  
-    
+      result[i] = event_hash
+      i += 1  
+        
     return result
 
 

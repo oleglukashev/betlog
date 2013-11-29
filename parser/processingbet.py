@@ -47,10 +47,30 @@ class ProcessingBet(Database):
       championship_id = championship.id
 
       for key, coefficients in events_block['events_data'].items():
-        first_team = coefficients['first_team'] if 'first_team' in coefficients.keys() else ""
-        second_team = coefficients['second_team'] if 'second_team' in coefficients.keys() else ""
+        first_team = coefficients['first_team'] if 'first_team' in coefficients.keys() and coefficients['first_team'] is not None else None
+        second_team = coefficients['second_team'] if 'second_team' in coefficients.keys() and coefficients['first_team'] is not None else None
 
-        if ( len( first_team ) > 0 and len( second_team ) > 0 ):
+        if ( first_team is not None and second_team is not None ):
+          event_data = {
+            'date_event': coefficients['date_event'] if 'date_event' in coefficients.keys() else "",
+            'first_team': first_team,
+            'second_team': second_team,
+            'first': coefficients['first'] if 'first' in coefficients.keys() else None,
+            'draw': coefficients['draw'] if 'draw' in coefficients.keys() else None,
+            'second': coefficients['second'] if 'second' in coefficients.keys() else None, 
+            'first_or_draw': coefficients['first_or_draw'] if 'first_or_draw' in coefficients.keys() else None,
+            'first_or_second': coefficients['first_or_second'] if 'first_or_second' in coefficients.keys() else None,
+            'draw_or_second': coefficients['draw_or_second'] if 'draw_or_second' in coefficients.keys() else None,
+            'first_fora': coefficients['first_fora'] if 'first_fora' in coefficients.keys() else None,
+            'second_fora': coefficients['second_fora'] if 'second_fora' in coefficients.keys() else None,
+            'coeff_first_fora': coefficients['coeff_first_fora'] if 'coeff_first_fora' in coefficients.keys() else None,
+            'coeff_second_fora': coefficients['coeff_second_fora'] if 'coeff_second_fora' in coefficients.keys() else None,
+            'total_less': coefficients['total_less'] if 'total_less' in coefficients.keys() else None,
+            'total_more': coefficients['total_more'] if 'total_more' in coefficients.keys() else None,
+            'coeff_first_total': coefficients['coeff_first_total'] if 'coeff_first_total' in coefficients.keys() else None,
+            'coeff_second_total': coefficients['coeff_second_total'] if 'coeff_second_total' in coefficients.keys() else None
+          }
+          
           date_event = coefficients['date_event'] if 'date_event' in coefficients.keys() else ""
           events_query = self.session.query(Events).filter(Events.opponent_1 == first_team).filter(Events.opponent_2 == second_team).filter(Events.date_event == date_event)
 
@@ -60,7 +80,24 @@ class ProcessingBet(Database):
           event = events_query.first()
           event_id = event.id
 
-          coefficients_block = self.session.add(Coefficients(event_id, bookmaker_id, coefficients['first'], coefficients['draw'], coefficients['second'], coefficients['first_or_draw'], coefficients['first_or_second'], coefficients['draw_or_second'], coefficients['first_fora'], coefficients['second_fora'], coefficients['total_less'], coefficients['total_more']))
+          coefficients_block = self.session.add(
+            Coefficients(event_id,
+                          bookmaker_id, 
+                          event_data['first'], 
+                          event_data['draw'], 
+                          event_data['second'], 
+                          event_data['first_or_draw'], 
+                          event_data['first_or_second'], 
+                          event_data['draw_or_second'], 
+                          event_data['first_fora'], 
+                          event_data['second_fora'],
+                          event_data['coeff_first_fora'], 
+                          event_data['coeff_second_fora'], 
+                          event_data['total_less'], 
+                          event_data['total_more'], 
+                          event_data['coeff_first_total'], 
+                          event_data['coeff_second_total']
+          ))
         
         self.session.commit()
 
