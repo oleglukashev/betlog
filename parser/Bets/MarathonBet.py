@@ -72,20 +72,30 @@ class MarathonBet():
 
             if ( championship_content is not None ):
               if ( len( championship_content.cssselect("div.main-block-events") ) ):
-                self.current_sport = championship.parentNode.parentNode.parentNode.getAttribute("value")
-                self.current_country = championship.parentNode.getAttribute("value")
-                self.current_championship = championship.getAttribute("value")
+                for events_block in championship_content.cssselect("div.main-block-events"):
+                  events_block_title_elems = event.cssselect('div.block-events-head > *')
+                  
+                  for events_block_title_elem in events_block_title_elems:
+                    events_block_title_elem.drop_tree()
+                  
+                  events_block_title = events_block.cssselect("div.block-events-head")[0].text.strip(" \r\n")
 
-                event_hash = {
-                  "bookmaker": self.bookmaker,
-                  "sport": self.current_sport,
-                  "country": self.current_country,
-                  "championship": self.current_championship,
-                  "events_data": self.getTeamsAndCoefficientsFromEventDom( championship_content )
-                }
+                  if 
 
-                result[i] = event_hash
-                i += 1
+                  self.current_sport = championship.parentNode.parentNode.parentNode.getAttribute("value")
+                  self.current_country = championship.parentNode.getAttribute("value")
+                  self.current_championship = championship.getAttribute("value")
+
+                  event_hash = {
+                    "bookmaker": self.bookmaker,
+                    "sport": self.current_sport,
+                    "country": self.current_country,
+                    "championship": self.current_championship,
+                    "events_data": self.getTeamsAndCoefficientsFromEventDom( championship_content )
+                  }
+
+                  result[i] = event_hash
+                  i += 1
 
               else:
                 print("-- data on this page not founded --")
@@ -164,6 +174,14 @@ class MarathonBet():
       return Dictionary.findTeam( team )
     else:
       self.showTeamNotFound( team )
+
+
+
+  def getChampionship( self, championship ):
+    if Dictionary.findChampionship( championship ):
+      return Dictionary.findChampionship( championship )
+    else:
+      self.showChampionshipNotFound( championship )
 
 
 
