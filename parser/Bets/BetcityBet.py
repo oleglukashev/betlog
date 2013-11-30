@@ -82,10 +82,7 @@ class BetcityBet():
 
                 self.result[i] = event_hash
 
-                return self.result
-
                 i += 1
-
               else:
                 print("-- data on this page not founded --")
 
@@ -122,6 +119,8 @@ class BetcityBet():
               event_hash[key] = self.getDate( date + " " + td.text_content().strip(" \r\n") )
             elif ( key == "first_team" or key == "second_team" ):
               event_hash[key] = self.getTeam( td.text_content().strip(" \r\n") )
+              if ( event_hash[key] is None ):
+                self.showTeamNotFound( td.text_content().strip(" \r\n") )
             else:
               event_hash[key] = td.text_content().strip(" \r\n")
 
@@ -173,6 +172,8 @@ class BetcityBet():
   def getTeam( self, team ):
     if Dictionary.findTeam( team ):
       return Dictionary.findTeam( team )
+    else:
+      self.showTeamNotFound( team )
 
 
 
