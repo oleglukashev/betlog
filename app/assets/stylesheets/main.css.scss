@@ -133,7 +133,7 @@ div.input-wrap
   zoom: 1;
   *display: inline;
   _height: 24px;
-	background-image: image-url("mini_bulged_left.png");
+	background-image: image-url("mini_bulged_white_left.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 	padding-left: 6px;
@@ -141,7 +141,7 @@ div.input-wrap
 
 div.input-wrap div
 {
-	background-image: image-url("mini_bulged_right.png");
+	background-image: image-url("mini_bulged_white_right.png");
 	background-repeat: no-repeat;
 	background-position: right 0;
 	padding: 0 6px 0 0;
@@ -149,7 +149,7 @@ div.input-wrap div
 
 div.input-wrap div div
 {
-	background-image: image-url("mini_bulged_center.png");
+	background-image: image-url("mini_bulged_white_center.png");
 	background-repeat: repeat-x;
 	background-position: 0 0;
 	padding: 0;
@@ -166,6 +166,7 @@ div.input-wrap div div input
 	padding: 1px 0;
 	color: #555;
 }
+
 
 
 /*
@@ -201,6 +202,7 @@ div.header div.navigation a
 	text-decoration: none;
 	font-weight: bold;
 	margin-right: 20px;
+  color: #555;
 }
 
 div.logo
@@ -228,24 +230,48 @@ div.search
   margin: 16px 0 0 100px;
 }
 
-div.search div.lupa
+div.search.hide div.input-wrap 
 {
-	position: absolute;
-	width: 17px;
-	height: 14px;
-	background-image: image-url("lupa.png");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	left: 0;
-	top: 0;
-	margin: 4px 0 0 6px;
+  background-image: image-url("mini_bulged_left.png");
 }
 
-div.search div div div input
+div.search.hide div.input-wrap div
 {
-	width: 100px;
-	margin-left: 22px;
+  background-image: image-url("mini_bulged_right.png");
+}
+
+div.search.hide div.input-wrap div div
+{
+  background-image: image-url("mini_bulged_center.png"); 
+}
+
+div.search div.lupa
+{
+  background-image: image-url("lupa.png");
+  position: absolute;
+  width: 17px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 0;
+  top: 0;
+  margin: 4px 0 0 6px;
+}
+
+div.search.hide div.lupa
+{
+  background-image: image-url("lupa_white.png");
+}
+
+div.search.hide div div div input
+{
 	color: #fff;
+}
+
+div.search div div div input {
+  width: 100px;
+  margin-left: 22px;
+  color: #555;
 }
 
 div.search div div div input:-moz-placeholder { color: #fff; }
@@ -882,16 +908,16 @@ div.footer
 
 div.loginbox-content-top
 {
-	padding-left: 6px;
-	background-image: image-url("sec_convex_left_top.png");
+	padding-left: 11px;
+	background-image: image-url("main_convex_left_top.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;	
 }
 
 div.loginbox-content-top div
 {
-	padding: 0 6px 0 0;
-	background-image: image-url("sec_convex_right_top.png");
+	padding: 0 11px 0 0;
+	background-image: image-url("main_convex_right_top.png");
 	background-repeat: no-repeat;
 	background-position: right 0;
 }
@@ -899,24 +925,24 @@ div.loginbox-content-top div
 div.loginbox-content-top div div
 {
 	padding: 0;
-	height: 6px;
-	background-image: image-url("sec_convex_top.png");
+	height: 13px;
+	background-image: image-url("main_convex_top.png");
 	background-repeat: repeat-x;
 	background-position: 0 0;
 }
 
 div.loginbox-content-bottom
 {
-	padding-left: 6px;
-	background-image: image-url("sec_convex_left_bottom.png");
+	padding-left: 11px;
+	background-image: image-url("main_convex_left_bottom.png");
 	background-repeat: no-repeat;
 	background-position: 0 bottom;	
 }
 
 div.loginbox-content-bottom div
 {
-	padding: 0 6px 0 0;
-	background-image: image-url("sec_convex_right_bottom.png");
+	padding: 0 11px 0 0;
+	background-image: image-url("main_convex_right_bottom.png");
 	background-repeat: no-repeat;
 	background-position: right bottom;
 }
@@ -924,16 +950,16 @@ div.loginbox-content-bottom div
 div.loginbox-content-bottom div div
 {
 	padding: 0;
-	height: 6px;
-	background-image: image-url("sec_convex_bottom.png");
+	height: 13px;
+	background-image: image-url("main_convex_bottom.png");
 	background-repeat: repeat-x;
 	background-position: 0 bottom;
 }
 
 div.loginbox-content-body
 {
-	padding: 8px 20px;
-	background-color: #f9f9f9;
+	padding: 0 20px;
+	background-color: #ebebeb;
 }
 
 p.loginbox-title
@@ -945,8 +971,9 @@ p.loginbox-title
 
 div.loginbox-close
 {
-	width: 17px;
-	height: 17px;
+	width: 14px;
+	height: 14px;
+  padding: 1px;
 	float: right;
 	background-image: image-url("close.png");
 	background-repeat: no-repeat;
@@ -990,6 +1017,8 @@ div.loginbox-content-body form div p {
 
 div.loginbox-content-body form div p button {
 	margin-top: 6px;
+  width: 80px;
+  height: 24px;
 }
 
 p.loginbox-forgot {
@@ -1018,126 +1047,12 @@ div.loginbox-remember p:first-child
 	z-index: 2;
 }
 
-div.loginbox-content-top
-{
-	padding-left: 6px;
-	background-image: image-url("sec_convex_left_top.png");
-	background-repeat: no-repeat;
-	background-position: 0 0;	
+#registration div.loginbox-content-body form div p button {
+  width: 150px;
 }
 
-div.loginbox-content-top div
-{
-	padding: 0 6px 0 0;
-	background-image: image-url("sec_convex_right_top.png");
-	background-repeat: no-repeat;
-	background-position: right 0;
-}
 
-div.loginbox-content-top div div
-{
-	padding: 0;
-	height: 6px;
-	background-image: image-url("sec_convex_top.png");
-	background-repeat: repeat-x;
-	background-position: 0 0;
-}
 
-div.loginbox-content-bottom
-{
-	padding-left: 6px;
-	background-image: image-url("sec_convex_left_bottom.png");
-	background-repeat: no-repeat;
-	background-position: 0 bottom;	
-}
-
-div.loginbox-content-bottom div
-{
-	padding: 0 6px 0 0;
-	background-image: image-url("sec_convex_right_bottom.png");
-	background-repeat: no-repeat;
-	background-position: right bottom;
-}
-
-div.loginbox-content-bottom div div
-{
-	padding: 0;
-	height: 6px;
-	background-image: image-url("sec_convex_bottom.png");
-	background-repeat: repeat-x;
-	background-position: 0 bottom;
-}
-
-div.loginbox-content-body
-{
-	padding: 8px 20px;
-	background-color: #f9f9f9;
-}
-
-p.loginbox-title
-{
-	font-family: "HelveticaNeueCyrThin";
-	font-size: 16px;
-	margin-bottom: 16px;
-}
-
-div.loginbox-close
-{
-	width: 17px;
-	height: 17px;
-	float: right;
-	background-image: image-url("close.png");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	cursor: pointer;
-	margin-right: -5px;
-}
-
-div.loginbox-content-body form div.input-wrap
-{
-	margin-bottom: 10px;
-}
-
-p.loginbox-input-error
-{
-	font-weight: bold;
-	color: red;
-	margin-top: -5px;
-	margin-bottom: 10px;
-}
-
-div.loginbox-input-error-container p.novalid
-{
-	display: block;
-}
-
-div.loginbox-remember
-{
-	font-size: 0;
-	margin-bottom: 10px;
-}
-
-div.loginbox-content-body form div p {
-	display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: top;
-  zoom: 1;
-  *display: inline;
-  font-size: 12px;
-}
-
-div.loginbox-content-body form div p button {
-	margin-top: 6px;
-}
-
-p.loginbox-forgot {
-	float: right;
-}
-
-div.loginbox-remember p:first-child
-{
-	margin: 2px 5px 0 0;
-}
 
 
 

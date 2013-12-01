@@ -4,12 +4,16 @@ $(document).ready(function(){
 	$("div.search input").placeholder();
 
 	$("div.search input").on("focus", function(){
+		$(this).attr("placeholder", "")
+		$("div.search").removeClass("hide");
 		$(this).animate({
 			width: '200px'
 		}, 200);
 	});
 
-	$("div.search input").on("blur", function(){
+	$("div.search input").on("blur", function() {
+		$(this).attr("placeholder", "Поиск...")
+		$("div.search").addClass("hide");
 		$(this).animate({
 			width: '100px'
 		}, 200);
