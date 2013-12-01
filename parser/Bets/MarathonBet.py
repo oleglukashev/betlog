@@ -72,30 +72,36 @@ class MarathonBet():
 
             if ( championship_content is not None ):
               if ( len( championship_content.cssselect("div.main-block-events") ) ):
+
+                success_championship = False
+
                 for events_block in championship_content.cssselect("div.main-block-events"):
-                  events_block_title_elems = event.cssselect('div.block-events-head > *')
-                  
+                  events_block_title_elems = events_block.cssselect('div.block-events-head > *')
                   for events_block_title_elem in events_block_title_elems:
                     events_block_title_elem.drop_tree()
                   
                   events_block_title = events_block.cssselect("div.block-events-head")[0].text.strip(" \r\n")
 
-                  if 
-
                   self.current_sport = championship.parentNode.parentNode.parentNode.getAttribute("value")
                   self.current_country = championship.parentNode.getAttribute("value")
                   self.current_championship = championship.getAttribute("value")
 
-                  event_hash = {
-                    "bookmaker": self.bookmaker,
-                    "sport": self.current_sport,
-                    "country": self.current_country,
-                    "championship": self.current_championship,
-                    "events_data": self.getTeamsAndCoefficientsFromEventDom( championship_content )
-                  }
+                  if ( self.getChampionshipFromEventBlockTitle( events_block_title ) == self.current_championship ):
+                    success_championship = True
+
+                    event_hash = {
+                      "bookmaker": self.bookmaker,
+                      "sport": self.current_sport,
+                      "country": self.current_country,
+                      "championship": self.current_championship,
+                      "events_data": self.getTeamsAndCoefficientsFromEventDom( championship_content )
+                    }
 
                   result[i] = event_hash
                   i += 1
+
+                if ( success_championship is False ):
+                  print("-- data on this page not founded --")
 
               else:
                 print("-- data on this page not founded --")
@@ -120,19 +126,19 @@ class MarathonBet():
           key = self.getKeyByHeadTitle( head_tbody.cssselect("th")[count if count == 0 else count + 1].cssselect("a")[0].text_content().strip(" \r\n") )
 
           if ( key is not None ):
-            event_hash[key] = td.cssselect("span")[0].text.strip(" \r\n")
+            event_hash[key] = self.getCoefficient( td.cssselect("span")[0].text.strip(" \r\n") )
 
             if ( key == 'coeff_first_fora' ):
-              event_hash['first_fora'] = td.text.strip(" \r\n")[1:-1]
+              event_hash['first_fora'] = self.getCoefficient( td.text.strip(" \r\n")[1:-1] )
 
             if ( key == 'coeff_second_fora' ):
-              event_hash['second_fora'] = td.text.strip(" \r\n")[1:-1]
+              event_hash['second_fora'] = self.getCoefficient( td.text.strip(" \r\n")[1:-1] )
 
             if ( key == 'coeff_first_total' ):
-              event_hash['total_less'] = td.text.strip(" \r\n")[1:-1]
+              event_hash['total_less'] = self.getCoefficient( td.text.strip(" \r\n")[1:-1] )
 
             if ( key == 'coeff_first_total' ):
-              event_hash['total_more'] = td.text.strip(" \r\n")[1:-1]
+              event_hash['total_more'] = self.getCoefficient( td.text.strip(" \r\n")[1:-1] )
 
         else:
           if ( td.get("class") == "first" ):
@@ -177,11 +183,21 @@ class MarathonBet():
 
 
 
-  def getChampionship( self, championship ):
-    if Dictionary.findChampionship( championship ):
-      return Dictionary.findChampionship( championship )
+  def getChampionshipFromEventBlockTitle( self, title ):
+    for title_part in title.split("."):
+      print(title_part)
+      if Dictionary.findChampionship( title_part.strip(" \r\n") ):
+        return Dictionary.findChampionship( title_part.strip(" \r\n") )
+      else:
+        self.showChampionshipNotFound( title_part.strip(" \r\n") )
+
+
+
+  def getCoefficient( self, coefficient ):
+    if ( len( coefficient ) > 0 ):
+      return coefficient
     else:
-      self.showChampionshipNotFound( championship )
+      return '0'
 
 
 
@@ -199,9 +215,20 @@ class MarathonBet():
 
 
   def showTeamNotFound( self, not_found_team_str ):
-    print("------ team not found -------")
-    print("sport: " + self.current_sport )
-    print("country: " + self.current_country )
-    print("championship: " + self.current_championship)
-    print("team: " + not_found_team_str + "\r\n")
+    file = open( "display.txt", 'a', encoding='utf-8' )
+    file.write("------ team not found -------\r\n")
+    file.write("sport: " + self.current_sport + "\r\n" )
+    file.write("country: " + self.current_country + "\r\n" )
+    file.write("championship: " + self.current_championship + "\r\n" )
+    file.write("team: " + not_found_team_str + "\r\n")
+    file.close()
+
+
+  def showChampionshipNotFound( self, not_found_championship_str ):
+    file = open( "display.txt", 'a', encoding='utf-8' )
+    file.write("------ championship not found -------\r\n")
+    file.write("sport: " + self.current_sport + "\r\n" )
+    file.write("country: " + self.current_country + "\r\n" )
+    file.write("championship: " + not_found_championship_str + "\r\n")
+    file.close()
 

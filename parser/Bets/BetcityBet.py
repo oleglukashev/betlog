@@ -166,6 +166,13 @@ class BetcityBet():
     print("country: " + self.current_country )
     print("championship: " + self.current_championship)
     print("team: " + not_found_team_str + "\r\n")
+    file = open( "display.txt", 'a', encoding='utf-8' )
+    file.write("------ team not found -------\r\n")
+    file.write("sport: " + self.current_sport + "\r\n" )
+    file.write("country: " + self.current_country + "\r\n" )
+    file.write("championship: " + self.current_championship + "\r\n" )
+    file.write("team: " + not_found_team_str + "\r\n")
+    file.close()
 
 
 
