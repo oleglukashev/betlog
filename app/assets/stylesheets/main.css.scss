@@ -572,8 +572,6 @@ div.event-title
 	cursor: pointer;
 }
 
-div.event-full-content { display: none; }
-
 div.event-part,
 div.event-border
 {
@@ -597,6 +595,11 @@ div.event-hide-full {
 	width: 17px;
 	height: 12px;
 	margin: 3px -10px 0 0;
+}
+
+div.event-full-content {
+  overflow: hidden;
+  height: 0;  
 }
 
 div.event-show-full { 

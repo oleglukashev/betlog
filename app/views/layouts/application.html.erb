@@ -23,15 +23,11 @@
 					<div><div><div><input type="text" placeholder="Поиск..." /></div></div></div>
 				</div>
 			</div>
-			
-			<%= render 'layouts/past_events' %>
-
 		</div>
 		<div class="content">
 			<div class="content-top"><div><div></div></div></div>
 			<div class="content-body">
 				<div class="events">
-					<h1>События</h1>
 					<div ng-controller="Sports">
 						<a href="javascript://" ng-repeat="sport in sports" ng-click="selectSport(sport);" ng-show="hasEvents(sport);">{{ sport.name }}</a>
 					</div>
@@ -43,14 +39,14 @@
 									<p>{{events_date | date:'d'}}</p>
 									<p>{{events_date | date:'MMMM'}}</p>
 								</div>
-								<div id="event-1" class="event" ng-repeat="event in getChampionshipEventsByEventDate(events_date);">
-									<div class="event-title">
+								<div id="event-{{event.id}}" class="event" ng-repeat="event in getChampionshipEventsByEventDate(events_date);">
+									<div class="event-title" ng-click="toggle(event);">
 										<div class="event-part">
 											<div class="event-date">{{event.date_event | date:'HH:mm'}}</div>{{ event.opponent_1}}</div>
 										<div class="event-border">&mdash;</div>
 										<div class="event-part">{{ event.opponent_2 }}<div class="event-show-full"></div></div>
 									</div>
-									<div class="event-full-content">
+									<div class="event-full-content" ng-show="event.isOpened" ng-class="{ 'event-fade-in': event.isOpened }">
 										<ul class="coefs-tabs-title">
 										  <li class="coefs-title-item-1 active"><a href="#">1x2</a></li>
 										  <li class="coefs-title-item-2"><a href="#">1x2</a></li>
@@ -109,7 +105,6 @@
 					</div>
 				</div>
 				<div class="country-menu" ng-controller="Championships">
-					<h1>Категории</h1>
 					<ul>
 						<li ng-class="{ active: country.isActive }" ng-repeat="country in getCountriesByActiveSport()">
 							<div class="country-menu-item" ng-click="selectCountry( country );">

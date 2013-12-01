@@ -1,4 +1,4 @@
-betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$element', 'filterFilter', function( $scope, $rootScope, $http, $element, filterFilter ) {
+betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$element', 'filterFilter', '$animate', function( $scope, $rootScope, $http, $element, filterFilter, $animate ) {
     $scope.events = [];
     $scope.active_championship = false;
 
@@ -12,7 +12,8 @@ betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$elem
                 championship_id: event.championship_id,
                 opponent_1: event.opponent_1,
                 opponent_2: event.opponent_2,
-                date_event: event.date_event
+                date_event: event.date_event,
+                isOpened: false
               }
 
               $scope.events.push( new_event );
@@ -67,6 +68,10 @@ betlog_controllers.controller('Events', ['$scope', '$rootScope', '$http', '$elem
       });
 
       return result;
+    }
+
+    $scope.toggle = function( event_obj ) {
+      event_obj.isOpened = event_obj.isOpened ? false : true;  
     }
 
 
