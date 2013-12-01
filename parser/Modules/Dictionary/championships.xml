@@ -153,6 +153,12 @@
     <championship value="ПХЛ">
       <variant value="ПХЛ" />
     </championship>
+    <championship value="LBN">
+      <variant value="LBN" />
+    </championship>
+    <championship value="Высшая лига">
+      <variant value="Высшая лига" />
+    </championship>
 
 
 

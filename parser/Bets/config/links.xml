@@ -242,10 +242,16 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/NHL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=2751" />
+                </bookmaker>
             </championship>
             <championship value="КХЛ">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Russia/KHL/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=10043" />
                 </bookmaker>
             </championship>
         </country>
@@ -254,12 +260,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Austria/EBEL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=7156" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Беларусь">
             <championship value="Экстралига">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Belarus/Extraleague/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
                 </bookmaker>
             </championship>
         </country>
@@ -268,12 +280,18 @@
                 <bookmaker value="Marathon">
                     <link value="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=11095" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Германия">
             <championship value="DEL">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Germany/DEL/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=144" />
                 </bookmaker>
             </championship>
         </country>
@@ -282,12 +300,28 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Italy/Serie+A/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Норвегия">
             <championship value="GET-лига">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Norway/GET-Ligaen/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
+            </championship>
+        </country>
+        <country value="Польша">
+            <championship value="PLH">
+                <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=36913" />
                 </bookmaker>
             </championship>
         </country>
@@ -296,12 +330,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Russia/VHL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=17479" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Украина">
             <championship value="ПХЛ">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Ukraine/Championship/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
                 </bookmaker>
             </championship>
         </country>
@@ -310,12 +350,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Finland/SM-Liiga/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=17479" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Чехия">
             <championship value="Экстралига">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Czech+Republic/Extraliga/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=146" />
                 </bookmaker>
             </championship>
         </country>
@@ -324,12 +370,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Switzerland/National+League+A/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Швеция">
             <championship value="Аллсвенскан">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Ice+Hockey/Sweden/Allsvenskan/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=423" />
                 </bookmaker>
             </championship>
         </country>
@@ -342,6 +394,9 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/NBA/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=6165" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Австралия">
@@ -350,7 +405,7 @@
                     <link value="http://marathonbet.com/ru/betting/Basketball/Australia/Men/NBL/" />
                 </bookmaker>
                 <bookmaker value="Betcity">
-                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=7458" />
+                    <link value="" />
                 </bookmaker>
             </championship>
         </country>
@@ -359,12 +414,18 @@
                 <bookmaker value="Marathon">
                     <link value="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=3298" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Аргентина">
             <championship value="LBN">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Argentina/Men/LNB/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=13870" />
                 </bookmaker>
             </championship>
         </country>
@@ -373,12 +434,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Brazil/Men/NBB/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Беларусь">
             <championship value="Премьер-лига">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Great+Britain/Men/BBL/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
                 </bookmaker>
             </championship>
         </country>
@@ -387,12 +454,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Great+Britain/Men/BBL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=18066" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Германия">
             <championship value="Бундеслига">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Germany/Men/Bundesliga/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=3286" />
                 </bookmaker>
             </championship>
         </country>
@@ -401,12 +474,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Denmark/Men/CDL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Греция">
             <championship value="А1 Этники">
                 <bookmaker value="Marathon">
                     <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1205" />
                 </bookmaker>
             </championship>
         </country>
@@ -415,12 +494,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Israel/Men/BSL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=10989" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Испания">
             <championship value="АСВ">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Spain/Men/Liga+ACB/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=132" />
                 </bookmaker>
             </championship>
         </country>
@@ -429,6 +514,9 @@
                 <bookmaker value="Marathon">
                     <link valie="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=545" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Нидерланды">
@@ -436,11 +524,17 @@
                 <bookmaker value="Marathon">
                     <link valie="http://marathonbet.com/ru/betting/Basketball/Netherlands/Men/DBL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Россия">
             <championship value="ПБЛ">
                 <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
                     <link value="" />
                 </bookmaker>
             </championship>
@@ -450,12 +544,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Ukraine/Men/Super+League/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Франция">
             <championship value="Pro A">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/France/Men/PRO+A/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=346" />
                 </bookmaker>
             </championship>
         </country>
@@ -464,12 +564,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Czech+Republic/Men/NBL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Швеция">
             <championship value="SBBF">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Basketball/Sweden/Men/SBBF/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
                 </bookmaker>
             </championship>
         </country>
@@ -484,11 +590,17 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Austria/Men/AVL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Аргентина">
             <championship value="Серия А1">
                 <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
                     <link value="" />
                 </bookmaker>
             </championship>
@@ -498,11 +610,17 @@
                 <bookmaker value="Marathon">
                     <link value="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Бразилия">
             <championship value="Суперлига">
                 <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
                     <link value="" />
                 </bookmaker>
             </championship>
@@ -512,6 +630,9 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Germany/Men/1.Bundesliga/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Греция">
@@ -519,11 +640,17 @@
                 <bookmaker value="Marathon">
                     <link value="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=9304" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Израиль">
             <championship value="Национальная лига">
                 <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
                     <link value="" />
                 </bookmaker>
             </championship>
@@ -533,12 +660,18 @@
                 <bookmaker value="Marathon">
                     <link value="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Италия">
             <championship value="Серия A1">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Italy/Men/Serie+A1/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
                 </bookmaker>
             </championship>
         </country>
@@ -547,12 +680,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Netherlands/Men/Eredivisie/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Польша">
             <championship value="Плюс-лига">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Poland/Men/PlusLiga/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=9108" />
                 </bookmaker>
             </championship>
         </country>
@@ -561,6 +700,9 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Portugal/Men/A1/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Россия">
@@ -568,17 +710,28 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Russia/Men/Super+League/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=2965" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Украина">
             <championship value="Суперлига">
-                <bookmaker value="Marathon"><link value="" />
-            </bookmaker></championship>
+                <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
+            </championship>
         </country>
         <country value="Финляндия">
             <championship value="Местраууслига">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Finland/Men/Mestaruusliiga/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
                 </bookmaker>
             </championship>
         </country>
@@ -587,12 +740,18 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/France/Men/Ligue+A/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Чехия">
             <championship value="Экстралига">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Czech+Republic/Men/Extraliga/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=2326" />
                 </bookmaker>
             </championship>
         </country>
@@ -601,12 +760,18 @@
                 <bookmaker value="Marathon">
                     <link value="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Швеция">
             <championship value="Элитсериен">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Volleyball/Sweden/Men/Elitserien/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
                 </bookmaker>
             </championship>
         </country>
@@ -619,11 +784,17 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Rugby+League/World+Cup+2013/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Англия">
             <championship value="Премьер-лига">
                 <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
                     <link value="" />
                 </bookmaker>
             </championship>
@@ -633,11 +804,17 @@
                 <bookmaker value="Marathon">
                     <link value="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Новая Зеландия">
             <championship value="Кубок ITM">
                 <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
                     <link value="" />
                 </bookmaker>
             </championship>
@@ -653,11 +830,17 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Handball/Denmark/Men/Jack+%26+Jones+Ligaen/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Венгрия">
             <championship value="HB">
                 <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
                     <link value="" />
                 </bookmaker>
             </championship>
@@ -667,6 +850,9 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Handball/Germany/Men/Bundesliga/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Испания">
@@ -674,11 +860,17 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Handball/Spain/Men/Liga+ASOBAL/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Норвегия">
             <championship value="Постенлигаен">
                 <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
                     <link value="" />
                 </bookmaker>
             </championship>
@@ -688,11 +880,17 @@
                 <bookmaker value="Marathon">
                     <link value="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Россия">
             <championship value="Суперлига">
                 <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
                     <link value="" />
                 </bookmaker>
             </championship>
@@ -702,6 +900,9 @@
                 <bookmaker value="Marathon">
                     <link value="" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Франция">
@@ -709,12 +910,28 @@
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Handball/France/Men/LNH/Division+1/" />
                 </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
             </championship>
         </country>
         <country value="Швейцария">
             <championship value="NLA">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Handball/Switzerland/Men/NLA/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
+            </championship>
+        </country>
+        <country value="Швеция">
+            <championship value="Высшая лига">
+                <bookmaker value="Marathon">
+                    <link value="" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=9326" />
                 </bookmaker>
             </championship>
         </country>
