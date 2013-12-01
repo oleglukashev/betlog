@@ -97,8 +97,8 @@ class MarathonBet():
                       "events_data": self.getTeamsAndCoefficientsFromEventDom( championship_content )
                     }
 
-                  result[i] = event_hash
-                  i += 1
+                    result[i] = event_hash
+                    i += 1
 
                 if ( success_championship is False ):
                   print("-- data on this page not founded --")
@@ -185,7 +185,6 @@ class MarathonBet():
 
   def getChampionshipFromEventBlockTitle( self, title ):
     for title_part in title.split("."):
-      print(title_part)
       if Dictionary.findChampionship( title_part.strip(" \r\n") ):
         return Dictionary.findChampionship( title_part.strip(" \r\n") )
       else:
