@@ -3,6 +3,8 @@
 <sports>
   <sport value="Футбол">
     <countries>
+        <country value="Международный">
+        </country>
         <country value="Австралия">
             <championship value="А-лига">
                 <bookmaker value="Marathon">
@@ -583,7 +585,7 @@
   </sport>
   <sport value="Волейбол">
     <countries>
-        <country value="Международные">
+        <country value="Международный">
         </country>
         <country value="Австрия">
             <championship value="AVL">
@@ -779,7 +781,7 @@
   </sport>
   <sport value="Регби">
     <countries>
-        <country value="Международные">
+        <country value="Международный">
             <championship value="Кубок мира 2013">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Rugby+League/World+Cup+2013/" />
@@ -823,7 +825,7 @@
   </sport>
   <sport value="Гандбол">
     <countries>
-        <country value="Международные">
+        <country value="Международный">
         </country>
         <country value="Дания">
             <championship value="J&amp;J-лига">
@@ -939,7 +941,7 @@
   </sport>
   <sport value="Теннис">
     <countries>
-        <country value="Международные">
+        <country value="Международный">
         </country>
     </countries>    
   </sport>

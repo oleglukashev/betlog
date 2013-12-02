@@ -1,0 +1,1892 @@
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Австралия
+championship: А-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Бразилия
+championship: Серия А
+------ error championship -------
+sport: Футбол
+country: Португалия
+championship: Примейра-лига
+------ error championship -------
+sport: Футбол
+country: Португалия
+championship: Примейра-лига
+------ error championship -------
+sport: Хоккей
+country: Международный
+championship: КХЛ
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ exeption  championship -------
+sport: Хоккей
+country: Норвегия
+championship: GET-лига
+------ error championship -------
+sport: Хоккей
+country: Россия
+championship: ВХЛ
+------ error championship -------
+sport: Хоккей
+country: Украина
+championship: ПХЛ
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ exeption  championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ exeption  championship -------
+sport: Баскетбол
+country: Австралия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Аргентина
+championship: LBN
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ exeption  championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ exeption  championship -------
+sport: Баскетбол
+country: Бразилия
+championship: NBB
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ exeption  championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ exeption  championship -------
+sport: Баскетбол
+country: Беларусь
+championship: Премьер-лига
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ exeption  championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ exeption  championship -------
+sport: Баскетбол
+country: Великобритания
+championship: BBL
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ exeption  championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ exeption  championship -------
+sport: Баскетбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ exeption  championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ exeption  championship -------
+sport: Баскетбол
+country: Дания
+championship: CDL
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ exeption  championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ exeption  championship -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ exeption  championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ exeption  championship -------
+sport: Баскетбол
+country: Испания
+championship: АСВ
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ exeption  championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ exeption  championship -------
+sport: Баскетбол
+country: Украина
+championship: Суперлига
+------ error championship -------
+sport: Баскетбол
+country: Франция
+championship: Pro A
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ exeption  championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ exeption  championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ error championship -------
+sport: Баскетбол
+country: Швеция
+championship: SBBF
+------ error championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ error championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ error championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ exeption  championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ error championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ exeption  championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ error championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ exeption  championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ error championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ exeption  championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ error championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ error championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ error championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ exeption  championship -------
+sport: Волейбол
+country: Австрия
+championship: AVL
+------ error championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ error championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ error championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ exeption  championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ error championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ exeption  championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ error championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ exeption  championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ error championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ exeption  championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ error championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ error championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ error championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ exeption  championship -------
+sport: Волейбол
+country: Германия
+championship: Бундеслига 1
+------ error championship -------
+sport: Волейбол
+country: Италия
+championship: Серия A1
+------ error championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ error championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ error championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ exeption  championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ error championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ exeption  championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ error championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ exeption  championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ error championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ exeption  championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ error championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ error championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ error championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ exeption  championship -------
+sport: Волейбол
+country: Нидерланды
+championship: Эредивизи
+------ error championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ error championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ error championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ exeption  championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ error championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ exeption  championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ error championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ exeption  championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ error championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ exeption  championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ error championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ error championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ error championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ exeption  championship -------
+sport: Волейбол
+country: Польша
+championship: Плюс-лига
+------ error championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ error championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ error championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ exeption  championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ error championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ exeption  championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ error championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ exeption  championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ error championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ exeption  championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ error championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ error championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ error championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ exeption  championship -------
+sport: Волейбол
+country: Португалия
+championship: Лига А1
+------ error championship -------
+sport: Волейбол
+country: Россия
+championship: Суперлига
+------ error championship -------
+sport: Волейбол
+country: Финляндия
+championship: Местраууслига
+------ error championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ error championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ error championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ exeption  championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ error championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ exeption  championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ error championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ exeption  championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ error championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ exeption  championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ error championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ error championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ error championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ exeption  championship -------
+sport: Волейбол
+country: Франция
+championship: Лига A
+------ exeption  championship -------
+sport: Волейбол
+country: Чехия
+championship: Экстралига
+------ error championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ error championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ error championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ exeption  championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ error championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ exeption  championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ error championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ exeption  championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ error championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ exeption  championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ error championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ error championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ error championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ exeption  championship -------
+sport: Волейбол
+country: Швеция
+championship: Элитсериен
+------ exeption  championship -------
+sport: Регби
+country: Международный
+championship: Кубок мира 2013
+------ error championship -------
+sport: Гандбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Гандбол
+country: Германия
+championship: Бундеслига
+------ error championship -------
+sport: Гандбол
+country: Франция
+championship: LNH
+------ error championship -------
+sport: Гандбол
+country: Франция
+championship: LNH
+------ error championship -------
+sport: Гандбол
+country: Швейцария
+championship: NLA
+------ error championship -------
+sport: Гандбол
+country: Швейцария
+championship: NLA

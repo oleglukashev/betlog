@@ -1,0 +1,108 @@
+------ success championship -------
+sport: Футбол
+country: Австрия
+championship: Бундеслига
+------ success championship -------
+sport: Футбол
+country: Англия
+championship: Премьер-лига
+------ success championship -------
+sport: Футбол
+country: Аргентина
+championship: Примера дивизион
+------ success championship -------
+sport: Футбол
+country: Бельгия
+championship: Про-лига
+------ success championship -------
+sport: Футбол
+country: Германия
+championship: Бундеслига
+------ success championship -------
+sport: Футбол
+country: Дания
+championship: Суперлига
+------ success championship -------
+sport: Футбол
+country: Испания
+championship: Примера дивизион
+------ success championship -------
+sport: Футбол
+country: Италия
+championship: Серия А
+------ success championship -------
+sport: Футбол
+country: Нидерланды
+championship: Эредивизи
+------ success championship -------
+sport: Футбол
+country: Россия
+championship: Премьер-лига
+------ success championship -------
+sport: Футбол
+country: Украина
+championship: Премьер-лига
+------ success championship -------
+sport: Футбол
+country: Франция
+championship: Лига 1
+------ success championship -------
+sport: Футбол
+country: Швейцария
+championship: Суперлига
+------ success championship -------
+sport: Футбол
+country: Шотландия
+championship: Премьер-лига
+------ success championship -------
+sport: Футбол
+country: Япония
+championship: Джей-лига
+------ success championship -------
+sport: Хоккей
+country: Международный
+championship: NHL
+------ success championship -------
+sport: Хоккей
+country: Австрия
+championship: EBEL
+------ success championship -------
+sport: Хоккей
+country: Беларусь
+championship: Экстралига
+------ success championship -------
+sport: Хоккей
+country: Германия
+championship: DEL
+------ success championship -------
+sport: Хоккей
+country: Италия
+championship: Серия А
+------ success championship -------
+sport: Хоккей
+country: Финляндия
+championship: СМ-лига
+------ success championship -------
+sport: Хоккей
+country: Чехия
+championship: Экстралига
+------ success championship -------
+sport: Хоккей
+country: Швейцария
+championship: NLA
+------ success championship -------
+sport: Хоккей
+country: Швеция
+championship: Аллсвенскан
+------ success championship -------
+sport: Баскетбол
+country: Международный
+championship: NBA
+------ success championship -------
+sport: Гандбол
+country: Дания
+championship: J&J-лига
+------ success championship -------
+sport: Гандбол
+country: Испания
+championship: Лига ASOBAL

@@ -70,11 +70,13 @@ class MarathonBet():
             else:
               print("-- warning: no url for championship: " + championship.getAttribute("value") )
 
+            #content to be
             if ( championship_content is not None ):
               if ( len( championship_content.cssselect("div.main-block-events") ) ):
 
                 success_championship = False
 
+                #begaem po blokam s sobitiami
                 for events_block in championship_content.cssselect("div.main-block-events"):
                   events_block_title_elems = events_block.cssselect('div.block-events-head > *')
                   for events_block_title_elem in events_block_title_elems:
@@ -86,19 +88,35 @@ class MarathonBet():
                   self.current_country = championship.parentNode.getAttribute("value")
                   self.current_championship = championship.getAttribute("value")
 
-                  if ( self.getChampionshipFromEventBlockTitle( events_block_title ) == self.current_championship ):
-                    success_championship = True
 
-                    event_hash = {
-                      "bookmaker": self.bookmaker,
-                      "sport": self.current_sport,
-                      "country": self.current_country,
-                      "championship": self.current_championship,
-                      "events_data": self.getTeamsAndCoefficientsFromEventDom( championship_content )
-                    }
+                  #iedm dalshe esli net isklucheni
+                  if ( self.checkExeptionValuesFromTitle( events_block_title ) != True ):
 
-                    result[i] = event_hash
-                    i += 1
+                    #esli dannie chemp sporta i strani shodatsa s dannimi is titla
+                    if ( self.current_sport == self.getSportFromEventBlockTitle( events_block_title ) and
+                      self.current_country == self.getCountryFromEventBlockTitle( events_block_title ) and 
+                      self.current_championship == self.getChampionshipFromEventBlockTitle( events_block_title) ):
+                      
+                      success_championship = True
+
+                      event_hash = {
+                        "bookmaker": self.bookmaker,
+                        "sport": self.current_sport,
+                        "country": self.current_country,
+                        "championship": self.current_championship,
+                        "events_data": self.getTeamsAndCoefficientsFromEventDom( events_block )
+                      }
+
+                      result[i] = event_hash
+                      i += 1
+
+                      self.loggedSuccessChampionship()
+                    
+                    else:
+                      self.loggedErrorChampionship()
+
+                  else:
+                    self.loggedExeptionChampionship();
 
                 if ( success_championship is False ):
                   print("-- data on this page not founded --")
@@ -110,14 +128,14 @@ class MarathonBet():
             
 
 
-  def getTeamsAndCoefficientsFromEventDom( self, championship_content ):
+  def getTeamsAndCoefficientsFromEventDom( self, events_block ):
     result = {}
     i = 0
     head_tbody = None
 
-    for tbody in championship_content.cssselect("div.main-block-events table.foot-market > tbody"):
+    for tbody in events_block.cssselect("div.main-block-events table.foot-market > tbody"):
       event_hash = {}
-      head_tbody = championship_content.cssselect("div.main-block-events table.foot-market > tr")[0]
+      head_tbody = events_block.cssselect("div.main-block-events table.foot-market > tr")[0]
       count = 0
       for td in tbody.cssselect("tr.event-header > td"):
         head_td = head_tbody.cssselect("th")[count if count == 0 else count + 1]
@@ -183,12 +201,47 @@ class MarathonBet():
 
 
 
+  def getSportFromEventBlockTitle( self, title ):
+    for title_part in title.split("."):
+      if Dictionary.findSport( title_part.strip() ):
+        return Dictionary.findSport( title_part.strip() )
+      else:
+        self.showSportNotFound( title_part.strip() )
+
+
+
+  def getCountryFromEventBlockTitle( self, title ):
+    result = "Международный"
+    for title_part in title.split("."):
+      if Dictionary.findCountry( title_part.strip() ):
+        result = Dictionary.findCountry( title_part.strip() )
+    return result 
+
+
+
   def getChampionshipFromEventBlockTitle( self, title ):
     for title_part in title.split("."):
       if Dictionary.findChampionship( title_part.strip(" \r\n") ):
         return Dictionary.findChampionship( title_part.strip(" \r\n") )
       else:
         self.showChampionshipNotFound( title_part.strip(" \r\n") )
+
+
+
+  def checkExeptionValuesFromTitle( self, title ):
+    for title_part in title.split("."):
+      if ( self.stopExeptionByValue( title_part.strip() ) == True ):
+        return True
+    return False
+
+
+
+  def stopExeptionByValue( self, value ):
+    stopped_values = ['Итоги', 'Женщины']
+    for stopped_value in stopped_values:
+      if value == stopped_value:
+        return True
+    return False
 
 
 
@@ -206,6 +259,8 @@ class MarathonBet():
 
     if ( len( date_array ) == 1 ):
       result_date = str( date.today().day ) + '.' + str( date.today().month ) + '.' + str( date.today().year ) + ' ' + date_array[0]
+    elif ( len( date_array) == 4 ):
+      result_date = str( date_array[0] ) + '.' + months_sample[date_array[1]] + '.' + date_array[2] + ' ' + date_array[3]
     else:
       result_date = str( date_array[0] ) + '.' + months_sample[date_array[1]] + '.' + str( date.today().year ) + ' ' + date_array[2]
 
@@ -229,5 +284,52 @@ class MarathonBet():
     file.write("sport: " + self.current_sport + "\r\n" )
     file.write("country: " + self.current_country + "\r\n" )
     file.write("championship: " + not_found_championship_str + "\r\n")
+    file.close()
+
+
+
+  def showSportNotFound( self, not_found_sport_str ):
+    file = open( "display.txt", 'a', encoding='utf-8' )
+    file.write("------ sport not found -------\r\n")
+    file.write("sport: " + not_found_sport_str + "\r\n" )
+    file.close()
+
+
+
+  def showCountryNotFound( self, not_found_country_str ):
+    file = open( "display.txt", 'a', encoding='utf-8' )
+    file.write("------ championship not found -------\r\n")
+    file.write("sport: " + self.current_sport + "\r\n" )
+    file.write("country: " + not_found_country_str + "\r\n" )
+    file.close()
+
+
+
+  def loggedSuccessChampionship( self ):
+    file = open( "success_championships.txt", 'a', encoding='utf-8' )
+    file.write("------ success championship -------\r\n")
+    file.write("sport: " + self.current_sport + "\r\n" )
+    file.write("country: " + self.current_country + "\r\n" )
+    file.write("championship: " + self.current_championship + "\r\n")
+    file.close()
+
+
+
+  def loggedExeptionChampionship( self ):
+    file = open( "error_championships.txt", 'a', encoding='utf-8' )
+    file.write("------ exeption  championship -------\r\n")
+    file.write("sport: " + self.current_sport + "\r\n" )
+    file.write("country: " + self.current_country + "\r\n" )
+    file.write("championship: " + self.current_championship + "\r\n")
+    file.close()
+
+
+
+  def loggedErrorChampionship( self ):
+    file = open( "error_championships.txt", 'a', encoding='utf-8' )
+    file.write("------ error championship -------\r\n")
+    file.write("sport: " + self.current_sport + "\r\n" )
+    file.write("country: " + self.current_country + "\r\n" )
+    file.write("championship: " + self.current_championship + "\r\n")
     file.close()
 
