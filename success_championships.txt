@@ -1,5 +1,9 @@
 ------ success championship -------
 sport: Футбол
+country: Австралия
+championship: А-лига
+------ success championship -------
+sport: Футбол
 country: Австрия
 championship: Бундеслига
 ------ success championship -------
@@ -34,6 +38,10 @@ championship: Серия А
 sport: Футбол
 country: Нидерланды
 championship: Эредивизи
+------ success championship -------
+sport: Футбол
+country: Португалия
+championship: Примейра-лига
 ------ success championship -------
 sport: Футбол
 country: Россия
@@ -84,10 +92,6 @@ country: Финляндия
 championship: СМ-лига
 ------ success championship -------
 sport: Хоккей
-country: Чехия
-championship: Экстралига
------- success championship -------
-sport: Хоккей
 country: Швейцария
 championship: NLA
 ------ success championship -------
@@ -99,10 +103,22 @@ sport: Баскетбол
 country: Международный
 championship: NBA
 ------ success championship -------
+sport: Баскетбол
+country: Чехия
+championship: NBL
+------ success championship -------
 sport: Гандбол
 country: Дания
 championship: J&J-лига
 ------ success championship -------
 sport: Гандбол
+country: Германия
+championship: Бундеслига
+------ success championship -------
+sport: Гандбол
 country: Испания
 championship: Лига ASOBAL
+------ success championship -------
+sport: Гандбол
+country: Швейцария
+championship: NLA

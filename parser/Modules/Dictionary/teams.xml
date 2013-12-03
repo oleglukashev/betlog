@@ -1484,6 +1484,15 @@
     <team value="Фасса">
       <variant value="Фасса" />
     </team>
+    <team value="Випитено Бронкос">
+      <variant value="Випитено Бронкос" />
+    </team>
+    <team value="Риттен">
+      <variant value="Риттен" />
+    </team>
+    <team value="Вальпелличе">
+      <variant value="Вальпелличе" />
+    </team>
 
     <!-- Норвегия -->
 
@@ -2483,6 +2492,34 @@
     <team value="Одесса">
       <variant value="Одесса" />
     </team>
+
+    <!-- Чехия -->
+
+    <team value="НГ Острава">
+      <variant value="НГ Острава" />
+    </team>
+    <team value="Брно">
+      <variant value="Брно" />
+    </team>
+    <team value="Колин">
+      <variant value="Колин" />
+    </team>
+    <team value="Простеёв">
+      <variant value="Простеёв" />
+    </team>
+    <team value="Дечин">
+      <variant value="Дечин" />
+    </team>
+    <team value="Опава">
+      <variant value="Опава" />
+    </team>
+    <team value="Туржы Свитави">
+      <variant value="Туржы Свитави" />
+    </team>
+    <team value="УСК Прага">
+      <variant value="УСК Прага" />
+    </team>
+
 
 
 
@@ -3690,6 +3727,33 @@
     </team>
     <team value="Энергия Пандурий">
       <variant value="Энергия Пандурий" />
+    </team>
+
+    <!-- Швейцария -->
+
+    <team value="Лейкерс Стефа">
+      <variant value="Лейкерс Стефа" />
+    </team>
+    <team value="ТСВ Ст. Отмар">
+      <variant value="ТСВ Ст. Отмар" />
+    </team>
+    <team value="Пфади Винтертур">
+      <variant value="Пфади Винтертур" />
+    </team>
+    <team value="ХК КТВ Альтдорф">
+      <variant value="ХК КТВ Альтдорф" />
+    </team>
+    <team value="ГК Амицития Цюрих">
+      <variant value="ГК Амицития Цюрих" />
+    </team>
+    <team value="Берн Мури">
+      <variant value="Берн Мури" />
+    </team>
+    <team value="Кринс-Люцерн">
+      <variant value="Кринс-Люцерн" />
+    </team>
+    <team value="Ваккер Тун">
+      <variant value="Ваккер Тун" />
     </team>
   </teams>
 </dictionary>
