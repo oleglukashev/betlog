@@ -81,7 +81,6 @@ class BetcityBet():
                 }
 
                 self.result[i] = event_hash
-
                 i += 1
               else:
                 print("-- data on this page not founded --")
@@ -103,7 +102,7 @@ class BetcityBet():
         head_tbody = tbody
 
       if ( tbody.get("class") == "date" ):
-        date = tbody.cssselect('tr td')[0].text.strip(" \r\n")
+        date = tbody.cssselect('tr td')[0].text.strip()
 
       if ( tbody.get("id") == "line"):
 
@@ -111,18 +110,18 @@ class BetcityBet():
         for td in tbody.cssselect("tr[class] > td"):
           if ( count <= len( head_tbody.cssselect("tr > td") ) - 1 ):
 
-            key = self.getKeyByHeadTitle( head_tbody.cssselect("tr > td")[count].text_content().strip(" \r\n"), None )
+            key = self.getKeyByHeadTitle( head_tbody.cssselect("tr > td")[count].text_content().strip(), None )
             if ( key in event_hash ):
-              key = self.getKeyByHeadTitle( head_tbody.cssselect("tr > td")[count].text_content().strip(" \r\n"), 'skip_first' )
+              key = self.getKeyByHeadTitle( head_tbody.cssselect("tr > td")[count].text_content().strip(), 'skip_first' )
             
             if ( key == "date_event" ):
-              event_hash[key] = self.getDate( date + " " + td.text_content().strip(" \r\n") )
+              event_hash[key] = self.getDate( date + " " + td.text_content().strip() )
             elif ( key == "first_team" or key == "second_team" ):
-              event_hash[key] = self.getTeam( td.text_content().strip(" \r\n") )
+              event_hash[key] = self.getTeam( td.text_content().strip() )
               if ( event_hash[key] is None ):
-                self.showTeamNotFound( td.text_content().strip(" \r\n") )
+                self.showTeamNotFound( td.text_content().strip() )
             else:
-              event_hash[key] = td.text_content().strip(" \r\n")
+              event_hash[key] = td.text_content().strip() if len( td.text_content().strip() ) > 0 else None
 
             count += 1
 
@@ -161,12 +160,7 @@ class BetcityBet():
 
 
   def showTeamNotFound( self, not_found_team_str ):
-    print("------ team not found -------")
-    print("sport: " + self.current_sport )
-    print("country: " + self.current_country )
-    print("championship: " + self.current_championship)
-    print("team: " + not_found_team_str + "\r\n")
-    file = open( "display.txt", 'a', encoding='utf-8' )
+    file = open( "teams_not_found.txt", 'a', encoding='utf-8' )
     file.write("------ team not found -------\r\n")
     file.write("sport: " + self.current_sport + "\r\n" )
     file.write("country: " + self.current_country + "\r\n" )

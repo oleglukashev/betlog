@@ -46,11 +46,11 @@
 										<div class="event-border">&mdash;</div>
 										<div class="event-part">{{ event.opponent_2 }}<div class="event-show-full"></div></div>
 									</div>
-									<div class="event-full-content" ng-show="event.isOpened" ng-class="{ 'event-fade-in': event.isOpened }">
+									<div class="event-full-content" ng-show="event.isOpened" ng-class="{ 'event-fade-in': event.isOpened }" ng-controller="Coefficients">
 										<ul class="coefs-tabs-title">
-										  <li class="coefs-title-item-1 active"><a href="#">1x2</a></li>
-										  <li class="coefs-title-item-2"><a href="#">1x2</a></li>
-										  <li class="coefs-title-item-3"><a href="#">1x2</a></li>
+										  <li class="coefs-title-item-1 active"><a href="#">1/x/2</a></li>
+										  <li class="coefs-title-item-2"><a href="#">1x/12/x2</a></li>
+										  <li class="coefs-title-item-3"><a href="#">Фора/Тотал</a></li>
 										</ul>
 										<div class="coef-tab">
 											<table>
@@ -59,35 +59,12 @@
 													<th>1</th>
 													<th>x</th>
 													<th>2</th>
-													<th>Процент</th>
 												</tr>
-												<tr class="odd">
-													<td class="td1">10bet</td>
-													<td class="td2">1.44</td>
-													<td class="td3">1.56</td>
-													<td class="td4">2.57</td>
-													<td>95%</td>
-												</tr>
-												<tr>
-													<td>10bet</td>
-													<td>1.44<span class="coef-position up"></span></td>
-													<td>1.56<span class="coef-position down"></span></td>
-													<td>2.57</td>
-													<td>95%</td>
-												</tr>
-												<tr class="odd">
-													<td>10bet</td>
-													<td>1.44</td>
-													<td>1.56</td>
-													<td>2.57</td>
-													<td>95%</td>
-												</tr>
-												<tr>
-													<td>10bet</td>
-													<td>1.44</td>
-													<td>1.56</td>
-													<td>2.57</td>
-													<td>95%</td>
+												<tr class="odd" ng-repeat="coefficient in getCoefficientsByEventId( event.id );">
+													<td class="td1">{{coefficient.id}}</td>
+													<td class="td2">{{coefficient.first}}</td>
+													<td class="td3">{{coefficient.draw}}</td>
+													<td class="td4">{{coefficient.second}}</td>
 												</tr>
 											</table>
 										</div>

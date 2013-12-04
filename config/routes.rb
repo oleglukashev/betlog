@@ -5,6 +5,7 @@ Betlog::Application.routes.draw do
     resources :homes
     resources :sports, :only => [:index, :create, :update, :destroy]
     resources :events, :only => [:index, :create, :update, :destroy]
+    resources :coefficients, :only => [:index, :create, :update, :destroy]
     resources :countries, :only => [:index, :create, :update, :destroy]
     resources :championships, :only => [:index, :create, :update, :destroy]
     resources :users, :only => [:new, :create, :edit, :update]
