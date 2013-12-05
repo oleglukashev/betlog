@@ -40,7 +40,7 @@ class BetcityBet():
 
   def getContentByUrl( self, url ):
     http = urllib3.PoolManager()
-    page = http.request( 'POST', url, { 'line_id[]': url[47:] } )
+    page = http.request( 'POST', url, { 'line_id[]': url[47:], 'time': 1, 'gcheck': 9 } )
 
     result = False
     if ( page.status == 200 ):
@@ -160,7 +160,7 @@ class BetcityBet():
 
 
   def showTeamNotFound( self, not_found_team_str ):
-    file = open( "teams_not_found.txt", 'a', encoding='utf-8' )
+    file = open( "team_not_found.txt", 'a', encoding='utf-8' )
     file.write("------ team not found -------\r\n")
     file.write("sport: " + self.current_sport + "\r\n" )
     file.write("country: " + self.current_country + "\r\n" )
