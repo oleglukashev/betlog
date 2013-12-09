@@ -460,9 +460,11 @@
     </team>
     <team value="Байер 04">
       <variant value="Байер 04" />
+      <variant value="Байер Л" />
     </team>
     <team value="Айнтрахт Франкфурт">
       <variant value="Айнтрахт Франкфурт" />
+      <variant value="Айнтрахт Фр" />
     </team>
     <team value="Вольфсбург">
       <variant value="Вольфсбург" />
@@ -472,6 +474,7 @@
     </team>
     <team value="Майнц 05">
       <variant value="Майнц 05" />
+      <variant value="Майнц" />
     </team>
     <team value="Фрайбург">
       <variant value="Фрайбург" />
@@ -486,9 +489,11 @@
     </team>
     <team value="Вердер Бремен">
       <variant value="Вердер Бремен" />
+      <variant value="Вердер" />
     </team>
     <team value="Боруссия Дортмунд">
       <variant value="Боруссия Дортмунд" />
+      <variant value="Боруссия Д" />
     </team>
     <team value="Нюрнберг">
       <variant value="Нюрнберг" />
@@ -504,9 +509,11 @@
     </team>
     <team value="Айнтрахт Брауншвейг">
       <variant value="Айнтрахт Брауншвейг" />
+      <variant value="Айнтрахт Бр" />
     </team>
     <team value="Герта Берлин">
       <variant value="Герта Берлин" />
+      <variant value="Герта" />
     </team>
 
     <!-- Греция -->
@@ -613,6 +620,7 @@
     </team>
     <team value="Ирони Нир Рамат.">
       <variant value="Ирони Нир Рамат." />
+      <variant value="Ирони Нир Рамат-ха-Шарон" />
     </team>
     <team value="Хапоэль Беэр-Шева">
       <variant value="Хапоэль Беэр-Шева" />
@@ -637,6 +645,7 @@
     </team>
     <team value="Бейтар Иерусалим">
       <variant value="Бейтар Иерусалим" />
+      <variant value="Бейтар" />
     </team>
     <team value="Ашдод">
       <variant value="Ашдод" />
@@ -646,9 +655,16 @@
     </team>
     <team value="Ирони Кирьят-Шмона">
       <variant value="Ирони Кирьят-Шмона" />
+      <variant value="Хапоэль Ирони Кирьят-Шмона" />
     </team>
     <team value="Маккаби Тель-Авив">
       <variant value="Маккаби Тель-Авив" />
+    </team>
+    <team value="Маккаби Петах-Тиква">
+      <variant value="Маккаби Петах-Тиква" />
+    </team>
+    <team value="Хапоэль Раанана">
+      <variant value="Хапоэль Раанана" />
     </team>
 
     <!-- Испания -->
@@ -692,6 +708,7 @@
     </team>
     <team value="Реал Мадрид">
       <variant value="Реал Мадрид" />
+      <variant value="Реал М" />
     </team>
     <team value="Реал Сосьедад">
       <variant value="Реал Сосьедад" />
@@ -707,6 +724,7 @@
     </team>
     <team value="Атлетико Мадрид">
       <variant value="Атлетико Мадрид" />
+      <variant value="Атлетико М" />
     </team>
     <team value="Райо Вальекано">
       <variant value="Райо Вальекано" />
@@ -744,6 +762,7 @@
     <team value="Интер Милан">
       <variant value="Интер Милан" />
       <variant value="Интер" />
+      <variant value="Интер М" />
     </team>
     <team value="Дженоа">
       <variant value="Дженоа" />
@@ -996,6 +1015,7 @@
 
     <team value="Волга Нижний Новгород">
       <variant value="Волга Нижний Новгород" />
+      <variant value="Волга НН" />
     </team>
     <team value="Кубань">
       <variant value="Кубань" />
@@ -1008,6 +1028,7 @@
     </team>
     <team value="Динамо Москва">
       <variant value="Динамо Москва" />
+      <variant value="Динамо М" />
     </team>
     <team value="Локомотив Москва">
       <variant value="Локомотив Москва" />
@@ -1018,6 +1039,7 @@
     </team>
     <team value="Ростов">
       <variant value="Ростов" />
+      <variant value="ФК Ростов" />
     </team>
     <team value="Спартак Москва">
       <variant value="Спартак Москва" />
@@ -1042,6 +1064,7 @@
     </team>
     <team value="Крылья Советов">
       <variant value="Крылья Советов" />
+      <variant value="Кр. Советов" />
     </team>
     <team value="Томь">
       <variant value="Томь" />
@@ -1107,7 +1130,6 @@
     <team value="Севастополь">
       <variant value="Севастополь" />
     </team>
-
 
     <!-- Франция -->
 
@@ -1182,7 +1204,6 @@
     <team value="Нант">
       <variant value="Нант" />
     </team>
-
 
     <!-- Шейцария -->
 
@@ -1287,6 +1308,7 @@
 
     <team value="Сент-Джонстон">
       <variant value="Сент-Джонстон" />
+      <variant value="Ст. Джонстон" />
     </team>
     <team value="ФК Данди">
       <variant value="ФК Данди" />
@@ -1296,6 +1318,7 @@
     </team>
     <team value="Данди Юнайтед">
       <variant value="Данди Юнайтед" />
+      <variant value="Данди Юн" />
     </team>
     <team value="Росс Каунти">
       <variant value="Росс Каунти" />
@@ -1311,6 +1334,7 @@
     </team>
     <team value="Сент-Миррен">
       <variant value="Сент-Миррен" />
+      <variant value="Ст. Миррен" />
     </team>
     <team value="Килмарнок">
       <variant value="Килмарнок" />
@@ -1323,6 +1347,10 @@
     </team>
     <team value="Партик Тистл">
       <variant value="Партик Тистл" />
+      <variant value="Партик Тисл" />
+    </team>
+    <team value="Мазервелл">
+      <variant value="Мазервелл" />
     </team>
 
 
@@ -1495,6 +1523,7 @@
 
     <team value="Витебск">
       <variant value="Витебск" />
+      <variant value="ХК Витебск" />
     </team>
     <team value="Лиепаяс Металургс">
       <variant value="Лиепаяс Металургс" />
@@ -1504,27 +1533,33 @@
     </team>
     <team value="Лида">
       <variant value="Лида" />
+      <variant value="ХК Лида" />
     </team>
     <team value="Гомель">
       <variant value="Гомель" />
+      <variant value="ХК Гомель" />
     </team>
     <team value="Могилёв">
       <variant value="Могилёв" />
+      <variant value="ХК Могилев" />
     </team>
     <team value="Юниор-Минск">
       <variant value="Юниор-Минск" />
     </team>
     <team value="Неман Гродно">
       <variant value="Неман Гродно" />
+      <variant value="Неман" />
     </team>
     <team value="Металлург Жлобин">
       <variant value="Металлург Жлобин" />
+      <variant value="Металлург Жл" />
     </team>
     <team value="Шахтёр Солигорск">
       <variant value="Шахтёр Солигорск" />
     </team>
     <team value="Брест">
       <variant value="Брест" />
+      <variant value="ХК Брест" />
     </team>
 
     <!-- Британия -->
@@ -1710,6 +1745,7 @@
     </team>
     <team value="Лос-Анджелес Кингз">
       <variant value="Лос-Анджелес Кингз" />
+      <variant value="Лос-Анджелес" />
     </team>
     <team value="Чикаго Блэкхокс">
       <variant value="Чикаго Блэкхокс" />
@@ -1744,6 +1780,7 @@
     </team>
     <team value="Вашингтон Кэпиталз">
       <variant value="Вашингтон Кэпиталз" />
+      <variant value="Вашингтон" />
     </team>
     <team value="Монреаль Канадиенс">
       <variant value="Монреаль Канадиенс" />
@@ -2041,6 +2078,9 @@
     <team value="КалПа">
       <variant value="КалПа" />
     </team>
+    <team value="Ювяскюля">
+      <variant value="Ювяскюля" />
+    </team>
 
     <!-- Чехия -->
 
@@ -2124,6 +2164,7 @@
     </team>
     <team value="Фрибур-Готтерон">
       <variant value="Фрибур-Готтерон" />
+      <variant value="Фрибург" />
     </team>
     <team value="Рапперсвил">
       <variant value="Рапперсвил" />
@@ -2158,9 +2199,11 @@
     </team>
     <team value="Асплёвен">
       <variant value="Асплёвен" />
+      <variant value="Аспловен" />
     </team>
     <team value="Седертелье">
       <variant value="Седертелье" />
+      <variant value="Сёдертелье" />
     </team>
     <team value="Карлскруна">
       <variant value="Карлскруна" />
@@ -2180,6 +2223,7 @@
     </team>
     <team value="Регле">
       <variant value="Регле" />
+      <variant value="Рёгле" />
     </team>
 
     
@@ -2220,9 +2264,11 @@
     </team>
     <team value="Шарлотт Бобкэтс">
       <variant value="Шарлотт Бобкэтс" />
+      <variant value="Шарлотт" />
     </team>
     <team value="Орландо Мэджик">
       <variant value="Орландо Мэджик" />
+      <variant value="Орландо" />
     </team>
     <team value="Майами Хит">
       <variant value="Майами Хит" />
@@ -2254,6 +2300,7 @@
     </team>
     <team value="Вашингтон Уизардз">
       <variant value="Вашингтон Уизардз" />
+      <variant value="Вашингтон" />
     </team>
     <team value="Даллас Маверикс">
       <variant value="Даллас Маверикс" />
@@ -2265,6 +2312,7 @@
     </team>
     <team value="Сакраменто Кингз">
       <variant value="Сакраменто Кингз" />
+      <variant value="Сакраменто" />
     </team>
     <team value="Нью-Йорк Никс">
       <variant value="Нью-Йорк Никс" />
@@ -2288,6 +2336,7 @@
     </team>
     <team value="Лос-Анджелес Лейкерс">
       <variant value="Лос-Анджелес Лейкерс" />
+      <variant value="Лейкерс" />
     </team>
     <team value="Филадельфия 76-е">
       <variant value="Филадельфия 76-е" />
@@ -2316,6 +2365,7 @@
     </team>
     <team value="Голден Стэйт Уорриорз">
       <variant value="Голден Стэйт Уорриорз" />
+      <variant value="Голден Стэйт" />
     </team>
     <team value="Нью-Орлеан Пеликанс">
       <variant value="Нью-Орлеан Пеликанс" />
@@ -2325,12 +2375,14 @@
 
     <team value="Аделаида 36е">
       <variant value="Аделаида 36е" />
+      <variant value="Аделаида" />
     </team>
     <team value="Таунсвилл Крокодайлз">
       <variant value="Таунсвилл Крокодайлз" />
     </team>
     <team value="Вуллонгонг Хокс">
       <variant value="Вуллонгонг Хокс" />
+      <variant value="Вуллонгонг" />
     </team>
     <team value="Нью Зиланд Брейкерз">
       <variant value="Нью Зиланд Брейкерз" />
@@ -2340,6 +2392,7 @@
     </team>
     <team value="Кайрнс Тейпенс">
       <variant value="Кайрнс Тейпенс" />
+      <variant value="Кэрнc" />
     </team>
     <team value="Перт Уайлдкэтс">
       <variant value="Перт Уайлдкэтс" />
@@ -2352,9 +2405,11 @@
 
     <team value="Клостернойбург Дюкс">
       <variant value="Клостернойбург Дюкс" />
+      <variant value="Клоштернойбург" />
     </team>
     <team value="УБК Санкт-Пёльтен">
       <variant value="УБК Санкт-Пёльтен" />
+      <variant value="Ст. Пёльтен" />
     </team>
     <team value="УБШК Грац">
       <variant value="УБШК Грац" />
@@ -2368,12 +2423,14 @@
     </team>
     <team value="Трайскирхен Лайонз">
       <variant value="Трайскирхен Лайонз" />
+      <variant value="Трайскирхен" />
     </team>
     <team value="БК Вена">
       <variant value="БК Вена" />
     </team>
     <team value="Оберварт Ганнерз">
       <variant value="Оберварт Ганнерз" />
+      <variant value="Оберварт" />
     </team>
     <team value="Фюрстенфельд Пантерз">
       <variant value="Фюрстенфельд Пантерз" />
@@ -2381,9 +2438,11 @@
     </team>
     <team value="Капфенберг Буллз">
       <variant value="Капфенберг Буллз" />
+      <variant value="Капфенберг" />
     </team>
     <team value="Гмунден Суонс">
       <variant value="Гмунден Суонс" />
+      <variant value="Сванс Гмунден" />
     </team>
 
     <!-- Аргентина -->
@@ -2403,8 +2462,29 @@
     <team value="Кильмес">
       <variant value="Кильмес" />
     </team>
-    <team value="">
-      <variant value="" />
+    <team value="Депортиво Либертад">
+      <variant value="Депортиво Либертад" />
+    </team>
+    <team value="Атлетико Ланус">
+      <variant value="Атлетико Ланус" />
+    </team>
+    <team value="Пеньяроль">
+      <variant value="Пеньяроль" />
+    </team>
+    <team value="Регатас Коррьентес">
+      <variant value="Регатас Коррьентес" />
+    </team>
+    <team value="Сиклиста Олимпико">
+      <variant value="Сиклиста Олимпико" />
+    </team>
+    <team value="Химнасия Эсгрима">
+      <variant value="Химнасия Эсгрима" />
+    </team>
+    <team value="Хувентуд Сиониста">
+      <variant value="Хувентуд Сиониста" />
+    </team>
+    <team value="Кимса">
+      <variant value="Кимса" />
     </team>
     <team value="">
       <variant value="" />
@@ -2412,7 +2492,10 @@
     <team value="">
       <variant value="" />
     </team>
-    \<team value="">
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
       <variant value="" />
     </team>
 
@@ -2440,6 +2523,52 @@
       <variant value="БГУИР" />
     </team>
 
+    <!-- Бразилия -->
+
+    <team value="Палмейрас">
+      <variant value="Палмейрас" />
+    </team>
+    <team value="Франка">
+      <variant value="Франка" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    Франка
+
     <!-- Великобритания -->
 
     <team value="Суррей Юнайтед">
@@ -2447,6 +2576,7 @@
     </team>
     <team value="Лондон Лайонз">
       <variant value="Лондон Лайонз" />
+      <variant value="Лондон Лайонс" />
     </team>
     <team value="Дарем Уайлдкэтс">
       <variant value="Дарем Уайлдкэтс" />
@@ -2471,12 +2601,20 @@
     </team>
     <team value="Манчестер Джайнтс">
       <variant value="Манчестер Джайнтс" />
+      <variant value="Манчестер Джайантс" />
     </team>
     <team value="Ньюкасл Иглз">
       <variant value="Ньюкасл Иглз" />
     </team>
     <team value="Сарри Хит">
       <variant value="Сарри Хит" />
+    </team>
+    <team value="Бирмингем Найтс">
+      <variant value="Бирмингем Найтс" />
+    </team>
+    <team value="Плимут Рейдерс">
+      <variant value="Плимут Рейдерс" />
+      <variant value="Плимут Рэйдерс" />
     </team>
 
     <!-- Германия -->
@@ -2486,6 +2624,7 @@
     </team>
     <team value="Ратиофарм Ульм">
       <variant value="Ратиофарм Ульм" />
+      <variant value="Ульм" />
     </team>
     <team value="Брозе">
       <variant value="Брозе" />
@@ -2498,13 +2637,15 @@
     </team>
     <team value="Тюбинген">
       <variant value="Тюбинген" />
+      <variant value="Тюбенген" />
     </team>
     <team value="Миттельдойче">
       <variant value="Миттельдойче" />
       <variant value="Миттельдойчер" />
     </team>
-    <team value="с.Оливер Баскетс Вюрцбург">
+    <team value="Вюрцбург">
       <variant value="с.Оливер Баскетс Вюрцбург" />
+      <variant value="Вюрцбург" />
     </team>
     <team value="Гессен">
       <variant value="Гессен" />
@@ -2517,15 +2658,18 @@
     </team>
     <team value="Феникс Хаген">
       <variant value="Феникс Хаген" />
+      <variant value="Хаген" />
     </team>
     <team value="Альба Берлин">
       <variant value="Альба Берлин" />
+      <variant value="Альба" />
     </team>
     <team value="Брауншвейг">
       <variant value="Брауншвейг" />
     </team>
     <team value="Бонн">
       <variant value="Бонн" />
+      <variant value="Телеком Бонн" />
     </team>
     <team value="Трир">
       <variant value="Трир" />
@@ -2539,6 +2683,7 @@
     </team>
     <team value="Раста">
       <variant value="Раста" />
+      <variant value="Раста Вехта" />
     </team>
 
     <!-- Греция -->
@@ -2551,6 +2696,7 @@
     </team>
     <team value="Колоссос">
       <variant value="Колоссос" />
+      <variant value="Колосос" />
     </team>
     <team value="Кавала">
       <variant value="Кавала" />
@@ -2570,9 +2716,11 @@
     </team>
     <team value="Ретимно">
       <variant value="Ретимно" />
+      <variant value="АГО Ретимно" />
     </team>
     <team value="Драмас">
       <variant value="Драмас" />
+      <variant value="КАО Драма" />
     </team>
     <team value="Панатинаикос">
       <variant value="Панатинаикос" />
@@ -2585,6 +2733,14 @@
     </team>
     <team value="Олимпиакос">
       <variant value="Олимпиакос" />
+    </team>
+    <team value="Трикала 2000">
+      <variant value="Трикала 2000" />
+      <variant value="Трикалла" />
+    </team>
+    <team value="НЕА Кифисия">
+      <variant value="НЕА Кифисия" />
+      <variant value="Неа Кифисия" />
     </team>
 
     <!-- Израиль -->
@@ -2637,6 +2793,7 @@
     </team>
     <team value="Фуенлабрада">
       <variant value="Фуенлабрада" />
+      <variant value="Фуэнлабрада" />
     </team>
     <team value="Канариас">
       <variant value="Канариас" />
@@ -2652,6 +2809,7 @@
     </team>
     <team value="Реал Мадрид">
       <variant value="Реал Мадрид" />
+      <variant value="Реал М" />
     </team>
     <team value="Ховентуд">
       <variant value="Ховентуд" />
@@ -2677,6 +2835,7 @@
     </team>
     <team value="Гран Канария">
       <variant value="Гран Канария" />
+      <variant value="Гран-Канария" />
     </team>
     <team value="Уникаха">
       <variant value="Уникаха" />
@@ -2687,23 +2846,33 @@
     <team value="Манреса">
       <variant value="Манреса" />
     </team>
+    <team value="Ла Лагуна">
+      <variant value="Ла Лагуна" />
+    </team>
+    <team value="Гипускоа">
+      <variant value="Гипускоа" />
+    </team>
 
     <!-- Италия -->
 
     <team value="Виртус Болонья">
       <variant value="Виртус Болонья" />
+      <variant value="Виртус" />
     </team>
     <team value="Бриндизи">
       <variant value="Бриндизи" />
+      <variant value="Энел Бриндизи" />
     </team>
     <team value="Ваноли Кремона">
       <variant value="Ваноли Кремона" />
     </team>
     <team value="Реджо Эмилия">
       <variant value="Реджо Эмилия" />
+      <variant value="Реджи Эмилия" />
     </team>
     <team value="Виктория Либертас">
       <variant value="Виктория Либертас" />
+      <variant value="Скаволини" />
     </team>
     <team value="Варезе">
       <variant value="Варезе" />
@@ -2713,6 +2882,7 @@
     </team>
     <team value="Сассари">
       <variant value="Сассари" />
+      <variant value="Сарденья Сассари" />
     </team>
     <team value="Лоттоматика Рома">
       <variant value="Лоттоматика Рома" />
@@ -2824,8 +2994,56 @@
     <team value="Орлеан">
       <variant value="Орлеан" />
     </team>
-    <team value="Орлеан">
-      <variant value="Орлеан" />
+    <team value="Гравелин">
+      <variant value="Гравелин" />
+    </team>
+    <team value="Антиб">
+      <variant value="Антиб" />
+    </team>
+    <team value="ПСЖ-Леваллуа">
+      <variant value="ПСЖ-Леваллуа" />
+    </team>
+    <team value="Дижон">
+      <variant value="Дижон" />
+    </team>
+    <team value="Лион-Виллербанн">
+      <variant value="Лион-Виллербанн" />
+    </team>
+    <team value="Ле-Ман">
+      <variant value="Ле-Ман" />
+    </team>
+    <team value="Шалон">
+      <variant value="Шалон" />
+    </team>
+    <team value="Шоле">
+      <variant value="Шоле" />
+    </team>
+    <team value="Нантерр">
+      <variant value="Нантерр" />
+    </team>
+    <team value="Гавр">
+      <variant value="Гавр" />
+    </team>
+    <team value="Роанн">
+      <variant value="Роанн" />
+    </team>
+    <team value="По-Ортез">
+      <variant value="По-Ортез" />
+    </team>
+    <team value="Страсбург">
+      <variant value="Страсбург" />
+    </team>
+    <team value="Лимож">
+      <variant value="Лимож" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
+    </team>
+    <team value="">
+      <variant value="" />
     </team>
 
     <!-- Чехия -->
@@ -2856,6 +3074,9 @@
     </team>
     <team value="Нимбурк">
       <variant value="Нимбурк" />
+    </team>
+    <team value="Йиндржихув-Градец">
+      <variant value="Йиндржихув-Градец" />
     </team>
 
 
@@ -2917,6 +3138,7 @@
     </team>
     <team value="ПСМ Волей">
       <variant value="ПСМ Волей" />
+      <variant value="ПСМ" />
     </team>
     <team value="Формоса">
       <variant value="Формоса" />
@@ -3005,8 +3227,14 @@
     <team value="Супер Императрис">
       <variant value="Супер Императрис" />
     </team>
-    <team value=" УФЖФ">
+    <team value="УФЖФ">
       <variant value=" УФЖФ" />
+    </team>
+    <team value="Бразил Кирин">
+      <variant value="Бразил Кирин" />
+    </team>
+    <team value="Монтес Кларос">
+      <variant value="Монтес Кларос" />
     </team>
 
     <!-- Германия -->
@@ -3043,6 +3271,16 @@
     </team>
     <team value="Мёрзер">
       <variant value="Мёрзер" />
+      <variant value="Морсер" />
+    </team>
+    <team value="Ботроп">
+      <variant value="Ботроп" />
+    </team>
+    <team value="Берлин СК">
+      <variant value="Берлин СК" />
+    </team>
+    <team value="Кобург-Груб">
+      <variant value="Кобург-Груб" />
     </team>
 
     <!-- Греция -->
@@ -3156,7 +3394,7 @@
     <team value="Сарагоса">
       <variant value="Сарагоса" />
     </team>
-
+    
     <!-- Италия -->
 
     <team value="Модена">
@@ -3164,6 +3402,7 @@
     </team>
     <team value="Вибо-Валентия">
       <variant value="Вибо-Валентия" />
+      <variant value="Вибо Валентия" />
     </team>
     <team value="Латина">
       <variant value="Латина" />
@@ -3194,6 +3433,12 @@
     </team>
     <team value="Перуджа">
       <variant value="Перуджа" />
+    </team>
+    <team value="Мольфетта">
+      <variant value="Мольфетта" />
+    </team>
+    <team value="Читта-ди-Кастелло">
+      <variant value="Читта-ди-Кастелло" />
     </team>
 
     <!-- Нидерланды -->
@@ -3455,24 +3700,30 @@
     </team>
     <team value="Нант-Резе">
       <variant value="Нант-Резе" />
+      <variant value="Нант Резе" />
     </team>
     <team value="Монпелье">
       <variant value="Монпелье" />
     </team>
-    <team value="Нарбонн">
+    <team value="Нарбонна">
       <variant value="Нарбонн" />
+      <variant value="Нарбонна" />
     </team>
     <team value="Ренн">
       <variant value="Ренн" />
     </team>
     <team value="Пари">
       <variant value="Пари" />
+      <variant value="Пари Воллей" />
     </team>
     <team value="Шомон">
       <variant value="Шомон" />
     </team>
     <team value="Тур">
       <variant value="Тур" />
+    </team>
+    <team value="Сен-Назер">
+      <variant value="Сен-Назер" />
     </team>
 
     <!-- Чехия -->
@@ -3779,6 +4030,7 @@
     </team>
     <team value="Сканнерборг">
       <variant value="Сканнерборг" />
+      <variant value="Скандерборг" />
     </team>
     <team value="Ольборг">
       <variant value="Ольборг" />
@@ -3797,6 +4049,7 @@
     </team>
     <team value="Кольдинг">
       <variant value="Кольдинг" />
+      <variant value="КИФ Колдинг" />
     </team>
     <team value="Твис Хольстебро">
       <variant value="Твис Хольстебро" />
@@ -3818,6 +4071,12 @@
     </team>
     <team value="ГОГ">
       <variant value="ГОГ" />
+    </team>
+    <team value="Скьерн">
+      <variant value="Скьерн" />
+    </team>
+    <team value="Скиве">
+      <variant value="Скиве" />
     </team>
 
     <!-- Израиль -->
@@ -3850,6 +4109,9 @@
     <team value="Орошхаза">
       <variant value="Орошхаза" />
     </team>
+    <team value="Веспрем">
+      <variant value="Веспрем" />
+    </team>
 
     <!-- Германия -->
 
@@ -3858,15 +4120,18 @@
     </team>
     <team value="Фриш Ауф Гёппинген">
       <variant value="Фриш Ауф Гёппинген" />
+      <variant value="Гёппинген" />
     </team>
     <team value="Фюхсе Берлин">
       <variant value="Фюхсе Берлин" />
+      <variant value="Фюксе Берлин" />
     </team>
     <team value="Гроссвальштадт">
       <variant value="Гроссвальштадт" />
     </team>
     <team value="Вецлар">
       <variant value="Вецлар" />
+      <variant value="Ветцлар" />
     </team>
     <team value="Эссен">
       <variant value="Эссен" />
@@ -3900,15 +4165,18 @@
     </team>
     <team value="Киль">
       <variant value="Киль" />
+      <variant value="ТХВ Киль" />
     </team>
     <team value="Ганновер-Бургдорф">
       <variant value="Ганновер-Бургдорф" />
     </team>
     <team value="Нетельштедт-Люббеке">
       <variant value="Нетельштедт-Люббеке" />
+      <variant value="Люббекке" />
     </team>
     <team value="Рейн-Неккар Лёвен">
       <variant value="Рейн-Неккар Лёвен" />
+      <variant value="Рейн-Некар" />
     </team>
     <team value="Эмсдеттен">
       <variant value="Эмсдеттен" />
@@ -4006,6 +4274,7 @@
     </team>
     <team value="Арендаль">
       <variant value="Арендаль" />
+      <variant value="Арендал" />
     </team>
     <team value="Хаугаланн">
       <variant value="Хаугаланн" />
@@ -4078,6 +4347,7 @@
     </team>
     <team value="СКИФ">
       <variant value="СКИФ" />
+      <variant value="Скиф Омск" />
     </team>
     <team value="Сунгуль">
       <variant value="Сунгуль" />
@@ -4096,6 +4366,9 @@
     </team>
     <team value="Пермские медведи">
       <variant value="Пермские медведи" />
+    </team>
+    <team value="УГНТУ Уфа">
+      <variant value="УГНТУ Уфа" />
     </team>
 
     <!-- Румыния -->
