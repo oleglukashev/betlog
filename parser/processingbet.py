@@ -1,4 +1,5 @@
 from sqlalchemy import *
+from sqlalchemy import desc
 from datetime import datetime
 import pytz
 from database import Database
@@ -72,31 +73,52 @@ class ProcessingBet(Database):
           }
           
           date_event = coefficients['date_event'] if 'date_event' in coefficients.keys() else ""
-          events_query = self.session.query(Events).filter(Events.opponent_1 == first_team).filter(Events.opponent_2 == second_team).filter(Events.date_event == date_event)
+          events_query = self.session.query(Events).filter(Events.opponent_1 == first_team).filter(Events.opponent_2 == second_team)
 
-          if ( events_query.first() == None ):
+          if ( len( events_query.all() ) > 0 ):
+            for result_item in events_query.all():
+              event = result_item
+              event_id = None
+
+              print("len > 0")
+              print(event)
+
+              if ( ( event.date_event - coefficients['date_event'] ).days == 0 ):
+                event_id = event.id
+              
+            if ( event_id is None ):
+              event = self.session.add(Events(championship_id, first_team, second_team, date_event))
+              self.session.commit()
+              event = self.session.query(Events).filter(Events.opponent_1 == first_team).filter(Events.opponent_2 == second_team).order_by(desc(Events.created_at)).limit(1)
+              print(event)
+              event_id = event.id
+              print("event_id is none")
+              print(event)
+          else:
             event = self.session.add(Events(championship_id, first_team, second_team, date_event))
             self.session.commit()
-          event = events_query.first()
-          event_id = event.id
+            event = events_query.first()
+            event_id = event.id
+            print("len == 0")
+            print(event)
 
           coefficients_block = self.session.add(
             Coefficients(event_id,
-                          bookmaker_id, 
-                          event_data['first'], 
-                          event_data['draw'], 
-                          event_data['second'], 
-                          event_data['first_or_draw'], 
-                          event_data['first_or_second'], 
-                          event_data['draw_or_second'], 
-                          event_data['first_fora'], 
-                          event_data['second_fora'],
-                          event_data['coeff_first_fora'], 
-                          event_data['coeff_second_fora'], 
-                          event_data['total_less'], 
-                          event_data['total_more'], 
-                          event_data['coeff_first_total'], 
-                          event_data['coeff_second_total']
+              bookmaker_id, 
+              event_data['first'], 
+              event_data['draw'], 
+              event_data['second'], 
+              event_data['first_or_draw'], 
+              event_data['first_or_second'], 
+              event_data['draw_or_second'], 
+              event_data['first_fora'], 
+              event_data['second_fora'],
+              event_data['coeff_first_fora'], 
+              event_data['coeff_second_fora'], 
+              event_data['total_less'], 
+              event_data['total_more'], 
+              event_data['coeff_first_total'], 
+              event_data['coeff_second_total']
           ))
         
         self.session.commit()
