@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
   
   def create
-    if ( params[:user][:password] )
-      params[:user][:password_confirmation] = params[:user][:password]
+    if ( params[:password] )
+      params[:password_confirmation] = params[:password]
     end
+
+    logger.info(11111111111)
+    logger.info(user_params)
+    logger.info(11111111111)
   	
     @user = User.new( user_params )
 
@@ -43,6 +47,8 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:login, :name, :role, :password, :password_confirmation)
+    params.require(:user).permit(:login, :name, :role)
+      .merge(:password => params[:password])
+      .merge(:password_confirmation => params[:password_confirmation])
   end
 end

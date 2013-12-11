@@ -1,0 +1,30 @@
+<div class="sport-menu" ng-controller="Sports">
+  <div class="sport-menu-items"><div><div>
+    <ul class="sport-menu-items-container">
+      <li ng-repeat="sport in sports" ng-click="selectSport(sport);" ng-show="hasEvents(sport);"><p>{{ sport.name }}</p>
+        <div class="sport-menu-item-countries">
+          <div>
+            <p><a href="javascript://">Россия</a></p>
+            <p><a href="javascript://">Австрия</a></p>
+            <p><a href="javascript://">Австралия</a></p>
+            <p><a href="javascript://">Германия</a></p>
+            <p><a href="javascript://">Дания</a></p>
+            <p><a href="javascript://">США</a></p>
+            <p><a href="javascript://">Белоруссия</a></p>
+            <p><a href="javascript://">Словения</a></p>
+          </div>
+          <div>
+            <p><a href="javascript://">Англия</a></p>
+            <p><a href="javascript://">Франция</a></p>
+            <p><a href="javascript://">Испания</a></p>
+            <p><a href="javascript://">Италия</a></p>
+            <p><a href="javascript://">Мексика</a></p>
+            <p><a href="javascript://">Уругвай</a></p>
+            <p><a href="javascript://">Бразилия</a></p>
+            <p><a href="javascript://">Аргентина</a></p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div></div></div>
+</div>

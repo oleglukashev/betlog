@@ -33,8 +33,8 @@ betlog_controllers.controller('Registration', ['$scope', '$http', '$element', '$
       var data = {
         'login': $scope.register.login,
         'name': $scope.register.name,
-        'password': $scope.register.password,
-        'subscribed': $scope.register.subscribed
+        'password': $scope.register.password
+        //'subscribed': $scope.register.subscribed
       }
 
       $http({ method: 'POST', url: '/users', data: data })
@@ -43,8 +43,8 @@ betlog_controllers.controller('Registration', ['$scope', '$http', '$element', '$
             $scope.register = {
               login: '',
               password: '',
-              name: '',
-              subscribed: false
+              name: ''
+              //subscribed: false
             }
             
             $scope.close();

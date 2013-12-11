@@ -11,8 +11,7 @@ class User < ActiveRecord::Base
 	validates :login, :presence => true, 
                     :length => {:minimum => 3, :maximum => 128},
                     :uniqueness => true,
-                    :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}	
-
+                    :format => {:with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}
 
 	def encrypt_password
 		self.password = Digest::MD5.hexdigest( password )

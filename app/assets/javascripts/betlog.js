@@ -27,4 +27,8 @@ var betlog_controllers = angular.module('betlog.controllers', [])
       otherwise({
         redirectTo: '/phones'
       });
+  }])
+
+  .config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
   }]);

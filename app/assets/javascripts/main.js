@@ -19,18 +19,6 @@ $(document).ready(function(){
 		}, 200);
 	});
 
-	/* Carousel pastevents*/
-	$("ul.pastevents-items-carousel").bxSlider({
-		slideWidth: 90,
-		startSlide: 1,
-		maxSlides: 9,
-		minSlides: 1,
-    slideMargin: 3,
-    moveSlides: 1,
-    auto: true,
-    pager: false
-	});
-
 	/* event */
 	$('div.event div.event-title').on('click', function() {
 		if ( $(this).next().is(':visible') ) {
