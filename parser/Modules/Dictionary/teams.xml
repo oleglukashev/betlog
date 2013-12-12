@@ -224,6 +224,7 @@
     </team>
     <team value="Сан-Лоренсо">
       <variant value="Сан-Лоренсо" />
+      <variant value="Сан Лоренцо" />
     </team>
     <team value="Атлетико Рафаэла">
       <variant value="Атлетико Рафаэла" />
@@ -235,6 +236,7 @@
     </team>
     <team value="Ньюэлз Олд Бойз">
       <variant value="Ньюэлз Олд Бойз" />
+      <variant value="Ньюэлз О.Б." />
     </team>
     <team value="Бельграно">
       <variant value="Бельграно" />
@@ -623,6 +625,7 @@
     <team value="Ирони Нир Рамат.">
       <variant value="Ирони Нир Рамат." />
       <variant value="Ирони Нир Рамат-ха-Шарон" />
+      <variant value="Ирони Рамат-ха-Шарон" />
     </team>
     <team value="Хапоэль Беэр-Шева">
       <variant value="Хапоэль Беэр-Шева" />
@@ -1729,9 +1732,13 @@
     </team>
     <team value="Волеранга">
       <variant value="Волеранга" />
+      <variant value="Волеренга" />
     </team>
     <team value="Спарта Уорриорз">
       <variant value="Спарта Уорриорз" />
+    </team>
+    <team value="Спарта С">
+      <variant value="Спарта С" />
     </team>
 
     <!-- NHL -->
@@ -2406,6 +2413,7 @@
     </team>
     <team value="Таунсвилл Крокодайлз">
       <variant value="Таунсвилл Крокодайлз" />
+      <variant value="Таунсвилл" />
     </team>
     <team value="Вуллонгонг Хокс">
       <variant value="Вуллонгонг Хокс" />
@@ -2424,6 +2432,7 @@
     </team>
     <team value="Перт Уайлдкэтс">
       <variant value="Перт Уайлдкэтс" />
+      <variant value="Перт" />
     </team>
     <team value="Мельбурн Тайгерз">
       <variant value="Мельбурн Тайгерз" />
@@ -2575,20 +2584,32 @@
     <team value="Лига Сорокабана">
       <variant value="Лига Сорокабана" />
     </team>
-    <team value="">
-      <variant value="" />
+    <team value="Гояния">
+      <variant value="Гояния" />
     </team>
-    <team value="">
-      <variant value="" />
+    <team value="Макаэ">
+      <variant value="Макаэ" />
     </team>
-    <team value="">
-      <variant value="" />
+    <team value="Сан-Жозе Унимед">
+      <variant value="Сан-Жозе Унимед" />
     </team>
-    <team value="">
-      <variant value="" />
+    <team value="Гремио Можи-дас-Крузис">
+      <variant value="Гремио Можи-дас-Крузис" />
     </team>
-    <team value="">
-      <variant value="" />
+    <team value="Велья Гарото">
+      <variant value="Велья Гарото" />
+    </team>
+    <team value="Паулистано">
+      <variant value="Паулистано" />
+    </team>
+    <team value="Пиньерос">
+      <variant value="Пиньерос" />
+    </team>
+    <team value="Сеаренсе">
+      <variant value="Сеаренсе" />
+    </team>
+    <team value="Минас">
+      <variant value="Минас" />
     </team>
     <team value="">
       <variant value="" />
@@ -3032,6 +3053,7 @@
     </team>
     <team value="Днепр-Азот">
       <variant value="Днепр-Азот" />
+      <variant value="ДнепрАЗОТ" />
     </team>
     <team value="Днепр">
       <variant value="Днепр" />
@@ -3241,6 +3263,7 @@
 
     <team value="УНТРЕФ Волей">
       <variant value="УНТРЕФ Волей" />
+      <variant value="УНТРЕФ" />
     </team>
     <team value="Олимпо Баия">
       <variant value="Олимпо Баия" />
@@ -3260,6 +3283,7 @@
     </team>
     <team value="Бока-Рио Уругвай">
       <variant value="Бока-Рио Уругвай" />
+      <variant value="Бока Рио" />
     </team>
     <team value="Гигантес">
       <variant value="Гигантес" />
@@ -3767,6 +3791,7 @@
     </team>
     <team value="Лаккапяя">
       <variant value="Лаккапяя" />
+      <variant value="Лаккапя ПерПо" />
     </team>
     <team value="Тиикерит">
       <variant value="Тиикерит" />
@@ -3779,6 +3804,7 @@
     </team>
     <team value="Иску-Волей">
       <variant value="Иску-Волей" />
+      <variant value="Иску-Воллей" />
     </team>
     <team value="Лиига Риенто">
       <variant value="Лиига Риенто" />
@@ -4228,6 +4254,7 @@
 
     <team value="Цеглед">
       <variant value="Цеглед" />
+      <variant value="Цегледи" />
     </team>
     <team value="Орошхаза">
       <variant value="Орошхаза" />
@@ -4243,6 +4270,9 @@
     </team>
     <team value="Пик Сегед">
       <variant value="Пик Сегед" />
+    </team>
+    <team value="Дьёндьёши">
+      <variant value="Дьёндьёши" />
     </team>
 
     <!-- Германия -->
@@ -4512,12 +4542,14 @@
 
     <team value="Университатя Сучава">
       <variant value="Университатя Сучава" />
+      <variant value="Сучава" />
     </team>
     <team value="Караш-Северин">
       <variant value="Караш-Северин" />
     </team>
     <team value="Штиинца Бакэу">
       <variant value="Штиинца Бакэу" />
+      <variant value="Стинта Бакау" />
     </team>
     <team value="Потаисса Турда">
       <variant value="Потаисса Турда" />
@@ -4536,6 +4568,7 @@
     </team>
     <team value="Политехника Тимишоара">
       <variant value="Политехника Тимишоара" />
+      <variant value="Поли Тимишоара" />
     </team>
     <team value="Плоешти">
       <variant value="Плоешти" />
@@ -4548,6 +4581,12 @@
     </team>
     <team value="Одорхею-Секуйеск">
       <variant value="Одорхею-Секуйеск" />
+    </team>
+    <team value="Байя Маре">
+      <variant value="Байя Маре" />
+    </team>
+    <team value="Бухарест ЦСМ">
+      <variant value="Бухарест ЦСМ" />
     </team>
 
     <!-- Швейцария -->
