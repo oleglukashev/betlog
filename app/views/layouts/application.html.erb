@@ -59,12 +59,33 @@
 													<th>1</th>
 													<th>x</th>
 													<th>2</th>
+													<th>1x</th>
+													<th>12</th>
+													<th>x2</th>
+													<th>Фора1</th>
+													<th>Коэф. форы</th>
+													<th>Фора2</th>
+													<th>Коэф. форы</th>
+													<th>Тотал (меньше)</th>
+													<th>Коэф. тотал</th>
+													<th>Тотал (больше)</th>
+													<th>Коэф. тотал</th>
 												</tr>
 												<tr class="odd" ng-repeat="coefficient in getCoefficientsByEventId( event.id );">
-													<td class="td1">{{coefficient.bookmaker_id}}</td>
+													<td class="td1">{{coefficient.bookmaker_name}}</td>
 													<td class="td2">{{coefficient.first}}</td>
 													<td class="td3">{{coefficient.draw}}</td>
-													<td class="td4">{{coefficient.second}}</td>
+													<td class="td4">{{coefficient.first_or_draw}}</td>
+													<td class="td2">{{coefficient.first_or_second}}</td>
+													<td class="td3">{{coefficient.second_or_draw}}</td>
+													<td class="td4">{{coefficient.first_fora}}</td>
+													<td class="td4">{{coefficient.coeff_first_fora}}</td>
+													<td class="td4">{{coefficient.second_fora}}</td>
+													<td class="td4">{{coefficient.coeff_second_fora}}</td>
+													<td class="td4">{{coefficient.total_less}}</td>
+													<td class="td4">{{coefficient.coeff_total_less}}</td>
+													<td class="td4">{{coefficient.total_more}}</td>
+													<td class="td4">{{coefficient.coeff_total_more}}</td>
 												</tr>
 											</table>
 										</div>
@@ -74,7 +95,6 @@
 										</div>
 									</div>
 								</div>
-		
 								<div class="clear"></div>
 							</div>
 						</div>
@@ -83,18 +103,18 @@
 				</div>
 				<div class="country-menu" ng-controller="Championships">
 					<ul>
-						<li ng-class="{ active: country.isActive }" ng-repeat="country in getCountriesByActiveSport()">
-							<div class="country-menu-item" ng-click="selectCountry( country );">
+						<li class="active">
+							<div class="country-menu-item">
 								<div class="country-menu-item-top"><div></div></div>
-								<div class="country-menu-item-body" ng-class="{ 'no-border': getCountriesByActiveSport()[ $index-1 ].isActive }">
-									{{ country.name }}
+								<div class="country-menu-item-body">
+									{{ active_country.name }}
 								</div>
 								<div class="country-menu-item-bottom"><div></div></div>
 							</div>
-							<div class="country-submenu" ng-show="getChampionshipsByActiveCountry().length">
+							<div class="country-submenu">
 								<div class="country-submenu-body">
 									<ul>
-										<li ng-repeat="champship in getChampionshipsByActiveCountry()" ng-class="{ active: champship.isActive }">{{ champship.name }}</li>
+										<li ng-repeat="champship in getChampionshipsByActiveCountry()" ng-class="{ active: champship.isActive }" ng-click="select(champship);">{{ champship.name }}</li>
 									</ul>
 								</div>
 								<div class="country-submenu-bottom"><div></div></div>

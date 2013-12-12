@@ -342,9 +342,10 @@ ul.sport-menu-items-container li
 }
 
 ul.sport-menu-items-container li p {
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
+ul.sport-menu-items-container li.active,
 ul.sport-menu-items-container li:hover {
   background-color: #f9f9f9;
 }
@@ -371,7 +372,7 @@ ul.sport-menu-items-container li:hover div.sport-menu-item-countries {
   display: block;
 }
 
-ul.sport-menu-items-container li div.sport-menu-item-countries div {
+ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
@@ -381,13 +382,21 @@ ul.sport-menu-items-container li div.sport-menu-item-countries div {
   margin-right: 20px;
 }
 
-ul.sport-menu-items-container li div.sport-menu-item-countries div p {
+ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks div {
   line-height: 12px;
   padding: 0;
   margin-bottom: 10px;  
 }
 
-ul.sport-menu-items-container li div.sport-menu-item-countries div p a {
+ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks div p {
+  padding: 0;  
+}
+
+ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks div p.alphabet {
+  margin-bottom: 10px;  
+}
+
+ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks div a {
   font-size: 12px;
   text-decoration: none;
   font-weight: bold;

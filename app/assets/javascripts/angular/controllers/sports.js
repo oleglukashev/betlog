@@ -15,15 +15,19 @@ betlog_controllers.controller('Sports', ['$scope', '$rootScope', '$http', '$elem
               $scope.sports.push( new_sport );
             });
 
-            $scope.selectSport( $scope.sports[0] );
+            //$scope.select( $scope.sports[0] );
           }
         })
         .error(function(data, status, headers, config) {
 
         });
     }
-    
-    $scope.active = function( sport ) {
+
+    $scope.hasEvents = function(sport) {
+      return sport.count_of_countries;
+    }
+
+    $scope.active = function(sport) {
       $scope.sports.map(function(sport, i) {
         sport.isActive = false;  
       })
@@ -31,27 +35,14 @@ betlog_controllers.controller('Sports', ['$scope', '$rootScope', '$http', '$elem
       sport.isActive = true;
     }
 
-    $scope.activeSportAndSendHimToBroadcast = function(sport) {
-      var sport_to_active = sport ? sport : $scope.sports[0];
-      $rootScope.$broadcast( 'sportSelected', sport );
-    }
-
-    $scope.selectSport = function(sport) {
-      $scope.activeSportAndSendHimToBroadcast(sport); 
-    }
-
-    $scope.hasEvents = function(sport) {
-      return sport.count_of_countries;
-    }
-
     /* watch */
 
-    $scope.$watch('sports', function() {
+    /*$scope.$watch('sports', function() {
       if ($scope.sports.length) {
         sport = filterFilter($scope.sports, { isActive: true })[0];
         $rootScope.$broadcast( 'sportSelected', sport ); 
       } 
-    });
+    });*/
 
     /* on */
 
@@ -59,6 +50,11 @@ betlog_controllers.controller('Sports', ['$scope', '$rootScope', '$http', '$elem
       $scope.sports.map(function(sport) {
         sport.count_of_countries = count_countries_by_sport_id[sport.id];
       });
+    });
+
+    $scope.$on('activeSport', function(event, sport_id) {
+      var sport = filterFilter( $scope.sports, { id: sport_id }, true )[0];
+      $scope.active( sport );
     });
 
    

@@ -1,27 +1,14 @@
 <div class="sport-menu" ng-controller="Sports">
   <div class="sport-menu-items"><div><div>
     <ul class="sport-menu-items-container">
-      <li ng-repeat="sport in sports" ng-click="selectSport(sport);" ng-show="hasEvents(sport);"><p>{{ sport.name }}</p>
-        <div class="sport-menu-item-countries">
-          <div>
-            <p><a href="javascript://">Россия</a></p>
-            <p><a href="javascript://">Австрия</a></p>
-            <p><a href="javascript://">Австралия</a></p>
-            <p><a href="javascript://">Германия</a></p>
-            <p><a href="javascript://">Дания</a></p>
-            <p><a href="javascript://">США</a></p>
-            <p><a href="javascript://">Белоруссия</a></p>
-            <p><a href="javascript://">Словения</a></p>
-          </div>
-          <div>
-            <p><a href="javascript://">Англия</a></p>
-            <p><a href="javascript://">Франция</a></p>
-            <p><a href="javascript://">Испания</a></p>
-            <p><a href="javascript://">Италия</a></p>
-            <p><a href="javascript://">Мексика</a></p>
-            <p><a href="javascript://">Уругвай</a></p>
-            <p><a href="javascript://">Бразилия</a></p>
-            <p><a href="javascript://">Аргентина</a></p>
+      <li ng-repeat="sport in sports" ng-class="{ active:sport.isActive }"><p>{{ sport.name }}</p>
+        <div class="sport-menu-item-countries" ng-controller="Countries">
+          <div class="sport-menu-blocks" ng-repeat="country_block in getBlockCountryBySport(sport)">
+            <div ng-repeat="country in getCountriesByBlockAndSport(country_block, sport)">
+              <p class="alphabet" ng-show="getFirstWordByCountry(country) != first_word">{{ getFirstWordByCountry(country) }}</p>
+              <p><a href="javascript://" ng-click="selectWidthCountryAndSport(country, sport);">{{ country.name }}</a></p>
+              {{setFirstWord( getFirstWordByCountry(country) )}}
+            </div>
           </div>
         </div>
       </li>

@@ -80,27 +80,19 @@ class ProcessingBet(Database):
               event = result_item
               event_id = None
 
-              print("len > 0")
-              print(event)
-
               if ( ( event.date_event - coefficients['date_event'] ).days == 0 ):
                 event_id = event.id
               
             if ( event_id is None ):
               event = self.session.add(Events(championship_id, first_team, second_team, date_event))
               self.session.commit()
-              event = self.session.query(Events).filter(Events.opponent_1 == first_team).filter(Events.opponent_2 == second_team).order_by(desc(Events.created_at)).limit(1)
-              print(event)
+              event = self.session.query(Events).filter(Events.opponent_1 == first_team).filter(Events.opponent_2 == second_team).order_by(desc(Events.created_at)).limit(1).first()
               event_id = event.id
-              print("event_id is none")
-              print(event)
           else:
             event = self.session.add(Events(championship_id, first_team, second_team, date_event))
             self.session.commit()
             event = events_query.first()
             event_id = event.id
-            print("len == 0")
-            print(event)
 
           coefficients_block = self.session.add(
             Coefficients(event_id,
