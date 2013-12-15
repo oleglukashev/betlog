@@ -366,6 +366,7 @@ ul.sport-menu-items-container li div.sport-menu-item-countries {
   -webkit-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.3);
   -moz-box-shadow:    0px 1px 1px rgba(50, 50, 50, 0.3);
   box-shadow:         0px 1px 1px rgba(50, 50, 50, 0.3);
+  z-index: 15;
 }
 
 ul.sport-menu-items-container li:hover div.sport-menu-item-countries {
@@ -471,13 +472,21 @@ div.content-bottom div div
 
 div.content-body
 {
-	padding: 7px 30px;
+	padding: 7px 20px;
 	background-color: #ebebeb;
 	font-size: 0;
 }
 
+div.content-body > div
+{
+  font-size: 12px;
+}
 
-div.events, div.country-menu
+
+div.events,
+div.favorites,
+div.optional, 
+div.country-menu
 {
 	display: -moz-inline-stack;
   display: inline-block;
@@ -489,10 +498,12 @@ div.events, div.country-menu
 
 div.events
 {
-	width: 650px;
+	width: 665px;
 }
 
-div.events-content
+div.events-content,
+div.favorites-content,
+div.manager-league-content
 {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -502,7 +513,9 @@ div.events-content
 	box-shadow:         0px 1px 2px rgba(50, 50, 50, 0.5);
 }
 
-div.events-content-top
+div.events-content-top,
+div.favorites-content-top,
+div.manager-league-content-top
 {
 	padding-left: 6px;
 	background-image: image-url("sec_convex_left_top.png");
@@ -510,7 +523,9 @@ div.events-content-top
 	background-position: 0 0;	
 }
 
-div.events-content-top div
+div.events-content-top div,
+div.favorites-content-top div,
+div.manager-league-content-top div
 {
 	padding: 0 6px 0 0;
 	background-image: image-url("sec_convex_right_top.png");
@@ -518,7 +533,9 @@ div.events-content-top div
 	background-position: right 0;
 }
 
-div.events-content-top div div
+div.events-content-top div div,
+div.favorites-content-top div div,
+div.manager-league-content-top div div
 {
 	padding: 0;
 	height: 6px;
@@ -527,7 +544,9 @@ div.events-content-top div div
 	background-position: 0 0;
 }
 
-div.events-content-bottom
+div.events-content-bottom,
+div.favorites-content-bottom,
+div.manager-league-content-bottom
 {
 	padding-left: 6px;
 	background-image: image-url("sec_convex_left_bottom.png");
@@ -535,7 +554,9 @@ div.events-content-bottom
 	background-position: 0 bottom;	
 }
 
-div.events-content-bottom div
+div.events-content-bottom div,
+div.favorites-content-bottom div,
+div.manager-league-content-bottom div 
 {
 	padding: 0 6px 0 0;
 	background-image: image-url("sec_convex_right_bottom.png");
@@ -543,7 +564,9 @@ div.events-content-bottom div
 	background-position: right bottom;
 }
 
-div.events-content-bottom div div
+div.events-content-bottom div div,
+div.favorites-content-bottom div div,
+div.manager-league-content-bottom div div
 {
 	padding: 0;
 	height: 6px;
@@ -552,11 +575,16 @@ div.events-content-bottom div div
 	background-position: 0 bottom;
 }
 
-div.events-content-body
+div.events-content-body,
+div.favorites-content-body,
+div.manager-league-content-body
 {
-  min-height: 980px;
-	padding: 14px 30px;
+	padding: 14px 20px;
 	background-color: #f9f9f9;
+}
+
+div.events-content-body {
+  min-height: 980px;
 }
 
 
@@ -574,7 +602,7 @@ div.event-group-date
 	width: 66px;
 	height: 57px;
 	padding-top: 12px;
-	margin-left: -82px;
+	margin-left: -63px;
 	background-image: image-url("date_background.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -606,9 +634,19 @@ div.event
 
 div.event-title
 {
-	padding: 12px 30px;
+	padding: 12px 20px;
 	font-size: 0;
 	cursor: pointer;
+}
+
+div.hot-matches div.event-title
+{
+  padding: 8px 20px;
+}
+
+p.event-sport-title {
+  font-weight: bold;
+  margin-bottom: 5px;  
 }
 
 div.event-part,
@@ -622,7 +660,15 @@ div.event-border
   *display: inline;	
 }
 
-div.event-part { width: 235px; }
+div.hot-matches div.event-part,
+div.hot-matches div.event-border {
+  font-size: 14px;
+}
+
+div.event-part { width: 255px; }
+
+div.hot-matches div.event-part { width: 235px; }
+
 div.event-part:first-child { text-align: right; }
 
 div.event-border { width: 25px; text-align: center; }
@@ -653,54 +699,77 @@ div.event-hide-full {
 	background-position: 0 0;
 }
 
-ul.coefs-tabs-title li {
-	margin-left: -10px;
-	background-image: image-url("bet_tab.png");
-	background-repeat: no-repeat;
-	background-position: 0 0;
+
+
+
+div.hot-matches div.tabs {
+  padding: 5px;  
+}
+
+div.tabs-title div.tab-title-item {
+  margin-left: -10px;
+  padding-left: 16px;
+  background: url(../assets/bet_tab_left.png) no-repeat 0 0;
 	display: -moz-inline-stack;
-  	display: inline-block;
-  	vertical-align: top;
-  	zoom: 1;
-  	position: relative;
-  	*display: inline;
+	display: inline-block;
+  *display: inline;
+	vertical-align: top;
+	zoom: 1;
+	position: relative;
+  text-shadow: 0px 1px 0 #fff;
+  font-size: 12px;
 }
 
-ul.coefs-tabs-title li:first-child { margin-left: 0; }
-
-ul.coefs-tabs-title li.active {
-	background-image: image-url("bet_tab_active.png");
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	z-index: 99px;
+div.tabs-title div.tab-title-item div {
+  padding: 0 16px 0 0;
+  background: url(../assets/bet_tab_right.png) no-repeat right 0;
 }
 
-li.coefs-title-item-1 { z-index: 10; }
-li.coefs-title-item-2 { z-index: 9; }
-li.coefs-title-item-3 { z-index: 8; }
-li.coefs-title-item-4 { z-index: 7; }
-li.coefs-title-item-5 { z-index: 6; }
-li.coefs-title-item-6 { z-index: 5; }
-li.coefs-title-item-7 { z-index: 4; }
-li.coefs-title-item-8 { z-index: 3; }
-li.coefs-title-item-9 { z-index: 2; }
-li.coefs-title-item-10 { z-index: 1; }
-
-ul.coefs-tabs-title li a {
-	display: block;
-	width: 50px;
-	height: 24px;
-	line-height: 24px;
-	padding-right: 10px;
-	text-align: center;
-	text-decoration: none;
-	color: #555;
-	font-weight: bold;
-	text-shadow: 0px 1px 0 #fff;
+div.tabs-title div.tab-title-item div div {
+  padding: 0 15px;
+  height: 24px;
+  background: url(../assets/bet_tab_center.png) repeat-x 0 0;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
 }
 
-div.coef-tab table { width: 100%; }
-div.coef-tab table tr th { 
+div.tabs-title div.tab-title-item.active {
+  background: url(../assets/bet_tab_left_active.png) no-repeat 0 0;
+}
+
+div.tabs-title div.tab-title-item.active div {
+  background: url(../assets/bet_tab_right_active.png) no-repeat right 0;
+}
+
+div.tabs-title div.tab-title-item.active div div {
+  background: url(../assets/bet_tab_center_active.png) repeat-x 0 0;
+}
+
+
+div.tabs-title div.tab-title-item:first-child { margin-left: 0; }
+
+
+
+div.tab-title-item-1 { z-index: 10; }
+div.tab-title-item-2 { z-index: 9; }
+div.tab-title-item-3 { z-index: 8; }
+div.tab-title-item-4 { z-index: 7; }
+div.tab-title-item-5 { z-index: 6; }
+div.tab-title-item-6 { z-index: 5; }
+div.tab-title-item-7 { z-index: 4; }
+div.tab-title-item-8 { z-index: 3; }
+div.tab-title-item-9 { z-index: 2; }
+div.tab-title-item-10 { z-index: 1; }
+
+div.tabs-title div.tab-title-item a {
+	
+}
+
+div.tab-content table { width: 100%; }
+div.tab-content table tr th { 
 	height: 28px;
 	background-image: image-url("bet_coef_table_background.png");
 	background-repeat: repeat-x;
@@ -711,23 +780,23 @@ div.coef-tab table tr th {
 	padding: 0 10px;
 }
 
-div.coef-tab table tr th:first-child {
+div.tab-content table tr th:first-child {
 	text-align: left;
 }
 
-div.coef-tab table tr td {
+div.tab-content table tr td {
 	padding: 2px 10px;
 	border: 1px solid #d7d7d7;
 	font-weight: bold;
 }
 
-div.coef-tab table tr td.td1 { width: 40%; }
+div.tab-content table tr td.td1 { width: 40%; }
 
-div.coef-tab table tr.odd td {
+div.tab-content table tr.odd td {
 	background-color: #cdecf1;
 }
 
-div.coef-tab table tr td span.coef-position {
+div.tab-content table tr td span.coef-position {
 	width: 11px;
 	height: 8px;
 	display: -moz-inline-stack;
@@ -738,22 +807,33 @@ div.coef-tab table tr td span.coef-position {
   margin: 5px 0 0 3px; 
 }
 
-div.coef-tab table tr td span.coef-position.up {
+div.tab-content table tr td span.coef-position.up {
 	background-image: image-url("coef-up.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
 
-div.coef-tab table tr td span.coef-position.down {
+div.tab-content table tr td span.coef-position.down {
 	background-image: image-url("coef-down.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* Menu */
 
-div.country-menu { width: 190px; }
+div.country-menu { width: 190px; margin-left: -3px; }
 
 div.country-menu h1 { margin-left: 20px; }
 
@@ -844,8 +924,13 @@ div.country-menu ul li ul li {
 	padding: 6px 20px;
 }
 
-div.country-menu ul li ul li.active,
-div.country-menu ul li ul li:hover
+div.country-menu ul li ul li a {
+  text-decoration: none;
+  color: #555;  
+}
+
+div.country-menu ul li ul li.active a,
+div.country-menu ul li ul li:hover a
 {
 	color: #000;
 }
@@ -890,12 +975,33 @@ div.country-menu ul li div.country-submenu div.country-submenu-bottom div
 	background: #e1e1e1;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 div.footer
 {
 	width: 900px;
 	margin: 0 auto;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Loginbox */
@@ -1044,6 +1150,16 @@ div.loginbox-remember p:first-child
 }
 
 
+
+
+
+
+
+
+
+
+
+
 /* registration */
 
 #registration
@@ -1083,4 +1199,43 @@ div.loginbox-remember p:first-child
 	-khtml-opacity: 0.4;
 	opacity: 0.4;
 	z-index: 1;
+}
+
+
+
+
+
+
+
+/* favorites */
+div.favorites {
+  width: 610px;
+  margin-right: 17px;
+}
+
+div.hot-matches {
+  padding: 5px 10px;
+  background-color: #ffdd3f;
+  -webkit-border-radius: 2px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius: 2px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 2px;
+  border-top-left-radius: 0;
+}
+
+div.hot-matches-group {
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/* optional */
+div.optional { width: 190px; }
+
+div.manager_league {
+  width: 180px;
+
 }

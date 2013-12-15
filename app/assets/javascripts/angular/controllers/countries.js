@@ -1,34 +1,6 @@
 betlog_controllers.controller('Countries', ['$scope', '$rootScope', '$http', '$element', 'filterFilter', function( $scope, $rootScope, $http, $element, filterFilter ) {
-    $scope.countries = [];
     $scope.active_country = false;
     $scope.first_word = "";
-
-    $scope.init = function() {
-      $http.get('/countries.json')
-        .success(function(data, status, headers, config) {
-          if ( status === 200 && data.length ) {
-            var count_countries_by_sport_id = {};
-
-            data.map(function(country, i) {
-              var new_country = {
-                id: country.id,
-                name: country.name,
-                sport_id: country.sport_id,
-                isActive: false
-              }
-
-              $scope.countries.push( new_country );
-
-              //count_countries_by_sport_id[country['sport_id']] = !count_countries_by_sport_id[country['sport_id']] ? 1 : count_countries_by_sport_id[country['sport_id']] + 1;
-            });
-
-            //$rootScope.$broadcast('countCountries', count_countries_by_sport_id);
-          }
-        })
-        .error(function(data, status, headers, config) {
-
-        });
-    }
 
     $scope.selectWidthCountryAndSport = function(country, sport) {
       $scope.activeSportBySportId(country.sport_id);
@@ -36,7 +8,7 @@ betlog_controllers.controller('Countries', ['$scope', '$rootScope', '$http', '$e
     }
 
     $scope.getCountriesBySport = function(sport) {
-      return filterFilter( $scope.countries, { sport_id: sport.id }, true);
+      return filterFilter( Storage.getCountries(), { sport_id: sport.id }, true);
     }
 
     $scope.getBlockCountryBySport = function( sport ) {
@@ -83,10 +55,8 @@ betlog_controllers.controller('Countries', ['$scope', '$rootScope', '$http', '$e
 
     /* on */
 
+    $scope.$on('reloadCountries', function() {
+      Storage.getCountries();
+    })
 
-
-    /* init */
-
-    $scope.init();
-  
   }])

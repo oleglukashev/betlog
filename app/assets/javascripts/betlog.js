@@ -14,21 +14,29 @@ var betlog = angular.module('betlog', [
 var betlog_controllers = angular.module('betlog.controllers', [])
 
   betlog.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/phones', {
-        templateUrl: 'partials/phone-list.html',
-        controller: 'PhoneListCtrl'
-      }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
-      }).
-      otherwise({
-        redirectTo: '/phones'
-      });
-  }])
+    function($routeProvider) {
+      $routeProvider.
+        when('/', {
+          templateUrl: 'favorites.html',
+          controller: 'MainFavoriteEvents'
+        }).
+        when('/sport/:sportId/country/:countryId/championships', {
+          templateUrl: 'championships_events.html',
+          controller: 'EventsList'
+        }).
+        when('/sport/:sportId/country/:countryId/championship/:championshipId/events', {
+          templateUrl: 'championships_events.html',
+          controller: 'EventsList'
+        })
+    }])
 
-  .config(['$httpProvider', function($httpProvider) {
-    $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
-  }]);
+    .config(['$httpProvider', function($httpProvider) {
+      $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
+    }]);
+
+
+function getRandom(min, max)
+{
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+

@@ -145,9 +145,12 @@ class BetcityBet():
       'X': ['draw'],
       '2': ['second'],
       '1X': ['first_or_draw'],
+      '12': ['first_or_second'],
       'X2': ['draw_or_second'],
       'кф': ['coeff_first_fora', 'coeff_second_fora'],
       'фора': ['first_fora', 'second_fora'],
+      'Фора': ['first_fora', 'second_fora'],
+      'Тотал': ['total_less', 'total_more'],
       'тотал': ['total_less', 'total_more'],
       'мен': ['coeff_first_total'],
       'бол': ['coeff_second_total']

@@ -1,31 +1,15 @@
-betlog_controllers.controller('Championships', ['$scope', '$rootScope', '$http', '$element', 'filterFilter', function( $scope, $rootScope, $http, $element, filterFilter ) {
-    $scope.championships = [];
-    $scope.countries = [];
+betlog_controllers.controller('Championships', [
+    '$scope', 
+    '$rootScope',
+    '$http', 
+    'filterFilter', 
+    '$animate', 
+    '$route', 
+    '$routeParams', 
+    function( $scope, $rootScope, $http, filterFilter, $animate, $route, $routeParams ) {
     $scope.active_sport = false;
     $scope.active_country = false;
 
-    $scope.init = function() {
-      $http.get('/championships.json')
-        .success(function(data, status, headers, config) {
-          if ( status === 200 && data.length) {
-            data.map(function(championship, i) {
-              var new_championship = {
-                id: championship.id,
-                name: championship.name,
-                country_id: championship.country_id,
-                sport_id: championship.sport_id,
-                isActive: false
-              }
-
-              $scope.championships.push( new_championship ); 
-            });
-          }
-        }).
-        error(function(data, status, headers, config) {
-
-        }); 
-    }
-    
     $scope.active = function( championship ) {
       $scope.championships.map(function(championship, i) {
         championship.isActive = false; 
@@ -38,11 +22,16 @@ betlog_controllers.controller('Championships', ['$scope', '$rootScope', '$http',
       $scope.activeChampionshipAndSendHimToBroadcast(championship);
     }
 
-    $scope.getChampionshipsByCountryIdAndSportId = function( country_id, sport_id ) {
-      return filterFilter( $scope.championships, { country_id: $scope.active_country.id }, true);
+    /*$scope.selectFavorite = function(championship) {
+      var first_championship = $scope.getChampionshipsByActiveCountryOrFavorites()[0];
+      $scope.select(first_championship);
+    }*/
+
+    $scope.getChampionships = function( country_id, sport_id ) {
+      return filterFilter( $scope.championships, { country_id: $routeParams.countryId, sport_id: $routeParams.sportId }, true);
     }
 
-    $scope.getChampionshipsByActiveCountry = function() {
+    $scope.getChampionshipsByActiveCountryOrFavorites = function() {
       return filterFilter( $scope.championships, { country_id: $scope.active_country.id, sport_id: $scope.active_sport.id }, true);
     }
 
@@ -51,30 +40,8 @@ betlog_controllers.controller('Championships', ['$scope', '$rootScope', '$http',
       $rootScope.$broadcast('championshipSelected', championship);
     }
 
+    $scope.getCountryName = function() {
+      return $scope.active_country ? $scope.active_country.name : "Избранное";
+    }
 
-    /* on */
-
-    $rootScope.$on('countrySelected', function(event, country, sport) {
-      $scope.active_country = country;
-      $scope.active_sport = sport;
-
-      if ($scope.championships.length) {
-        var first_of_championship = $scope.getChampionshipsByActiveCountry()[0];
-        $scope.activeChampionshipAndSendHimToBroadcast(first_of_championship);
-      } else {
-        var championships_length_listener = $scope.$watch('championships.length', function() {
-          if ($scope.championships.length) {
-            var first_of_championship = $scope.getChampionshipsByActiveCountry()[0];
-            $scope.activeChampionshipAndSendHimToBroadcast(first_of_championship);
-            championships_length_listener();
-          }  
-        });
-      }
-    });
-
-
-    /* init */
-
-    $scope.init();
-  
   }])

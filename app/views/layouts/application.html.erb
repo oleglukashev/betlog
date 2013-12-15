@@ -3,6 +3,7 @@
 <head>
   <title>Betlog</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "//vk.com/js/api/openapi.js?105" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -27,104 +28,22 @@
 			<%= render 'layouts/menu_sports' %>
 
 		</div>
-		<div class="content">
+		<div class="content" ng-controller="Main">
 			<div class="content-top"><div><div></div></div></div>
 			<div class="content-body">
-				<div class="events">
-					<div class="events-content" ng-controller="Events">
-						<div class="events-content-top"><div><div></div></div></div>
-						<div class="events-content-body">
-							<div class="event-group" ng-repeat="events_date in getDatesFromCmapionshipEvents();">
-								<div class="event-group-date">
-									<p>{{events_date | date:'d'}}</p>
-									<p>{{events_date | date:'MMMM'}}</p>
-								</div>
-								<div id="event-{{event.id}}" class="event" ng-repeat="event in getChampionshipEventsByEventDate(events_date);">
-									<div class="event-title" ng-click="toggle(event);">
-										<div class="event-part">
-											<div class="event-date">{{event.date_event | date:'HH:mm'}}</div>{{ event.opponent_1}}</div>
-										<div class="event-border">&mdash;</div>
-										<div class="event-part">{{ event.opponent_2 }}<div class="event-show-full"></div></div>
-									</div>
-									<div class="event-full-content" ng-show="event.isOpened" ng-class="{ 'event-fade-in': event.isOpened }" ng-controller="Coefficients">
-										<ul class="coefs-tabs-title">
-										  <li class="coefs-title-item-1 active"><a href="#">1/x/2</a></li>
-										  <li class="coefs-title-item-2"><a href="#">1x/12/x2</a></li>
-										  <li class="coefs-title-item-3"><a href="#">Фора/Тотал</a></li>
-										</ul>
-										<div class="coef-tab">
-											<table>
-												<tr>
-													<th>Букмекеры</th>
-													<th>1</th>
-													<th>x</th>
-													<th>2</th>
-													<th>1x</th>
-													<th>12</th>
-													<th>x2</th>
-													<th>Фора1</th>
-													<th>Коэф. форы</th>
-													<th>Фора2</th>
-													<th>Коэф. форы</th>
-													<th>Тотал (меньше)</th>
-													<th>Коэф. тотал</th>
-													<th>Тотал (больше)</th>
-													<th>Коэф. тотал</th>
-												</tr>
-												<tr class="odd" ng-repeat="coefficient in getCoefficientsByEventId( event.id );">
-													<td class="td1">{{coefficient.bookmaker_name}}</td>
-													<td class="td2">{{coefficient.first}}</td>
-													<td class="td3">{{coefficient.draw}}</td>
-													<td class="td4">{{coefficient.first_or_draw}}</td>
-													<td class="td2">{{coefficient.first_or_second}}</td>
-													<td class="td3">{{coefficient.second_or_draw}}</td>
-													<td class="td4">{{coefficient.first_fora}}</td>
-													<td class="td4">{{coefficient.coeff_first_fora}}</td>
-													<td class="td4">{{coefficient.second_fora}}</td>
-													<td class="td4">{{coefficient.coeff_second_fora}}</td>
-													<td class="td4">{{coefficient.total_less}}</td>
-													<td class="td4">{{coefficient.coeff_total_less}}</td>
-													<td class="td4">{{coefficient.total_more}}</td>
-													<td class="td4">{{coefficient.coeff_total_more}}</td>
-												</tr>
-											</table>
-										</div>
-										<div class="coef-tab">
-										</div>
-										<div class="coef-tab">
-										</div>
-									</div>
-								</div>
-								<div class="clear"></div>
-							</div>
-						</div>
-						<div class="events-content-bottom"><div><div></div></div></div>
-					</div>
-				</div>
-				<div class="country-menu" ng-controller="Championships">
-					<ul>
-						<li class="active">
-							<div class="country-menu-item">
-								<div class="country-menu-item-top"><div></div></div>
-								<div class="country-menu-item-body">
-									{{ active_country.name }}
-								</div>
-								<div class="country-menu-item-bottom"><div></div></div>
-							</div>
-							<div class="country-submenu">
-								<div class="country-submenu-body">
-									<ul>
-										<li ng-repeat="champship in getChampionshipsByActiveCountry()" ng-class="{ active: champship.isActive }" ng-click="select(champship);">{{ champship.name }}</li>
-									</ul>
-								</div>
-								<div class="country-submenu-bottom"><div></div></div>
-							</div>
-						</li>
-					</ul>
-					<div class="event-menu-top"><div></div></div>
-				</div>
+
+				<div ng-view></div>
+
+				<script type="text/ng-template" id="favorites.html">
+					<%= render 'layouts/favorites' %>
+				</script>
+
+				<script type="text/ng-template" id="championships_events.html">
+					<%= render 'layouts/championships_events' %>
+				</script>
+
 			</div>
-			<%= yield %>
+
 			<div class="content-bottom"><div><div></div></div></div>
 		</div>
 		
