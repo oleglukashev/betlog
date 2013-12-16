@@ -277,7 +277,17 @@ div.search div div div input {
 div.search div div div input:-moz-placeholder { color: #fff; }
 div.search div div div input::-webkit-input-placeholder { color: #fff; }
 
-/* Pastevents */
+
+
+
+
+
+
+
+
+
+
+/* Sport Menu */
 
 div.sport-menu
 {
@@ -1233,9 +1243,35 @@ div.hot-matches-group {
 
 
 /* optional */
-div.optional { width: 190px; }
+div.optional { width: 230px; }
 
-div.manager_league {
-  width: 180px;
+div.manager-league-content-body {
+  padding: 0;  
+}
 
+div.manager-league-title {
+  margin: 0 20px 5px;
+  font-weight: bold;
+}
+
+div.manager-league-sport {
+}
+
+div.manager-league-sport div.manager-league-sport-title {
+  padding: 3px 20px;
+  background-color: #ffdd3f;
+  font-weight: bold;
+}
+
+div.manager-league-championships {
+  margin-bottom: 5px;
+}
+
+div.manager-league-championship {
+  padding: 3px 20px; 
+}
+
+div.manager-league-edit {
+  margin-top: 15px;
+  padding: 0 20px;
 }
