@@ -5,10 +5,6 @@ class UsersController < ApplicationController
       params[:password_confirmation] = params[:password]
     end
 
-    logger.info(11111111111)
-    logger.info(user_params)
-    logger.info(11111111111)
-  	
     @user = User.new( user_params )
 
     respond_to do |format|

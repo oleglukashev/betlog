@@ -16,7 +16,7 @@
 				<p><input type="checkbox" value="1" mg-model="login.remember_me" name="remember_me" checked="checked" /></p><p>Запомнить меня</span></p>
 			</div>
 			<div>
-				<p><button ng-disabled="!login.login || !login.password" ng-click="submit();" eat-click >Войти</button></p>
+				<p><button ng-disabled="!login.login || !login.password" ng-click="signIn();" eat-click >Войти</button></p>
 				<p class="loginbox-forgot"><a href="/">Забыли пароль?</a><br/ ><a href="#" ng-click="showRegistration();" >Регистрация</a></p>
 				<div class="clear"></div>
 			</div>
@@ -51,10 +51,23 @@
 				<p><input type="checkbox" value="1" mg-model="register.subscribed" name="subscribed" checked="checked" /></p><p><span>Подписаться на новости</span></p>
 			</div>
 			<div>
-				<p><button ng-disabled="!loginValidate || !pwdValidate || !nameValidate" ng-click="submit();" eat-click >Зарегистрироваться</button></p>
+				<p><button ng-disabled="!loginValidate || !pwdValidate || !nameValidate" ng-click="signUp();" eat-click >Зарегистрироваться</button></p>
 				<div class="clear"></div>
 			</div>
 		</form>
+	</div>
+	<div class="loginbox-content-bottom"><div><div></div></div></div>
+</div>
+<div id="profile" ng-show="isActive" ng-controller="Profile">
+	<div class="loginbox-content-top"><div><div></div></div></div>
+	<div class="loginbox-content-body">
+		<div class="loginbox-close" ng-click="close('overlay');"></div>
+		<p class="loginbox-title">Профиль</p>
+		<div class="profile-data">
+			<div>Логин: {{getCurrentUser().login}}</div>
+			<div>Имя: {{getCurrentUser().name}}</div>
+		</div>
+		<p><button ng-click="signOut();">Выйти</button></p>
 	</div>
 	<div class="loginbox-content-bottom"><div><div></div></div></div>
 </div>

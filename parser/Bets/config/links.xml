@@ -35,6 +35,7 @@
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1950" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1951" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1952" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1953" />
                 </bookmaker>
             </championship>
         </country>
@@ -87,6 +88,7 @@
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1872" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=6" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=58" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=2236" />
                 </bookmaker>
             </championship>
         </country>
@@ -128,6 +130,7 @@
                 <bookmaker value="Betcity">
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=75" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=128" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=168" />
                 </bookmaker>
             </championship>
         </country>
@@ -140,6 +143,7 @@
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=2097" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=80" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=5471" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=170" />
                 </bookmaker>
             </championship>
         </country>
@@ -206,6 +210,7 @@
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=10" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=43" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=54" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1936" />
                 </bookmaker>
             </championship>
         </country>
@@ -597,7 +602,7 @@
         </country>
     </countries>
   </sport>
-  <sport value="Волейбол">
+  <sport value="Воллейбол">
     <countries>
         <country value="Международный">
         </country>
@@ -904,7 +909,7 @@
         <country value="Россия">
             <championship value="Суперлига">
                 <bookmaker value="Marathon">
-                    <link value="" />
+                    <link value="http://www.marathonbet.com/ru/betting/Handball/Russia/Men/Super+League/" />
                 </bookmaker>
                 <bookmaker value="Betcity">
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=57284" />
@@ -927,7 +932,7 @@
                     <link value="http://marathonbet.com/ru/betting/Handball/France/Men/LNH/Division+1/" />
                 </bookmaker>
                 <bookmaker value="Betcity">
-                    <link value="" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=7100" />
                 </bookmaker>
             </championship>
         </country>

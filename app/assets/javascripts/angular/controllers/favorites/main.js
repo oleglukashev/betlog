@@ -11,26 +11,6 @@ betlog_controllers.controller('MainFavoriteEvents', [
     $scope.favorite_countries_by_sport = [];
     $scope.favorite_championships_by_sport_and_country = [];
     
-    /*$scope.getFavoriteSports = function() {
-      var result = [];
-
-      Storage.getSports().map(function(country, key) {
-        if ( result.length <= 3 ) {
-          result.push(country);
-        }
-      });
-
-      return result;
-    }
-
-    $scope.getFavoriteCountriesBySport = function(sport) {
-      return filterFilter( Storage.getCountries(), { sport_id: sport.id }, true)[0];
-    }
-
-    $scope.getFavoriteChampionshipByCountryAndSport = function(country, sport) {
-      console.log(Storage.getChampionships())
-      return filterFilter( Storage.getChampionships(), { sport_id: sport.id, country_id: country.id }, true)[0];
-    }*/
 
     $scope.getFavoriteEvents = function() {
       var result = [];
@@ -45,7 +25,9 @@ betlog_controllers.controller('MainFavoriteEvents', [
     }
 
     $scope.getSportByCountry = function(country) {
-      return filterFilter( Storage.getSports(), { id: country.sport_id }, true)[0];
+      if ( country ) {
+        return filterFilter( Storage.getSports(), { id: country.sport_id }, true)[0];
+      }
     }
 
     $scope.getCountryByEvent = function(event) {

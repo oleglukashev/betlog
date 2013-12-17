@@ -3,8 +3,8 @@ class AddChampionshipsTable < ActiveRecord::Migration
   def up
   	create_table :championships do |t|
       t.string :name, :null => false
-      t.integer :country_id, :null => false
-      t.integer :sport_id, :null => false
+      t.belongs_to :country
+      t.belongs_to :sport
 
       t.timestamps
     end

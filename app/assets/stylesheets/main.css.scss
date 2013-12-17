@@ -296,17 +296,13 @@ div.sport-menu
 
 div.sport-menu-items
 {
-	padding-left: 30px;
 	margin-top: -2px;
-	background-image: image-url("medium_bulged_left.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
 
 div.sport-menu-items div
 {
-	padding: 0 30px 0 0;
-	background-image: image-url("medium_bulged_right.png");
 	background-repeat: no-repeat;
 	background-position: right 0;
 }
@@ -315,7 +311,6 @@ div.sport-menu-items div div
 {
 	height: 38px;
 	padding: 4px 0;
-	background-image: image-url("medium_bulged_center.png");
 	background-repeat: repeat-x;
 	background-position: 0 0;
 }
@@ -352,7 +347,7 @@ ul.sport-menu-items-container li
 }
 
 ul.sport-menu-items-container li p {
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 ul.sport-menu-items-container li.active,
@@ -400,7 +395,8 @@ ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-bl
 }
 
 ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks div p {
-  padding: 0;  
+  padding: 0;
+  color: #dedede;
 }
 
 ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks div p.alphabet {
@@ -609,7 +605,7 @@ div.event-group
 div.event-group-date
 {
 	float: left;
-	width: 66px;
+	width: 53px;
 	height: 57px;
 	padding-top: 12px;
 	margin-left: -63px;
@@ -1032,7 +1028,7 @@ div.footer
   -webkit-box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.5);
   -moz-box-shadow:    0px 2px 5px rgba(50, 50, 50, 0.5);
   box-shadow:         0px 2px 5px rgba(50, 50, 50, 0.5);
-	z-index: 2;
+	z-index: 16;
 }
 
 div.loginbox-content-top
@@ -1183,12 +1179,38 @@ div.loginbox-remember p:first-child
   -webkit-box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.5);
   -moz-box-shadow:    0px 2px 5px rgba(50, 50, 50, 0.5);
   box-shadow:         0px 2px 5px rgba(50, 50, 50, 0.5);
-	z-index: 2;
+	z-index: 16;
 }
 
 #registration div.loginbox-content-body form div p button {
   width: 150px;
 }
+
+
+
+
+
+
+/* profile */
+
+#profile
+{
+  position: absolute;
+  top: 10px;
+  width: 247px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 2px 5px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    0px 2px 5px rgba(50, 50, 50, 0.5);
+  box-shadow:         0px 2px 5px rgba(50, 50, 50, 0.5);
+  z-index: 16;
+}
+
+#profile div.loginbox-content-body form div p button {
+  width: 150px;
+}
+
 
 
 
@@ -1208,7 +1230,7 @@ div.loginbox-remember p:first-child
 	-moz-opacity: 0.4;
 	-khtml-opacity: 0.4;
 	opacity: 0.4;
-	z-index: 1;
+	z-index: 15;
 }
 
 
@@ -1225,7 +1247,7 @@ div.favorites {
 
 div.hot-matches {
   padding: 5px 10px;
-  background-color: #ffdd3f;
+  background-color: #fde577;
   -webkit-border-radius: 2px;
   -webkit-border-top-left-radius: 0;
   -moz-border-radius: 2px;
@@ -1261,14 +1283,30 @@ div.manager-league-sport div.manager-league-sport-title {
   padding: 3px 20px;
   background-color: #ffdd3f;
   font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+div.manager-league-sport div.manager-league-sport-title:hover {
+  text-decoration: underline;
 }
 
 div.manager-league-championships {
   margin-bottom: 5px;
+  height: 0;
+  overflow: hidden;
 }
 
 div.manager-league-championship {
   padding: 3px 20px; 
+}
+
+div.manager-league-championship a {
+  text-decoration: none;
+}
+
+div.manager-league-championship a:hover {
+  text-decoration: underline;
 }
 
 div.manager-league-edit {

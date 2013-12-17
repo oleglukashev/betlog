@@ -2,7 +2,7 @@ class CountriesController < ApplicationController
 
 
   def index
-    @countries = Countries.all
+    @countries = Country.all
 
     respond_to do |format|
       format.json { render json: @countries }

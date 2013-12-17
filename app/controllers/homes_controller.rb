@@ -3,13 +3,7 @@ class HomesController < ApplicationController
   # GET /homes
   # GET /homes.json
   def index
-    @sports = Sports.all
-    @championships = Championships.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: { sports: @sports, championships: @championships } }
-    end
+  
   end
 
   # GET /homes/1

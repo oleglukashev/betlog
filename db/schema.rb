@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131103184138) do
+ActiveRecord::Schema.define(version: 20131217093647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,15 +25,19 @@ ActiveRecord::Schema.define(version: 20131103184138) do
 
   create_table "championships", force: true do |t|
     t.string   "name",       null: false
-    t.integer  "country_id", null: false
-    t.integer  "sport_id",   null: false
+    t.integer  "country_id"
+    t.integer  "sport_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+  create_table "championships_users", id: false, force: true do |t|
+    t.integer "championship_id"
+    t.integer "user_id"
+  end
+
   create_table "coefficients", force: true do |t|
-    t.integer  "event_id",           null: false
-    t.integer  "bookmaker_id",       null: false
+    t.integer  "event_id"
     t.float    "first"
     t.float    "draw"
     t.float    "second"
@@ -48,19 +52,20 @@ ActiveRecord::Schema.define(version: 20131103184138) do
     t.float    "total_more"
     t.float    "coeff_first_total"
     t.float    "coeff_second_total"
+    t.integer  "bookmaker_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "countries", force: true do |t|
     t.string   "name",       null: false
-    t.integer  "sport_id",   null: false
+    t.integer  "sport_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "events", force: true do |t|
-    t.integer  "championship_id", null: false
+    t.integer  "championship_id"
     t.string   "opponent_1",      null: false
     t.string   "opponent_2",      null: false
     t.datetime "date_event",      null: false

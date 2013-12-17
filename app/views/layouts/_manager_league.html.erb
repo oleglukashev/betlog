@@ -1,22 +1,14 @@
-<div class="manager-league" ng-controller="ManagerLeague">
+<div class="manager-league" ng-controller="ManagerLeague" ng-show="isActive()">
   <div class="manager-league-content">
     <div class="manager-league-content-top"><div><div></div></div></div>
     <div class="manager-league-content-body">
       <div class="manager-league-title">Менеджер лиг</div>
-      <div class="manager-league-sport">
-        <div class="manager-league-sport-title">Футбол</div>
-        <div class="manager-league-championships">
-          <div class="manager-league-championship">Премьер-лига (Англия)</div>
-          <div class="manager-league-championship">Бундеслига (Германия)</div>
-          <div class="manager-league-championship">Премьер-лига (Россия)</div>
-        </div>
-      </div>
-      <div class="manager-league-sport">
-        <div class="manager-league-sport-title">Хоккей</div>
-        <div class="manager-league-championships">
-          <div class="manager-league-championship">Премьер-лига (Англия)</div>
-          <div class="manager-league-championship">Бундеслига (Германия)</div>
-          <div class="manager-league-championship">Премьер-лига (Россия)</div>
+      <div class="manager-league-sport" ng-repeat="sport in getSportsManagedChampionships()" ng-click="toggle(sport);">
+        <div class="manager-league-sport-title">{{sport.name}}</div>
+        <div class="manager-league-championships" ng-class="{ 'league-fade-in': sport.id === active_sport.id }">
+          <div class="manager-league-championship" ng-repeat="championship in getManagedChampionshipsBySport(sport)">
+            <a href="/#/sport/{{sport.id}}/country/{{getCountryByChampionship(championship).id}}/championship/{{championship.id}}/events">{{championship.name}} ({{getCountryByChampionship(championship).name}})</a>
+          </div>
         </div>
       </div>
       <div class="manager-league-edit">Редактировать список лиг</div>

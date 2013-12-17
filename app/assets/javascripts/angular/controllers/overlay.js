@@ -23,6 +23,7 @@ betlog_controllers.controller('Overlay', ['$scope', '$http', '$element', '$rootS
 
     $scope.resize = function() {
       $rootScope.$broadcast( 'resizeAuthorization' );
+      $rootScope.$broadcast( 'resizeProfile' );
     }
 
     $rootScope.$on('showOverlay', function() {

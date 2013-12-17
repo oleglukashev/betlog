@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 
   
   def index
-    @events = Events.all
+    @events = Event.all
 
     respond_to do |format|
       format.json { render json: @events }

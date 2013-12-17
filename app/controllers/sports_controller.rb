@@ -2,7 +2,7 @@ class SportsController < ApplicationController
 
   
   def index
-    @sports = Sports.all
+    @sports = Sport.all
 
     respond_to do |format|
       format.json { render json: @sports }

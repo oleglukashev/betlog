@@ -1,7 +1,7 @@
 <div class="sport-menu" ng-controller="Sports">
   <div class="sport-menu-items"><div><div>
     <ul class="sport-menu-items-container">
-      <li ng-repeat="sport in getSports()" ng-class="{ active:sport.isActive }"><p>{{ sport.name }}</p>
+      <li ng-repeat="sport in getSports()" ng-class="{ active:isActive(sport) }"><p>{{ sport.name }}</p>
         <div class="sport-menu-item-countries" ng-controller="Countries">
           <div class="sport-menu-blocks" ng-repeat="country_block in getBlockCountryBySport(sport)">
             <div ng-repeat="country in getCountriesByBlockAndSport(country_block, sport)">

@@ -8,11 +8,13 @@ Betlog::Application.routes.draw do
     resources :coefficients, :only => [:index, :create, :update, :destroy]
     resources :countries, :only => [:index, :create, :update, :destroy]
     resources :championships, :only => [:index, :create, :update, :destroy]
+    resources :managed_leagues, :only => [:index, :create]
     resources :users, :only => [:new, :create, :edit, :update]
-    resource :user_sessions, :only => [:new, :create, :destroy]
+    resource :user_sessions, :only => [:index, :new, :create, :destroy]
 
 
     get 'users/user_exists' => 'users#user_exists'
+    get 'user_sessions/current_user' => 'user_sessions#get_current_user'
 
 
     root to: "homes#index"

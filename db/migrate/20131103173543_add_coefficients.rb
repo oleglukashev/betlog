@@ -2,8 +2,7 @@
 class AddCoefficients < ActiveRecord::Migration
   def up
   	create_table :coefficients do |t|
-      t.integer :event_id, :null => false
-      t.integer :bookmaker_id, :null => false
+      t.belongs_to :event
       t.float :first
       t.float :draw
       t.float :second
@@ -18,6 +17,7 @@ class AddCoefficients < ActiveRecord::Migration
       t.float :total_more
       t.float :coeff_first_total
       t.float :coeff_second_total
+      t.belongs_to :bookmaker
 
       t.timestamps
     end

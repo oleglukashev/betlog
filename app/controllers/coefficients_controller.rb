@@ -2,7 +2,7 @@ class CoefficientsController < ApplicationController
 
   
   def index
-    @coefficients = Coefficients.all
+    @coefficients = Coefficient.all
 
     respond_to do |format|
       format.json { render :json => {
@@ -11,7 +11,7 @@ class CoefficientsController < ApplicationController
             :id => item[:id],
             :event_id => item[:event_id],
             :bookmaker_id => item[:bookmaker_id],
-            :bookmaker_name => item.bookmaker_name,
+            :bookmaker_name => item.bookmaker[:name],
             :first => item[:first],
             :draw => item[:draw],
             :second => item[:second],
