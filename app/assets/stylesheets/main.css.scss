@@ -723,7 +723,7 @@ div.hot-matches div.tabs {
 div.tabs-title div.tab-title-item {
   margin-left: -10px;
   padding-left: 16px;
-  background-image: image-url(../assets/bet_tab_left.png);
+  background-image: image-url(bet_tab_left.png);
   background-repeat: no-repeat;
   background-position: 0 0;
 	display: -moz-inline-stack;
@@ -739,7 +739,7 @@ div.tabs-title div.tab-title-item {
 
 div.tabs-title div.tab-title-item div {
   padding: 0 16px 0 0;
-  background-image: image-url(../assets/bet_tab_right.png);
+  background-image: image-url(bet_tab_right.png);
   background-repeat: no-repeat;
   background-position: right 0;
 }
@@ -747,7 +747,7 @@ div.tabs-title div.tab-title-item div {
 div.tabs-title div.tab-title-item div div {
   padding: 0 15px;
   height: 24px;
-  background-image: image-url(../assets/bet_tab_center.png);
+  background-image: image-url(bet_tab_center.png);
   background-repeat: repeat-x;
   background-position: 0 0;
   line-height: 24px;
@@ -758,20 +758,20 @@ div.tabs-title div.tab-title-item div div {
 }
 
 div.tabs-title div.tab-title-item.active {
-  background-image: image-url(../assets/bet_tab_left_active.png);
+  background-image: image-url(bet_tab_left_active.png);
   background-repeat: no-repeat;
   background-position: 0 0;
   z-index: 15;
 }
 
 div.tabs-title div.tab-title-item.active div {
-  background-image: image-url(../assets/bet_tab_right_active.png);
+  background-image: image-url(bet_tab_right_active.png);
   background-repeat: no-repeat;
   background-position: right 0;
 }
 
 div.tabs-title div.tab-title-item.active div div {
-  background-image: image-url(../assets/bet_tab_center_active.png);
+  background-image: image-url(bet_tab_center_active.png);
   background-repeat: repeat-x;
   background-position: 0 0;
 }
