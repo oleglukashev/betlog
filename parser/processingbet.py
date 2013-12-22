@@ -35,7 +35,7 @@ class ProcessingBet(Database):
 
       country_query = self.session.query(Countries).filter(Countries.name == events_block['country'])
       if ( country_query.first() == None ):
-        country = self.session.add(Countries(events_block['country'], sport_id))
+        country = self.session.add(Countries(events_block['country']))
         self.session.commit()
       country = country_query.first()
       country_id = country.id

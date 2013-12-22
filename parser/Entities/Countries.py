@@ -9,13 +9,11 @@ class Countries(Base):
 
   id = Column(Integer, Sequence('countries_id_seq'), primary_key=True)
   name = Column(String)
-  sport_id = Column(Integer)
   created_at = Column(Date, default=datetime.datetime.now())
   updated_at = Column(Date, default=datetime.datetime.now(), onupdate=datetime.datetime.now())
 
-  def __init__(self, name, sport_id):
+  def __init__(self, name):
     self.name = name
-    self.sport_id = sport_id
 
   def __repr__(self):
-    return "<Country('%s', '%s')>" % (self.name, self.sport_id)
+    return "<Country('%s')>" % (self.name)

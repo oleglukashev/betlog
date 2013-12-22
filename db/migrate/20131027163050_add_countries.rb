@@ -3,7 +3,6 @@ class AddCountries < ActiveRecord::Migration
   def up
   	create_table :countries do |t|
       t.string :name, :null => false
-      t.belongs_to :sport
 
       t.timestamps
     end

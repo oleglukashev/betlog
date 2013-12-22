@@ -7,6 +7,6 @@ class AddChampionshipsUsers < ActiveRecord::Migration
   end
 
   def down
-    drop_table :manager_leagues
+    drop_table :championships_users
   end
 end

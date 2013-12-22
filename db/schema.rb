@@ -59,7 +59,6 @@ ActiveRecord::Schema.define(version: 20131217093647) do
 
   create_table "countries", force: true do |t|
     t.string   "name",       null: false
-    t.integer  "sport_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

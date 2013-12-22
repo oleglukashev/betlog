@@ -227,7 +227,7 @@ div.search
   zoom: 1;
   *display: inline;
   _height: 57px;
-  margin: 16px 0 0 100px;
+  margin: 16px 0 0 160px;
 }
 
 div.search.hide div.input-wrap 
@@ -708,6 +708,14 @@ div.event-hide-full {
 
 
 
+
+
+
+div.tabs {
+  overflow: hidden;
+  height: 0;
+}
+
 div.hot-matches div.tabs {
   padding: 5px;  
 }
@@ -715,7 +723,9 @@ div.hot-matches div.tabs {
 div.tabs-title div.tab-title-item {
   margin-left: -10px;
   padding-left: 16px;
-  background: url(../assets/bet_tab_left.png) no-repeat 0 0;
+  background-image: image-url(../assets/bet_tab_left.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 	display: -moz-inline-stack;
 	display: inline-block;
   *display: inline;
@@ -724,17 +734,22 @@ div.tabs-title div.tab-title-item {
 	position: relative;
   text-shadow: 0px 1px 0 #fff;
   font-size: 12px;
+  cursor: pointer;
 }
 
 div.tabs-title div.tab-title-item div {
   padding: 0 16px 0 0;
-  background: url(../assets/bet_tab_right.png) no-repeat right 0;
+  background-image: image-url(../assets/bet_tab_right.png);
+  background-repeat: no-repeat;
+  background-position: right 0;
 }
 
 div.tabs-title div.tab-title-item div div {
   padding: 0 15px;
   height: 24px;
-  background: url(../assets/bet_tab_center.png) repeat-x 0 0;
+  background-image: image-url(../assets/bet_tab_center.png);
+  background-repeat: repeat-x;
+  background-position: 0 0;
   line-height: 24px;
   text-align: center;
   text-decoration: none;
@@ -743,15 +758,22 @@ div.tabs-title div.tab-title-item div div {
 }
 
 div.tabs-title div.tab-title-item.active {
-  background: url(../assets/bet_tab_left_active.png) no-repeat 0 0;
+  background-image: image-url(../assets/bet_tab_left_active.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 15;
 }
 
 div.tabs-title div.tab-title-item.active div {
-  background: url(../assets/bet_tab_right_active.png) no-repeat right 0;
+  background-image: image-url(../assets/bet_tab_right_active.png);
+  background-repeat: no-repeat;
+  background-position: right 0;
 }
 
 div.tabs-title div.tab-title-item.active div div {
-  background: url(../assets/bet_tab_center_active.png) repeat-x 0 0;
+  background-image: image-url(../assets/bet_tab_center_active.png);
+  background-repeat: repeat-x;
+  background-position: 0 0;
 }
 
 
@@ -770,9 +792,8 @@ div.tab-title-item-8 { z-index: 3; }
 div.tab-title-item-9 { z-index: 2; }
 div.tab-title-item-10 { z-index: 1; }
 
-div.tabs-title div.tab-title-item a {
-	
-}
+div.tab-content { display: none; }
+div.tab-content.active { display: block; }
 
 div.tab-content table { width: 100%; }
 div.tab-content table tr th { 
@@ -800,6 +821,14 @@ div.tab-content table tr td.td1 { width: 40%; }
 
 div.tab-content table tr.odd td {
 	background-color: #cdecf1;
+}
+
+div.tab-content table tr.odd td.main_coeff {
+  width: 36px;
+}
+
+div.tab-content table tr.odd td.opt_coeff {
+  width: 64px;
 }
 
 div.tab-content table tr td span.coef-position {
@@ -1243,6 +1272,10 @@ div.loginbox-remember p:first-child
 div.favorites {
   width: 610px;
   margin-right: 17px;
+}
+
+div.favorites div.tabs {
+  margin-bottom: 30px;
 }
 
 div.hot-matches {
