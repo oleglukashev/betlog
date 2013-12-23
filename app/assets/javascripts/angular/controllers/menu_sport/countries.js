@@ -8,8 +8,18 @@ betlog_controllers.controller('menuSportCountries', ['$scope', '$rootScope', '$h
     }
 
     $scope.getCountriesBySport = function(sport) {
+      var result = [];
+      var championships = filterFilter( $scope.getChampionships(), { sport_id: sport.id }, true);
 
-      return filterFilter( Storage.getCountries(), { sport_id: sport.id }, true);
+      championships.map(function(championship) {
+        var country = filterFilter( $scope.getCountries(), { id: championship.country_id }, true)[0];
+
+        if ( country && result.indexOf( country ) === -1) {
+          result.push( country );
+        } 
+      });
+
+      return result;
     }
 
     $scope.getBlockCountryBySport = function( sport ) {
@@ -53,11 +63,23 @@ betlog_controllers.controller('menuSportCountries', ['$scope', '$rootScope', '$h
       $scope.first_word = word;
     }
 
+    $scope.getCountries = function() {
+      return Storage.getCountries();
+    }
+
+    $scope.getChampionships = function() {
+      return Storage.getChampionships();
+    }
+
 
     /* on */
 
     $scope.$on('reloadCountries', function() {
-      Storage.getCountries();
-    })
+      $scope.getCountries();
+    });
+
+    $scope.$on('reloadChampionships', function() {
+      $scope.getChampionships();
+    });
 
   }])

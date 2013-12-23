@@ -8,16 +8,17 @@
           <p>{{events_date | date:'MMMM'}}</p>
         </div>
         <div id="event-{{event.id}}" class="event" ng-repeat="event in getEventsChampionshipByEventDate(events_date);">
-          <div class="event-title" ng-click="toggle(event);">
+          <div class="event-title" slide-toggle>
             <div class="event-part">
               <div class="event-date">{{event.date_event | date:'HH:mm'}}</div>{{ event.opponent_1}}</div>
             <div class="event-border">&mdash;</div>
             <div class="event-part">{{ event.opponent_2 }}<div class="event-show-full"></div></div>
           </div>
-          <div class="tabs event-full-content" ng-show="event.isOpened" ng-class="{ 'event-fade-in': event.isOpened }" ng-controller="Coefficients">
+          <div class="tabs slideable" ng-controller="Coefficients" tabs>
             <div class="tabs-title">
-              <div class="tab-title-item tab-title-item-1 active"><div><div>Коэффициенты</div></div></div>
-              <div class="tab-title-item tab-title-item-2"><div><div>График</div></div></div>
+              <div class="tab-title-item tab-title-item-1"><div><div>Коэффициенты</div></div></div>
+              <div class="tab-title-item tab-title-item-2"><div><div>Фора/Тотал</div></div></div>
+              <div class="tab-title-item tab-title-item-3"><div><div>График</div></div></div>
             </div>
             <div class="tab-content">
               <table>
@@ -29,27 +30,35 @@
                   <th>1x</th>
                   <th>12</th>
                   <th>x2</th>
-                  <th>Фора 1</th>
-                  <th>Фора 2</th>
-                  <th>Тотал (меньше)</th>
-                  <th>Тотал (больше)</th>
                 </tr>
                 <tr class="odd" ng-repeat="coefficient in getCoefficientsByEventId( event.id );">
-                  <td class="td1">{{coefficient.bookmaker_name}}</td>
-                  <td class="td2">{{coefficient.first}}</td>
-                  <td class="td3">{{coefficient.draw}}</td>
-                  <td class="td3">{{coefficient.second}}</td>
-                  <td class="td4">{{coefficient.first_or_draw}}</td>
-                  <td class="td2">{{coefficient.first_or_second}}</td>
-                  <td class="td3">{{coefficient.draw_or_second}}</td>
-                  <td class="td4">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}</td>
-                  <td class="td4">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}</td>
-                  <td class="td4">({{coefficient.total_less}}) {{coefficient.coeff_total_less}}</td>
-                  <td class="td4">({{coefficient.total_more}}) {{coefficient.coeff_total_more}}</td>
+                  <td>{{coefficient.bookmaker_name}}</td>
+                  <td class="main_coeff">{{coefficient.first}}</td>
+                  <td class="main_coeff">{{coefficient.draw}}</td>
+                  <td class="main_coeff">{{coefficient.second}}</td>
+                  <td class="main_coeff">{{coefficient.first_or_draw}}</td>
+                  <td class="main_coeff">{{coefficient.first_or_second}}</td>
+                  <td class="main_coeff">{{coefficient.draw_or_second}}</td>
                 </tr>
               </table>
             </div>
             <div class="tab-content">
+              <table>
+                <tr>
+                  <th>Букмекеры</th>
+                  <th>Фора 1</th>
+                  <th>Фора 2</th>
+                  <th>Тотал <</th>
+                  <th>Тотал ></th>
+                </tr>
+                <tr class="odd" ng-repeat="coefficient in getCoefficientsByEventId( event.id );">
+                  <td>{{coefficient.bookmaker_name}}</td>
+                  <td class="opt_coeff">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}</td>
+                  <td class="opt_coeff">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}</td>
+                  <td class="opt_coeff">({{coefficient.total_less}}) {{coefficient.coeff_first_total}}</td>
+                  <td class="opt_coeff">({{coefficient.total_more}}) {{coefficient.coeff_second_total}}</td>
+                </tr>
+              </table>
             </div>
             <div class="tab-content">
             </div>
@@ -62,6 +71,8 @@
   </div>
 </div>
 <div class="country-menu">
+  <%= render 'layouts/manager_league' %>
+
   <ul>
     <li class="active">
       <div class="country-menu-item">

@@ -504,7 +504,7 @@ div.country-menu
 
 div.events
 {
-	width: 665px;
+	width: 630px;
 }
 
 div.events-content,
@@ -868,7 +868,7 @@ div.tab-content table tr td span.coef-position.down {
 
 /* Menu */
 
-div.country-menu { width: 190px; margin-left: -3px; }
+div.country-menu { width: 230px; margin-left: -3px; }
 
 div.country-menu h1 { margin-left: 20px; }
 
@@ -1299,6 +1299,13 @@ div.hot-matches-group {
 
 /* optional */
 div.optional { width: 230px; }
+
+
+/* manager league */
+
+div.country-menu div.manager-league {
+  margin-left: 20px;
+}
 
 div.manager-league-content-body {
   padding: 0;  

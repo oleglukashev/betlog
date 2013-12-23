@@ -1,0 +1,37 @@
+<div class="hot-matches-group" ng-repeat="event in getFavoriteEvents();">        
+  <p class="event-sport-title">{{getSportByCountry(getCountryByEvent(event)).name}} - {{getCountryByEvent(event).name}} - {{getChampionshipByEvent(event).name}}</p>
+  <div id="event-{{event.id}}" class="event" ng-controller="Events">
+    <div class="event-title" ng-click="toggle(event);">
+      <div class="event-part">
+        <div class="event-date">{{event.date_event | date:'HH:mm'}}</div>{{ event.opponent_1}}</div>
+      <div class="event-border">&mdash;</div>
+      <div class="event-part">{{ event.opponent_2 }}<div class="event-show-full"></div></div>
+    </div>
+    <div class="tabs event-full-content" ng-show="event.isOpened" ng-class="{ 'event-fade-in': event.isOpened }" ng-controller="Coefficients">
+      <div class="tabs-title">
+        <div class="tab-title-item tab-title-item-1 active"><div><div>Коэффициенты</div></div></div>
+        <div class="tab-title-item tab-title-item-2"><div><div>График</div></div></div>
+      </div>
+      <div class="tab-content">
+        <table>
+          <tr>
+            <th>Букмекеры</th>
+            <th>1</th>
+            <th>x</th>
+            <th>2</th>
+          </tr>
+          <tr class="odd" ng-repeat="coefficient in getCoefficientsByEventId( event.id );">
+            <td class="td1">{{coefficient.bookmaker_name}}</td>
+            <td class="td2">{{coefficient.first}}</td>
+            <td class="td3">{{coefficient.draw}}</td>
+            <td class="td4">{{coefficient.second}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="tab-content">
+      </div>
+      <div class="tab-content">
+      </div>
+    </div>
+  </div>
+</div>

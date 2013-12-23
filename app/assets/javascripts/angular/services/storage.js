@@ -2,9 +2,11 @@
 /* Directives */
 angular.module('betlog.services', [])
   .factory('Storage', [
+  'filterFilter',
   '$http',
-  '$rootScope', 
-  function( $http, $rootScope ) {
+  '$rootScope',
+  '$cookieStore',
+  function( filterFilter, $http, $rootScope, $cookieStore ) {
     var sports = [];
     var countries = [];
     var championships = [];
@@ -76,6 +78,8 @@ angular.module('betlog.services', [])
               championships.push( new_championship ); 
 
               $rootScope.$broadcast('reloadChampionships', championships);
+
+              Storage.initManagedLeagues();
             });
           }
         }).
@@ -256,27 +260,22 @@ angular.module('betlog.services', [])
     }
 
     Storage.initManagedLeagues = function() {
-      $http.get('/managed_leagues')
-        .success(function(data, status, headers, config) {
-          if ( status === 200 && data.length) {
-            data.map(function(championship, i) {
-              var new_championship = {
-                id: championship.id,
-                name: championship.name,
-                country_id: championship.country_id,
-                sport_id: championship.sport_id,
-                isActive: false
-              }
+      var result = [];
+      var championships_ids = $cookieStore.get('managedLeagues');
 
-              managed_leagues.push( new_championship ); 
+      if ( championships_ids.length ) {
+        championships_ids.map(function(id) {
+          var championship = filterFilter( championships, { id: id }, true )[0];
 
-              $rootScope.$broadcast('reloadManagedLeagues');
-            });
+          if ( championship && result.indexOf( championship ) === -1 ) {
+            result.push( championship );
           }
-        })
-        .error(function(data, status, headers, config) {
-          
         });
+
+        managed_leagues = result;
+
+        $rootScope.$broadcast("reloadManagedLeagues");
+      }
     }
 
     Storage.initSports();
@@ -285,7 +284,6 @@ angular.module('betlog.services', [])
     Storage.initEvents();
     Storage.initCoefficients();
     Storage.initCurrentUser();
-    Storage.initManagedLeagues();
 
     return Storage;
 }]);

@@ -5,6 +5,7 @@
 var betlog = angular.module('betlog', [
   'ngRoute',
   'ngAnimate',
+  'ngCookies',
   'betlog.filters',
   'betlog.services',
   'betlog.directives',

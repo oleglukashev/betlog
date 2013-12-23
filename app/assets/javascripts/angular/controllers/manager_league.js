@@ -10,14 +10,6 @@ betlog_controllers.controller('ManagerLeague', [
   function( $scope, $rootScope, $http, filterFilter, $animate, $route, $routeParams, Storage ) {
     $scope.active_sport = false;
 
-    $scope.isActive = function() {
-      return Storage.hasCurrentUser();
-    }
-
-    $scope.getCurrentUser = function() {
-      return Storage.getCurrentUser();
-    }
-
     $scope.getManagedLeagues = function() {
       return Storage.getManagedLeagues();
     }
@@ -65,10 +57,6 @@ betlog_controllers.controller('ManagerLeague', [
 
     $rootScope.$on('reloadManagedLeagues', function() {
       $scope.getManagedLeagues();
-    });
-
-    $rootScope.$on('reloadCurrentUser', function() {
-      $scope.getCurrentUser();
     });
 
     $rootScope.$on('reloadSports', function() {

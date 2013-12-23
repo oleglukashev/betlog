@@ -1,0 +1,161 @@
+
+------ team not found -------
+sport: Гандбол
+country: Россия
+championship: Суперлига
+team: Энергия Воронеж
+------ team not found -------
+sport: Гандбол
+country: Норвегия
+championship: Постенлигаен
+team: Сторд
+------ team not found -------
+sport: Гандбол
+country: Норвегия
+championship: Постенлигаен
+team: Сторд
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Иври
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Иври
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Сен-Рафаэль
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Сен-Рафаэль
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Трембле
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Трембле
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Экс
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Экс
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Сессон-Ренн
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Сессон-Ренн
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Селестат
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Селестат
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Шамбери
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Шамбери
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Дюнкерк
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Дюнкерк
+------ team not found -------
+sport: Воллейбол
+country: Австрия
+championship: AVL
+team: Посоильница
+------ team not found -------
+sport: Воллейбол
+country: Австрия
+championship: AVL
+team: Вальдфиртель
+------ team not found -------
+sport: Воллейбол
+country: Австрия
+championship: AVL
+team: Амштеттен
+------ team not found -------
+sport: Воллейбол
+country: Бразилия
+championship: Суперлига
+team: Мода Маринга
+------ team not found -------
+sport: Воллейбол
+country: Испания
+championship: Суперлига
+team: Мадрид
+------ team not found -------
+sport: Воллейбол
+country: Испания
+championship: Суперлига
+team: Рио Дуэро Сан-Хосе
+------ team not found -------
+sport: Воллейбол
+country: Испания
+championship: Суперлига
+team: Луго
+------ team not found -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+team: Хапоэль И
+------ team not found -------
+sport: Баскетбол
+country: Израиль
+championship: Суперлига
+team: Хапоэль И
+------ team not found -------
+sport: Гандбол
+country: Венгрия
+championship: HB
+team: Венгрия (мол)
+------ team not found -------
+sport: Гандбол
+country: Венгрия
+championship: HB
+team: Венгрия (мол)
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Ним
+------ team not found -------
+sport: Гандбол
+country: Франция
+championship: LNH
+team: Ним
