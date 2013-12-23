@@ -263,7 +263,7 @@ angular.module('betlog.services', [])
       var result = [];
       var championships_ids = $cookieStore.get('managedLeagues');
 
-      if ( championships_ids.length ) {
+      if ( championships_ids && championships_ids.length ) {
         championships_ids.map(function(id) {
           var championship = filterFilter( championships, { id: id }, true )[0];
 
