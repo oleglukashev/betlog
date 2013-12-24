@@ -6,8 +6,9 @@ betlog_controllers.controller('Authorization', [
   '$animate', 
   '$route', 
   '$routeParams',
+  '$element',
   'Storage',
-  function( $scope, $rootScope, $http, filterFilter, $animate, $route, $routeParams, Storage ) {    
+  function( $scope, $rootScope, $http, filterFilter, $animate, $route, $routeParams, $element, Storage ) {    
     $scope.login = {
       login: '',
       password: '',
@@ -63,6 +64,10 @@ betlog_controllers.controller('Authorization', [
       Storage.signIn(data);
     }
 
+    $scope.init();
+
+    /*  on  */
+
     $rootScope.$on('showAuthorization', function() {
       $scope.show();
     })
@@ -99,8 +104,5 @@ betlog_controllers.controller('Authorization', [
 
     $rootScope.$on('reloadCurrentUser', function() {
       $scope.getCurrentUser();
-    });
-
-    $scope.init();
-  
+    });  
   }])

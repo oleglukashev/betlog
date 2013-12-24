@@ -23,6 +23,10 @@ betlog_controllers.controller('Registration', [
       });
     }
 
+    $scope.getCurrentUser = function() {
+      Storage.getCurrentUser();
+    }
+
     $scope.show = function() {
       $scope.isActive = true;
       $rootScope.$broadcast('showOverlay');
@@ -38,7 +42,6 @@ betlog_controllers.controller('Registration', [
     }
 
     $scope.signUp = function() {
-      console.log($scope.register);
       var data = {
         'login': $scope.register.login,
         'name': $scope.register.name,
@@ -50,6 +53,10 @@ betlog_controllers.controller('Registration', [
       $scope.register = {};
     }
 
+    $scope.init();
+
+    /*  on  */
+
     $rootScope.$on('showRegistration', function() {
       $scope.show();
     });
@@ -60,8 +67,11 @@ betlog_controllers.controller('Registration', [
 
     $rootScope.$on('signup_success', function() {
       $scope.close();
+      $scope.register = {};
     });
 
-    $scope.init();
+    $rootScope.$on('reloadCurrentUser', function() {
+      $scope.getCurrentUser();
+    });
   
   }])

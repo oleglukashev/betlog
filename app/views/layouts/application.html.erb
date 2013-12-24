@@ -15,12 +15,8 @@
 					<a ng-hide="getCurrentUserName()" id="signin" ng-click="showAuthorization();" href="#">Войти</a>
 			</div>
 			<div class="logo"><a href="/"><img src="<%= asset_path( 'logo.png' ) %>" title="Betlog" /></a></div>
-			<div class="search hide">
-				<div class="lupa"></div>
-				<div class="input-wrap">
-					<div><div><div><input type="text" placeholder="Поиск..." /></div></div></div>
-				</div>
-			</div>
+
+			<%= render 'layouts/search' %>
 
 			<%= render 'layouts/menu_sports' %>
 

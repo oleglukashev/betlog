@@ -7,7 +7,7 @@ $(document).ready(function(){
 		$(this).attr("placeholder", "")
 		$("div.search").removeClass("hide");
 		$(this).animate({
-			width: '200px'
+			width: '250px'
 		}, 200);
 	});
 

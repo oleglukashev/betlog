@@ -246,8 +246,8 @@ angular.module('betlog.services', [])
         .success(function(data, status, headers, config) {
           if ( status === 200 ) {
             var user = {
-              login: data.login,
-              name: data.name
+              login: data.user.login,
+              name: data.user.name
             }
 
             Storage.setCurrentUser( user );
