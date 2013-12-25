@@ -160,8 +160,8 @@ class MarathonBet():
 
         else:
           if ( td.get("class") == "first" ):
-            event_hash['first_team'] = self.getTeam( td.cssselect("table tr td span.command div")[0].text.strip(" \r\n") )
-            event_hash['second_team'] = self.getTeam( td.cssselect("table tr td span.command div")[1].text.strip(" \r\n") )
+            event_hash['first_team'] = self.getTeam( td.cssselect("table tr td span.command div")[0].text.strip(" \r\n") ) if self.getTeam( td.cssselect("table tr td span.command b")[0].text.strip(" \r\n") ) == "1." else self.getTeam( td.cssselect("table tr td span.command div")[1].text.strip(" \r\n") ) 
+            event_hash['second_team'] = self.getTeam( td.cssselect("table tr td span.command div")[1].text.strip(" \r\n") ) if self.getTeam( td.cssselect("table tr td span.command b")[1].text.strip(" \r\n") ) == "2." else self.getTeam( td.cssselect("table tr td span.command div")[0].text.strip(" \r\n") ) 
             event_hash['date_event'] = self.getDate( td.cssselect('td.first table tr td.date')[0].text.strip(" \r\n") )
 
         count += 1
