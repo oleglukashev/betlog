@@ -284,6 +284,12 @@ div.search-result {
   background-color: #fff;
   max-height: 390px;
   overflow-y: auto;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.3);
+  -moz-box-shadow:    0px 1px 1px rgba(50, 50, 50, 0.3);
+  box-shadow:         0px 1px 1px rgba(50, 50, 50, 0.3);
 }
 
 div.search-result-item {
@@ -303,11 +309,18 @@ div.search-result-item p a {
 }
 
 div.search-result-championship-title {
-  padding: 3px 20px;
+  padding: 3px 10px;
   background-color: #ffdd3f;
-  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
+}
+
+div.search-result-championship-title span {
+  margin: 0 3px;
+}
+
+div.search-result-championship-title span.search-result-championship-title-sport {
+  font-weight: bold;
 }
 
 

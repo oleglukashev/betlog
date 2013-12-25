@@ -36,6 +36,8 @@
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1951" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1952" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1953" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1954" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=1955" />
                 </bookmaker>
             </championship>
         </country>
@@ -89,6 +91,7 @@
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=6" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=58" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=2236" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=269" />
                 </bookmaker>
             </championship>
         </country>
@@ -131,6 +134,7 @@
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=75" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=128" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=168" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=215" />
                 </bookmaker>
             </championship>
         </country>
@@ -144,6 +148,7 @@
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=80" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=5471" />
                     <link value="http://betcityru.com/bets/bets2.php?line_id\[]=170" />
+                    <link value="http://betcityru.com/bets/bets2.php?line_id\[]=227" />
                 </bookmaker>
             </championship>
         </country>
@@ -804,6 +809,14 @@
             <championship value="Кубок мира 2013">
                 <bookmaker value="Marathon">
                     <link value="http://marathonbet.com/ru/betting/Rugby+League/World+Cup+2013/" />
+                </bookmaker>
+                <bookmaker value="Betcity">
+                    <link value="" />
+                </bookmaker>
+            </championship>
+            <championship value="Про 12">
+                <bookmaker value="Marathon">
+                    <link value="http://www.marathonbet.com/ru/betting/Rugby+Union/RaboDirect+Pro+12/" />
                 </bookmaker>
                 <bookmaker value="Betcity">
                     <link value="" />

@@ -123,8 +123,11 @@ class BetcityBet():
             else:
               event_hash[key] = td.text_content().strip() if len( td.text_content().strip() ) > 0 else None
 
-            count += 1
+            if ( key == "total_less"):
+              event_hash["total_more"] = event_hash[key]
 
+            count += 1
+              
       result[i] = event_hash
       i += 1  
         
@@ -149,9 +152,11 @@ class BetcityBet():
       'X2': ['draw_or_second'],
       'кф': ['coeff_first_fora', 'coeff_second_fora'],
       'фора': ['first_fora', 'second_fora'],
+      'фора 1': ['first_fora'],
+      'фора 2': ['second_fora'],
       'Фора': ['first_fora', 'second_fora'],
-      'Тотал': ['total_less', 'total_more'],
-      'тотал': ['total_less', 'total_more'],
+      'Тотал': ['total_less'],
+      'тотал': ['total_less'],
       'мен': ['coeff_first_total'],
       'бол': ['coeff_second_total']
     }

@@ -60,6 +60,9 @@
     <championship value="DEL">
       <variant value="DEL" />
     </championship>
+    <championship value="Про 12">
+      <variant value="Про 12" />
+    </championship>
     <championship value="Про-лига">
       <variant value="Про-лига" />
       <variant value="Жюпиле Про-лига" />
