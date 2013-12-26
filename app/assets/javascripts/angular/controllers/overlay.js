@@ -10,6 +10,7 @@ betlog_controllers.controller('Overlay', ['$scope', '$http', '$element', '$rootS
     $scope.closeWithBlock = function() {
       $rootScope.$broadcast( 'closeAuthorization' );
       $rootScope.$broadcast( 'closeRegistration' );
+      $rootScope.$broadcast( 'closeProfile' );
       $scope.close();
     }
 

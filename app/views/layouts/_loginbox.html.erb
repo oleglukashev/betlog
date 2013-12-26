@@ -64,8 +64,9 @@
 		<div class="loginbox-close" ng-click="close('overlay');"></div>
 		<p class="loginbox-title">Профиль</p>
 		<div class="profile-data">
-			<div>Логин: {{getCurrentUser().login}}</div>
-			<div>Имя: {{getCurrentUser().name}}</div>
+			<div class="profile-data-login">{{getCurrentUser().login}}</div>
+			<div><label><input type="checkbox" checked="checked" />Я хочу получать новости данного сервиса</label></div>
+			<div><label><input type="checkbox" checked="checked" />Я хочу получать новости об интересных матчах</label></div>
 		</div>
 		<p><button ng-click="signOut();">Выйти</button></p>
 	</div>

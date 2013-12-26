@@ -415,7 +415,7 @@ ul.sport-menu-items-container li div.sport-menu-item-countries {
   -webkit-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.3);
   -moz-box-shadow:    0px 1px 1px rgba(50, 50, 50, 0.3);
   box-shadow:         0px 1px 1px rgba(50, 50, 50, 0.3);
-  z-index: 15;
+  z-index: 20;
 }
 
 ul.sport-menu-items-container li:hover div.sport-menu-item-countries {
@@ -872,7 +872,7 @@ div.tab-content table tr.odd td.main_coeff {
 }
 
 div.tab-content table tr.odd td.opt_coeff {
-  width: 64px;
+  width: 70px;
 }
 
 div.tab-content table tr td span.coef-position {
@@ -1278,6 +1278,20 @@ div.loginbox-remember p:first-child
   -moz-box-shadow:    0px 2px 5px rgba(50, 50, 50, 0.5);
   box-shadow:         0px 2px 5px rgba(50, 50, 50, 0.5);
   z-index: 16;
+}
+
+div.profile-data > div {
+  margin-bottom: 8px;
+} 
+
+div.profile-data div.profile-data-login {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+div.profile-data label input {
+  float: left;
+  margin: 2px 5px 0 0;
 }
 
 #profile div.loginbox-content-body form div p button {

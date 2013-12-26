@@ -48,6 +48,10 @@ betlog_controllers.controller('Profile', [
       $scope.show();
     });
 
+    $rootScope.$on('closeProfile', function() {
+      $scope.close();
+    });
+
     $rootScope.$on('resizeProfile', function() {
       $scope.resize();
     });
