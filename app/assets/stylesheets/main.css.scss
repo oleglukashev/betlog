@@ -269,7 +269,7 @@ div.search.hide div div div input
 }
 
 div.search div div div input {
-  width: 100px;
+  width: 130px;
   margin-left: 22px;
   color: #555;
 }
@@ -297,6 +297,28 @@ div.search-result-item {
   background-color: #f9f9f9;
   border-bottom: 1px solid #ebebeb;
   cursor: pointer;
+  font-size: 0;
+}
+
+div.search-result-item div {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  font-size: 12px;
+}
+
+div.search-result-item-teams {
+  width: 70%;
+}
+
+div.search-result-item-date {
+  width: 30%;  
+}
+
+div.search-result-item-date p {
+  text-align: right;
 }
 
 div.search-result-item:hover {

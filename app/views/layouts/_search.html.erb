@@ -1,14 +1,19 @@
 <div class="search hide" ng-controller="SearchEvents">
   <div class="lupa"></div>
   <div class="input-wrap">
-    <div><div><div><input ng-model="str_for_search_teams" ng-blur="closeSearch();" on-keyup="searchEvents();" type="text" placeholder="Поиск..." /></div></div></div>
+    <div><div><div><input ng-model="str_for_search_teams" ng-blur="closeSearch();" on-keyup="searchEvents();" type="text" placeholder="Введите команду..." /></div></div></div>
   </div>
   <div class="search-result" ng-show="getSearchedResults().length">
     <div class="search-result-championship" ng-repeat="championship in getSearchedChampionshipsResults() | orderBy:'sport_id'">
       <div class="search-result-championship-title"><span class="search-result-championship-title-sport">{{ getSportByChampionship( championship ).name }}</span><span>»</span>{{ getCountryByChampionship( championship ).name }}<span>»</span>{{championship.name}}</div>
       <div class="search-result-item" ng-repeat="event in getSearchedResultsByChampionship(championship)">
-        <p><a href="/#/sport/{{getSportByCountry( getCountryByEvent(event) ).id}}/country/{{getCountryByEvent(event).id}}/championship/{{getChampionshipByEvent(event).id}}/events">{{ event.opponent_1 }}</a></p>
-        <p><a href="/#/sport/{{getSportByCountry( getCountryByEvent(event) ).id}}/country/{{getCountryByEvent(event).id}}/championship/{{getChampionshipByEvent(event).id}}/events">{{ event.opponent_2 }}</a></p>
+        <div class="search-result-item-teams">
+          <p><a href="/#/sport/{{getSportByCountry( getCountryByEvent(event) ).id}}/country/{{getCountryByEvent(event).id}}/championship/{{getChampionshipByEvent(event).id}}/events">{{ event.opponent_1 }}</a></p>
+          <p><a href="/#/sport/{{getSportByCountry( getCountryByEvent(event) ).id}}/country/{{getCountryByEvent(event).id}}/championship/{{getChampionshipByEvent(event).id}}/events">{{ event.opponent_2 }}</a></p>
+        </div>
+        <div class="search-result-item-date">
+          <p>{{event.date_event | date:'dd.MM.yyyy'}}</p>
+        </div>
       </div>
     </div>
   </div>

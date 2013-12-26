@@ -12,10 +12,10 @@ $(document).ready(function(){
 	});
 
 	$("div.search input").on("blur", function() {
-		$(this).attr("placeholder", "Поиск...")
+		$(this).attr("placeholder", "Введите команду...")
 		$("div.search").addClass("hide");
 		$(this).animate({
-			width: '100px'
+			width: '130px'
 		}, 200);
 	});
 
