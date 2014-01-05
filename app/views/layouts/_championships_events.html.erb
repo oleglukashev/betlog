@@ -66,6 +66,8 @@
         </div>
         <div class="clear"></div>
       </div>
+      <div class="add-championship-to-manager-leagues" ng-hide="managerLeagueHasChampionship(getActiveChampionship())" ng-click="addChampionshipInToManagerLeagues()">Добавить чемпионат в менеджер лиг</div>
+      <div class="add-championship-to-manager-leagues" ng-show="managerLeagueHasChampionship(getActiveChampionship())" ng-click="removeChampionshipFromManagerLeagues()">Удалить чемпионат из менеджера лиг</div>
     </div>
     <div class="events-content-bottom"><div><div></div></div></div>
   </div>

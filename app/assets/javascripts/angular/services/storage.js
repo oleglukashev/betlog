@@ -273,9 +273,43 @@ angular.module('betlog.services', [])
         });
 
         managed_leagues = result;
-
         $rootScope.$broadcast("reloadManagedLeagues");
       }
+    }
+
+    Storage.addChampionshipInToManagerLeagues = function(add_championship) {
+      var championships_ids = $cookieStore.get('managedLeagues');
+
+      if ( ! championships_ids ) {
+        championships_ids = [];
+      }
+      
+      if (championships_ids.indexOf(add_championship.id) === -1) {
+        championships_ids.push(add_championship.id);
+        managed_leagues.push(add_championship)
+      }
+
+      $rootScope.$broadcast("reloadManagedLeagues");
+      $cookieStore.put('managedLeagues', championships_ids);
+    }
+
+    Storage.removeChampionshipFromManagerLeagues = function(championship) {
+      var championships_ids = $cookieStore.get('managedLeagues');
+
+      championships_ids.map(function(championships_id, key) {
+        if ( championships_id === championship.id) {
+          championships_ids.splice(key, 1);
+        }
+      });
+
+      managed_leagues.map(function(managed_championship, key) {
+        if ( managed_championship.id === championship.id) {
+          managed_leagues.splice(key, 1);
+        }
+      });
+
+      $rootScope.$broadcast("reloadManagedLeagues");
+      $cookieStore.put('managedLeagues', championships_ids); 
     }
 
     Storage.initSports();

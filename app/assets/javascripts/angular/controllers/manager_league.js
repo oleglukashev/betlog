@@ -53,6 +53,10 @@ betlog_controllers.controller('ManagerLeague', [
       return filterFilter( $scope.getCountries(), { id: championship.country_id }, true)[0];
     }
 
+    $scope.remove = function(championship) {
+      Storage.removeChampionshipFromManagerLeagues(championship);
+    }
+
     /*  on  */
 
     $rootScope.$on('reloadManagedLeagues', function() {

@@ -125,16 +125,25 @@ angular.module('betlog.directives', [])
 	            var target = element.next().get(0);
 	            attrs.expanded = false;
 	            element.bind('click', function() {
-	                var content = target.querySelector('.slideable_content');
-	                if(!attrs.expanded) {
-	                    content.style.border = '1px solid rgba(0,0,0,0)';
-	                    var y = content.clientHeight;
-	                    content.style.border = 0;
-	                    target.style.height = y + 'px';
-	                } else {
-	                    target.style.height = '0px';
-	                }
-	                attrs.expanded = !attrs.expanded;
+	            	var content = target.querySelector('.slideable_content');
+
+	  						if ( element.hasClass("hidden-leagues")) {
+	  							element.removeClass("hidden-leagues");
+	  							element.addClass("visibled-leagues");
+	  						} else {
+	  							element.removeClass("visibled-leagues");
+	  							element.addClass("hidden-leagues");
+	  						}
+                
+                if(!attrs.expanded) {
+                    content.style.border = '1px solid rgba(0,0,0,0)';
+                    var y = content.clientHeight;
+                    content.style.border = 0;
+                    target.style.height = y + 'px';
+                } else {
+                    target.style.height = '0px';
+                }
+                attrs.expanded = !attrs.expanded;
 	            });
 	        }
 	    }

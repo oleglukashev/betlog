@@ -34,7 +34,13 @@ betlog_controllers.controller('EventsList', [
       return filterFilter( $scope.getChampionships(), { sport_id: parseInt($routeParams.sportId), country_id: parseInt($routeParams.countryId) }, true);
     }
 
+    $scope.addChampionshipInToManagerLeagues = function() {
+      Storage.addChampionshipInToManagerLeagues($scope.getActiveChampionship());
+    }
 
+    $scope.removeChampionshipFromManagerLeagues = function() {
+      Storage.removeChampionshipFromManagerLeagues($scope.getActiveChampionship()); 
+    }
 
 
     $scope.active = function( event ) {
@@ -91,6 +97,12 @@ betlog_controllers.controller('EventsList', [
       }
     }
 
+    $scope.managerLeagueHasChampionship = function(championship) {
+      if ( championship ) {
+        return filterFilter( Storage.getManagedLeagues(), { id: championship.id }, true).length ? true : false
+      }
+    }
+
 
 
     $scope.getCountries = function() {
@@ -142,5 +154,4 @@ betlog_controllers.controller('EventsList', [
     $scope.$on('reloadEvents', function() {
       Storage.getEvents();
     });
-
   }])

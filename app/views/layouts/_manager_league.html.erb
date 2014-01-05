@@ -4,14 +4,17 @@
     <div class="manager-league-content-body">
       <div class="manager-league-title">Менеджер лиг</div>
       <div class="manager-league-sport" ng-repeat="sport in getSportsManagedChampionships()">
-        <div class="manager-league-sport-title" slide-toggle="#leagueSport{{sport.id}}">{{sport.name}}</div>
+        <div class="manager-league-sport-title hidden-leagues" slide-toggle="#leagueSport{{sport.id}}">{{sport.name}}</div>
         <div id="leagueSport{{sport.id}}" class="manager-league-championships slideable">
           <div class="manager-league-championship" ng-repeat="championship in getManagedChampionshipsBySport(sport)">
             <a href="/#/sport/{{sport.id}}/country/{{getCountryByChampionship(championship).id}}/championship/{{championship.id}}/events">{{championship.name}} ({{getCountryByChampionship(championship).name}})</a>
+            <div class="manager-league-championship-delete" ng-click="remove(championship);"></div>
           </div>
         </div>
       </div>
-      <div class="manager-league-edit">Редактировать список лиг</div>
+      <div class="manager-league-clear" ng-hide="getSportsManagedChampionships().length">
+        Список пуст
+      </div>
     </div>
     <div class="manager-league-content-bottom"><div><div></div></div></div>
   </div>
