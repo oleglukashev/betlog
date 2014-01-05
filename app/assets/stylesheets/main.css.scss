@@ -407,9 +407,9 @@ ul.sport-menu-items-container li
   line-height: 34px;
   font-size: 16px;
   cursor: pointer;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 
 ul.sport-menu-items-container li p {
@@ -422,26 +422,21 @@ ul.sport-menu-items-container li:hover {
 }
 
 ul.sport-menu-items-container li div.sport-menu-item-countries {
-  display: none;
-  width: 500px;
+  margin-top: -3px;
   padding: 20px 20px 10px;
   position: absolute;
   background-color: #f9f9f9;
   font-size: 0;
-  -webkit-border-radius: 2px;
+  -webkit-border-radius: 6px;
   -webkit-border-top-left-radius: 0;
-  -moz-border-radius: 2px;
+  -moz-border-radius: 6px;
   -moz-border-radius-topleft: 0;
-  border-radius: 2px;
+  border-radius: 6px;
   border-top-left-radius: 0;
   -webkit-box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.3);
   -moz-box-shadow:    0px 1px 1px rgba(50, 50, 50, 0.3);
   box-shadow:         0px 1px 1px rgba(50, 50, 50, 0.3);
   z-index: 20;
-}
-
-ul.sport-menu-items-container li:hover div.sport-menu-item-countries {
-  display: block;
 }
 
 ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks {
@@ -451,7 +446,11 @@ ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-bl
   zoom: 1;
   *display: inline;
   font-size: 12px;
-  margin-right: 20px;
+  margin-left: 20px;
+}
+
+ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks:first-child {
+  margin-left: 0;
 }
 
 ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks div {
@@ -656,9 +655,8 @@ div.manager-league-content-body
 }
 
 div.events-content-body {
-  min-height: 980px;
+  min-height: 500px;
 }
-
 
 
 /* Event */
@@ -920,6 +918,15 @@ div.tab-content table tr td span.coef-position.down {
 	background-position: 0 0;
 }
 
+div.add-championship-to-manager-leagues {
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+div.add-championship-to-manager-leagues:hover {
+  text-decoration: none;
+}
 
 
 
@@ -951,7 +958,7 @@ div.country-menu ul li.active div.country-menu-item {
 	cursor: pointer;
 }
 
-div.country-menu ul { margin-top: 50px; }
+div.country-menu ul { margin-top: 20px; margin-right: -3px; }
 
 div.country-menu ul li { overflow: hidden; cursor: pointer; }
 
@@ -1089,10 +1096,62 @@ div.country-menu ul li div.country-submenu div.country-submenu-bottom div
 /* Footer */
 div.footer
 {
+  height: 100px;
 	width: 900px;
 	margin: 0 auto;
 }
 
+div.footer div.cop {
+  margin-top: 42px;
+  margin-left: 20px;
+  float:left;
+}
+
+div.footer div.social {
+  width: 94px;
+  margin-top: 35px;
+  margin-right: 20px;
+  float: right;
+  font-size: 0;
+}
+
+div.footer .fb,
+div.footer .tw {
+  width: 29px;
+  height: 29px;
+  padding: 4px;
+  margin-left: 10px;
+  background-color: #ebebeb;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  font-size: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+div.footer .fb {
+  background-position: center 6px;
+  background-image: image-url("facebook.png");
+}
+
+div.footer .tw {
+  background-position: center 7px;
+  background-image: image-url("twitter.png");
+}
+
+div.footer .fb:hover {
+  background-position: center -28px;
+}
+
+div.footer .tw:hover {
+  background-position: center -27px;
+}
 
 
 
@@ -1388,7 +1447,7 @@ div.country-menu div.manager-league {
 }
 
 div.manager-league-content-body {
-  padding: 0;  
+  padding: 0 0 10px;  
 }
 
 div.manager-league-title {
@@ -1397,6 +1456,7 @@ div.manager-league-title {
 }
 
 div.manager-league-sport {
+  margin-bottom: 1px;
 }
 
 div.manager-league-sport div.manager-league-sport-title {
@@ -1412,7 +1472,6 @@ div.manager-league-sport div.manager-league-sport-title:hover {
 }
 
 div.manager-league-championships {
-  margin-bottom: 5px;
   height: 0;
   overflow: hidden;
 }
@@ -1432,4 +1491,8 @@ div.manager-league-championship a:hover {
 div.manager-league-edit {
   margin-top: 15px;
   padding: 0 20px;
+}
+
+div.manager-league-clear {
+  padding: 0 20px; 
 }

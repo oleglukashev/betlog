@@ -8,7 +8,6 @@ betlog_controllers.controller('menuSports', [
   '$routeParams',
   'Storage',
   function( $scope, $rootScope, $http, filterFilter, $animate, $route, $routeParams, Storage ) {
-
     $scope.getSports = function() {
       return Storage.getSports()
     }

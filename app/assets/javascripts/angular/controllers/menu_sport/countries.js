@@ -1,11 +1,8 @@
 betlog_controllers.controller('menuSportCountries', ['$scope', '$rootScope', '$http', '$element', 'filterFilter', function( $scope, $rootScope, $http, $element, filterFilter ) {
     $scope.active_country = false;
     $scope.first_word = "";
-
-    $scope.selectWidthCountryAndSport = function(country, sport) {
-      $scope.activeSportBySportId(country.sport_id);
-      $scope.activeCountryAndSportSendHimToBroadcast(country, sport);
-    }
+    $scope.isActive = false;
+    var column_height = 6;
 
     $scope.getCountriesBySport = function(sport) {
       var result = [];
@@ -24,7 +21,7 @@ betlog_controllers.controller('menuSportCountries', ['$scope', '$rootScope', '$h
 
     $scope.getBlockCountryBySport = function( sport ) {
       var countries_length = $scope.getCountriesBySport( sport ).length;
-      var count_result = countries_length ? Math.ceil( countries_length / 8 ) : 0;
+      var count_result = countries_length ? Math.ceil( countries_length / column_height ) : 0;
       var result = [];
 
       for (var i = 0; i < count_result; i++) {
@@ -36,23 +33,14 @@ betlog_controllers.controller('menuSportCountries', ['$scope', '$rootScope', '$h
 
     $scope.getCountriesByBlockAndSport = function( block_number, sport ) {
       var result = [];
-      var block_size = 8;
 
       $scope.getCountriesBySport(sport).map(function(country, key) {
-        if ( key >= ( block_number * block_size ) && key < ( block_number * block_size ) + block_size ) {
+        if ( key >= ( block_number * column_height ) && key < ( block_number * column_height ) + column_height ) {
           result.push( country );
         }
       });
 
       return result;
-    }
-
-    $scope.activeCountryAndSportSendHimToBroadcast = function(country, sport) {
-      $rootScope.$broadcast('countrySelected', country, sport);
-    }
-
-    $scope.activeSportBySportId = function(sport_id) {
-      $rootScope.$broadcast('activeSport', sport_id);
     }
 
     $scope.getFirstWordByCountry = function( country ) {
