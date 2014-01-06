@@ -155,7 +155,8 @@ angular.module('betlog.services', [])
                 total_less: coefficient.item.total_less,
                 total_more: coefficient.item.total_more,
                 coeff_first_total: coefficient.item.coeff_first_total,
-                coeff_second_total: coefficient.item.coeff_second_total
+                coeff_second_total: coefficient.item.coeff_second_total,
+                created_at: coefficient.item.created_at
               }
 
               coefficients.push( new_coefficients );

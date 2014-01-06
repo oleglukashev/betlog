@@ -166,4 +166,43 @@ angular.module('betlog.directives', [])
 	            tab_titles[0].click();
 	        }
 	    }
+	})
+	.directive('eventGraph', function() {
+	  return {
+      restrict: 'A',
+      link: function(scope, element, attrs) {
+      	element.highcharts({
+	        title: {
+	            text: 'История изменения коэффициента',
+	            x: -20 //center
+	        },
+	        xAxis: {
+	            categories: scope.$eval(attrs.dates)
+	        },
+	        yAxis: {
+	            title: {
+	                text: ''
+	            },
+	            plotLines: [{
+	                value: 0,
+	                width: 0.5,
+	                color: '#808080'
+	            }]
+	        },
+	        tooltip: {
+	            valueSuffix: ''
+	        },
+	        legend: {
+	            enabled: false
+	        },
+	        series: [{
+	            name: attrs.paramName,
+	            data: scope.$eval(attrs.coefficients)
+	        }],
+	        exporting: {
+            enabled: false
+        	}
+    		});
+			}
+		}
 	});

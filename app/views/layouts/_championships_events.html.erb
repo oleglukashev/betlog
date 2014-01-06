@@ -18,7 +18,6 @@
             <div class="tabs-title">
               <div class="tab-title-item tab-title-item-1"><div><div>Коэффициенты</div></div></div>
               <div class="tab-title-item tab-title-item-2"><div><div>Фора/Тотал</div></div></div>
-              <div class="tab-title-item tab-title-item-3"><div><div>График</div></div></div>
             </div>
             <div class="tab-content">
               <table>
@@ -31,14 +30,14 @@
                   <th>12</th>
                   <th>x2</th>
                 </tr>
-                <tr class="odd" ng-repeat="coefficient in getCoefficientsByEventId( event.id );">
+                <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
                   <td>{{coefficient.bookmaker_name}}</td>
-                  <td class="main_coeff">{{coefficient.first}}</td>
-                  <td class="main_coeff">{{coefficient.draw}}</td>
-                  <td class="main_coeff">{{coefficient.second}}</td>
-                  <td class="main_coeff">{{coefficient.first_or_draw}}</td>
-                  <td class="main_coeff">{{coefficient.first_or_second}}</td>
-                  <td class="main_coeff">{{coefficient.draw_or_second}}</td>
+                  <td class="main_coeff">{{ coefficient.first }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'first') }}" param-name="Победа первой команды"></div></td>
+                  <td class="main_coeff">{{ coefficient.draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'draw') }}" param-name="Ничья"></td>
+                  <td class="main_coeff">{{ coefficient.second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'second') }}" param-name="Победа второй команды"></td>
+                  <td class="main_coeff">{{ coefficient.first_or_draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'first_or_draw') }}" param-name="Победа первой команды или ничья"></td>
+                  <td class="main_coeff">{{ coefficient.first_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'first_or_second') }}" param-name="Победа первой или второй команды"></td>
+                  <td class="main_coeff">{{ coefficient.draw_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'draw_or_second') }}" param-name="Ничья или победа второй команды"></td>
                 </tr>
               </table>
             </div>
@@ -51,7 +50,7 @@
                   <th>Тотал <</th>
                   <th>Тотал ></th>
                 </tr>
-                <tr class="odd" ng-repeat="coefficient in getCoefficientsByEventId( event.id );">
+                <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
                   <td>{{coefficient.bookmaker_name}}</td>
                   <td class="opt_coeff">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}</td>
                   <td class="opt_coeff">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}</td>
@@ -60,14 +59,14 @@
                 </tr>
               </table>
             </div>
-            <div class="tab-content">
-            </div>
           </div>
         </div>
         <div class="clear"></div>
       </div>
-      <div class="add-championship-to-manager-leagues" ng-hide="managerLeagueHasChampionship(getActiveChampionship())" ng-click="addChampionshipInToManagerLeagues()">Добавить чемпионат в менеджер лиг</div>
-      <div class="add-championship-to-manager-leagues" ng-show="managerLeagueHasChampionship(getActiveChampionship())" ng-click="removeChampionshipFromManagerLeagues()">Удалить чемпионат из менеджера лиг</div>
+      <div ng-show="getActiveChampionship();">
+        <div class="add-championship-to-manager-leagues" ng-hide="managerLeagueHasChampionship(getActiveChampionship())" ng-click="addChampionshipInToManagerLeagues()">Добавить чемпионат в менеджер лиг</div>
+        <div class="add-championship-to-manager-leagues" ng-show="managerLeagueHasChampionship(getActiveChampionship())" ng-click="removeChampionshipFromManagerLeagues()">Удалить чемпионат из менеджера лиг</div>
+      </div>
     </div>
     <div class="events-content-bottom"><div><div></div></div></div>
   </div>

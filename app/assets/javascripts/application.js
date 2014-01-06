@@ -23,3 +23,6 @@
 //= require vendor/angular/angular-cookies
 //= require betlog
 //= require_tree ./angular
+//= require vendor/hightchars/hightchars.js
+//= require vendor/hightchars/exporting.js
+
