@@ -53,7 +53,7 @@ betlog_controllers.controller('Coefficients', [
 
       coefficients.map(function(coefficient) {
         if ( result.indexOf( coefficient.created_at ) === -1 ) {
-          result.push( $filter('date')(coefficient.created_at, "dd.MM.yyyy") );
+          result.push( $filter('date')(coefficient.created_at, "dd.MM") );
         }
       });
 
