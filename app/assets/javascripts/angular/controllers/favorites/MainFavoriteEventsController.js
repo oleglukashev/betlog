@@ -38,6 +38,18 @@ betlog_controllers.controller('MainFavoriteEvents', [
       return filterFilter( Storage.getChampionships(), { id: event.championship_id }, true)[0];
     }
     
+    $scope.getNextEvents = function() {
+      var result = [];
+
+      filterFilter( Storage.getEvents(), { championship_id: Storage.getChampionships()[0].id }, true).map(function(event, key) {
+        if ( key <= 4 ) {
+          result.push( event );
+        }
+      });
+
+      return result;
+    }
+
     //$rootScope.$broadcast('getFavoriteSports');
 
     /* on */

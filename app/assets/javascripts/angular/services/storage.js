@@ -14,6 +14,7 @@ angular.module('betlog.services', [])
     var current_user = {};
     var coefficients = [];
     var managed_leagues = [];
+    var bookmakers = [];
 
     Storage.initSports = function() {
       $http.get('/sports.json')
@@ -168,6 +169,26 @@ angular.module('betlog.services', [])
         });
     }
 
+    Storage.initBookmakers = function() {
+      $http.get('/bookmakers.json')
+        .success(function(data, status, headers, config) {
+          if ( status === 200 && data.length ) {
+            data.map(function(bookmaker, i) {
+              var new_bookmaker = {
+                id: bookmaker.id,
+                name: bookmaker.name,
+                rating: bookmaker.rating
+              }
+
+              bookmakers.push( new_bookmaker );
+            });
+          }
+        })
+        .error(function(data, status, headers, config) {
+
+        });
+    }
+
 
     Storage.getSports = function() {
       return sports;
@@ -195,6 +216,10 @@ angular.module('betlog.services', [])
 
     Storage.getManagedLeagues = function() {
       return managed_leagues;
+    }
+
+    Storage.getBookmakers = function() {
+      return bookmakers;
     }
 
     Storage.setCurrentUser = function(data) {
@@ -319,6 +344,7 @@ angular.module('betlog.services', [])
     Storage.initEvents();
     Storage.initCoefficients();
     Storage.initCurrentUser();
+    Storage.initBookmakers();
 
     return Storage;
 }]);

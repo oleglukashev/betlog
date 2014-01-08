@@ -574,7 +574,8 @@ div.events
 
 div.events-content,
 div.favorites-content,
-div.manager-league-content
+div.manager-league-content,
+div.bookmaker-rating-content
 {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -586,7 +587,8 @@ div.manager-league-content
 
 div.events-content-top,
 div.favorites-content-top,
-div.manager-league-content-top
+div.manager-league-content-top,
+div.bookmaker-rating-content-top
 {
 	padding-left: 6px;
 	background-image: image-url("sec_convex_left_top.png");
@@ -596,7 +598,8 @@ div.manager-league-content-top
 
 div.events-content-top div,
 div.favorites-content-top div,
-div.manager-league-content-top div
+div.manager-league-content-top div,
+div.bookmaker-rating-content-top div
 {
 	padding: 0 6px 0 0;
 	background-image: image-url("sec_convex_right_top.png");
@@ -606,7 +609,8 @@ div.manager-league-content-top div
 
 div.events-content-top div div,
 div.favorites-content-top div div,
-div.manager-league-content-top div div
+div.manager-league-content-top div div,
+div.bookmaker-rating-content-top div div
 {
 	padding: 0;
 	height: 6px;
@@ -617,7 +621,8 @@ div.manager-league-content-top div div
 
 div.events-content-bottom,
 div.favorites-content-bottom,
-div.manager-league-content-bottom
+div.manager-league-content-bottom,
+div.bookmaker-rating-content-bottom
 {
 	padding-left: 6px;
 	background-image: image-url("sec_convex_left_bottom.png");
@@ -627,7 +632,8 @@ div.manager-league-content-bottom
 
 div.events-content-bottom div,
 div.favorites-content-bottom div,
-div.manager-league-content-bottom div 
+div.manager-league-content-bottom div,
+div.bookmaker-rating-content-bottom div 
 {
 	padding: 0 6px 0 0;
 	background-image: image-url("sec_convex_right_bottom.png");
@@ -637,7 +643,8 @@ div.manager-league-content-bottom div
 
 div.events-content-bottom div div,
 div.favorites-content-bottom div div,
-div.manager-league-content-bottom div div
+div.manager-league-content-bottom div div,
+div.bookmaker-rating-content-bottom div div
 {
 	padding: 0;
 	height: 6px;
@@ -648,10 +655,15 @@ div.manager-league-content-bottom div div
 
 div.events-content-body,
 div.favorites-content-body,
-div.manager-league-content-body
+div.manager-league-content-body,
+div.bookmaker-rating-content-body
 {
-	padding: 14px 20px;
 	background-color: #f9f9f9;
+}
+
+div.events-content-body,
+div.favorites-content-body {
+  padding: 14px 20px;
 }
 
 div.events-content-body {
@@ -872,8 +884,8 @@ div.tab-title-item-10 { z-index: 1; }
 div.tab-content { display: none; }
 div.tab-content.active { display: block; }
 
-div.tab-content table { width: 100%; }
-div.tab-content table tr th { 
+div.coefficients-table table { width: 100%; }
+div.coefficients-table table tr th { 
 	height: 28px;
 	background-image: image-url("bet_coef_table_background.png");
 	background-repeat: repeat-x;
@@ -884,40 +896,40 @@ div.tab-content table tr th {
 	padding: 0 10px;
 }
 
-div.tab-content table tr th:first-child {
+div.coefficients-table table tr th:first-child {
 	text-align: left;
 }
 
-div.tab-content table tr td {
+div.coefficients-table table tr td {
 	padding: 2px 10px;
 	border: 1px solid #d7d7d7;
 	font-weight: bold;
 }
 
-div.tab-content table tr td.td1 { width: 40%; }
+div.coefficients-table table tr td.td1 { width: 40%; }
 
-div.tab-content table tr.odd td {
+div.coefficients-table table tr.odd td {
 	background-color: #cdecf1;
 }
 
-div.tab-content table tr.odd td.main_coeff {
+div.coefficients-table table tr.odd td.main_coeff {
   width: 36px;
   cursor: pointer;
 }
 
-div.tab-content table tr.odd td.main_coeff:hover {
+div.coefficients-table table tr.odd td.main_coeff:hover {
   background-color: #ffdd3f;
 }
 
-div.tab-content table tr.odd td.main_coeff:hover div.event-graph {
+div.coefficients-table table tr.odd td.main_coeff:hover div.event-graph {
   display: block;
 }
 
-div.tab-content table tr.odd td.opt_coeff {
+div.coefficients-table table tr.odd td.opt_coeff {
   width: 70px;
 }
 
-div.tab-content table tr td span.coef-position {
+div.coefficients-table table tr td span.coef-position {
 	width: 11px;
 	height: 8px;
 	display: -moz-inline-stack;
@@ -928,13 +940,13 @@ div.tab-content table tr td span.coef-position {
   margin: 5px 0 0 3px; 
 }
 
-div.tab-content table tr td span.coef-position.up {
+div.coefficients-table table tr td span.coef-position.up {
 	background-image: image-url("coef-up.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
 
-div.tab-content table tr td span.coef-position.down {
+div.coefficients-table table tr td span.coef-position.down {
 	background-image: image-url("coef-down.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -1431,7 +1443,6 @@ div.profile-data label input {
 
 /* favorites */
 div.favorites {
-  width: 610px;
   margin-right: 17px;
 }
 
@@ -1440,7 +1451,7 @@ div.favorites div.tabs {
 }
 
 div.hot-matches {
-  padding: 5px 10px;
+  padding: 15px 20px;
   background-color: #fde577;
   -webkit-border-radius: 2px;
   -webkit-border-top-left-radius: 0;
@@ -1459,10 +1470,27 @@ div.hot-matches-group {
 
 
 /* optional */
-div.optional { width: 230px; }
+div.optional { width: 225px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* manager league */
+
+div.manager-league {
+  margin-bottom: 20px;  
+}
 
 div.country-menu div.manager-league {
   margin-left: 20px;
@@ -1542,4 +1570,28 @@ div.manager-league-edit {
 
 div.manager-league-clear {
   padding: 0 20px; 
+}
+
+
+
+
+
+
+
+/* bookmakers rating */
+div.bookmaker-rating-content-body {
+  padding: 0 15px;  
+}
+
+div.bookmaker-rating-content-body p {
+  font-weight: bold;
+}
+
+div.bookmaker-rating-content-body p span {
+  float: right;  
+}
+
+div.bookmaker-rating-title {
+  margin: 0 5px 5px;
+  font-weight: bold;  
 }

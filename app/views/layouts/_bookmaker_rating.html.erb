@@ -1,0 +1,12 @@
+<div class="bookmaker-rating" ng-controller="BookmakerRating">
+  <div class="bookmaker-rating-content">
+    <div class="bookmaker-rating-content-top"><div><div></div></div></div>
+    <div class="bookmaker-rating-content-body">
+      <div class="bookmaker-rating-title">Рейтинг букмекеров</div>
+      <div ng-repeat="bookmaker in getBookmakers()">
+        <p>{{bookmaker.name}}<span>{{bookmaker.rating}}</span></p>
+      </div>
+    </div>
+    <div class="bookmaker-rating-content-bottom"><div><div></div></div></div>
+  </div>
+</div>
