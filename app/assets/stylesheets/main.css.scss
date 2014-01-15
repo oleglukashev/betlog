@@ -422,6 +422,7 @@ ul.sport-menu-items-container li:hover {
 }
 
 ul.sport-menu-items-container li div.sport-menu-item-countries {
+  display: none;
   margin-top: -3px;
   padding: 20px 20px 10px;
   position: absolute;
@@ -437,6 +438,10 @@ ul.sport-menu-items-container li div.sport-menu-item-countries {
   -moz-box-shadow:    0px 1px 1px rgba(50, 50, 50, 0.3);
   box-shadow:         0px 1px 1px rgba(50, 50, 50, 0.3);
   z-index: 20;
+}
+
+ul.sport-menu-items-container li:hover div.sport-menu-item-countries {
+  display: block;
 }
 
 ul.sport-menu-items-container li div.sport-menu-item-countries div.sport-menu-blocks {
@@ -569,7 +574,7 @@ div.country-menu
 
 div.events
 {
-	width: 630px;
+	width: 615px;
 }
 
 div.events-content,
@@ -703,6 +708,19 @@ div.event-group-date p:first-child
 	font-size: 26px;
 }
 
+div.event-block div.event-sport-country-championship {
+  margin-bottom: 5px;
+  font-weight: bold;
+} 
+
+div.event-block div.event-sport-country-championship p {
+  float: right;  
+}
+
+div.event-block div.event-sport-country-championship span {
+  font-weight: normal;  
+}
+
 div.event
 {
 	-webkit-border-radius: 2px;
@@ -732,6 +750,8 @@ p.event-sport-title {
   margin-bottom: 5px;  
 }
 
+div.event-part { width: 255px; }
+
 div.event-part,
 div.event-border
 {
@@ -743,14 +763,18 @@ div.event-border
   *display: inline;	
 }
 
+
 div.hot-matches div.event-part,
 div.hot-matches div.event-border {
   font-size: 14px;
 }
 
-div.event-part { width: 255px; }
 
-div.hot-matches div.event-part { width: 235px; }
+div.hot-matches div.event-part { 
+  overflow: hidden;
+  height: 16px;
+  width: 215px;
+}
 
 div.event-part:first-child { text-align: right; }
 
@@ -762,7 +786,7 @@ div.event-hide-full {
 	float: right;
 	width: 17px;
 	height: 12px;
-	margin: 3px -10px 0 0;
+	margin: 3px 0 0 0;
 }
 
 div.event-full-content {
@@ -803,10 +827,6 @@ div.event-graph {
 div.tabs {
   overflow: hidden;
   height: 0;
-}
-
-div.hot-matches div.tabs {
-  padding: 5px;  
 }
 
 div.tabs-title div.tab-title-item {
@@ -975,7 +995,7 @@ div.add-championship-to-manager-leagues:hover {
 
 /* Menu */
 
-div.country-menu { width: 230px; margin-left: -3px; }
+div.country-menu { width: 245px; margin-left: -3px; }
 
 div.country-menu h1 { margin-left: 20px; }
 
@@ -1443,14 +1463,16 @@ div.profile-data label input {
 
 /* favorites */
 div.favorites {
+  width: 615px;
   margin-right: 17px;
 }
 
 div.favorites div.tabs {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 div.hot-matches {
+  position: relative;
   padding: 15px 20px;
   background-color: #fde577;
   -webkit-border-radius: 2px;
@@ -1464,6 +1486,44 @@ div.hot-matches {
 div.hot-matches-group {
   margin-bottom: 10px;
 }
+
+.hot-matches-left,
+.hot-matches-right {
+  position: absolute;
+  width: 35px;
+  height: 100%;
+  opacity: 0.2;
+  left: 0;
+  top:0;
+  cursor: pointer;
+  background-image: image-url("hot-matches-left.png");
+  background-repeat: no-repeat;
+  background-position: 4px center;
+}
+
+.hot-matches-right {
+  right: 0;
+  left: auto;
+  background-image: image-url("hot-matches-right.png");
+  background-position: 7px center;
+}
+
+.hot-matches-left:hover div,
+.hot-matches-right:hover div {
+  opacity: 0.5;
+}
+
+.hot-matches-left div,
+.hot-matches-right div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  opacity: 0.3;
+  left: 0;
+  top:0;
+}
+
 
 
 
@@ -1501,7 +1561,7 @@ div.manager-league-content-body {
 }
 
 div.manager-league-title {
-  margin: 0 20px 5px;
+  margin: 0 15px 5px;
   font-weight: bold;
 }
 
@@ -1510,7 +1570,7 @@ div.manager-league-sport {
 }
 
 div.manager-league-sport div.manager-league-sport-title {
-  padding: 3px 20px;
+  padding: 3px 15px;
   background-color: #ffdd3f;
   font-weight: bold;
   text-decoration: none;
@@ -1520,13 +1580,13 @@ div.manager-league-sport div.manager-league-sport-title {
 div.manager-league-sport div.manager-league-sport-title.hidden-leagues {
   background-image: image-url("manager_leagues_down.png");
   background-repeat: no-repeat;
-  background-position: 185px center;
+  background-position: 200px center;
 }
 
 div.manager-league-sport div.manager-league-sport-title.visibled-leagues {
   background-image: image-url("manager_leagues_up.png");
   background-repeat: no-repeat;
-  background-position: 185px center;
+  background-position: 200px center;
 }
 
 div.manager-league-sport div.manager-league-sport-title:hover {
@@ -1540,7 +1600,7 @@ div.manager-league-championships {
 
 div.manager-league-championship {
   position: relative;
-  padding: 3px 20px; 
+  padding: 3px 15px; 
 }
 
 div.manager-league-championship a {
@@ -1592,6 +1652,6 @@ div.bookmaker-rating-content-body p span {
 }
 
 div.bookmaker-rating-title {
-  margin: 0 5px 5px;
+  margin: 0 0 5px;
   font-weight: bold;  
 }

@@ -1,12 +1,12 @@
 <div class="sport-menu" ng-controller="menuSports">
   <div class="sport-menu-items"><div><div>
     <ul class="sport-menu-items-container">
-      <li ng-repeat="sport in getSports()" ng-mouseover="focus = true" ng-mouseleave="focus = false" ng-class="{ active:isActive(sport) }"><p>{{ sport.name }}</p>
-        <div class="sport-menu-item-countries" ng-controller="menuSportCountries" ng-show="focus">
+      <li ng-repeat="sport in getActiveSports()"><p>{{ sport.name }}</p>
+        <div class="sport-menu-item-countries" ng-controller="menuSportCountries">
           <div class="sport-menu-blocks" ng-repeat="country_block in getBlockCountryBySport(sport)">
             <div ng-repeat="country in getCountriesByBlockAndSport(country_block, sport)">
               <p class="alphabet" ng-show="getFirstWordByCountry(country) != first_word">{{ getFirstWordByCountry(country) }}</p>
-              <p><a href="/#/sport/{{sport.id}}/country/{{country.id}}/championships" ng-click="$parent.$parent.$parent.focus = false;">{{ country.name }}</a></p>
+              <p><a href="/#/sport/{{sport.id}}/country/{{country.id}}/championships">{{ country.name }}</a></p>
               {{setFirstWord( getFirstWordByCountry(country) )}}
             </div>
           </div>

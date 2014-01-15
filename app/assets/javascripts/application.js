@@ -25,4 +25,5 @@
 //= require_tree ./angular
 //= require vendor/hightchars/hightchars.js
 //= require vendor/hightchars/exporting.js
+//= require vendor/jcarousel/jquery.jcarousel.min.js
 

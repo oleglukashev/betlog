@@ -41,13 +41,15 @@ betlog_controllers.controller('SearchEvents', [
       var result = [];
       var championships_ids = [];
 
-      $scope.getSearchedResults().map(function(event) {
-        var championship = filterFilter( $scope.getChampionships(), { id: event.championship_id }, true)[0];
-        
-        if ( result.indexOf( championship ) === -1 && championship ) {
-          result.push( championship );
-        }
-      });
+      if ( $scope.getSearchedResults().length ) {
+        $scope.getSearchedResults().map(function(event) {
+          var championship = filterFilter( $scope.getChampionships(), { id: event.championship_id }, true)[0];
+          
+          if ( result.indexOf( championship ) === -1 && championship ) {
+            result.push( championship );
+          }
+        });
+      }
 
       return result;
     }

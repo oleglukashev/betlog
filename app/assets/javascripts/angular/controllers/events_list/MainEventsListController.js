@@ -21,7 +21,7 @@ betlog_controllers.controller('EventsList', [
         championship_events.map(function(events) {
           result.push( events );
         });
-      })
+      });
 
       return result;
     }

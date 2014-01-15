@@ -1,7 +1,7 @@
 <div class="search hide" ng-controller="SearchEvents">
   <div class="lupa"></div>
   <div class="input-wrap">
-    <div><div><div><input ng-model="str_for_search_teams" ng-blur="closeSearch();" on-keyup="searchEvents();" type="text" placeholder="Введите команду..." /></div></div></div>
+    <div><div><div><input ng-model="str_for_search_teams" ng-blur="closeSearch();" ng-keypress="searchEvents();" type="text" placeholder="Введите команду..." /></div></div></div>
   </div>
   <div class="search-result" ng-show="getSearchedResults().length">
     <div class="search-result-championship" ng-repeat="championship in getSearchedChampionshipsResults() | orderBy:'sport_id'">

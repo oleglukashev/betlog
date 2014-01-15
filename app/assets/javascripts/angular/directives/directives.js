@@ -81,15 +81,11 @@ angular.module('betlog.directives', [])
 				});
 			}
 		};
-	}]).directive('onKeyup', [function() {
-		return function(scope, elm, attrs) {
-			elm.bind("keyup", function() {
-				scope.$apply(attrs.onKeyup);
-			});
-		};
-	}]).directive('eatClick', [function() {
+	}])
+
+	.directive('eatClick', [function() {
 		return function(scope, element, attrs) {	
-    		$(element).click(function(event) {
+    		$(element).on('click', function(event) {
         		event.preventDefault();
     		});
 		}	
@@ -209,4 +205,41 @@ angular.module('betlog.directives', [])
       	});
 			}
 		}
-	});
+	})
+
+	.directive('jcarousel', function () {
+		    return {
+		        restrict:'C',
+		        compile: function (element, attr) {
+	            return function postLink(scope, element, attrs) {
+	            	(function($) {
+								    $(function() {
+								        $('.jcarousel').jcarousel({wrap: 'circular'});
+
+								        $('.hot-matches-left')
+								            .on('jcarouselcontrol:active', function() {
+								                $(this).removeClass('inactive');
+								            })
+								            .on('jcarouselcontrol:inactive', function() {
+								                $(this).addClass('inactive');
+								            })
+								            .jcarouselControl({
+								                target: '-=1'
+								            });
+
+								        $('.hot-matches-right')
+								            .on('jcarouselcontrol:active', function() {
+								                $(this).removeClass('inactive');
+								            })
+								            .on('jcarouselcontrol:inactive', function() {
+								                $(this).addClass('inactive');
+								            })
+								            .jcarouselControl({
+								                target: '+=1'
+								            });
+								    });
+								})(jQuery);
+	            };
+		        }
+		    };
+		});

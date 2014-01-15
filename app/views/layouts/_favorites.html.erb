@@ -2,7 +2,7 @@
   <div class="favorites-content">
     <div class="favorites-content-top"><div><div></div></div></div>
     <div class="favorites-content-body">
-      <div class="welcome">
+      <div class="welcome" style="margin-bottom: 20px;">
         <div class="welcome-title" style="font-size: 18px;"><span style="font-size: 25px;">Betlog</span> - сервис мониторинга букмекерских коэффициентов</div>
         <div style="margin-top: 15px;">
           <p>- собирай и анализируй данные букмекеров на спортивные состязания</p>
@@ -10,73 +10,117 @@
           <p>- выбирай у какого букмекера хочешь сделать ставку</p>
         </div>
       </div>
-      <div class="hot-matches" style="background-color: #ffdd3f; margin: 20px -20px 0; padding: 15px 60px;">
-        <div style="text-align: center; font-size: 22px; margin-bottom: 8px;">Футбол</div>
-        <div style="text-align: center; font-size: 14px; margin-bottom: 15px;">Россия (премьер-лига)</div>
-        <div>
-          <p style="font-size: 16px; margin-bottom: 15px; text-align: center; font-weight: bold;">Спартак М. &ndash; Локомотив М.</p>
-          <p style="font-size: 16px; margin-bottom: 15px; text-align: center; font-weight: bold;">Спартак М. &ndash; Локомотив М.</p>
-          <p style="font-size: 16px; margin-bottom: 15px; text-align: center; font-weight: bold;">Спартак М. &ndash; Локомотив М.</p>
-          <div><a href="#">Перейти к чемпионату</a></div>
+      <p style="font-size: 25px; margin-bottom: 20px;">Избранные чемпионаты</p>
+      <div class="hot-matches" style="margin: 20px -20px 0; padding: 15px 60px;">
+        <div class="jcarousel-wrapper">
+          <div class="jcarousel" jcarousel>
+            <ul>
+              <li ng-init="reloadJcarousel()" ng-repeat="championship in getFavoriteChampionships()">
+                <div style="font-size: 22px; margin-bottom: 8px;">{{getSportByChampionship(championship).name}}</div>
+                <div style="font-size: 14px; margin-bottom: 15px;">{{getCountryByChampionship(championship).name}} ({{championship.name}})</div>
+                <div class="event-block" ng-repeat="event in getEventsByChampionship(championship);">
+                  <div id="event-{{event.id}}" class="event">
+                    <div class="event-title hidden-leagues">
+                      <div class="event-part" style="font-weight: bold;">
+                        <div class="event-date" style="font-weight: normal;">{{event.date_event | date:'dd.MM (HH:mm)'}}</div>{{ event.opponent_1}}</div>
+                      <div class="event-border">&mdash;</div>
+                      <div class="event-part" style="font-weight: bold;">{{ event.opponent_2 }}<div class="event-show-full"></div></div>
+                    </div>
+                    <div class="tabs" ng-controller="Coefficients" style="height: 38px;">
+                      <div class="coefficients-table">
+                        <table>
+                          <tr>
+                            <th style="height: 15px; text-align: center; background-image: none;">1</th>
+                            <th style="height: 15px; text-align: center; background-image: none;">x</th>
+                            <th style="height: 15px; text-align: center; background-image: none;">2</th>
+                          </tr>
+                          <tr class="odd">
+                            <td class="main_coeff" style="text-align: center;">
+                              {{ getMaxCoefficientFirstByEvent(event).first }}
+                              <div class="event-graph" event-graph dates="{{ getCoefficientsDatesEvent(getMaxCoefficientFirstByEvent(event)) }}" coefficients="{{ getCoefficientsParamEvent(getMaxCoefficientFirstByEvent(event), 'first') }}" param-name="Победа первой команды"></div>
+                            </td>
+                            <td class="main_coeff" style="text-align: center;">
+                              {{ getMaxCoefficientDrawByEvent(event).draw }}
+                              <div class="event-graph" event-graph dates="{{ getCoefficientsDatesEvent(getMaxCoefficientDrawByEvent(event)) }}" coefficients="{{ getCoefficientsParamEvent(getMaxCoefficientDrawByEvent(event), 'draw') }}" param-name="Ничья">
+                            </td>
+                            <td class="main_coeff" style="text-align: center;">
+                              {{ getMaxCoefficientSecondByEvent(event).second }}
+                              <div class="event-graph" event-graph dates="{{ getCoefficientsDatesEvent(getMaxCoefficientSecondByEvent(event)) }}" coefficients="{{ getCoefficientsParamEvent(getMaxCoefficientSecondByEvent(event), 'second') }}" param-name="Победа второй команды">
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="hot-matches-left"><div></div></a>
+          <a href="#" class="hot-matches-right"><div></div></a>
         </div>
       </div>
       <div style="margin-top: 20px;">
         <p style="font-size: 25px; margin-bottom: 20px;">Следующие матчи</p>
 
-
-        <div id="event-{{event.id}}" class="event" ng-repeat="event in getNextEvents();">
-          <div class="event-title" slide-toggle>
-            <div class="event-part">
-              <div class="event-date">{{event.date_event | date:'HH:mm'}}</div>{{ event.opponent_1}}</div>
-            <div class="event-border">&mdash;</div>
-            <div class="event-part">{{ event.opponent_2 }}<div class="event-show-full"></div></div>
-          </div>
-          <div class="tabs slideable" ng-controller="Coefficients" tabs>
-            <div class="tabs-title">
-              <div class="tab-title-item tab-title-item-1"><div><div>Коэффициенты</div></div></div>
-              <div class="tab-title-item tab-title-item-2"><div><div>Фора/Тотал</div></div></div>
+        <div class="event-block" ng-repeat="event in getNextEvents();">
+          <div class="event-sport-country-championship"><p>{{event.date_event | date: 'dd.MM'}}</p>{{getSportByChampionship(getChampionshipByEvent(event)).name}}<span>»</span>{{getCountryByChampionship(getChampionshipByEvent(event)).name}}<span>»</span>{{getChampionshipByEvent(event).name}}</div>
+          <div id="event-{{event.id}}" class="event">
+            <div class="event-title" slide-toggle>
+              <div class="event-part">
+                <div class="event-date">{{event.date_event | date:'HH:mm'}}</div>{{ event.opponent_1}}</div>
+              <div class="event-border">&mdash;</div>
+              <div class="event-part">{{ event.opponent_2 }}<div class="event-show-full"></div></div>
             </div>
-            <div class="tab-content">
-              <div class="coefficients-table">
-                <table>
-                  <tr>
-                    <th>Букмекеры</th>
-                    <th>1</th>
-                    <th>x</th>
-                    <th>2</th>
-                    <th>1x</th>
-                    <th>12</th>
-                    <th>x2</th>
-                  </tr>
-                  <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
-                    <td>{{coefficient.bookmaker_name}}</td>
-                    <td class="main_coeff">{{ coefficient.first }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'first') }}" param-name="Победа первой команды"></div></td>
-                    <td class="main_coeff">{{ coefficient.draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'draw') }}" param-name="Ничья"></td>
-                    <td class="main_coeff">{{ coefficient.second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'second') }}" param-name="Победа второй команды"></td>
-                    <td class="main_coeff">{{ coefficient.first_or_draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'first_or_draw') }}" param-name="Победа первой команды или ничья"></td>
-                    <td class="main_coeff">{{ coefficient.first_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'first_or_second') }}" param-name="Победа первой или второй команды"></td>
-                    <td class="main_coeff">{{ coefficient.draw_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEvent(coefficient) }}" coefficients="{{ getCoefficientsParamEvent(coefficient, 'draw_or_second') }}" param-name="Ничья или победа второй команды"></td>
-                  </tr>
-                </table>
+            <div class="tabs slideable" ng-controller="Coefficients" tabs>
+              <div class="tabs-title">
+                <div class="tab-title-item tab-title-item-1"><div><div>Коэффициенты</div></div></div>
+                <div class="tab-title-item tab-title-item-2"><div><div>Фора/Тотал</div></div></div>
               </div>
-            </div>
-            <div class="tab-content">
-              <table>
-                <tr>
-                  <th>Букмекеры</th>
-                  <th>Фора 1</th>
-                  <th>Фора 2</th>
-                  <th>Тотал <</th>
-                  <th>Тотал ></th>
-                </tr>
-                <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
-                  <td>{{coefficient.bookmaker_name}}</td>
-                  <td class="opt_coeff">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}</td>
-                  <td class="opt_coeff">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}</td>
-                  <td class="opt_coeff">({{coefficient.total_less}}) {{coefficient.coeff_first_total}}</td>
-                  <td class="opt_coeff">({{coefficient.total_more}}) {{coefficient.coeff_second_total}}</td>
-                </tr>
-              </table>
+              <div class="tab-content">
+                <div class="coefficients-table">
+                  <table>
+                    <tr>
+                      <th>Букмекеры</th>
+                      <th>1</th>
+                      <th>x</th>
+                      <th>2</th>
+                      <th>1x</th>
+                      <th>12</th>
+                      <th>x2</th>
+                    </tr>
+                    <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
+                      <td>{{coefficient.bookmaker_name}}</td>
+                      <td class="main_coeff">{{ coefficient.first }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'first') }}" param-name="Победа первой команды"></div></td>
+                      <td class="main_coeff">{{ coefficient.draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'draw') }}" param-name="Ничья"></td>
+                      <td class="main_coeff">{{ coefficient.second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'second') }}" param-name="Победа второй команды"></td>
+                      <td class="main_coeff">{{ coefficient.first_or_draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'first_or_draw') }}" param-name="Победа первой команды или ничья"></td>
+                      <td class="main_coeff">{{ coefficient.first_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'first_or_second') }}" param-name="Победа первой или второй команды"></td>
+                      <td class="main_coeff">{{ coefficient.draw_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'draw_or_second') }}" param-name="Ничья или победа второй команды"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-content">
+                <div class="coefficients-table">
+                  <table>
+                    <tr>
+                      <th>Букмекеры</th>
+                      <th>Фора 1</th>
+                      <th>Фора 2</th>
+                      <th>Тотал <</th>
+                      <th>Тотал ></th>
+                    </tr>
+                    <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
+                      <td>{{coefficient.bookmaker_name}}</td>
+                      <td class="opt_coeff">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}</td>
+                      <td class="opt_coeff">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}</td>
+                      <td class="opt_coeff">({{coefficient.total_less}}) {{coefficient.coeff_first_total}}</td>
+                      <td class="opt_coeff">({{coefficient.total_more}}) {{coefficient.coeff_second_total}}</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>

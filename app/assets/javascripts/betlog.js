@@ -28,7 +28,10 @@ var betlog_controllers = angular.module('betlog.controllers', [])
         when('/sport/:sportId/country/:countryId/championship/:championshipId/events', {
           templateUrl: 'championships_events.html',
           controller: 'EventsList'
-        })
+        }).
+        otherwise({
+          templateUrl:'404.html'
+        });
     }])
 
     .config(['$httpProvider', function($httpProvider) {
