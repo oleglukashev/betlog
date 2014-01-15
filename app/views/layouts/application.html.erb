@@ -11,8 +11,8 @@
 	<div id="carcas">
 		<div class="header">
 			<div class="navigation" ng-controller="Navigation">
-					<a ng-show="getCurrentUserName()" ng-click="showProfile();" href="#">{{getCurrentUserName()}}</a>
-					<a ng-hide="getCurrentUserName()" id="signin" ng-click="showAuthorization();" href="#">Войти</a>
+					<a ng-show="getCurrentUserName()" ng-click="showProfile();" href="javascript://">{{getCurrentUserName()}}</a>
+					<a ng-hide="getCurrentUserName()" id="signin" ng-click="showAuthorization();" href="javascript://">Войти</a>
 			</div>
 			<div class="logo"><a href="/"><img src="<%= asset_path( 'logo.png' ) %>" title="Betlog" /></a></div>
 
@@ -26,14 +26,6 @@
 			<div class="content-body">
 
 				<div ng-view></div>
-
-				<script type="text/ng-template" id="favorites.html">
-					<%= render 'layouts/favorites' %>
-				</script>
-
-				<script type="text/ng-template" id="championships_events.html">
-					<%= render 'layouts/championships_events' %>
-				</script>
 
 				<script type="text/ng-template" id="404.html">
 					<%= render 'layouts/not_found' %>

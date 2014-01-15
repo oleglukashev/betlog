@@ -1,0 +1,123 @@
+<div class="events">
+  <div class="events-content">
+    <div class="events-content-top"><div><div></div></div></div>
+    <div class="events-content-body">
+      <div class="event-group" ng-repeat="events_date in getDatesFromCmapionshipEvents();">
+        <div class="event-group-date">
+          <p>{{events_date | date:'d'}}</p>
+          <p>{{events_date | date:'MMMM'}}</p>
+        </div>
+        <div id="event-{{event.id}}" class="event" ng-repeat="event in getEventsChampionshipByEventDate(events_date);">
+          <div class="event-title" slide-toggle>
+            <div class="event-part">
+              <div class="event-date">{{event.date_event | date:'HH:mm'}}</div>{{ event.opponent_1}}</div>
+            <div class="event-border">&mdash;</div>
+            <div class="event-part">{{ event.opponent_2 }}<div class="event-show-full"></div></div>
+          </div>
+          <div class="tabs slideable" ng-controller="Coefficients" tabs>
+            <div class="tabs-title">
+              <div class="tab-title-item tab-title-item-1"><div><div>Коэффициенты</div></div></div>
+              <div class="tab-title-item tab-title-item-2"><div><div>Фора/Тотал</div></div></div>
+            </div>
+            <div class="tab-content">
+              <div class="coefficients-table">
+                <table>
+                  <tr>
+                    <th>Букмекеры</th>
+                    <th>1</th>
+                    <th>x</th>
+                    <th>2</th>
+                    <th>1x</th>
+                    <th>12</th>
+                    <th>x2</th>
+                  </tr>
+                  <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
+                    <td>{{coefficient.bookmaker_name}}</td>
+                    <td class="main_coeff">{{ coefficient.first }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'first') }}" param-name="Победа первой команды"></div></td>
+                    <td class="main_coeff">{{ coefficient.draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'draw') }}" param-name="Ничья"></td>
+                    <td class="main_coeff">{{ coefficient.second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'second') }}" param-name="Победа второй команды"></td>
+                    <td class="main_coeff">{{ coefficient.first_or_draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'first_or_draw') }}" param-name="Победа первой команды или ничья"></td>
+                    <td class="main_coeff">{{ coefficient.first_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'first_or_second') }}" param-name="Победа первой или второй команды"></td>
+                    <td class="main_coeff">{{ coefficient.draw_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'draw_or_second') }}" param-name="Ничья или победа второй команды"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="tab-content">
+              <div class="coefficients-table">
+                <table>
+                  <tr>
+                    <th>Букмекеры</th>
+                    <th>Фора 1</th>
+                    <th>Фора 2</th>
+                    <th>Тотал <</th>
+                    <th>Тотал ></th>
+                  </tr>
+                  <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
+                    <td>{{coefficient.bookmaker_name}}</td>
+                    <td class="opt_coeff">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}</td>
+                    <td class="opt_coeff">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}</td>
+                    <td class="opt_coeff">({{coefficient.total_less}}) {{coefficient.coeff_first_total}}</td>
+                    <td class="opt_coeff">({{coefficient.total_more}}) {{coefficient.coeff_second_total}}</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div ng-show="getActiveChampionship();">
+        <div class="add-championship-to-manager-leagues" ng-hide="managerLeagueHasChampionship(getActiveChampionship())" ng-click="addChampionshipInToManagerLeagues()">Добавить чемпионат в менеджер лиг</div>
+        <div class="add-championship-to-manager-leagues" ng-show="managerLeagueHasChampionship(getActiveChampionship())" ng-click="removeChampionshipFromManagerLeagues()">Удалить чемпионат из менеджера лиг</div>
+      </div>
+    </div>
+    <div class="events-content-bottom"><div><div></div></div></div>
+  </div>
+</div>
+<div class="country-menu">
+  <div class="manager-league" ng-controller="ManagerLeague">
+  <div class="manager-league-content">
+    <div class="manager-league-content-top"><div><div></div></div></div>
+    <div class="manager-league-content-body">
+      <div class="manager-league-title">Менеджер лиг</div>
+      <div class="manager-league-sport" ng-repeat="sport in getSportsManagedChampionships()">
+        <div class="manager-league-sport-title hidden-leagues" slide-toggle>{{sport.name}}</div>
+        <div id="leagueSport{{sport.id}}" class="manager-league-championships slideable">
+          <div class="manager-league-championship" ng-repeat="championship in getManagedChampionshipsBySport(sport)">
+            <a href="/#/sport/{{sport.id}}/country/{{getCountryByChampionship(championship).id}}/championship/{{championship.id}}/events">{{championship.name}} ({{getCountryByChampionship(championship).name}})</a>
+            <div class="manager-league-championship-delete" ng-click="remove(championship);"></div>
+          </div>
+        </div>
+      </div>
+      <div class="manager-league-clear" ng-hide="getSportsManagedChampionships().length">
+        Список пуст
+      </div>
+    </div>
+    <div class="manager-league-content-bottom"><div><div></div></div></div>
+  </div>
+</div>
+
+  <ul>
+    <li class="active">
+      <div class="country-menu-item">
+        <div class="country-menu-item-top"><div></div></div>
+        <div class="country-menu-item-body">
+          {{ getCountryName() }}
+        </div>
+        <div class="country-menu-item-bottom"><div></div></div>
+      </div>
+      <div class="country-submenu">
+        <div class="country-submenu-body">
+          <ul>
+            <li ng-repeat="champship in getChampionshipsBySportAndCountry()" ng-class="{ active: getActiveChampionship().id === champship.id }" ng-click="select(champship);">
+              <a href="/#/sport/{{getActiveSport().id}}/country/{{getActiveCountry().id}}/championship/{{champship.id}}/events">{{ champship.name }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="country-submenu-bottom"><div></div></div>
+      </div>
+    </li>
+  </ul>
+  <div class="event-menu-top"><div></div></div>
+</div>

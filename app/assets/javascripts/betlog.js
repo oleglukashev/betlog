@@ -18,15 +18,15 @@ var betlog_controllers = angular.module('betlog.controllers', [])
     function($routeProvider) {
       $routeProvider.
         when('/', {
-          templateUrl: 'favorites.html',
+          templateUrl: 'assets/favorites.html',
           controller: 'MainFavoriteEvents'
         }).
         when('/sport/:sportId/country/:countryId/championships', {
-          templateUrl: 'championships_events.html',
+          templateUrl: 'assets/championships_events_list.html',
           controller: 'EventsList'
         }).
         when('/sport/:sportId/country/:countryId/championship/:championshipId/events', {
-          templateUrl: 'championships_events.html',
+          templateUrl: 'assets/championships_events_list.html',
           controller: 'EventsList'
         }).
         otherwise({

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Добро пожаловать на сайт betlog.net, <%= @user.name %></h1>
+    <p>
+      Вы успешно зарегистрированы,
+      ваш логин: <%= @user.login %>.<br/>
+    </p>
+    <p>
+      Чтобы автоматически авторизоваться перейдите по этой ссылке: <%= @url %>.
+    </p>
+    <p>Спасибо, что выбрали наш сервис!</p>
+  </body>
+</html>
