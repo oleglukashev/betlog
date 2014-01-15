@@ -824,6 +824,8 @@ div.event-graph {
 
 
 
+
+
 div.tabs {
   overflow: hidden;
   height: 0;
@@ -937,8 +939,16 @@ div.coefficients-table table tr.odd td.main_coeff {
   cursor: pointer;
 }
 
+div.hot-matches div.coefficients-table table tr.odd td.main_coeff {
+  cursor: default;
+}
+
 div.coefficients-table table tr.odd td.main_coeff:hover {
   background-color: #ffdd3f;
+}
+
+div.hot-matches div.coefficients-table table tr.odd td.main_coeff:hover {
+  background-color: #cdecf1;
 }
 
 div.coefficients-table table tr.odd td.main_coeff:hover div.event-graph {

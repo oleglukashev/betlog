@@ -36,16 +36,13 @@
                           </tr>
                           <tr class="odd">
                             <td class="main_coeff" style="text-align: center;">
-                              {{ getMaxCoefficientFirstByEvent(event).first }}
-                              <div class="event-graph" event-graph dates="{{ getCoefficientsDatesEvent(getMaxCoefficientFirstByEvent(event)) }}" coefficients="{{ getCoefficientsParamEvent(getMaxCoefficientFirstByEvent(event), 'first') }}" param-name="Победа первой команды"></div>
+                              {{ getMaxCoefficientFirstByEvent(event).first }} ({{getBookmaker(getMaxCoefficientFirstByEvent(event).bookmaker_id).name}})
                             </td>
                             <td class="main_coeff" style="text-align: center;">
-                              {{ getMaxCoefficientDrawByEvent(event).draw }}
-                              <div class="event-graph" event-graph dates="{{ getCoefficientsDatesEvent(getMaxCoefficientDrawByEvent(event)) }}" coefficients="{{ getCoefficientsParamEvent(getMaxCoefficientDrawByEvent(event), 'draw') }}" param-name="Ничья">
+                              {{ getMaxCoefficientDrawByEvent(event).draw }} ({{getBookmaker(getMaxCoefficientFirstByEvent(event).bookmaker_id).name}})
                             </td>
                             <td class="main_coeff" style="text-align: center;">
-                              {{ getMaxCoefficientSecondByEvent(event).second }}
-                              <div class="event-graph" event-graph dates="{{ getCoefficientsDatesEvent(getMaxCoefficientSecondByEvent(event)) }}" coefficients="{{ getCoefficientsParamEvent(getMaxCoefficientSecondByEvent(event), 'second') }}" param-name="Победа второй команды">
+                              {{ getMaxCoefficientSecondByEvent(event).second }} ({{getBookmaker(getMaxCoefficientFirstByEvent(event).bookmaker_id).name}})
                             </td>
                           </tr>
                         </table>
@@ -53,6 +50,7 @@
                     </div>
                   </div>
                 </div>
+                <p>» <a href="#/sport/{{getSportByChampionship(championship).id}}/country/{{getCountryByChampionship(championship).id}}/championship/{{championship.id}}/events">Перейти на страницу чемпионата</a></p>
               </li>
             </ul>
           </div>
