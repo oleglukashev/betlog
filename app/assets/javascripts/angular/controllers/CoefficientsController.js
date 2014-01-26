@@ -100,6 +100,11 @@ betlog_controllers.controller('Coefficients', [
     }
 
 
+    $scope.isLogged = function() {
+      return Storage.hasCurrentUser();
+    }
+
+
     $scope.reloadCoefficients();
 
 
