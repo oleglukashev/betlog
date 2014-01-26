@@ -90,11 +90,11 @@
                       <td>{{ coefficient.bookmaker_name }}</td>
                       <td class="main_coeff">{{ coefficient.first }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ 
                       coefficients_params_event_only_one_bookmaker[coefficient.id]['first'] }}" param-name="Победа первой команды"></div></td>
-                      <td class="main_coeff">{{ coefficient.draw }}<div class="event-graph" event-graph dates=" {{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['draw'] }}" param-name="Ничья"></td>
-                      <td class="main_coeff">{{ coefficient.second }}<div class="event-graph" event-graph dates=" {{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['second'] }}" param-name="Победа второй команды"></td>
-                      <td class="main_coeff">{{ coefficient.first_or_draw }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['first_or_draw'] }}" param-name="Победа первой команды или ничья"></td>
-                      <td class="main_coeff">{{ coefficient.first_or_second }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['first_or_second'] }}" param-name="Победа первой или второй команды"></td>
-                      <td class="main_coeff">{{ coefficient.draw_or_second }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['draw_or_second'] }}" param-name="Ничья или победа второй команды"></td>
+                      <td class="main_coeff">{{ coefficient.draw }}<div class="event-graph" event-graph dates=" {{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['draw'] }}" param-name="Ничья"></div></td>
+                      <td class="main_coeff">{{ coefficient.second }}<div class="event-graph" event-graph dates=" {{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['second'] }}" param-name="Победа второй команды"></div></td>
+                      <td class="main_coeff">{{ coefficient.first_or_draw }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['first_or_draw'] }}" param-name="Победа первой команды или ничья"></div></td>
+                      <td class="main_coeff">{{ coefficient.first_or_second }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['first_or_second'] }}" param-name="Победа первой или второй команды"></div></td>
+                      <td class="main_coeff">{{ coefficient.draw_or_second }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['draw_or_second'] }}" param-name="Ничья или победа второй команды"></div></td>
                     </tr>
                   </table>
                 </div>
@@ -111,10 +111,10 @@
                     </tr>
                     <tr class="odd" ng-repeat="coefficient in getLastGroupedCoefficientsByEvent( event );">
                       <td>{{coefficient.bookmaker_name}}</td>
-                      <td class="opt_coeff">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}</td>
-                      <td class="opt_coeff">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}</td>
-                      <td class="opt_coeff">({{coefficient.total_less}}) {{coefficient.coeff_first_total}}</td>
-                      <td class="opt_coeff">({{coefficient.total_more}}) {{coefficient.coeff_second_total}}</td>
+                      <td class="opt_coeff">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['coeff_first_fora'] }}" param-name="Ничья или победа второй команды"></div></td>
+                      <td class="opt_coeff">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['coeff_second_fora'] }}" param-name="Ничья или победа второй команды"></div></td>
+                      <td class="opt_coeff">({{coefficient.total_less}}) {{coefficient.coeff_first_total}}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['coeff_first_total'] }}" param-name="Ничья или победа второй команды"></div></td>
+                      <td class="opt_coeff">({{coefficient.total_more}}) {{coefficient.coeff_second_total}}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['coeff_second_total'] }}" param-name="Ничья или победа второй команды"></div></td>
                     </tr>
                   </table>
                 </div>

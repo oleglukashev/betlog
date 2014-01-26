@@ -939,24 +939,29 @@ div.coefficients-table table tr.odd td.main_coeff {
   cursor: pointer;
 }
 
-div.hot-matches div.coefficients-table table tr.odd td.main_coeff {
+div.coefficients-table table tr.odd td.opt_coeff {
+  width: 70px;
+  cursor: pointer;
+}
+
+div.hot-matches div.coefficients-table table tr.odd td.main_coeff,
+div.hot-matches div.coefficients-table table tr.odd td.opt_coeff {
   cursor: default;
 }
 
-div.coefficients-table table tr.odd td.main_coeff:hover {
+div.coefficients-table table tr.odd td.main_coeff:hover,
+div.coefficients-table table tr.odd td.opt_coeff:hover {
   background-color: #ffdd3f;
 }
 
-div.hot-matches div.coefficients-table table tr.odd td.main_coeff:hover {
+div.hot-matches div.coefficients-table table tr.odd td.main_coeff:hover,
+div.hot-matches div.coefficients-table table tr.odd td.opt_coeff:hover {
   background-color: #cdecf1;
 }
 
-div.coefficients-table table tr.odd td.main_coeff:hover div.event-graph {
+div.coefficients-table table tr.odd td.main_coeff:hover div.event-graph,
+div.coefficients-table table tr.odd td.opt_coeff:hover div.event-graph {
   display: block;
-}
-
-div.coefficients-table table tr.odd td.opt_coeff {
-  width: 70px;
 }
 
 div.coefficients-table table tr td span.coef-position {

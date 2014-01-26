@@ -45,6 +45,10 @@ betlog_controllers.controller('Coefficients', [
         $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'first_or_draw' );
         $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'first_or_second' );
         $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'draw_or_second' );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'coeff_first_fora' );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'coeff_second_fora' );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'coeff_first_total' );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'coeff_second_total' );
       });
     }
     
