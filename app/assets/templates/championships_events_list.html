@@ -54,7 +54,7 @@
                     <th>Тотал <</th>
                     <th>Тотал ></th>
                   </tr>
-                  <tr class="odd" ng-repeat="coefficient in getLastCoefficientsGroupedByBookmaker( event );">
+                  <tr class="odd" ng-repeat="coefficient in getLastGroupedCoefficientsByEvent( event );">
                     <td>{{coefficient.bookmaker_name}}</td>
                     <td class="opt_coeff">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}</td>
                     <td class="opt_coeff">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}</td>
