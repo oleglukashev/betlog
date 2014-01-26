@@ -10,89 +10,99 @@ betlog_controllers.controller('Coefficients', [
   'Storage',
   function( $scope, $rootScope, $http, filterFilter, $filter, $animate, $route, $routeParams, Storage ) {
     $scope.coefficients = [];
-    $scope.coefficients_by_event = {};
-    $scope.last_coefficients_by_event = {};
-    $scope.coefficients_dates_event_only_one_bookmaker = {};
+
+    $scope.grouped_coefficients_of_event = {};
+    $scope.last_grouped_coefficients_of_event = {};
+    $scope.coefficients_dates_event_one_bookmaker = {};
     $scope.coefficients_params_event_only_one_bookmaker = {};
 
 
-    $scope.getCoefficients = function() {
-      return Storage.getCoefficients();
+    $scope.reloadCoefficients = function() {
+      $scope.coefficients = Storage.getCoefficients();
     }
 
-    $scope.getAllCoefficientsGroupedByBookmaker = function( event ) {
-      if ( ! $scope.coefficients_by_event[event.id] ) {
-        var bookmakers = [];
-        var coefficients = filterFilter( $scope.getCoefficients(), { 'event_id': event.id }, true );
-        $scope.coefficients_by_event[event.id] = [];
 
-        coefficients.map(function(coefficients_item) {
-          if ( bookmakers.indexOf(coefficients_item.bookmaker_name) === -1 ) {
-            result_coeffs = filterFilter( coefficients, { 'bookmaker_name': coefficients_item.bookmaker_name }, true );
-            $scope.coefficients_by_event[event.id].push( result_coeffs );
-            bookmakers.push( coefficients_item.bookmaker_name );
-          }
-        });
+    $scope.getLastGroupedCoefficientsByEvent = function( event ) {
+      if ( typeof $scope.last_grouped_coefficients_of_event[event.id] === 'undefined' ) {
+        $scope.reloadLastCoefficientsGroupedByBookmaker( event )
       }
 
-      return $scope.coefficients_by_event[event.id];
+      return $scope.last_grouped_coefficients_of_event[event.id];
     }
 
 
+    $scope.reloadLastCoefficientsGroupedByBookmaker = function( event ) {
+      $scope.reloadCoefficientsGroupedByBookmaker( event );
+      $scope.last_grouped_coefficients_of_event[event.id] = [];
 
-    $scope.getLastCoefficientsGroupedByBookmaker = function( event ) {
-      if ( ! $scope.last_coefficients_by_event[event.id] ) {
-        $scope.last_coefficients_by_event[event.id] = [];
-
-        $scope.getAllCoefficientsGroupedByBookmaker(event).map(function(coefficients_group) {
-          $scope.last_coefficients_by_event[event.id].push(coefficients_group[coefficients_group.length - 1]);
-        });
-      }
-
-      return $scope.last_coefficients_by_event[event.id];
+      $scope.grouped_coefficients_of_event[event.id].map(function(coefficients_item) {
+        var last_coefficients_item = coefficients_item[coefficients_item.length - 1];
+        $scope.last_grouped_coefficients_of_event[event.id].push( last_coefficients_item );
+        $scope.reloadCoefficientsDatesEventOnlyOneBookmaker( last_coefficients_item );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'first' );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'draw' );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'second' );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'first_or_draw' );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'first_or_second' );
+        $scope.reloadCoefficientsParamEventOnlyOneBookmaker( last_coefficients_item, 'draw_or_second' );
+      });
     }
-
-    $scope.getCoefficientsDatesEventOnlyOneBookmaker = function(coefficient_item) {
-      if ( coefficient_item ) {
-        if ( ! $scope.coefficients_dates_event_only_one_bookmaker[coefficient_item.id] ) {
-          var coefficients = filterFilter( $scope.getCoefficients(), { 'event_id': coefficient_item.event_id, 'bookmaker_name': coefficient_item.bookmaker_name  }, true );
-          $scope.coefficients_dates_event_only_one_bookmaker[coefficient_item.id] = [];
-
-          coefficients.map(function(coefficient) {
-            if ( $scope.coefficients_dates_event_only_one_bookmaker[coefficient_item.id].indexOf( coefficient.created_at ) === -1 ) {
-              $scope.coefficients_dates_event_only_one_bookmaker[coefficient_item.id].push( $filter('date')(coefficient.created_at, "dd.MM") );
-            }
-          });
-        }
-
-        return $scope.coefficients_dates_event_only_one_bookmaker[coefficient_item.id];
-      }
-    }
-
     
 
-    $scope.getCoefficientsParamEventOnlyOneBookmaker = function(coefficient_item, param) {
-      if ( coefficient_item ) {
-        if ( ! $scope.coefficients_params_event_only_one_bookmaker[coefficient_item.id] ) {
-          var coefficients = filterFilter( $scope.getCoefficients(), { 'event_id': coefficient_item.event_id, 'bookmaker_name': coefficient_item.bookmaker_name  }, true );
-          $scope.coefficients_params_event_only_one_bookmaker[coefficient_item.id] = [];
+    $scope.reloadCoefficientsGroupedByBookmaker = function( event ) {
+      var bookmakers = [];
+      var coefficients = filterFilter( $scope.coefficients, { 'event_id': event.id }, true );
+      $scope.grouped_coefficients_of_event[event.id] = [];
 
-          coefficients.map(function(coefficient) {
-            if ( $scope.coefficients_params_event_only_one_bookmaker[coefficient_item.id].indexOf( coefficient.created_at ) === -1 ) {
-              $scope.coefficients_params_event_only_one_bookmaker[coefficient_item.id].push( coefficient[param] );
-            }
-          });
+      coefficients.map(function(coefficients_item) {
+        if ( bookmakers.indexOf(coefficients_item.bookmaker_name) === -1 ) {
+          var result_coeffs = filterFilter( coefficients, { 'bookmaker_name': coefficients_item.bookmaker_name }, true );
+          $scope.grouped_coefficients_of_event[event.id].push( result_coeffs );
+          bookmakers.push( coefficients_item.bookmaker_name );
         }
-
-        return $scope.coefficients_params_event_only_one_bookmaker[coefficient_item.id];
-      }
+      });
     }
+
+
+    $scope.reloadCoefficientsDatesEventOnlyOneBookmaker = function( coeff_item ) {
+      var coefficients = filterFilter( $scope.coefficients, { 'event_id': coeff_item.event_id, 'bookmaker_name': coeff_item.bookmaker_name  }, true );
+      
+      if ( typeof $scope.coefficients_dates_event_one_bookmaker[coeff_item.id] === 'undefined' ) {
+        $scope.coefficients_dates_event_one_bookmaker[coeff_item.id] = [];  
+      }
+
+      coefficients.map(function(coefficient) {
+        if ( $scope.coefficients_dates_event_one_bookmaker[coeff_item.id].indexOf( coefficient.created_at ) === -1 ) {
+          $scope.coefficients_dates_event_one_bookmaker[coeff_item.id].push( $filter('date')(coefficient.created_at, "dd.MM") );
+        }
+      });
+    }
+
+
+    $scope.reloadCoefficientsParamEventOnlyOneBookmaker = function( coeff_item, param ) {
+      var coefficients = filterFilter( $scope.coefficients, { 'event_id': coeff_item.event_id, 'bookmaker_name': coeff_item.bookmaker_name  }, true );
+      
+      if ( typeof $scope.coefficients_params_event_only_one_bookmaker[coeff_item.id] === 'undefined' ) {
+        $scope.coefficients_params_event_only_one_bookmaker[coeff_item.id] = {};
+      }
+
+      $scope.coefficients_params_event_only_one_bookmaker[coeff_item.id][param] = [];
+
+      coefficients.map(function(coefficient) {
+        if ( $scope.coefficients_params_event_only_one_bookmaker[coeff_item.id][param].indexOf( coefficient.created_at ) === -1 ) {
+          $scope.coefficients_params_event_only_one_bookmaker[coeff_item.id][param].push( coefficient[param] );
+        }
+      });
+    }
+
+
+    $scope.reloadCoefficients();
 
 
     /* on */
 
     $rootScope.$on('reloadCoefficients', function() {
-        $scope.getCoefficients();
+        $scope.reloadCoefficients();
     });
   
   }])
