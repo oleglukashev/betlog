@@ -31,14 +31,15 @@
                     <th>12</th>
                     <th>x2</th>
                   </tr>
-                  <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
-                    <td>{{coefficient.bookmaker_name}}</td>
-                    <td class="main_coeff">{{ coefficient.first }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'first') }}" param-name="Победа первой команды"></div></td>
-                    <td class="main_coeff">{{ coefficient.draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'draw') }}" param-name="Ничья"></td>
-                    <td class="main_coeff">{{ coefficient.second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'second') }}" param-name="Победа второй команды"></td>
-                    <td class="main_coeff">{{ coefficient.first_or_draw }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'first_or_draw') }}" param-name="Победа первой команды или ничья"></td>
-                    <td class="main_coeff">{{ coefficient.first_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'first_or_second') }}" param-name="Победа первой или второй команды"></td>
-                    <td class="main_coeff">{{ coefficient.draw_or_second }}<div class="event-graph" event-graph dates=" {{ getCoefficientsDatesEventOnlyOneBookmaker(coefficient) }}" coefficients="{{ getCoefficientsParamEventOnlyOneBookmaker(coefficient, 'draw_or_second') }}" param-name="Ничья или победа второй команды"></td>
+                  <tr class="odd" ng-repeat="coefficient in getLastGroupedCoefficientsByEvent(event)">
+                    <td>{{ coefficient.bookmaker_name }}</td>
+                    <td class="main_coeff">{{ coefficient.first }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ 
+                    coefficients_params_event_only_one_bookmaker[coefficient.id]['first'] }}" param-name="Победа первой команды"></div></td>
+                    <td class="main_coeff">{{ coefficient.draw }}<div class="event-graph" event-graph dates=" {{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['draw'] }}" param-name="Ничья"></td>
+                    <td class="main_coeff">{{ coefficient.second }}<div class="event-graph" event-graph dates=" {{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['second'] }}" param-name="Победа второй команды"></td>
+                    <td class="main_coeff">{{ coefficient.first_or_draw }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['first_or_draw'] }}" param-name="Победа первой команды или ничья"></td>
+                    <td class="main_coeff">{{ coefficient.first_or_second }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['first_or_second'] }}" param-name="Победа первой или второй команды"></td>
+                    <td class="main_coeff">{{ coefficient.draw_or_second }}<div class="event-graph" event-graph dates="{{ coefficients_dates_event_one_bookmaker[coefficient.id] }}" coefficients="{{ coefficients_params_event_only_one_bookmaker[coefficient.id]['draw_or_second'] }}" param-name="Ничья или победа второй команды"></td>
                   </tr>
                 </table>
               </div>
@@ -53,7 +54,7 @@
                     <th>Тотал <</th>
                     <th>Тотал ></th>
                   </tr>
-                  <tr class="odd" ng-repeat="coefficient in getLastCoefficientsByEventGroupedByBookmaker( event );">
+                  <tr class="odd" ng-repeat="coefficient in getLastCoefficientsGroupedByBookmaker( event );">
                     <td>{{coefficient.bookmaker_name}}</td>
                     <td class="opt_coeff">({{coefficient.first_fora}}) {{coefficient.coeff_first_fora}}</td>
                     <td class="opt_coeff">({{coefficient.second_fora}}) {{coefficient.coeff_second_fora}}</td>

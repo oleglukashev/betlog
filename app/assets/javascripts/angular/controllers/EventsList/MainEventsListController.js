@@ -43,14 +43,6 @@ betlog_controllers.controller('EventsList', [
     }
 
 
-    $scope.active = function( event ) {
-      $scope.getEventsByActiveCountryAndSport().map(function(event, i) {
-        event.isActive = false;  
-      })
-
-      event.isActive = true;
-    }
-
     $scope.getDatesFromCmapionshipEvents = function() {
       var result = [];
 
