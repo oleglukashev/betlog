@@ -59,8 +59,8 @@ betlog_controllers.controller('FavoriteEvents', [
       $scope.favorite_championships = [];
 
       $scope.championships.map(function(championship) {
-        if ( championship.id === 494 || championship.id === 503
-        || championship.id === 508 || championship.id === 514 || championship.id === 515 ) {
+        if ( championship.id === 1 || championship.id === 2
+        || championship.id === 3 || championship.id === 4 || championship.id === 5 ) {
           $scope.favorite_championships.push( championship );
           $scope.reloadEventsByChampionship( championship );
         }
