@@ -18,6 +18,8 @@ module Betlog
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.assets.paths << Rails.root.join('app/assets/templates')
+    config.assets.register_mime_type('text/html', '.html')
     config.i18n.default_locale = :ru
   end
 end
