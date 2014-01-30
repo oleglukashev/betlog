@@ -78,9 +78,10 @@ class MarathonBet():
 
                 #begaem po blokam s sobitiami
                 for events_block in championship_content.cssselect("div.main-block-events"):
-                  events_block_title = events_block.cssselect("div.block-events-head span")[0].text.strip(" \r\n")
-                  events_block_title = events_block_title + events_block.cssselect("div.block-events-head span")[1].text.strip(" \r\n")
-                  events_block_title = events_block_title + events_block.cssselect("div.block-events-head span")[2].text.strip(" \r\n")
+                  events_block_title = ""
+
+                  for title_part in events_block.cssselect("div.block-events-head span"):
+                    events_block_title = events_block_title + title_part.text.strip(" \r\n")
 
                   self.current_sport = championship.parentNode.parentNode.parentNode.getAttribute("value")
                   self.current_country = championship.parentNode.getAttribute("value")
@@ -89,6 +90,7 @@ class MarathonBet():
 
                   #iedm dalshe esli net isklucheni
                   if ( self.checkExeptionValuesFromTitle( events_block_title ) != True ):
+
                     #esli dannie chemp sporta i strani shodatsa s dannimi is titla
                     if ( self.current_sport == self.getSportFromEventBlockTitle( events_block_title ) and
                       self.current_country == self.getCountryFromEventBlockTitle( events_block_title ) and
