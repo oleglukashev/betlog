@@ -20,7 +20,7 @@ from Modules.Dictionary import Dictionary
 
 
 class MarathonBet():
-  
+
   def __init__( self ):
     self.bookmaker = "Marathon"
     self.teams_not_found = {}
@@ -48,21 +48,21 @@ class MarathonBet():
       return lxml.html.document_fromstring(page.data)
     else:
       print("-- error: url " + url + " not access")
-    
+
 
 
   def parse( self ):
     result = {}
     i = 0
     championships = self.getChampionshipsDataFromConfig()
-    
+
     for championship in championships:
       for bookmaker in championship.getElementsByTagName('bookmaker'):
         if bookmaker.getAttribute("value") == self.bookmaker:
           for link in bookmaker.getElementsByTagName("link"):
 
             championship_content = None
-            
+
             if ( len( link.getAttribute("value") ) > 0 ):
               time.sleep( random.randint(3, 6) )
 
@@ -78,11 +78,9 @@ class MarathonBet():
 
                 #begaem po blokam s sobitiami
                 for events_block in championship_content.cssselect("div.main-block-events"):
-                  events_block_title_elems = events_block.cssselect('div.block-events-head > *')
-                  for events_block_title_elem in events_block_title_elems:
-                    events_block_title_elem.drop_tree()
-                  
-                  events_block_title = events_block.cssselect("div.block-events-head")[0].text.strip(" \r\n")
+                  events_block_title = events_block.cssselect("div.block-events-head span")[0].text.strip(" \r\n")
+                  events_block_title = events_block_title + events_block.cssselect("div.block-events-head span")[1].text.strip(" \r\n")
+                  events_block_title = events_block_title + events_block.cssselect("div.block-events-head span")[2].text.strip(" \r\n")
 
                   self.current_sport = championship.parentNode.parentNode.parentNode.getAttribute("value")
                   self.current_country = championship.parentNode.getAttribute("value")
@@ -91,12 +89,11 @@ class MarathonBet():
 
                   #iedm dalshe esli net isklucheni
                   if ( self.checkExeptionValuesFromTitle( events_block_title ) != True ):
-
                     #esli dannie chemp sporta i strani shodatsa s dannimi is titla
                     if ( self.current_sport == self.getSportFromEventBlockTitle( events_block_title ) and
-                      self.current_country == self.getCountryFromEventBlockTitle( events_block_title ) and 
+                      self.current_country == self.getCountryFromEventBlockTitle( events_block_title ) and
                       self.current_championship == self.getChampionshipFromEventBlockTitle( events_block_title) ):
-                      
+
                       success_championship = True
 
                       event_hash = {
@@ -111,7 +108,7 @@ class MarathonBet():
                       i += 1
 
                       self.loggedSuccessChampionship()
-                    
+
                     else:
                       self.loggedErrorChampionship()
 
@@ -125,7 +122,7 @@ class MarathonBet():
                 print("-- data on this page not founded --")
 
     return result
-            
+
 
 
   def getTeamsAndCoefficientsFromEventDom( self, events_block ):
@@ -160,12 +157,12 @@ class MarathonBet():
 
         else:
           if ( td.get("class") == "first" ):
-            event_hash['first_team'] = self.getTeam( td.cssselect("table tr td span.command div")[0].text.strip(" \r\n") ) if td.cssselect("table tr td span.command b")[0].text.strip(" \r\n") == "1." else self.getTeam( td.cssselect("table tr td span.command div")[1].text.strip(" \r\n") ) 
-            event_hash['second_team'] = self.getTeam( td.cssselect("table tr td span.command div")[1].text.strip(" \r\n") ) if td.cssselect("table tr td span.command b")[1].text.strip(" \r\n") == "2." else self.getTeam( td.cssselect("table tr td span.command div")[0].text.strip(" \r\n") ) 
+            event_hash['first_team'] = self.getTeam( td.cssselect("table tr td span.command div")[0].text.strip(" \r\n") ) if td.cssselect("table tr td span.command b")[0].text.strip(" \r\n") == "1." else self.getTeam( td.cssselect("table tr td span.command div")[1].text.strip(" \r\n") )
+            event_hash['second_team'] = self.getTeam( td.cssselect("table tr td span.command div")[1].text.strip(" \r\n") ) if td.cssselect("table tr td span.command b")[1].text.strip(" \r\n") == "2." else self.getTeam( td.cssselect("table tr td span.command div")[0].text.strip(" \r\n") )
             event_hash['date_event'] = self.getDate( td.cssselect('td.first table tr td.date')[0].text.strip(" \r\n") )
 
         count += 1
-      
+
       result[i] = event_hash
       i += 1
 
@@ -215,7 +212,7 @@ class MarathonBet():
     for title_part in title.split("."):
       if Dictionary.findCountry( title_part.strip() ):
         result = Dictionary.findCountry( title_part.strip() )
-    return result 
+    return result
 
 
 
