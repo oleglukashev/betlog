@@ -18,11 +18,12 @@ betlog_controllers.controller('NextEvents', [
     $scope.championship_of_event = {};
 
     $scope.mainDataIsLoaded = function() {
-      if ( $scope.sports.length && $scope.championships.length && $scope.events.length && $scope.countries.length) {
+      if ( $scope.sports.length && $scope.championships.length && $scope.events.length
+      && $scope.countries.length) {
         return true;
       }
     }
-    
+
 
     $scope.reloadEvents = function() {
       $scope.events = Storage.getEvents();
@@ -78,6 +79,7 @@ betlog_controllers.controller('NextEvents', [
         return a - b;
       });
 
+      $scope.next_events = [];
       sort_next_events.map(function(event, key) {
         if ( key <= 4 ) {
           $scope.next_events.push( event );
