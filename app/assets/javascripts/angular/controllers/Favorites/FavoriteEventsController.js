@@ -180,22 +180,27 @@ betlog_controllers.controller('FavoriteEvents', [
     /* on */
     $scope.$on('sendFavoriteSports', function(event, sports) {
       $scope.favorite_sports = sports;
+      $scope.reloadFavoriteChampionships();
     });
 
     $scope.$on('reloadCountries', function() {
       $scope.reloadCountries();
+      $scope.reloadFavoriteChampionships();
     });
 
     $scope.$on('reloadSports', function() {
       $scope.reloadSports();
+      $scope.reloadFavoriteChampionships();
     });
 
     $scope.$on('reloadChampionships', function() {
       $scope.reloadChampionships();
+      $scope.reloadFavoriteChampionships();
     });
 
     $scope.$on('reloadEvents', function() {
       $scope.reloadEvents();
+      $scope.reloadFavoriteChampionships();
     });
 
     $rootScope.$on('reloadCoefficients', function() {

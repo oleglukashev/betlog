@@ -92,18 +92,22 @@ betlog_controllers.controller('NextEvents', [
 
     $scope.$on('reloadCountries', function() {
       $scope.reloadCountries();
+      $scope.reloadNextEvents();
     });
 
     $scope.$on('reloadSports', function() {
       $scope.reloadSports();
+      $scope.reloadNextEvents();
     });
 
     $scope.$on('reloadChampionships', function() {
       $scope.reloadChampionships();
+      $scope.reloadNextEvents();
     });
 
     $scope.$on('reloadEvents', function() {
       $scope.reloadEvents();
+      $scope.reloadNextEvents();
     });
 
   }])
