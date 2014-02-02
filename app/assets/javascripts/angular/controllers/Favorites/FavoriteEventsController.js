@@ -23,7 +23,9 @@ betlog_controllers.controller('FavoriteEvents', [
     $scope.coefficients_dates_of_event = {};
 
     $scope.mainDataIsLoaded = function() {
-      if ( $scope.sports.length && $scope.championships.length && $scope.events.length && $scope.countries.length) {
+      if ( $scope.sports.length && $scope.championships.length
+      && $scope.events.length && $scope.countries.length
+      && $scope.coefficients.length) {
         return true;
       }
     }
