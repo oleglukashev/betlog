@@ -11,6 +11,7 @@ betlog_controllers.controller('FavoriteEvents', [
     $scope.events = [];
     $scope.championships = [];
     $scope.bookmakers = [];
+    $scope.sports = [];
 
     $scope.favorite_championships = [];
     $scope.events_of_championship = {};
@@ -20,6 +21,12 @@ betlog_controllers.controller('FavoriteEvents', [
     $scope.max_coefficient_of_event = {};
     $scope.coefficients_params_of_event = {};
     $scope.coefficients_dates_of_event = {};
+
+    $scope.mainDataIsLoaded = function() {
+      if ( $scope.sports.length && $scope.championships.length && $scope.events.length && $scope.countries.length) {
+        return true;
+      }
+    }
 
     $scope.getBookmaker = function(id) {
       return filterFilter( $scope.bookmakers, { 'id': id }, true )[0];
@@ -56,6 +63,10 @@ betlog_controllers.controller('FavoriteEvents', [
 
 
     $scope.reloadFavoriteChampionships = function() {
+      if ( ! $scope.mainDataIsLoaded() ) {
+        return false;
+      }
+
       $scope.favorite_championships = [];
 
       $scope.championships.map(function(championship) {

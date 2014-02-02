@@ -17,6 +17,12 @@ betlog_controllers.controller('NextEvents', [
     $scope.country_of_championship = {};
     $scope.championship_of_event = {};
 
+    $scope.mainDataIsLoaded = function() {
+      if ( $scope.sports.length && $scope.championships.length && $scope.events.length && $scope.countries.length) {
+        return true;
+      }
+    }
+    
 
     $scope.reloadEvents = function() {
       $scope.events = Storage.getEvents();
@@ -54,6 +60,10 @@ betlog_controllers.controller('NextEvents', [
 
     
     $scope.reloadNextEvents = function() {
+      if ( ! $scope.mainDataIsLoaded() ) {
+        return false;
+      }
+
       var sort_next_events = [];
       
       $scope.events.map(function(event) {
