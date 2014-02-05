@@ -189,6 +189,7 @@ betlog_controllers.controller('FavoriteEvents', [
     $scope.reloadChampionships();
     $scope.reloadEvents();
     $scope.reloadCoefficients();
+    $scope.reloadBookmakers();
     $scope.reloadFavoriteChampionships();
 
 

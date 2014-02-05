@@ -184,6 +184,8 @@ angular.module('betlog.services', [])
 
               bookmakers.push( new_bookmaker );
             });
+
+            $rootScope.$broadcast('reloadBookmakers');
           }
         })
         .error(function(data, status, headers, config) {
