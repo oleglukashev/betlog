@@ -26,7 +26,7 @@ betlog_controllers.controller('FavoriteEvents', [
     $scope.mainDataIsLoaded = function() {
       if ( $scope.sports.length && $scope.championships.length
       && $scope.events.length && $scope.countries.length
-      && $scope.coefficients.length) {
+      && $scope.coefficients.length && $scope.bookmakers.length) {
         return true;
       }
     }
@@ -190,7 +190,7 @@ betlog_controllers.controller('FavoriteEvents', [
     $scope.reloadEvents();
     $scope.reloadCoefficients();
     $scope.reloadFavoriteChampionships();
-    
+
 
     //$rootScope.$broadcast('getFavoriteSports');
 
@@ -222,6 +222,11 @@ betlog_controllers.controller('FavoriteEvents', [
 
     $rootScope.$on('reloadCoefficients', function() {
       $scope.reloadCoefficients();
+      $scope.reloadFavoriteChampionships();
+    });
+
+    $rootScope.$on('reloadBookmakers', function() {
+      $scope.reloadBookmakers();
       $scope.reloadFavoriteChampionships();
     });
 
