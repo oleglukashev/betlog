@@ -100,6 +100,13 @@ betlog_controllers.controller('NextEvents', [
     }
 
 
+    $scope.reloadSports();
+    $scope.reloadCountries();
+    $scope.reloadChampionships();
+    $scope.reloadEvents();
+    $scope.reloadCoefficients();
+    $scope.reloadNextEvents();
+
     /* on */
 
     $scope.$on('reloadCountries', function() {

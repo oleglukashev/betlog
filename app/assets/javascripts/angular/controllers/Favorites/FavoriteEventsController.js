@@ -184,6 +184,14 @@ betlog_controllers.controller('FavoriteEvents', [
     }
 
 
+    $scope.reloadSports();
+    $scope.reloadCountries();
+    $scope.reloadChampionships();
+    $scope.reloadEvents();
+    $scope.reloadCoefficients();
+    $scope.reloadFavoriteChampionships();
+    
+
     //$rootScope.$broadcast('getFavoriteSports');
 
     /* on */
