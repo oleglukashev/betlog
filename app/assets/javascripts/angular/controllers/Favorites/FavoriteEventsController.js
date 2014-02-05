@@ -115,7 +115,7 @@ betlog_controllers.controller('FavoriteEvents', [
 
 
     $scope.reloadChampionshipByEvent = function( event ) {
-      if ( $scope.championship.length ) {
+      if ( $scope.championships.length ) {
         $scope.championship_of_event[event.id] = filterFilter( $scope.championships, { id: event.championship_id }, true)[0];
       }
     }
