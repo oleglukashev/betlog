@@ -30,7 +30,7 @@ angular.module('betlog.services', [])
               sports.push( new_sport );
             });
 
-            $rootScope.$broadcast('reloadSports', sports);
+            $rootScope.$broadcast('reloadSports');
           }
         })
         .error(function(data, status, headers, config) {
@@ -55,7 +55,7 @@ angular.module('betlog.services', [])
               countries.push( new_country );
             });
 
-            $rootScope.$broadcast('reloadCountries', countries);
+            $rootScope.$broadcast('reloadCountries');
           }
         })
         .error(function(data, status, headers, config) {
@@ -77,11 +77,11 @@ angular.module('betlog.services', [])
               }
 
               championships.push( new_championship ); 
-
-              $rootScope.$broadcast('reloadChampionships', championships);
-
-              Storage.initManagedLeagues();
             });
+
+            $rootScope.$broadcast('reloadChampionships');
+
+            Storage.initManagedLeagues();
           }
         }).
         error(function(data, status, headers, config) {
@@ -104,9 +104,9 @@ angular.module('betlog.services', [])
               }
 
               events.push( new_event );
-
-              $rootScope.$broadcast('reloadEvents', events);
             });
+
+            $rootScope.$broadcast('reloadEvents');
           }
         })
         .error(function(data, status, headers, config) {
@@ -162,6 +162,8 @@ angular.module('betlog.services', [])
 
               coefficients.push( new_coefficients );
             });
+
+            $rootScope.$broadcast('reloadCoefficients');
           }
         })
         .error(function(data, status, headers, config) {

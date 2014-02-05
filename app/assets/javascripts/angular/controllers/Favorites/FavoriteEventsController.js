@@ -10,6 +10,7 @@ betlog_controllers.controller('FavoriteEvents', [
     $scope.coefficients = [];
     $scope.events = [];
     $scope.championships = [];
+    $scope.countries = [];
     $scope.bookmakers = [];
     $scope.sports = [];
 
@@ -100,17 +101,23 @@ betlog_controllers.controller('FavoriteEvents', [
 
 
     $scope.reloadSportByChampionship = function( championship ) {
-      $scope.sport_of_championship[championship.id] = filterFilter( $scope.sports, { id: championship.sport_id }, true)[0];
+      if ( $scope.sports.length ) {
+        $scope.sport_of_championship[championship.id] = filterFilter( $scope.sports, { id: championship.sport_id }, true)[0];
+      }
     }
 
 
     $scope.reloadCountryByChampionship = function( championship ) {
-      $scope.country_of_championship[championship.id] = filterFilter( $scope.countries, { id: championship.country_id }, true)[0];
+      if ( $scope.countries.length ) {
+        $scope.country_of_championship[championship.id] = filterFilter( $scope.countries, { id: championship.country_id }, true)[0];
+      }
     }
 
 
     $scope.reloadChampionshipByEvent = function( event ) {
-      $scope.championship_of_event[event.id] = filterFilter( $scope.championships, { id: event.championship_id }, true)[0];
+      if ( $scope.championship.length ) {
+        $scope.championship_of_event[event.id] = filterFilter( $scope.championships, { id: event.championship_id }, true)[0];
+      }
     }
     
 
@@ -175,17 +182,6 @@ betlog_controllers.controller('FavoriteEvents', [
     $scope.reloadJcarousel = function() {
       $('.jcarousel').jcarousel();
     }
-
-  
-
-
-    $scope.reloadChampionships();
-    $scope.reloadSports();
-    $scope.reloadCountries();
-    $scope.reloadEvents();
-    $scope.reloadCoefficients();
-    $scope.reloadBookmakers();
-    $scope.reloadFavoriteChampionships();
 
 
     //$rootScope.$broadcast('getFavoriteSports');

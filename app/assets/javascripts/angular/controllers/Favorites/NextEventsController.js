@@ -10,6 +10,7 @@ betlog_controllers.controller('NextEvents', [
     $scope.events = [];
     $scope.sports = [];
     $scope.championships = [];
+    $scope.coefficients = [];
     $scope.countries = [];
 
     $scope.next_events = [];
@@ -19,9 +20,14 @@ betlog_controllers.controller('NextEvents', [
 
     $scope.mainDataIsLoaded = function() {
       if ( $scope.sports.length && $scope.championships.length && $scope.events.length
-      && $scope.countries.length) {
+      && $scope.countries.length && $scope.coefficients.length) {
         return true;
       }
+    }
+
+
+    $scope.reloadCoefficients = function() {
+      $scope.coefficients = Storage.getCoefficients();
     }
 
 
@@ -93,12 +99,6 @@ betlog_controllers.controller('NextEvents', [
 
     }
 
-    $scope.reloadChampionships();
-    $scope.reloadSports();
-    $scope.reloadCountries();
-    $scope.reloadEvents();
-    $scope.reloadNextEvents();
-
 
     /* on */
 
@@ -119,6 +119,11 @@ betlog_controllers.controller('NextEvents', [
 
     $scope.$on('reloadEvents', function() {
       $scope.reloadEvents();
+      $scope.reloadNextEvents();
+    });
+
+    $scope.$on('reloadCoefficients', function() {
+      $scope.reloadCoefficients();
       $scope.reloadNextEvents();
     });
 
